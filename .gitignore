@@ -2,4 +2,4 @@ deps
 objs
 cpplint.py
 worker$
-logs_*
+logs/*

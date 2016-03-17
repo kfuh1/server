@@ -94,7 +94,6 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
 
   DLOG(INFO) << "Received request: " << client_req.get_request_string() << std::endl;
 
-  //printf("hello");
   // You can assume that traces end with this special message.  It
   // exists because it might be useful for debugging to dump
   // information about the entire run here: statistics, etc.
