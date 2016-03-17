@@ -1,0 +1,13 @@
+Log file created at: 2016/03/16 23:24:47
+Running on machine: ghc26.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0316 23:24:47.844611 18918 main.cpp:49] Booting worker. Hostname: ghc26.ghc.andrew.cmu.edu
+I0316 23:24:48.847117 18918 main.cpp:62] Connected to master ghc26.ghc.andrew.cmu.edu:43873
+I0316 23:24:48.847158 18918 worker.cpp:56] **** Initializing worker: my worker 0 ****
+I0316 23:24:49.347944 18918 worker.cpp:68] Worker got request: [0:cmd=418wisdom;x=84443]
+I0316 23:24:50.596014 18918 worker.cpp:90] Worker completed work in 1248.11 ms (0)
+I0316 23:24:50.596103 18918 worker.cpp:68] Worker got request: [1:cmd=418wisdom;x=75796]
+I0316 23:24:51.809864 18918 worker.cpp:90] Worker completed work in 1213.81 ms (1)
+I0316 23:24:51.809924 18918 worker.cpp:68] Worker got request: [2:cmd=418wisdom;x=42057]
+I0316 23:24:52.961966 18918 worker.cpp:90] Worker completed work in 1152.07 ms (2)
+F0316 23:24:52.962034 18918 main.cpp:125] Check failed: err >= 0 (-1 vs. 0) Error writing to master!

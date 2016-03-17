@@ -1,0 +1,8 @@
+Log file created at: 2016/03/16 23:29:47
+Running on machine: ghc26.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0316 23:29:47.382077 20243 main_loop.cpp:73] Requesting worker name=my worker 0;tag=1804289383
+I0316 23:29:48.889359 20243 master.cpp:93] Received request: cmd=418wisdom;x=1
+I0316 23:29:49.389534 20243 master.cpp:93] Received request: cmd=lastrequest
+I0316 23:29:50.135165 20243 master.cpp:82] Master received a response from a worker: [0:OMG, 418 is so gr8!]
+I0316 23:29:50.144855 20243 main_loop.cpp:138] Shutting down

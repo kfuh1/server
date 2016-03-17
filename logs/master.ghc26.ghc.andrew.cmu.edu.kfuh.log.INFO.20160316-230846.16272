@@ -1,0 +1,4 @@
+Log file created at: 2016/03/16 23:08:46
+Running on machine: ghc26.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0316 23:08:46.033174 16272 main_loop.cpp:73] Requesting worker name=my worker 0;tag=1804289383

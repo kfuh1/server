@@ -1,9 +1,11 @@
 #include <glog/logging.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <map>
 
 #include "server/messages.h"
 #include "server/master.h"
+#include "tools/work_queue.h"
 
 
 static struct Master_state {
@@ -18,8 +20,13 @@ static struct Master_state {
   int num_pending_client_requests;
   int next_tag;
 
+  int queue_size;
+
   Worker_handle my_worker;
   Client_handle waiting_client;
+
+  WorkQueue<Request_msg> *queue = new WorkQueue<Request_msg>();
+  std::map<int,Client_handle> tagMap;
 
 } mstate;
 
@@ -35,6 +42,7 @@ void master_node_init(int max_workers, int& tick_period) {
   mstate.max_num_workers = max_workers;
   mstate.num_pending_client_requests = 0;
 
+  mstate.queue_size = 0;
   // don't mark the server as ready until the server is ready to go.
   // This is actually when the first worker is up and running, not
   // when 'master_node_init' returnes
@@ -73,15 +81,19 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
 
   DLOG(INFO) << "Master received a response from a worker: [" << resp.get_tag() << ":" << resp.get_response() << "]" << std::endl;
 
-  send_client_response(mstate.waiting_client, resp);
+  int tag = resp.get_tag();
+  Client_handle client_handle = mstate.tagMap.at(tag);
+  send_client_response(client_handle, resp);
+  mstate.num_pending_client_requests--;
+  mstate.tagMap.erase(tag);
 
-  mstate.num_pending_client_requests = 0;
 }
 
 void handle_client_request(Client_handle client_handle, const Request_msg& client_req) {
 
   DLOG(INFO) << "Received request: " << client_req.get_request_string() << std::endl;
 
+  //printf("hello");
   // You can assume that traces end with this special message.  It
   // exists because it might be useful for debugging to dump
   // information about the entire run here: statistics, etc.
@@ -92,14 +104,29 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     return;
   }
 
+  mstate.tagMap.insert(std::pair<int,Client_handle>(mstate.num_pending_client_requests, client_handle));
+  int tag = mstate.next_tag++;
+  Request_msg worker_req(tag, client_req);
+  mstate.queue->put_work(worker_req);
+  mstate.queue_size++;
+  mstate.num_pending_client_requests++;
+  //printf("\n");
+  while(mstate.queue_size > 0){
+    //printf("%d\n", mstate.num_pending_client_requests);
+    send_request_to_worker(mstate.my_worker, mstate.queue->get_work());
+    mstate.queue_size--;
+ }
+
   // The provided starter code cannot handle multiple pending client
   // requests.  The server returns an error message, and the checker
   // will mark the response as "incorrect"
-  if (mstate.num_pending_client_requests > 0) {
+  
+  /*if (mstate.num_pending_client_requests > 0) { 
     Response_msg resp(0);
     resp.set_response("Oh no! This server cannot handle multiple outstanding requests!");
     send_client_response(client_handle, resp);
     return;
+    
   }
 
   // Save off the handle to the client that is expecting a response.
@@ -114,7 +141,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   int tag = mstate.next_tag++;
   Request_msg worker_req(tag, client_req);
   send_request_to_worker(mstate.my_worker, worker_req);
-
+*/
   // We're done!  This event handler now returns, and the master
   // process calls another one of your handlers when action is
   // required.

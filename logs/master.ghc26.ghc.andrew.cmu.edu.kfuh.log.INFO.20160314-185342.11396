@@ -1,0 +1,16 @@
+Log file created at: 2016/03/14 18:53:42
+Running on machine: ghc26.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0314 18:53:42.698745 11396 main_loop.cpp:73] Requesting worker name=my worker 0;tag=1804289383
+I0314 18:53:44.207988 11396 master.cpp:83] Received request: cmd=418wisdom;x=1
+I0314 18:53:45.208783 11396 master.cpp:83] Received request: cmd=tellmenow;x=4249
+I0314 18:53:45.454324 11396 master.cpp:74] Master received a response from a worker: [0:OMG, 418 is so gr8!]
+I0314 18:53:46.208997 11396 master.cpp:83] Received request: cmd=countprimes;n=1000011
+I0314 18:53:47.248050 11396 master.cpp:83] Received request: cmd=compareprimes;n1=624059;n2=791933;n3=773594;n4=859536
+I0314 18:53:47.502852 11396 master.cpp:74] Master received a response from a worker: [1:78499]
+I0314 18:53:48.208953 11396 master.cpp:83] Received request: cmd=tellmenow;x=7788
+I0314 18:53:48.209264 11396 master.cpp:74] Master received a response from a worker: [2:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0314 18:53:49.248091 11396 master.cpp:83] Received request: cmd=projectidea;x=75796
+I0314 18:53:50.248098 11396 master.cpp:83] Received request: cmd=lastrequest
+I0314 18:53:53.789988 11396 master.cpp:74] Master received a response from a worker: [3:Parallelize an algorithm you are working on for research.]
+I0314 18:53:53.800402 11396 main_loop.cpp:138] Shutting down

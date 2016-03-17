@@ -1,0 +1,4 @@
+Log file created at: 2016/03/16 23:36:04
+Running on machine: ghc26.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+F0316 23:36:04.622454 21041 main.cpp:125] Check failed: err >= 0 (-1 vs. 0) Error writing to master!

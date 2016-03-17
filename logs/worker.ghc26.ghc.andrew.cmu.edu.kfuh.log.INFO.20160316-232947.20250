@@ -1,0 +1,9 @@
+Log file created at: 2016/03/16 23:29:47
+Running on machine: ghc26.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0316 23:29:47.389731 20250 main.cpp:49] Booting worker. Hostname: ghc26.ghc.andrew.cmu.edu
+I0316 23:29:48.393103 20250 main.cpp:62] Connected to master ghc26.ghc.andrew.cmu.edu:43873
+I0316 23:29:48.393128 20250 worker.cpp:56] **** Initializing worker: my worker 0 ****
+I0316 23:29:48.889549 20250 worker.cpp:68] Worker got request: [0:cmd=418wisdom;x=1]
+I0316 23:29:50.135049 20250 worker.cpp:90] Worker completed work in 1245.54 ms (0)
+I0316 23:29:50.145725 20250 main.cpp:103] Worker on ghc26.ghc.andrew.cmu.edu is shutting down (master terminated connection)
