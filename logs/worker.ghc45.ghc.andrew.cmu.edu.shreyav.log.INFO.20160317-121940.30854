@@ -1,0 +1,695 @@
+Log file created at: 2016/03/17 12:19:40
+Running on machine: ghc45.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0317 12:19:40.479583 30854 main.cpp:49] Booting worker. Hostname: ghc45.ghc.andrew.cmu.edu
+I0317 12:19:41.483683 30854 main.cpp:62] Connected to master ghc45.ghc.andrew.cmu.edu:22964
+I0317 12:19:41.483732 30854 worker.cpp:56] **** Initializing worker: my worker 0 ****
+I0317 12:19:41.967628 30854 worker.cpp:68] Worker got request: [0:cmd=418wisdom;x=84443]
+I0317 12:19:43.164993 30854 worker.cpp:90] Worker completed work in 1197.29 ms (0)
+I0317 12:19:43.165156 30854 worker.cpp:68] Worker got request: [1:cmd=418wisdom;x=75796]
+I0317 12:19:44.360425 30854 worker.cpp:90] Worker completed work in 1195.2 ms (1)
+I0317 12:19:44.360551 30854 worker.cpp:68] Worker got request: [2:cmd=418wisdom;x=42057]
+I0317 12:19:45.558056 30854 worker.cpp:90] Worker completed work in 1197.44 ms (2)
+I0317 12:19:45.558187 30854 worker.cpp:68] Worker got request: [3:cmd=418wisdom;x=25891]
+I0317 12:19:46.753564 30854 worker.cpp:90] Worker completed work in 1195.31 ms (3)
+I0317 12:19:46.753693 30854 worker.cpp:68] Worker got request: [4:cmd=418wisdom;x=51127]
+I0317 12:19:47.950727 30854 worker.cpp:90] Worker completed work in 1196.97 ms (4)
+I0317 12:19:47.950848 30854 worker.cpp:68] Worker got request: [5:cmd=418wisdom;x=40493]
+I0317 12:19:49.148028 30854 worker.cpp:90] Worker completed work in 1197.12 ms (5)
+I0317 12:19:49.148160 30854 worker.cpp:68] Worker got request: [6:cmd=418wisdom;x=78380]
+I0317 12:19:50.343179 30854 worker.cpp:90] Worker completed work in 1194.96 ms (6)
+I0317 12:19:50.343296 30854 worker.cpp:68] Worker got request: [7:cmd=418wisdom;x=30331]
+I0317 12:19:51.540345 30854 worker.cpp:90] Worker completed work in 1196.99 ms (7)
+I0317 12:19:51.540455 30854 worker.cpp:68] Worker got request: [8:cmd=418wisdom;x=47660]
+I0317 12:19:52.735993 30854 worker.cpp:90] Worker completed work in 1195.47 ms (8)
+I0317 12:19:52.736121 30854 worker.cpp:68] Worker got request: [9:cmd=418wisdom;x=58338]
+I0317 12:19:53.931308 30854 worker.cpp:90] Worker completed work in 1195.12 ms (9)
+I0317 12:19:53.931438 30854 worker.cpp:68] Worker got request: [10:cmd=418wisdom;x=90812]
+I0317 12:19:55.127205 30854 worker.cpp:90] Worker completed work in 1195.71 ms (10)
+I0317 12:19:55.127316 30854 worker.cpp:68] Worker got request: [11:cmd=418wisdom;x=50469]
+I0317 12:19:56.323367 30854 worker.cpp:90] Worker completed work in 1195.99 ms (11)
+I0317 12:19:56.323492 30854 worker.cpp:68] Worker got request: [12:cmd=418wisdom;x=28184]
+I0317 12:19:57.519783 30854 worker.cpp:90] Worker completed work in 1196.23 ms (12)
+I0317 12:19:57.519919 30854 worker.cpp:68] Worker got request: [13:cmd=418wisdom;x=75581]
+I0317 12:19:58.715716 30854 worker.cpp:90] Worker completed work in 1195.74 ms (13)
+I0317 12:19:58.715821 30854 worker.cpp:68] Worker got request: [14:cmd=418wisdom;x=61837]
+I0317 12:19:59.911654 30854 worker.cpp:90] Worker completed work in 1195.77 ms (14)
+I0317 12:19:59.911757 30854 worker.cpp:68] Worker got request: [15:cmd=418wisdom;x=25050]
+I0317 12:20:01.107807 30854 worker.cpp:90] Worker completed work in 1195.99 ms (15)
+I0317 12:20:01.107926 30854 worker.cpp:68] Worker got request: [16:cmd=418wisdom;x=90975]
+I0317 12:20:02.306630 30854 worker.cpp:90] Worker completed work in 1198.64 ms (16)
+I0317 12:20:02.306766 30854 worker.cpp:68] Worker got request: [17:cmd=418wisdom;x=98279]
+I0317 12:20:03.503921 30854 worker.cpp:90] Worker completed work in 1197.09 ms (17)
+I0317 12:20:03.504055 30854 worker.cpp:68] Worker got request: [18:cmd=418wisdom;x=81022]
+I0317 12:20:04.701205 30854 worker.cpp:90] Worker completed work in 1197.09 ms (18)
+I0317 12:20:04.701328 30854 worker.cpp:68] Worker got request: [19:cmd=418wisdom;x=90217]
+I0317 12:20:05.897807 30854 worker.cpp:90] Worker completed work in 1196.42 ms (19)
+I0317 12:20:05.897934 30854 worker.cpp:68] Worker got request: [20:cmd=418wisdom;x=31015]
+I0317 12:20:07.093535 30854 worker.cpp:90] Worker completed work in 1195.54 ms (20)
+I0317 12:20:07.093603 30854 worker.cpp:68] Worker got request: [21:cmd=418wisdom;x=72983]
+I0317 12:20:08.289516 30854 worker.cpp:90] Worker completed work in 1195.85 ms (21)
+I0317 12:20:08.289623 30854 worker.cpp:68] Worker got request: [22:cmd=418wisdom;x=89884]
+I0317 12:20:09.485503 30854 worker.cpp:90] Worker completed work in 1195.82 ms (22)
+I0317 12:20:09.485694 30854 worker.cpp:68] Worker got request: [23:cmd=418wisdom;x=68399]
+I0317 12:20:10.681656 30854 worker.cpp:90] Worker completed work in 1195.9 ms (23)
+I0317 12:20:10.681967 30854 worker.cpp:68] Worker got request: [24:cmd=tellmenow;x=4249]
+I0317 12:20:10.681977 30854 worker.cpp:90] Worker completed work in 0.00299813 ms (24)
+I0317 12:20:10.682019 30854 worker.cpp:68] Worker got request: [25:cmd=tellmenow;x=906]
+I0317 12:20:10.682024 30854 worker.cpp:90] Worker completed work in 0.00141187 ms (25)
+I0317 12:20:10.682065 30854 worker.cpp:68] Worker got request: [26:cmd=tellmenow;x=3907]
+I0317 12:20:10.682070 30854 worker.cpp:90] Worker completed work in 0.00135563 ms (26)
+I0317 12:20:10.682109 30854 worker.cpp:68] Worker got request: [27:cmd=tellmenow;x=5498]
+I0317 12:20:10.682114 30854 worker.cpp:90] Worker completed work in 0.00131532 ms (27)
+I0317 12:20:10.682154 30854 worker.cpp:68] Worker got request: [28:cmd=tellmenow;x=8218]
+I0317 12:20:10.682159 30854 worker.cpp:90] Worker completed work in 0.00110718 ms (28)
+I0317 12:20:10.682189 30854 worker.cpp:68] Worker got request: [29:cmd=tellmenow;x=8700]
+I0317 12:20:10.682194 30854 worker.cpp:90] Worker completed work in 0.00116344 ms (29)
+I0317 12:20:10.682206 30854 worker.cpp:68] Worker got request: [30:cmd=tellmenow;x=4293]
+I0317 12:20:10.682209 30854 worker.cpp:90] Worker completed work in 0.00092719 ms (30)
+I0317 12:20:10.682220 30854 worker.cpp:68] Worker got request: [31:cmd=tellmenow;x=7788]
+I0317 12:20:10.682224 30854 worker.cpp:90] Worker completed work in 0.00078282 ms (31)
+I0317 12:20:10.682234 30854 worker.cpp:68] Worker got request: [32:cmd=tellmenow;x=2344]
+I0317 12:20:10.682237 30854 worker.cpp:90] Worker completed work in 0.000858752 ms (32)
+I0317 12:20:10.682246 30854 worker.cpp:68] Worker got request: [33:cmd=tellmenow;x=7246]
+I0317 12:20:10.682250 30854 worker.cpp:90] Worker completed work in 0.000810003 ms (33)
+I0317 12:20:10.682260 30854 worker.cpp:68] Worker got request: [34:cmd=tellmenow;x=4938]
+I0317 12:20:10.682262 30854 worker.cpp:90] Worker completed work in 0.000822198 ms (34)
+I0317 12:20:10.682272 30854 worker.cpp:68] Worker got request: [35:cmd=tellmenow;x=126]
+I0317 12:20:10.682276 30854 worker.cpp:90] Worker completed work in 0.000816566 ms (35)
+I0317 12:20:10.682286 30854 worker.cpp:68] Worker got request: [36:cmd=418wisdom;x=71971]
+I0317 12:20:11.877739 30854 worker.cpp:90] Worker completed work in 1195.39 ms (36)
+I0317 12:20:11.877861 30854 worker.cpp:68] Worker got request: [37:cmd=418wisdom;x=39882]
+I0317 12:20:13.072784 30854 worker.cpp:90] Worker completed work in 1194.86 ms (37)
+I0317 12:20:13.072918 30854 worker.cpp:68] Worker got request: [38:cmd=418wisdom;x=82485]
+I0317 12:20:14.268524 30854 worker.cpp:90] Worker completed work in 1195.54 ms (38)
+I0317 12:20:14.268648 30854 worker.cpp:68] Worker got request: [39:cmd=418wisdom;x=66815]
+I0317 12:20:15.464274 30854 worker.cpp:90] Worker completed work in 1195.56 ms (39)
+I0317 12:20:15.464393 30854 worker.cpp:68] Worker got request: [40:cmd=418wisdom;x=114]
+I0317 12:20:16.659929 30854 worker.cpp:90] Worker completed work in 1195.47 ms (40)
+I0317 12:20:16.660053 30854 worker.cpp:68] Worker got request: [41:cmd=418wisdom;x=49358]
+I0317 12:20:17.855059 30854 worker.cpp:90] Worker completed work in 1194.95 ms (41)
+I0317 12:20:17.855185 30854 worker.cpp:68] Worker got request: [42:cmd=418wisdom;x=86761]
+I0317 12:20:19.050966 30854 worker.cpp:90] Worker completed work in 1195.72 ms (42)
+I0317 12:20:19.051089 30854 worker.cpp:68] Worker got request: [43:cmd=418wisdom;x=24391]
+I0317 12:20:20.246762 30854 worker.cpp:90] Worker completed work in 1195.61 ms (43)
+I0317 12:20:20.246886 30854 worker.cpp:68] Worker got request: [44:cmd=418wisdom;x=32520]
+I0317 12:20:21.442392 30854 worker.cpp:90] Worker completed work in 1195.45 ms (44)
+I0317 12:20:21.442517 30854 worker.cpp:68] Worker got request: [45:cmd=418wisdom;x=87047]
+I0317 12:20:22.638537 30854 worker.cpp:90] Worker completed work in 1195.96 ms (45)
+I0317 12:20:22.638648 30854 worker.cpp:68] Worker got request: [46:cmd=418wisdom;x=19106]
+I0317 12:20:23.833909 30854 worker.cpp:90] Worker completed work in 1195.2 ms (46)
+I0317 12:20:23.834033 30854 worker.cpp:68] Worker got request: [47:cmd=418wisdom;x=56751]
+I0317 12:20:25.029366 30854 worker.cpp:90] Worker completed work in 1195.18 ms (47)
+I0317 12:20:25.029500 30854 worker.cpp:68] Worker got request: [48:cmd=418wisdom;x=23861]
+I0317 12:20:26.224830 30854 worker.cpp:90] Worker completed work in 1195.27 ms (48)
+I0317 12:20:26.224949 30854 worker.cpp:68] Worker got request: [49:cmd=418wisdom;x=96754]
+I0317 12:20:27.420696 30854 worker.cpp:90] Worker completed work in 1195.68 ms (49)
+I0317 12:20:27.420811 30854 worker.cpp:68] Worker got request: [50:cmd=418wisdom;x=80318]
+I0317 12:20:28.615908 30854 worker.cpp:90] Worker completed work in 1195.03 ms (50)
+I0317 12:20:28.615993 30854 worker.cpp:68] Worker got request: [51:cmd=418wisdom;x=44797]
+I0317 12:20:29.812314 30854 worker.cpp:90] Worker completed work in 1196.26 ms (51)
+I0317 12:20:29.812446 30854 worker.cpp:68] Worker got request: [52:cmd=418wisdom;x=8044]
+I0317 12:20:31.008551 30854 worker.cpp:90] Worker completed work in 1196.04 ms (52)
+I0317 12:20:31.008669 30854 worker.cpp:68] Worker got request: [53:cmd=418wisdom;x=32005]
+I0317 12:20:32.204746 30854 worker.cpp:90] Worker completed work in 1196.01 ms (53)
+I0317 12:20:32.204880 30854 worker.cpp:68] Worker got request: [54:cmd=418wisdom;x=50794]
+I0317 12:20:33.400992 30854 worker.cpp:90] Worker completed work in 1196.05 ms (54)
+I0317 12:20:33.401114 30854 worker.cpp:68] Worker got request: [55:cmd=418wisdom;x=93284]
+I0317 12:20:34.597054 30854 worker.cpp:90] Worker completed work in 1195.88 ms (55)
+I0317 12:20:34.597178 30854 worker.cpp:68] Worker got request: [56:cmd=418wisdom;x=10905]
+I0317 12:20:35.793112 30854 worker.cpp:90] Worker completed work in 1195.87 ms (56)
+I0317 12:20:35.793241 30854 worker.cpp:68] Worker got request: [57:cmd=418wisdom;x=55127]
+I0317 12:20:36.989327 30854 worker.cpp:90] Worker completed work in 1196.02 ms (57)
+I0317 12:20:36.989459 30854 worker.cpp:68] Worker got request: [58:cmd=418wisdom;x=70656]
+I0317 12:20:38.185827 30854 worker.cpp:90] Worker completed work in 1196.31 ms (58)
+I0317 12:20:38.185947 30854 worker.cpp:68] Worker got request: [59:cmd=418wisdom;x=54744]
+I0317 12:20:39.381609 30854 worker.cpp:90] Worker completed work in 1195.6 ms (59)
+I0317 12:20:39.381741 30854 worker.cpp:68] Worker got request: [60:cmd=tellmenow;x=7331]
+I0317 12:20:39.381748 30854 worker.cpp:90] Worker completed work in 0.0030825 ms (60)
+I0317 12:20:39.381785 30854 worker.cpp:68] Worker got request: [61:cmd=tellmenow;x=4863]
+I0317 12:20:39.381791 30854 worker.cpp:90] Worker completed work in 0.00143251 ms (61)
+I0317 12:20:39.381834 30854 worker.cpp:68] Worker got request: [62:cmd=tellmenow;x=8675]
+I0317 12:20:39.381839 30854 worker.cpp:90] Worker completed work in 0.00136219 ms (62)
+I0317 12:20:39.381877 30854 worker.cpp:68] Worker got request: [63:cmd=tellmenow;x=5429]
+I0317 12:20:39.381882 30854 worker.cpp:90] Worker completed work in 0.0011222 ms (63)
+I0317 12:20:39.381922 30854 worker.cpp:68] Worker got request: [64:cmd=tellmenow;x=5289]
+I0317 12:20:39.381927 30854 worker.cpp:90] Worker completed work in 0.00109593 ms (64)
+I0317 12:20:39.381958 30854 worker.cpp:68] Worker got request: [65:cmd=tellmenow;x=4005]
+I0317 12:20:39.381963 30854 worker.cpp:90] Worker completed work in 0.00109876 ms (65)
+I0317 12:20:39.381973 30854 worker.cpp:68] Worker got request: [66:cmd=tellmenow;x=5367]
+I0317 12:20:39.381976 30854 worker.cpp:90] Worker completed work in 0.000944056 ms (66)
+I0317 12:20:39.381986 30854 worker.cpp:68] Worker got request: [67:cmd=tellmenow;x=3464]
+I0317 12:20:39.381989 30854 worker.cpp:90] Worker completed work in 0.000811866 ms (67)
+I0317 12:20:39.381999 30854 worker.cpp:68] Worker got request: [68:cmd=tellmenow;x=5181]
+I0317 12:20:39.382002 30854 worker.cpp:90] Worker completed work in 0.000795 ms (68)
+I0317 12:20:39.382014 30854 worker.cpp:68] Worker got request: [69:cmd=tellmenow;x=2613]
+I0317 12:20:39.382019 30854 worker.cpp:90] Worker completed work in 0.000780943 ms (69)
+I0317 12:20:39.382028 30854 worker.cpp:68] Worker got request: [70:cmd=tellmenow;x=1704]
+I0317 12:20:39.382031 30854 worker.cpp:90] Worker completed work in 0.000780012 ms (70)
+I0317 12:20:39.382136 30854 worker.cpp:68] Worker got request: [71:cmd=tellmenow;x=1680]
+I0317 12:20:39.382143 30854 worker.cpp:90] Worker completed work in 0.00134531 ms (71)
+I0317 12:20:39.382154 30854 worker.cpp:68] Worker got request: [72:cmd=418wisdom;x=61277]
+I0317 12:20:40.577685 30854 worker.cpp:90] Worker completed work in 1195.47 ms (72)
+I0317 12:20:40.577793 30854 worker.cpp:68] Worker got request: [73:cmd=418wisdom;x=65666]
+I0317 12:20:41.773524 30854 worker.cpp:90] Worker completed work in 1195.67 ms (73)
+I0317 12:20:41.773808 30854 worker.cpp:68] Worker got request: [74:cmd=418wisdom;x=47653]
+I0317 12:20:42.969216 30854 worker.cpp:90] Worker completed work in 1195.34 ms (74)
+I0317 12:20:42.969348 30854 worker.cpp:68] Worker got request: [75:cmd=418wisdom;x=8982]
+I0317 12:20:44.165318 30854 worker.cpp:90] Worker completed work in 1195.91 ms (75)
+I0317 12:20:44.165448 30854 worker.cpp:68] Worker got request: [76:cmd=418wisdom;x=75761]
+I0317 12:20:45.361024 30854 worker.cpp:90] Worker completed work in 1195.51 ms (76)
+I0317 12:20:45.361145 30854 worker.cpp:68] Worker got request: [77:cmd=418wisdom;x=87677]
+I0317 12:20:46.556231 30854 worker.cpp:90] Worker completed work in 1195.02 ms (77)
+I0317 12:20:46.556351 30854 worker.cpp:68] Worker got request: [78:cmd=418wisdom;x=92339]
+I0317 12:20:47.752205 30854 worker.cpp:90] Worker completed work in 1195.79 ms (78)
+I0317 12:20:47.752333 30854 worker.cpp:68] Worker got request: [79:cmd=418wisdom;x=84246]
+I0317 12:20:48.947767 30854 worker.cpp:90] Worker completed work in 1195.37 ms (79)
+I0317 12:20:48.947888 30854 worker.cpp:68] Worker got request: [80:cmd=418wisdom;x=89818]
+I0317 12:20:50.144029 30854 worker.cpp:90] Worker completed work in 1196.08 ms (80)
+I0317 12:20:50.144151 30854 worker.cpp:68] Worker got request: [81:cmd=418wisdom;x=92309]
+I0317 12:20:51.339381 30854 worker.cpp:90] Worker completed work in 1195.17 ms (81)
+I0317 12:20:51.339515 30854 worker.cpp:68] Worker got request: [82:cmd=418wisdom;x=54060]
+I0317 12:20:52.535748 30854 worker.cpp:90] Worker completed work in 1196.17 ms (82)
+I0317 12:20:52.535876 30854 worker.cpp:68] Worker got request: [83:cmd=418wisdom;x=39129]
+I0317 12:20:53.731717 30854 worker.cpp:90] Worker completed work in 1195.78 ms (83)
+I0317 12:20:53.731838 30854 worker.cpp:68] Worker got request: [84:cmd=418wisdom;x=70529]
+I0317 12:20:54.926966 30854 worker.cpp:90] Worker completed work in 1195.07 ms (84)
+I0317 12:20:54.927090 30854 worker.cpp:68] Worker got request: [85:cmd=418wisdom;x=27563]
+I0317 12:20:56.123015 30854 worker.cpp:90] Worker completed work in 1195.86 ms (85)
+I0317 12:20:56.123147 30854 worker.cpp:68] Worker got request: [86:cmd=418wisdom;x=81163]
+I0317 12:20:57.319177 30854 worker.cpp:90] Worker completed work in 1195.97 ms (86)
+I0317 12:20:57.319308 30854 worker.cpp:68] Worker got request: [87:cmd=418wisdom;x=84949]
+I0317 12:20:58.515419 30854 worker.cpp:90] Worker completed work in 1196.04 ms (87)
+I0317 12:20:58.515540 30854 worker.cpp:68] Worker got request: [88:cmd=418wisdom;x=89504]
+I0317 12:20:59.711194 30854 worker.cpp:90] Worker completed work in 1195.59 ms (88)
+I0317 12:20:59.711324 30854 worker.cpp:68] Worker got request: [89:cmd=418wisdom;x=58980]
+I0317 12:21:00.907096 30854 worker.cpp:90] Worker completed work in 1195.71 ms (89)
+I0317 12:21:00.907224 30854 worker.cpp:68] Worker got request: [90:cmd=418wisdom;x=94977]
+I0317 12:21:02.102905 30854 worker.cpp:90] Worker completed work in 1195.62 ms (90)
+I0317 12:21:02.103018 30854 worker.cpp:68] Worker got request: [91:cmd=418wisdom;x=57970]
+I0317 12:21:03.298147 30854 worker.cpp:90] Worker completed work in 1195.06 ms (91)
+I0317 12:21:03.298281 30854 worker.cpp:68] Worker got request: [92:cmd=418wisdom;x=45056]
+I0317 12:21:04.494395 30854 worker.cpp:90] Worker completed work in 1196.05 ms (92)
+I0317 12:21:04.494524 30854 worker.cpp:68] Worker got request: [93:cmd=418wisdom;x=66025]
+I0317 12:21:05.689846 30854 worker.cpp:90] Worker completed work in 1195.26 ms (93)
+I0317 12:21:05.689965 30854 worker.cpp:68] Worker got request: [94:cmd=418wisdom;x=99626]
+I0317 12:21:06.886098 30854 worker.cpp:90] Worker completed work in 1196.07 ms (94)
+I0317 12:21:06.886229 30854 worker.cpp:68] Worker got request: [95:cmd=418wisdom;x=91695]
+I0317 12:21:08.081514 30854 worker.cpp:90] Worker completed work in 1195.22 ms (95)
+I0317 12:21:08.081631 30854 worker.cpp:68] Worker got request: [96:cmd=tellmenow;x=7140]
+I0317 12:21:08.081640 30854 worker.cpp:90] Worker completed work in 0.00311906 ms (96)
+I0317 12:21:08.081679 30854 worker.cpp:68] Worker got request: [97:cmd=tellmenow;x=741]
+I0317 12:21:08.081684 30854 worker.cpp:90] Worker completed work in 0.00118031 ms (97)
+I0317 12:21:08.081786 30854 worker.cpp:68] Worker got request: [98:cmd=tellmenow;x=5515]
+I0317 12:21:08.081794 30854 worker.cpp:90] Worker completed work in 0.00169687 ms (98)
+I0317 12:21:08.081835 30854 worker.cpp:68] Worker got request: [99:cmd=tellmenow;x=4378]
+I0317 12:21:08.081840 30854 worker.cpp:90] Worker completed work in 0.00124313 ms (99)
+I0317 12:21:08.081882 30854 worker.cpp:68] Worker got request: [100:cmd=tellmenow;x=5671]
+I0317 12:21:08.081892 30854 worker.cpp:90] Worker completed work in 0.00187407 ms (100)
+I0317 12:21:08.081940 30854 worker.cpp:68] Worker got request: [101:cmd=tellmenow;x=7606]
+I0317 12:21:08.081950 30854 worker.cpp:90] Worker completed work in 0.0019772 ms (101)
+I0317 12:21:08.081972 30854 worker.cpp:68] Worker got request: [102:cmd=tellmenow;x=2187]
+I0317 12:21:08.081980 30854 worker.cpp:90] Worker completed work in 0.00186001 ms (102)
+I0317 12:21:08.082001 30854 worker.cpp:68] Worker got request: [103:cmd=tellmenow;x=6584]
+I0317 12:21:08.082010 30854 worker.cpp:90] Worker completed work in 0.00190406 ms (103)
+I0317 12:21:08.082036 30854 worker.cpp:68] Worker got request: [104:cmd=tellmenow;x=1054]
+I0317 12:21:08.082042 30854 worker.cpp:90] Worker completed work in 0.00155813 ms (104)
+I0317 12:21:08.082063 30854 worker.cpp:68] Worker got request: [105:cmd=tellmenow;x=1984]
+I0317 12:21:08.082072 30854 worker.cpp:90] Worker completed work in 0.00175032 ms (105)
+I0317 12:21:08.082108 30854 worker.cpp:68] Worker got request: [106:cmd=tellmenow;x=7152]
+I0317 12:21:08.082115 30854 worker.cpp:90] Worker completed work in 0.00186375 ms (106)
+I0317 12:21:08.082135 30854 worker.cpp:68] Worker got request: [107:cmd=tellmenow;x=2993]
+I0317 12:21:08.082142 30854 worker.cpp:90] Worker completed work in 0.00174562 ms (107)
+I0317 12:21:08.082162 30854 worker.cpp:68] Worker got request: [108:cmd=418wisdom;x=81592]
+I0317 12:21:09.278429 30854 worker.cpp:90] Worker completed work in 1196.2 ms (108)
+I0317 12:21:09.278558 30854 worker.cpp:68] Worker got request: [109:cmd=418wisdom;x=10060]
+I0317 12:21:10.474566 30854 worker.cpp:90] Worker completed work in 1195.94 ms (109)
+I0317 12:21:10.474704 30854 worker.cpp:68] Worker got request: [110:cmd=418wisdom;x=14635]
+I0317 12:21:11.670840 30854 worker.cpp:90] Worker completed work in 1196.07 ms (110)
+I0317 12:21:11.670964 30854 worker.cpp:68] Worker got request: [111:cmd=418wisdom;x=69767]
+I0317 12:21:12.866420 30854 worker.cpp:90] Worker completed work in 1195.39 ms (111)
+I0317 12:21:12.866714 30854 worker.cpp:68] Worker got request: [112:cmd=418wisdom;x=4523]
+I0317 12:21:14.062479 30854 worker.cpp:90] Worker completed work in 1195.7 ms (112)
+I0317 12:21:14.062614 30854 worker.cpp:68] Worker got request: [113:cmd=418wisdom;x=57387]
+I0317 12:21:15.258445 30854 worker.cpp:90] Worker completed work in 1195.77 ms (113)
+I0317 12:21:15.258591 30854 worker.cpp:68] Worker got request: [114:cmd=418wisdom;x=91002]
+I0317 12:21:16.453903 30854 worker.cpp:90] Worker completed work in 1195.25 ms (114)
+I0317 12:21:16.454048 30854 worker.cpp:68] Worker got request: [115:cmd=418wisdom;x=53420]
+I0317 12:21:17.649876 30854 worker.cpp:90] Worker completed work in 1195.76 ms (115)
+I0317 12:21:17.650005 30854 worker.cpp:68] Worker got request: [116:cmd=418wisdom;x=68059]
+I0317 12:21:18.845129 30854 worker.cpp:90] Worker completed work in 1195.06 ms (116)
+I0317 12:21:18.845273 30854 worker.cpp:68] Worker got request: [117:cmd=418wisdom;x=2669]
+I0317 12:21:20.041113 30854 worker.cpp:90] Worker completed work in 1195.78 ms (117)
+I0317 12:21:20.041257 30854 worker.cpp:68] Worker got request: [118:cmd=418wisdom;x=63500]
+I0317 12:21:21.236537 30854 worker.cpp:90] Worker completed work in 1195.22 ms (118)
+I0317 12:21:21.236661 30854 worker.cpp:68] Worker got request: [119:cmd=418wisdom;x=60634]
+I0317 12:21:22.432245 30854 worker.cpp:90] Worker completed work in 1195.52 ms (119)
+I0317 12:21:22.432385 30854 worker.cpp:68] Worker got request: [120:cmd=418wisdom;x=57595]
+I0317 12:21:23.628628 30854 worker.cpp:90] Worker completed work in 1196.18 ms (120)
+I0317 12:21:23.628764 30854 worker.cpp:68] Worker got request: [121:cmd=418wisdom;x=39121]
+I0317 12:21:24.824959 30854 worker.cpp:90] Worker completed work in 1196.13 ms (121)
+I0317 12:21:24.825083 30854 worker.cpp:68] Worker got request: [122:cmd=418wisdom;x=37014]
+I0317 12:21:26.020476 30854 worker.cpp:90] Worker completed work in 1195.33 ms (122)
+I0317 12:21:26.020622 30854 worker.cpp:68] Worker got request: [123:cmd=418wisdom;x=98052]
+I0317 12:21:27.216542 30854 worker.cpp:90] Worker completed work in 1195.86 ms (123)
+I0317 12:21:27.216675 30854 worker.cpp:68] Worker got request: [124:cmd=418wisdom;x=3639]
+I0317 12:21:28.411890 30854 worker.cpp:90] Worker completed work in 1195.15 ms (124)
+I0317 12:21:28.412016 30854 worker.cpp:68] Worker got request: [125:cmd=418wisdom;x=2163]
+I0317 12:21:29.608299 30854 worker.cpp:90] Worker completed work in 1196.22 ms (125)
+I0317 12:21:29.608499 30854 worker.cpp:68] Worker got request: [126:cmd=418wisdom;x=96104]
+I0317 12:21:30.804388 30854 worker.cpp:90] Worker completed work in 1195.82 ms (126)
+I0317 12:21:30.804528 30854 worker.cpp:68] Worker got request: [127:cmd=418wisdom;x=18497]
+I0317 12:21:31.999887 30854 worker.cpp:90] Worker completed work in 1195.29 ms (127)
+I0317 12:21:32.000030 30854 worker.cpp:68] Worker got request: [128:cmd=418wisdom;x=12389]
+I0317 12:21:33.195962 30854 worker.cpp:90] Worker completed work in 1195.87 ms (128)
+I0317 12:21:33.196099 30854 worker.cpp:68] Worker got request: [129:cmd=418wisdom;x=21057]
+I0317 12:21:34.391754 30854 worker.cpp:90] Worker completed work in 1195.59 ms (129)
+I0317 12:21:34.391896 30854 worker.cpp:68] Worker got request: [130:cmd=418wisdom;x=80075]
+I0317 12:21:35.588088 30854 worker.cpp:90] Worker completed work in 1196.13 ms (130)
+I0317 12:21:35.588220 30854 worker.cpp:68] Worker got request: [131:cmd=418wisdom;x=93697]
+I0317 12:21:36.783686 30854 worker.cpp:90] Worker completed work in 1195.4 ms (131)
+I0317 12:21:36.783820 30854 worker.cpp:68] Worker got request: [132:cmd=tellmenow;x=205]
+I0317 12:21:36.783831 30854 worker.cpp:90] Worker completed work in 0.00371718 ms (132)
+I0317 12:21:36.783892 30854 worker.cpp:68] Worker got request: [133:cmd=tellmenow;x=3830]
+I0317 12:21:36.783901 30854 worker.cpp:90] Worker completed work in 0.00204374 ms (133)
+I0317 12:21:36.783951 30854 worker.cpp:68] Worker got request: [134:cmd=tellmenow;x=913]
+I0317 12:21:36.783960 30854 worker.cpp:90] Worker completed work in 0.00214124 ms (134)
+I0317 12:21:36.784085 30854 worker.cpp:68] Worker got request: [135:cmd=tellmenow;x=2339]
+I0317 12:21:36.784190 30854 worker.cpp:90] Worker completed work in 0.00364876 ms (135)
+I0317 12:21:36.784266 30854 worker.cpp:68] Worker got request: [136:cmd=tellmenow;x=1987]
+I0317 12:21:36.784276 30854 worker.cpp:90] Worker completed work in 0.00209251 ms (136)
+I0317 12:21:36.784328 30854 worker.cpp:68] Worker got request: [137:cmd=tellmenow;x=5822]
+I0317 12:21:36.784338 30854 worker.cpp:90] Worker completed work in 0.0022125 ms (137)
+I0317 12:21:36.784375 30854 worker.cpp:68] Worker got request: [138:cmd=tellmenow;x=3152]
+I0317 12:21:36.784384 30854 worker.cpp:90] Worker completed work in 0.00218811 ms (138)
+I0317 12:21:36.784417 30854 worker.cpp:68] Worker got request: [139:cmd=tellmenow;x=1623]
+I0317 12:21:36.784427 30854 worker.cpp:90] Worker completed work in 0.00200531 ms (139)
+I0317 12:21:36.784449 30854 worker.cpp:68] Worker got request: [140:cmd=tellmenow;x=4533]
+I0317 12:21:36.784456 30854 worker.cpp:90] Worker completed work in 0.00176344 ms (140)
+I0317 12:21:36.784477 30854 worker.cpp:68] Worker got request: [141:cmd=tellmenow;x=354]
+I0317 12:21:36.784487 30854 worker.cpp:90] Worker completed work in 0.00199499 ms (141)
+I0317 12:21:36.784523 30854 worker.cpp:68] Worker got request: [142:cmd=tellmenow;x=908]
+I0317 12:21:36.784531 30854 worker.cpp:90] Worker completed work in 0.00201094 ms (142)
+I0317 12:21:36.784554 30854 worker.cpp:68] Worker got request: [143:cmd=tellmenow;x=8895]
+I0317 12:21:36.784560 30854 worker.cpp:90] Worker completed work in 0.00175313 ms (143)
+I0317 12:21:36.784579 30854 worker.cpp:68] Worker got request: [144:cmd=418wisdom;x=19935]
+I0317 12:21:37.980305 30854 worker.cpp:90] Worker completed work in 1195.66 ms (144)
+I0317 12:21:37.980506 30854 worker.cpp:68] Worker got request: [145:cmd=418wisdom;x=35855]
+I0317 12:21:39.176679 30854 worker.cpp:90] Worker completed work in 1196.11 ms (145)
+I0317 12:21:39.176827 30854 worker.cpp:68] Worker got request: [146:cmd=418wisdom;x=73160]
+I0317 12:21:40.372344 30854 worker.cpp:90] Worker completed work in 1195.46 ms (146)
+I0317 12:21:40.372468 30854 worker.cpp:68] Worker got request: [147:cmd=418wisdom;x=83833]
+I0317 12:21:41.568531 30854 worker.cpp:90] Worker completed work in 1196 ms (147)
+I0317 12:21:41.568655 30854 worker.cpp:68] Worker got request: [148:cmd=418wisdom;x=91849]
+I0317 12:21:42.763794 30854 worker.cpp:90] Worker completed work in 1195.08 ms (148)
+I0317 12:21:42.763921 30854 worker.cpp:68] Worker got request: [149:cmd=418wisdom;x=16942]
+I0317 12:21:43.959112 30854 worker.cpp:90] Worker completed work in 1195.13 ms (149)
+I0317 12:21:43.959463 30854 worker.cpp:68] Worker got request: [150:cmd=418wisdom;x=67264]
+I0317 12:21:45.154559 30854 worker.cpp:90] Worker completed work in 1195.03 ms (150)
+I0317 12:21:45.154693 30854 worker.cpp:68] Worker got request: [151:cmd=418wisdom;x=96655]
+I0317 12:21:46.350236 30854 worker.cpp:90] Worker completed work in 1195.48 ms (151)
+I0317 12:21:46.350365 30854 worker.cpp:68] Worker got request: [152:cmd=418wisdom;x=5805]
+I0317 12:21:47.546159 30854 worker.cpp:90] Worker completed work in 1195.73 ms (152)
+I0317 12:21:47.546295 30854 worker.cpp:68] Worker got request: [153:cmd=418wisdom;x=67620]
+I0317 12:21:48.741789 30854 worker.cpp:90] Worker completed work in 1195.43 ms (153)
+I0317 12:21:48.741932 30854 worker.cpp:68] Worker got request: [154:cmd=418wisdom;x=84543]
+I0317 12:21:49.937754 30854 worker.cpp:90] Worker completed work in 1195.76 ms (154)
+I0317 12:21:49.937891 30854 worker.cpp:68] Worker got request: [155:cmd=418wisdom;x=34231]
+I0317 12:21:51.134392 30854 worker.cpp:90] Worker completed work in 1196.44 ms (155)
+I0317 12:21:51.134532 30854 worker.cpp:68] Worker got request: [156:cmd=418wisdom;x=25068]
+I0317 12:21:52.330705 30854 worker.cpp:90] Worker completed work in 1196.11 ms (156)
+I0317 12:21:52.330848 30854 worker.cpp:68] Worker got request: [157:cmd=418wisdom;x=59679]
+I0317 12:21:53.526418 30854 worker.cpp:90] Worker completed work in 1195.5 ms (157)
+I0317 12:21:53.526556 30854 worker.cpp:68] Worker got request: [158:cmd=418wisdom;x=44231]
+I0317 12:21:54.722558 30854 worker.cpp:90] Worker completed work in 1195.94 ms (158)
+I0317 12:21:54.722686 30854 worker.cpp:68] Worker got request: [159:cmd=418wisdom;x=17482]
+I0317 12:21:55.918797 30854 worker.cpp:90] Worker completed work in 1196.05 ms (159)
+I0317 12:21:55.918927 30854 worker.cpp:68] Worker got request: [160:cmd=418wisdom;x=47163]
+I0317 12:21:57.113785 30854 worker.cpp:90] Worker completed work in 1194.79 ms (160)
+I0317 12:21:57.113925 30854 worker.cpp:68] Worker got request: [161:cmd=418wisdom;x=40990]
+I0317 12:21:58.309664 30854 worker.cpp:90] Worker completed work in 1195.67 ms (161)
+I0317 12:21:58.309792 30854 worker.cpp:68] Worker got request: [162:cmd=418wisdom;x=56911]
+I0317 12:21:59.506201 30854 worker.cpp:90] Worker completed work in 1196.34 ms (162)
+I0317 12:21:59.506320 30854 worker.cpp:68] Worker got request: [163:cmd=418wisdom;x=50860]
+I0317 12:22:00.701889 30854 worker.cpp:90] Worker completed work in 1195.5 ms (163)
+I0317 12:22:00.702008 30854 worker.cpp:68] Worker got request: [164:cmd=418wisdom;x=31144]
+I0317 12:22:01.897145 30854 worker.cpp:90] Worker completed work in 1195.07 ms (164)
+I0317 12:22:01.897275 30854 worker.cpp:68] Worker got request: [165:cmd=418wisdom;x=35715]
+I0317 12:22:03.092248 30854 worker.cpp:90] Worker completed work in 1194.91 ms (165)
+I0317 12:22:03.092375 30854 worker.cpp:68] Worker got request: [166:cmd=418wisdom;x=83766]
+I0317 12:22:04.288040 30854 worker.cpp:90] Worker completed work in 1195.6 ms (166)
+I0317 12:22:04.288182 30854 worker.cpp:68] Worker got request: [167:cmd=418wisdom;x=25093]
+I0317 12:22:05.484084 30854 worker.cpp:90] Worker completed work in 1195.84 ms (167)
+I0317 12:22:05.484213 30854 worker.cpp:68] Worker got request: [168:cmd=tellmenow;x=5045]
+I0317 12:22:05.484225 30854 worker.cpp:90] Worker completed work in 0.00391032 ms (168)
+I0317 12:22:05.484288 30854 worker.cpp:68] Worker got request: [169:cmd=tellmenow;x=111]
+I0317 12:22:05.484297 30854 worker.cpp:90] Worker completed work in 0.00195375 ms (169)
+I0317 12:22:05.484345 30854 worker.cpp:68] Worker got request: [170:cmd=tellmenow;x=6674]
+I0317 12:22:05.484355 30854 worker.cpp:90] Worker completed work in 0.00207189 ms (170)
+I0317 12:22:05.484493 30854 worker.cpp:68] Worker got request: [171:cmd=tellmenow;x=3023]
+I0317 12:22:05.484501 30854 worker.cpp:90] Worker completed work in 0.00178219 ms (171)
+I0317 12:22:05.484558 30854 worker.cpp:68] Worker got request: [172:cmd=tellmenow;x=411]
+I0317 12:22:05.484565 30854 worker.cpp:90] Worker completed work in 0.0014297 ms (172)
+I0317 12:22:05.484609 30854 worker.cpp:68] Worker got request: [173:cmd=tellmenow;x=2528]
+I0317 12:22:05.484704 30854 worker.cpp:90] Worker completed work in 0.00261188 ms (173)
+I0317 12:22:05.484736 30854 worker.cpp:68] Worker got request: [174:cmd=tellmenow;x=2161]
+I0317 12:22:05.484741 30854 worker.cpp:90] Worker completed work in 0.00122063 ms (174)
+I0317 12:22:05.484760 30854 worker.cpp:68] Worker got request: [175:cmd=tellmenow;x=8579]
+I0317 12:22:05.484763 30854 worker.cpp:90] Worker completed work in 0.00101344 ms (175)
+I0317 12:22:05.484776 30854 worker.cpp:68] Worker got request: [176:cmd=tellmenow;x=3170]
+I0317 12:22:05.484779 30854 worker.cpp:90] Worker completed work in 0.000837186 ms (176)
+I0317 12:22:05.484789 30854 worker.cpp:68] Worker got request: [177:cmd=tellmenow;x=2591]
+I0317 12:22:05.484792 30854 worker.cpp:90] Worker completed work in 0.000808126 ms (177)
+I0317 12:22:05.484805 30854 worker.cpp:68] Worker got request: [178:cmd=tellmenow;x=3233]
+I0317 12:22:05.484810 30854 worker.cpp:90] Worker completed work in 0.00104345 ms (178)
+I0317 12:22:05.484820 30854 worker.cpp:68] Worker got request: [179:cmd=tellmenow;x=8523]
+I0317 12:22:05.484824 30854 worker.cpp:90] Worker completed work in 0.000887812 ms (179)
+I0317 12:22:05.484838 30854 worker.cpp:68] Worker got request: [180:cmd=418wisdom;x=63375]
+I0317 12:22:06.680608 30854 worker.cpp:90] Worker completed work in 1195.71 ms (180)
+I0317 12:22:06.680727 30854 worker.cpp:68] Worker got request: [181:cmd=418wisdom;x=62108]
+I0317 12:22:07.876272 30854 worker.cpp:90] Worker completed work in 1195.48 ms (181)
+I0317 12:22:07.876402 30854 worker.cpp:68] Worker got request: [182:cmd=418wisdom;x=71562]
+I0317 12:22:09.072077 30854 worker.cpp:90] Worker completed work in 1195.61 ms (182)
+I0317 12:22:09.072182 30854 worker.cpp:68] Worker got request: [183:cmd=418wisdom;x=38802]
+I0317 12:22:10.267796 30854 worker.cpp:90] Worker completed work in 1195.55 ms (183)
+I0317 12:22:10.267928 30854 worker.cpp:68] Worker got request: [184:cmd=418wisdom;x=41442]
+I0317 12:22:11.464223 30854 worker.cpp:90] Worker completed work in 1196.23 ms (184)
+I0317 12:22:11.464361 30854 worker.cpp:68] Worker got request: [185:cmd=418wisdom;x=65083]
+I0317 12:22:12.660840 30854 worker.cpp:90] Worker completed work in 1196.42 ms (185)
+I0317 12:22:12.660966 30854 worker.cpp:68] Worker got request: [186:cmd=418wisdom;x=152]
+I0317 12:22:13.857487 30854 worker.cpp:90] Worker completed work in 1196.46 ms (186)
+I0317 12:22:13.857609 30854 worker.cpp:68] Worker got request: [187:cmd=418wisdom;x=19231]
+I0317 12:22:15.053401 30854 worker.cpp:90] Worker completed work in 1195.73 ms (187)
+I0317 12:22:15.053732 30854 worker.cpp:68] Worker got request: [188:cmd=418wisdom;x=33440]
+I0317 12:22:16.248347 30854 worker.cpp:90] Worker completed work in 1194.55 ms (188)
+I0317 12:22:16.248487 30854 worker.cpp:68] Worker got request: [189:cmd=418wisdom;x=23941]
+I0317 12:22:17.444540 30854 worker.cpp:90] Worker completed work in 1195.99 ms (189)
+I0317 12:22:17.444671 30854 worker.cpp:68] Worker got request: [190:cmd=418wisdom;x=63740]
+I0317 12:22:18.639562 30854 worker.cpp:90] Worker completed work in 1194.83 ms (190)
+I0317 12:22:18.639688 30854 worker.cpp:68] Worker got request: [191:cmd=418wisdom;x=37865]
+I0317 12:22:19.835847 30854 worker.cpp:90] Worker completed work in 1196.1 ms (191)
+I0317 12:22:19.835975 30854 worker.cpp:68] Worker got request: [192:cmd=418wisdom;x=87543]
+I0317 12:22:21.031173 30854 worker.cpp:90] Worker completed work in 1195.14 ms (192)
+I0317 12:22:21.031294 30854 worker.cpp:68] Worker got request: [193:cmd=418wisdom;x=56815]
+I0317 12:22:22.226574 30854 worker.cpp:90] Worker completed work in 1195.22 ms (193)
+I0317 12:22:22.226686 30854 worker.cpp:68] Worker got request: [194:cmd=418wisdom;x=41441]
+I0317 12:22:23.422339 30854 worker.cpp:90] Worker completed work in 1195.59 ms (194)
+I0317 12:22:23.422473 30854 worker.cpp:68] Worker got request: [195:cmd=418wisdom;x=40227]
+I0317 12:22:24.618824 30854 worker.cpp:90] Worker completed work in 1196.29 ms (195)
+I0317 12:22:24.618952 30854 worker.cpp:68] Worker got request: [196:cmd=418wisdom;x=70183]
+I0317 12:22:25.815109 30854 worker.cpp:90] Worker completed work in 1196.1 ms (196)
+I0317 12:22:25.815237 30854 worker.cpp:68] Worker got request: [197:cmd=418wisdom;x=41823]
+I0317 12:22:27.011010 30854 worker.cpp:90] Worker completed work in 1195.71 ms (197)
+I0317 12:22:27.011124 30854 worker.cpp:68] Worker got request: [198:cmd=418wisdom;x=66220]
+I0317 12:22:28.207026 30854 worker.cpp:90] Worker completed work in 1195.84 ms (198)
+I0317 12:22:28.207151 30854 worker.cpp:68] Worker got request: [199:cmd=418wisdom;x=4678]
+I0317 12:22:29.402593 30854 worker.cpp:90] Worker completed work in 1195.38 ms (199)
+I0317 12:22:29.402709 30854 worker.cpp:68] Worker got request: [200:cmd=418wisdom;x=44535]
+I0317 12:22:30.598150 30854 worker.cpp:90] Worker completed work in 1195.38 ms (200)
+I0317 12:22:30.598284 30854 worker.cpp:68] Worker got request: [201:cmd=418wisdom;x=25922]
+I0317 12:22:31.794090 30854 worker.cpp:90] Worker completed work in 1195.75 ms (201)
+I0317 12:22:31.794217 30854 worker.cpp:68] Worker got request: [202:cmd=418wisdom;x=15768]
+I0317 12:22:32.990689 30854 worker.cpp:90] Worker completed work in 1196.41 ms (202)
+I0317 12:22:32.990818 30854 worker.cpp:68] Worker got request: [203:cmd=418wisdom;x=52757]
+I0317 12:22:34.186947 30854 worker.cpp:90] Worker completed work in 1196.07 ms (203)
+I0317 12:22:34.187072 30854 worker.cpp:68] Worker got request: [204:cmd=tellmenow;x=4385]
+I0317 12:22:34.187080 30854 worker.cpp:90] Worker completed work in 0.00345094 ms (204)
+I0317 12:22:34.187120 30854 worker.cpp:68] Worker got request: [205:cmd=tellmenow;x=5053]
+I0317 12:22:34.187125 30854 worker.cpp:90] Worker completed work in 0.00121312 ms (205)
+I0317 12:22:34.187163 30854 worker.cpp:68] Worker got request: [206:cmd=tellmenow;x=6800]
+I0317 12:22:34.187168 30854 worker.cpp:90] Worker completed work in 0.00111281 ms (206)
+I0317 12:22:34.187206 30854 worker.cpp:68] Worker got request: [207:cmd=tellmenow;x=7955]
+I0317 12:22:34.187211 30854 worker.cpp:90] Worker completed work in 0.00112594 ms (207)
+I0317 12:22:34.187249 30854 worker.cpp:68] Worker got request: [208:cmd=tellmenow;x=4451]
+I0317 12:22:34.187254 30854 worker.cpp:90] Worker completed work in 0.00100593 ms (208)
+I0317 12:22:34.187284 30854 worker.cpp:68] Worker got request: [209:cmd=tellmenow;x=2808]
+I0317 12:22:34.187289 30854 worker.cpp:90] Worker completed work in 0.00123843 ms (209)
+I0317 12:22:34.187300 30854 worker.cpp:68] Worker got request: [210:cmd=tellmenow;x=4202]
+I0317 12:22:34.187304 30854 worker.cpp:90] Worker completed work in 0.000849381 ms (210)
+I0317 12:22:34.187314 30854 worker.cpp:68] Worker got request: [211:cmd=tellmenow;x=7282]
+I0317 12:22:34.187412 30854 worker.cpp:90] Worker completed work in 0.00207844 ms (211)
+I0317 12:22:34.187444 30854 worker.cpp:68] Worker got request: [212:cmd=tellmenow;x=7876]
+I0317 12:22:34.187449 30854 worker.cpp:90] Worker completed work in 0.00102469 ms (212)
+I0317 12:22:34.187461 30854 worker.cpp:68] Worker got request: [213:cmd=tellmenow;x=7312]
+I0317 12:22:34.187464 30854 worker.cpp:90] Worker completed work in 0.00074906 ms (213)
+I0317 12:22:34.187474 30854 worker.cpp:68] Worker got request: [214:cmd=tellmenow;x=1692]
+I0317 12:22:34.187477 30854 worker.cpp:90] Worker completed work in 0.000796877 ms (214)
+I0317 12:22:34.187492 30854 worker.cpp:68] Worker got request: [215:cmd=tellmenow;x=8995]
+I0317 12:22:34.187496 30854 worker.cpp:90] Worker completed work in 0.000849381 ms (215)
+I0317 12:22:34.187506 30854 worker.cpp:68] Worker got request: [216:cmd=418wisdom;x=63309]
+I0317 12:22:35.383430 30854 worker.cpp:90] Worker completed work in 1195.87 ms (216)
+I0317 12:22:35.383558 30854 worker.cpp:68] Worker got request: [217:cmd=418wisdom;x=8346]
+I0317 12:22:36.579614 30854 worker.cpp:90] Worker completed work in 1196 ms (217)
+I0317 12:22:36.579747 30854 worker.cpp:68] Worker got request: [218:cmd=418wisdom;x=72556]
+I0317 12:22:37.775368 30854 worker.cpp:90] Worker completed work in 1195.56 ms (218)
+I0317 12:22:37.775486 30854 worker.cpp:68] Worker got request: [219:cmd=418wisdom;x=98683]
+I0317 12:22:38.971401 30854 worker.cpp:90] Worker completed work in 1195.86 ms (219)
+I0317 12:22:38.971524 30854 worker.cpp:68] Worker got request: [220:cmd=418wisdom;x=40182]
+I0317 12:22:40.167907 30854 worker.cpp:90] Worker completed work in 1196.32 ms (220)
+I0317 12:22:40.168031 30854 worker.cpp:68] Worker got request: [221:cmd=418wisdom;x=67852]
+I0317 12:22:41.364156 30854 worker.cpp:90] Worker completed work in 1196.07 ms (221)
+I0317 12:22:41.364272 30854 worker.cpp:68] Worker got request: [222:cmd=418wisdom;x=31618]
+I0317 12:22:42.560478 30854 worker.cpp:90] Worker completed work in 1196.15 ms (222)
+I0317 12:22:42.560601 30854 worker.cpp:68] Worker got request: [223:cmd=418wisdom;x=21352]
+I0317 12:22:43.755960 30854 worker.cpp:90] Worker completed work in 1195.3 ms (223)
+I0317 12:22:43.756083 30854 worker.cpp:68] Worker got request: [224:cmd=418wisdom;x=71733]
+I0317 12:22:44.952687 30854 worker.cpp:90] Worker completed work in 1196.54 ms (224)
+I0317 12:22:44.952803 30854 worker.cpp:68] Worker got request: [225:cmd=418wisdom;x=235]
+I0317 12:22:46.148558 30854 worker.cpp:90] Worker completed work in 1195.7 ms (225)
+I0317 12:22:46.148885 30854 worker.cpp:68] Worker got request: [226:cmd=418wisdom;x=82273]
+I0317 12:22:47.344835 30854 worker.cpp:90] Worker completed work in 1195.89 ms (226)
+I0317 12:22:47.344957 30854 worker.cpp:68] Worker got request: [227:cmd=418wisdom;x=52835]
+I0317 12:22:48.541165 30854 worker.cpp:90] Worker completed work in 1196.15 ms (227)
+I0317 12:22:48.541286 30854 worker.cpp:68] Worker got request: [228:cmd=418wisdom;x=9778]
+I0317 12:22:49.737095 30854 worker.cpp:90] Worker completed work in 1195.75 ms (228)
+I0317 12:22:49.737221 30854 worker.cpp:68] Worker got request: [229:cmd=418wisdom;x=11890]
+I0317 12:22:50.932531 30854 worker.cpp:90] Worker completed work in 1195.25 ms (229)
+I0317 12:22:50.932651 30854 worker.cpp:68] Worker got request: [230:cmd=418wisdom;x=64927]
+I0317 12:22:52.129025 30854 worker.cpp:90] Worker completed work in 1196.31 ms (230)
+I0317 12:22:52.129153 30854 worker.cpp:68] Worker got request: [231:cmd=418wisdom;x=87366]
+I0317 12:22:53.324925 30854 worker.cpp:90] Worker completed work in 1195.72 ms (231)
+I0317 12:22:53.325038 30854 worker.cpp:68] Worker got request: [232:cmd=418wisdom;x=27998]
+I0317 12:22:54.521178 30854 worker.cpp:90] Worker completed work in 1196.08 ms (232)
+I0317 12:22:54.521307 30854 worker.cpp:68] Worker got request: [233:cmd=418wisdom;x=97852]
+I0317 12:22:55.717507 30854 worker.cpp:90] Worker completed work in 1196.14 ms (233)
+I0317 12:22:55.717641 30854 worker.cpp:68] Worker got request: [234:cmd=418wisdom;x=10018]
+I0317 12:22:56.913254 30854 worker.cpp:90] Worker completed work in 1195.55 ms (234)
+I0317 12:22:56.913370 30854 worker.cpp:68] Worker got request: [235:cmd=418wisdom;x=85394]
+I0317 12:22:58.109061 30854 worker.cpp:90] Worker completed work in 1195.63 ms (235)
+I0317 12:22:58.109179 30854 worker.cpp:68] Worker got request: [236:cmd=418wisdom;x=39670]
+I0317 12:22:59.305320 30854 worker.cpp:90] Worker completed work in 1196.08 ms (236)
+I0317 12:22:59.305450 30854 worker.cpp:68] Worker got request: [237:cmd=418wisdom;x=8134]
+I0317 12:23:00.501706 30854 worker.cpp:90] Worker completed work in 1196.2 ms (237)
+I0317 12:23:00.501818 30854 worker.cpp:68] Worker got request: [238:cmd=418wisdom;x=27471]
+I0317 12:23:01.697693 30854 worker.cpp:90] Worker completed work in 1195.81 ms (238)
+I0317 12:23:01.697818 30854 worker.cpp:68] Worker got request: [239:cmd=418wisdom;x=45298]
+I0317 12:23:02.893178 30854 worker.cpp:90] Worker completed work in 1195.3 ms (239)
+I0317 12:23:02.893308 30854 worker.cpp:68] Worker got request: [240:cmd=tellmenow;x=7131]
+I0317 12:23:02.893316 30854 worker.cpp:90] Worker completed work in 0.00290906 ms (240)
+I0317 12:23:02.893357 30854 worker.cpp:68] Worker got request: [241:cmd=tellmenow;x=7753]
+I0317 12:23:02.893362 30854 worker.cpp:90] Worker completed work in 0.00131907 ms (241)
+I0317 12:23:02.893401 30854 worker.cpp:68] Worker got request: [242:cmd=tellmenow;x=1200]
+I0317 12:23:02.893411 30854 worker.cpp:90] Worker completed work in 0.00657656 ms (242)
+I0317 12:23:02.893452 30854 worker.cpp:68] Worker got request: [243:cmd=tellmenow;x=4688]
+I0317 12:23:02.893458 30854 worker.cpp:90] Worker completed work in 0.00131437 ms (243)
+I0317 12:23:02.893497 30854 worker.cpp:68] Worker got request: [244:cmd=tellmenow;x=5857]
+I0317 12:23:02.893502 30854 worker.cpp:90] Worker completed work in 0.00105092 ms (244)
+I0317 12:23:02.893532 30854 worker.cpp:68] Worker got request: [245:cmd=tellmenow;x=3123]
+I0317 12:23:02.893537 30854 worker.cpp:90] Worker completed work in 0.0010275 ms (245)
+I0317 12:23:02.893549 30854 worker.cpp:68] Worker got request: [246:cmd=tellmenow;x=7847]
+I0317 12:23:02.893553 30854 worker.cpp:90] Worker completed work in 0.000743443 ms (246)
+I0317 12:23:02.893568 30854 worker.cpp:68] Worker got request: [247:cmd=tellmenow;x=2505]
+I0317 12:23:02.893573 30854 worker.cpp:90] Worker completed work in 0.000855944 ms (247)
+I0317 12:23:02.893582 30854 worker.cpp:68] Worker got request: [248:cmd=tellmenow;x=167]
+I0317 12:23:02.893585 30854 worker.cpp:90] Worker completed work in 0.000727508 ms (248)
+I0317 12:23:02.893595 30854 worker.cpp:68] Worker got request: [249:cmd=tellmenow;x=366]
+I0317 12:23:02.893685 30854 worker.cpp:90] Worker completed work in 0.0020953 ms (249)
+I0317 12:23:02.893717 30854 worker.cpp:68] Worker got request: [250:cmd=tellmenow;x=6129]
+I0317 12:23:02.893721 30854 worker.cpp:90] Worker completed work in 0.00104062 ms (250)
+I0317 12:23:02.893733 30854 worker.cpp:68] Worker got request: [251:cmd=tellmenow;x=5025]
+I0317 12:23:02.893736 30854 worker.cpp:90] Worker completed work in 0.000795946 ms (251)
+I0317 12:23:02.893746 30854 worker.cpp:68] Worker got request: [252:cmd=418wisdom;x=94651]
+I0317 12:23:04.088677 30854 worker.cpp:90] Worker completed work in 1194.87 ms (252)
+I0317 12:23:04.088812 30854 worker.cpp:68] Worker got request: [253:cmd=418wisdom;x=93844]
+I0317 12:23:05.284293 30854 worker.cpp:90] Worker completed work in 1195.42 ms (253)
+I0317 12:23:05.284411 30854 worker.cpp:68] Worker got request: [254:cmd=418wisdom;x=90986]
+I0317 12:23:06.480476 30854 worker.cpp:90] Worker completed work in 1196 ms (254)
+I0317 12:23:06.480599 30854 worker.cpp:68] Worker got request: [255:cmd=418wisdom;x=4200]
+I0317 12:23:07.676452 30854 worker.cpp:90] Worker completed work in 1195.79 ms (255)
+I0317 12:23:07.676584 30854 worker.cpp:68] Worker got request: [256:cmd=418wisdom;x=74914]
+I0317 12:23:08.872455 30854 worker.cpp:90] Worker completed work in 1195.81 ms (256)
+I0317 12:23:08.872582 30854 worker.cpp:68] Worker got request: [257:cmd=418wisdom;x=70133]
+I0317 12:23:10.068557 30854 worker.cpp:90] Worker completed work in 1195.91 ms (257)
+I0317 12:23:10.068671 30854 worker.cpp:68] Worker got request: [258:cmd=418wisdom;x=65536]
+I0317 12:23:11.263959 30854 worker.cpp:90] Worker completed work in 1195.23 ms (258)
+I0317 12:23:11.264075 30854 worker.cpp:68] Worker got request: [259:cmd=418wisdom;x=71236]
+I0317 12:23:12.459960 30854 worker.cpp:90] Worker completed work in 1195.82 ms (259)
+I0317 12:23:12.460085 30854 worker.cpp:68] Worker got request: [260:cmd=418wisdom;x=90271]
+I0317 12:23:13.656731 30854 worker.cpp:90] Worker completed work in 1196.58 ms (260)
+I0317 12:23:13.656859 30854 worker.cpp:68] Worker got request: [261:cmd=418wisdom;x=64014]
+I0317 12:23:14.852962 30854 worker.cpp:90] Worker completed work in 1196.04 ms (261)
+I0317 12:23:14.853091 30854 worker.cpp:68] Worker got request: [262:cmd=418wisdom;x=37245]
+I0317 12:23:16.049195 30854 worker.cpp:90] Worker completed work in 1196.04 ms (262)
+I0317 12:23:16.049329 30854 worker.cpp:68] Worker got request: [263:cmd=418wisdom;x=53793]
+I0317 12:23:17.245074 30854 worker.cpp:90] Worker completed work in 1195.68 ms (263)
+I0317 12:23:17.245385 30854 worker.cpp:68] Worker got request: [264:cmd=418wisdom;x=20784]
+I0317 12:23:18.440318 30854 worker.cpp:90] Worker completed work in 1194.87 ms (264)
+I0317 12:23:18.440454 30854 worker.cpp:68] Worker got request: [265:cmd=418wisdom;x=58713]
+I0317 12:23:19.636211 30854 worker.cpp:90] Worker completed work in 1195.69 ms (265)
+I0317 12:23:19.636338 30854 worker.cpp:68] Worker got request: [266:cmd=418wisdom;x=889]
+I0317 12:23:20.832082 30854 worker.cpp:90] Worker completed work in 1195.68 ms (266)
+I0317 12:23:20.832218 30854 worker.cpp:68] Worker got request: [267:cmd=418wisdom;x=15102]
+I0317 12:23:22.027894 30854 worker.cpp:90] Worker completed work in 1195.61 ms (267)
+I0317 12:23:22.028028 30854 worker.cpp:68] Worker got request: [268:cmd=418wisdom;x=33341]
+I0317 12:23:23.223460 30854 worker.cpp:90] Worker completed work in 1195.37 ms (268)
+I0317 12:23:23.223573 30854 worker.cpp:68] Worker got request: [269:cmd=418wisdom;x=78963]
+I0317 12:23:24.419661 30854 worker.cpp:90] Worker completed work in 1196.03 ms (269)
+I0317 12:23:24.419783 30854 worker.cpp:68] Worker got request: [270:cmd=418wisdom;x=71850]
+I0317 12:23:25.614430 30854 worker.cpp:90] Worker completed work in 1194.58 ms (270)
+I0317 12:23:25.614555 30854 worker.cpp:68] Worker got request: [271:cmd=418wisdom;x=33825]
+I0317 12:23:26.811532 30854 worker.cpp:90] Worker completed work in 1196.91 ms (271)
+I0317 12:23:26.811651 30854 worker.cpp:68] Worker got request: [272:cmd=418wisdom;x=62054]
+I0317 12:23:28.007342 30854 worker.cpp:90] Worker completed work in 1195.63 ms (272)
+I0317 12:23:28.007472 30854 worker.cpp:68] Worker got request: [273:cmd=418wisdom;x=4120]
+I0317 12:23:29.203809 30854 worker.cpp:90] Worker completed work in 1196.27 ms (273)
+I0317 12:23:29.203948 30854 worker.cpp:68] Worker got request: [274:cmd=418wisdom;x=16386]
+I0317 12:23:30.399993 30854 worker.cpp:90] Worker completed work in 1195.98 ms (274)
+I0317 12:23:30.400118 30854 worker.cpp:68] Worker got request: [275:cmd=418wisdom;x=98192]
+I0317 12:23:31.595924 30854 worker.cpp:90] Worker completed work in 1195.74 ms (275)
+I0317 12:23:31.596036 30854 worker.cpp:68] Worker got request: [276:cmd=tellmenow;x=2606]
+I0317 12:23:31.596043 30854 worker.cpp:90] Worker completed work in 0.00263812 ms (276)
+I0317 12:23:31.596083 30854 worker.cpp:68] Worker got request: [277:cmd=tellmenow;x=3553]
+I0317 12:23:31.596088 30854 worker.cpp:90] Worker completed work in 0.00112219 ms (277)
+I0317 12:23:31.596127 30854 worker.cpp:68] Worker got request: [278:cmd=tellmenow;x=4936]
+I0317 12:23:31.596132 30854 worker.cpp:90] Worker completed work in 0.0010575 ms (278)
+I0317 12:23:31.596169 30854 worker.cpp:68] Worker got request: [279:cmd=tellmenow;x=2640]
+I0317 12:23:31.596174 30854 worker.cpp:90] Worker completed work in 0.00107531 ms (279)
+I0317 12:23:31.596213 30854 worker.cpp:68] Worker got request: [280:cmd=tellmenow;x=4303]
+I0317 12:23:31.596218 30854 worker.cpp:90] Worker completed work in 0.00107344 ms (280)
+I0317 12:23:31.596247 30854 worker.cpp:68] Worker got request: [281:cmd=tellmenow;x=2157]
+I0317 12:23:31.596252 30854 worker.cpp:90] Worker completed work in 0.000946879 ms (281)
+I0317 12:23:31.596264 30854 worker.cpp:68] Worker got request: [282:cmd=tellmenow;x=434]
+I0317 12:23:31.596267 30854 worker.cpp:90] Worker completed work in 0.000878426 ms (282)
+I0317 12:23:31.596277 30854 worker.cpp:68] Worker got request: [283:cmd=tellmenow;x=1616]
+I0317 12:23:31.596282 30854 worker.cpp:90] Worker completed work in 0.000774366 ms (283)
+I0317 12:23:31.596292 30854 worker.cpp:68] Worker got request: [284:cmd=tellmenow;x=4707]
+I0317 12:23:31.596294 30854 worker.cpp:90] Worker completed work in 0.000772503 ms (284)
+I0317 12:23:31.596303 30854 worker.cpp:68] Worker got request: [285:cmd=tellmenow;x=637]
+I0317 12:23:31.596307 30854 worker.cpp:90] Worker completed work in 0.000744374 ms (285)
+I0317 12:23:31.596317 30854 worker.cpp:68] Worker got request: [286:cmd=tellmenow;x=3628]
+I0317 12:23:31.596320 30854 worker.cpp:90] Worker completed work in 0.000902815 ms (286)
+I0317 12:23:31.596329 30854 worker.cpp:68] Worker got request: [287:cmd=tellmenow;x=2957]
+I0317 12:23:31.596395 30854 worker.cpp:90] Worker completed work in 0.0019725 ms (287)
+I0317 12:23:31.596439 30854 worker.cpp:68] Worker got request: [288:cmd=418wisdom;x=41472]
+I0317 12:23:32.792598 30854 worker.cpp:90] Worker completed work in 1196.09 ms (288)
+I0317 12:23:32.792732 30854 worker.cpp:68] Worker got request: [289:cmd=418wisdom;x=9940]
+I0317 12:23:33.987529 30854 worker.cpp:90] Worker completed work in 1194.73 ms (289)
+I0317 12:23:33.987658 30854 worker.cpp:68] Worker got request: [290:cmd=418wisdom;x=90866]
+I0317 12:23:35.182760 30854 worker.cpp:90] Worker completed work in 1195.04 ms (290)
+I0317 12:23:35.182888 30854 worker.cpp:68] Worker got request: [291:cmd=418wisdom;x=47400]
+I0317 12:23:36.379216 30854 worker.cpp:90] Worker completed work in 1196.27 ms (291)
+I0317 12:23:36.379334 30854 worker.cpp:68] Worker got request: [292:cmd=418wisdom;x=84085]
+I0317 12:23:37.575085 30854 worker.cpp:90] Worker completed work in 1195.69 ms (292)
+I0317 12:23:37.575206 30854 worker.cpp:68] Worker got request: [293:cmd=418wisdom;x=97623]
+I0317 12:23:38.771011 30854 worker.cpp:90] Worker completed work in 1195.74 ms (293)
+I0317 12:23:38.771136 30854 worker.cpp:68] Worker got request: [294:cmd=418wisdom;x=34365]
+I0317 12:23:39.966711 30854 worker.cpp:90] Worker completed work in 1195.51 ms (294)
+I0317 12:23:39.966845 30854 worker.cpp:68] Worker got request: [295:cmd=418wisdom;x=47909]
+I0317 12:23:41.162966 30854 worker.cpp:90] Worker completed work in 1196.06 ms (295)
+I0317 12:23:41.163084 30854 worker.cpp:68] Worker got request: [296:cmd=418wisdom;x=69960]
+I0317 12:23:42.358455 30854 worker.cpp:90] Worker completed work in 1195.31 ms (296)
+I0317 12:23:42.358568 30854 worker.cpp:68] Worker got request: [297:cmd=418wisdom;x=42653]
+I0317 12:23:43.554689 30854 worker.cpp:90] Worker completed work in 1196.06 ms (297)
+I0317 12:23:43.554824 30854 worker.cpp:68] Worker got request: [298:cmd=418wisdom;x=30190]
+I0317 12:23:44.750787 30854 worker.cpp:90] Worker completed work in 1195.9 ms (298)
+I0317 12:23:44.750910 30854 worker.cpp:68] Worker got request: [299:cmd=418wisdom;x=73475]
+I0317 12:23:45.947263 30854 worker.cpp:90] Worker completed work in 1196.29 ms (299)
+I0317 12:23:45.947371 30854 worker.cpp:68] Worker got request: [300:cmd=418wisdom;x=89440]
+I0317 12:23:47.143749 30854 worker.cpp:90] Worker completed work in 1196.31 ms (300)
+I0317 12:23:47.143885 30854 worker.cpp:68] Worker got request: [301:cmd=418wisdom;x=91969]
+I0317 12:23:48.339411 30854 worker.cpp:90] Worker completed work in 1195.46 ms (301)
+I0317 12:23:48.339767 30854 worker.cpp:68] Worker got request: [302:cmd=418wisdom;x=62674]
+I0317 12:23:49.536542 30854 worker.cpp:90] Worker completed work in 1196.71 ms (302)
+I0317 12:23:49.536672 30854 worker.cpp:68] Worker got request: [303:cmd=418wisdom;x=37557]
+I0317 12:23:50.732928 30854 worker.cpp:90] Worker completed work in 1196.19 ms (303)
+I0317 12:23:50.733043 30854 worker.cpp:68] Worker got request: [304:cmd=418wisdom;x=97457]
+I0317 12:23:51.928503 30854 worker.cpp:90] Worker completed work in 1195.4 ms (304)
+I0317 12:23:51.928617 30854 worker.cpp:68] Worker got request: [305:cmd=418wisdom;x=63888]
+I0317 12:23:53.123967 30854 worker.cpp:90] Worker completed work in 1195.29 ms (305)
+I0317 12:23:53.124095 30854 worker.cpp:68] Worker got request: [306:cmd=418wisdom;x=6583]
+I0317 12:23:54.320142 30854 worker.cpp:90] Worker completed work in 1195.98 ms (306)
+I0317 12:23:54.320269 30854 worker.cpp:68] Worker got request: [307:cmd=418wisdom;x=8467]
+I0317 12:23:55.516027 30854 worker.cpp:90] Worker completed work in 1195.7 ms (307)
+I0317 12:23:55.516145 30854 worker.cpp:68] Worker got request: [308:cmd=418wisdom;x=74987]
+I0317 12:23:56.711845 30854 worker.cpp:90] Worker completed work in 1195.64 ms (308)
+I0317 12:23:56.711962 30854 worker.cpp:68] Worker got request: [309:cmd=418wisdom;x=6115]
+I0317 12:23:57.908139 30854 worker.cpp:90] Worker completed work in 1196.11 ms (309)
+I0317 12:23:57.908269 30854 worker.cpp:68] Worker got request: [310:cmd=418wisdom;x=785]
+I0317 12:23:59.102946 30854 worker.cpp:90] Worker completed work in 1194.61 ms (310)
+I0317 12:23:59.103060 30854 worker.cpp:68] Worker got request: [311:cmd=418wisdom;x=39381]
+I0317 12:24:00.299257 30854 worker.cpp:90] Worker completed work in 1196.13 ms (311)
+I0317 12:24:00.299382 30854 worker.cpp:68] Worker got request: [312:cmd=tellmenow;x=4671]
+I0317 12:24:00.299391 30854 worker.cpp:90] Worker completed work in 0.00302625 ms (312)
+I0317 12:24:00.299434 30854 worker.cpp:68] Worker got request: [313:cmd=tellmenow;x=4037]
+I0317 12:24:00.299440 30854 worker.cpp:90] Worker completed work in 0.00154781 ms (313)
+I0317 12:24:00.299480 30854 worker.cpp:68] Worker got request: [314:cmd=tellmenow;x=4398]
+I0317 12:24:00.299485 30854 worker.cpp:90] Worker completed work in 0.00121501 ms (314)
+I0317 12:24:00.299523 30854 worker.cpp:68] Worker got request: [315:cmd=tellmenow;x=5264]
+I0317 12:24:00.299528 30854 worker.cpp:90] Worker completed work in 0.00111845 ms (315)
+I0317 12:24:00.299566 30854 worker.cpp:68] Worker got request: [316:cmd=tellmenow;x=6114]
+I0317 12:24:00.299571 30854 worker.cpp:90] Worker completed work in 0.00107812 ms (316)
+I0317 12:24:00.299600 30854 worker.cpp:68] Worker got request: [317:cmd=tellmenow;x=3807]
+I0317 12:24:00.299605 30854 worker.cpp:90] Worker completed work in 0.00109593 ms (317)
+I0317 12:24:00.299618 30854 worker.cpp:68] Worker got request: [318:cmd=tellmenow;x=3315]
+I0317 12:24:00.299620 30854 worker.cpp:90] Worker completed work in 0.00107531 ms (318)
+I0317 12:24:00.299630 30854 worker.cpp:68] Worker got request: [319:cmd=tellmenow;x=8897]
+I0317 12:24:00.299634 30854 worker.cpp:90] Worker completed work in 0.000727508 ms (319)
+I0317 12:24:00.299643 30854 worker.cpp:68] Worker got request: [320:cmd=tellmenow;x=2348]
+I0317 12:24:00.299646 30854 worker.cpp:90] Worker completed work in 0.000807195 ms (320)
+I0317 12:24:00.299657 30854 worker.cpp:68] Worker got request: [321:cmd=tellmenow;x=6994]
+I0317 12:24:00.299660 30854 worker.cpp:90] Worker completed work in 0.000807195 ms (321)
+I0317 12:24:00.299670 30854 worker.cpp:68] Worker got request: [322:cmd=tellmenow;x=3881]
+I0317 12:24:00.299674 30854 worker.cpp:90] Worker completed work in 0.000816566 ms (322)
+I0317 12:24:00.299684 30854 worker.cpp:68] Worker got request: [323:cmd=tellmenow;x=3227]
+I0317 12:24:00.299687 30854 worker.cpp:90] Worker completed work in 0.000729371 ms (323)
+I0317 12:24:00.299696 30854 worker.cpp:68] Worker got request: [324:cmd=418wisdom;x=6385]
+I0317 12:24:01.495959 30854 worker.cpp:90] Worker completed work in 1196.2 ms (324)
+I0317 12:24:01.496084 30854 worker.cpp:68] Worker got request: [325:cmd=418wisdom;x=86358]
+I0317 12:24:02.691534 30854 worker.cpp:90] Worker completed work in 1195.33 ms (325)
+I0317 12:24:02.691658 30854 worker.cpp:68] Worker got request: [326:cmd=418wisdom;x=70201]
+I0317 12:24:03.886801 30854 worker.cpp:90] Worker completed work in 1195.08 ms (326)
+I0317 12:24:03.886919 30854 worker.cpp:68] Worker got request: [327:cmd=418wisdom;x=90301]
+I0317 12:24:05.082748 30854 worker.cpp:90] Worker completed work in 1195.77 ms (327)
+I0317 12:24:05.082867 30854 worker.cpp:68] Worker got request: [328:cmd=418wisdom;x=45161]
+I0317 12:24:06.277990 30854 worker.cpp:90] Worker completed work in 1195.06 ms (328)
+I0317 12:24:06.278110 30854 worker.cpp:68] Worker got request: [329:cmd=418wisdom;x=67692]
+I0317 12:24:07.473299 30854 worker.cpp:90] Worker completed work in 1195.13 ms (329)
+I0317 12:24:07.473433 30854 worker.cpp:68] Worker got request: [330:cmd=418wisdom;x=11891]
+I0317 12:24:08.668474 30854 worker.cpp:90] Worker completed work in 1194.98 ms (330)
+I0317 12:24:08.668591 30854 worker.cpp:68] Worker got request: [331:cmd=418wisdom;x=39795]
+I0317 12:24:09.863900 30854 worker.cpp:90] Worker completed work in 1195.25 ms (331)
+I0317 12:24:09.864022 30854 worker.cpp:68] Worker got request: [332:cmd=418wisdom;x=20723]
+I0317 12:24:11.059285 30854 worker.cpp:90] Worker completed work in 1195.2 ms (332)
+I0317 12:24:11.059402 30854 worker.cpp:68] Worker got request: [333:cmd=418wisdom;x=4210]
+I0317 12:24:12.254835 30854 worker.cpp:90] Worker completed work in 1195.37 ms (333)
+I0317 12:24:12.254961 30854 worker.cpp:68] Worker got request: [334:cmd=418wisdom;x=94797]
+I0317 12:24:13.449481 30854 worker.cpp:90] Worker completed work in 1194.46 ms (334)
+I0317 12:24:13.449596 30854 worker.cpp:68] Worker got request: [335:cmd=418wisdom;x=21589]
+I0317 12:24:14.644207 30854 worker.cpp:90] Worker completed work in 1194.55 ms (335)
+I0317 12:24:14.644328 30854 worker.cpp:68] Worker got request: [336:cmd=418wisdom;x=14635]
+I0317 12:24:15.839017 30854 worker.cpp:90] Worker completed work in 1194.63 ms (336)
+I0317 12:24:15.839138 30854 worker.cpp:68] Worker got request: [337:cmd=418wisdom;x=19797]
+I0317 12:24:17.034355 30854 worker.cpp:90] Worker completed work in 1195.16 ms (337)
+I0317 12:24:17.034473 30854 worker.cpp:68] Worker got request: [338:cmd=418wisdom;x=37803]
+I0317 12:24:18.229321 30854 worker.cpp:90] Worker completed work in 1194.79 ms (338)
+I0317 12:24:18.229441 30854 worker.cpp:68] Worker got request: [339:cmd=418wisdom;x=54639]
+I0317 12:24:19.423861 30854 worker.cpp:90] Worker completed work in 1194.36 ms (339)
+I0317 12:24:19.424077 30854 worker.cpp:68] Worker got request: [340:cmd=418wisdom;x=15133]
+I0317 12:24:20.618892 30854 worker.cpp:90] Worker completed work in 1194.75 ms (340)
+I0317 12:24:20.619014 30854 worker.cpp:68] Worker got request: [341:cmd=418wisdom;x=98869]
+I0317 12:24:21.814113 30854 worker.cpp:90] Worker completed work in 1195.04 ms (341)
+I0317 12:24:21.814232 30854 worker.cpp:68] Worker got request: [342:cmd=418wisdom;x=98299]
+I0317 12:24:23.009121 30854 worker.cpp:90] Worker completed work in 1194.83 ms (342)
+I0317 12:24:23.009248 30854 worker.cpp:68] Worker got request: [343:cmd=418wisdom;x=14840]
+I0317 12:24:24.204918 30854 worker.cpp:90] Worker completed work in 1195.61 ms (343)
+F0317 12:24:24.204985 30854 main.cpp:125] Check failed: err >= 0 (-1 vs. 0) Error writing to master!

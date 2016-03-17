@@ -1,7 +1,7 @@
 #include <glog/logging.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <map>
+#include <unordered_map>
 
 #include "server/messages.h"
 #include "server/master.h"
@@ -25,8 +25,8 @@ static struct Master_state {
   Worker_handle my_worker;
   Client_handle waiting_client;
 
-  WorkQueue<Request_msg> *queue = new WorkQueue<Request_msg>();
-  std::map<int,Client_handle> tagMap;
+  WorkQueue<Request_msg> reqQueue;
+  std::unordered_map<int,Client_handle> tagMap;
 
 } mstate;
 
@@ -43,6 +43,7 @@ void master_node_init(int max_workers, int& tick_period) {
   mstate.num_pending_client_requests = 0;
 
   mstate.queue_size = 0;
+  mstate.reqQueue = WorkQueue<Request_msg>();
   // don't mark the server as ready until the server is ready to go.
   // This is actually when the first worker is up and running, not
   // when 'master_node_init' returnes
@@ -104,16 +105,16 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     return;
   }
 
-  mstate.tagMap.insert(std::pair<int,Client_handle>(mstate.num_pending_client_requests, client_handle));
+  mstate.tagMap.insert(std::pair<int,Client_handle>(mstate.next_tag, client_handle));
   int tag = mstate.next_tag++;
   Request_msg worker_req(tag, client_req);
-  mstate.queue->put_work(worker_req);
+  mstate.reqQueue.put_work(worker_req);
   mstate.queue_size++;
   mstate.num_pending_client_requests++;
   //printf("\n");
   while(mstate.queue_size > 0){
     //printf("%d\n", mstate.num_pending_client_requests);
-    send_request_to_worker(mstate.my_worker, mstate.queue->get_work());
+    send_request_to_worker(mstate.my_worker, mstate.reqQueue.get_work());
     mstate.queue_size--;
  }
 

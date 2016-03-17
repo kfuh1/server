@@ -1,0 +1,27 @@
+Log file created at: 2016/03/16 20:44:21
+Running on machine: ghc45.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0316 20:44:21.102465 14095 main.cpp:49] Booting worker. Hostname: ghc45.ghc.andrew.cmu.edu
+I0316 20:44:22.105319 14095 main.cpp:62] Connected to master ghc45.ghc.andrew.cmu.edu:22964
+I0316 20:44:22.105350 14095 worker.cpp:56] **** Initializing worker: my worker 0 ****
+I0316 20:44:22.605775 14095 worker.cpp:68] Worker got request: [0:cmd=418wisdom;x=84443]
+I0316 20:44:23.773026 14095 worker.cpp:90] Worker completed work in 1167.19 ms (0)
+I0316 20:44:25.368562 14095 worker.cpp:68] Worker got request: [1:cmd=418wisdom;x=71971]
+I0316 20:44:26.552363 14095 worker.cpp:90] Worker completed work in 1183.74 ms (1)
+I0316 20:44:28.132592 14095 worker.cpp:68] Worker got request: [2:cmd=418wisdom;x=61277]
+I0316 20:44:29.311056 14095 worker.cpp:90] Worker completed work in 1178.4 ms (2)
+I0316 20:44:30.896471 14095 worker.cpp:68] Worker got request: [3:cmd=418wisdom;x=81592]
+I0316 20:44:32.058337 14095 worker.cpp:90] Worker completed work in 1161.8 ms (3)
+I0316 20:44:33.660586 14095 worker.cpp:68] Worker got request: [4:cmd=418wisdom;x=19935]
+I0316 20:44:34.851480 14095 worker.cpp:90] Worker completed work in 1190.83 ms (4)
+I0316 20:44:36.424592 14095 worker.cpp:68] Worker got request: [5:cmd=418wisdom;x=63375]
+I0316 20:44:37.611623 14095 worker.cpp:90] Worker completed work in 1186.97 ms (5)
+I0316 20:44:39.188397 14095 worker.cpp:68] Worker got request: [6:cmd=418wisdom;x=63309]
+I0316 20:44:40.361248 14095 worker.cpp:90] Worker completed work in 1172.79 ms (6)
+I0316 20:44:41.952466 14095 worker.cpp:68] Worker got request: [7:cmd=418wisdom;x=94651]
+I0316 20:44:43.141775 14095 worker.cpp:90] Worker completed work in 1189.24 ms (7)
+I0316 20:44:44.716346 14095 worker.cpp:68] Worker got request: [8:cmd=418wisdom;x=41472]
+I0316 20:44:45.879190 14095 worker.cpp:90] Worker completed work in 1162.78 ms (8)
+I0316 20:44:47.480548 14095 worker.cpp:68] Worker got request: [9:cmd=418wisdom;x=6385]
+I0316 20:44:48.654790 14095 worker.cpp:90] Worker completed work in 1174.18 ms (9)
+I0316 20:44:48.677697 14095 main.cpp:103] Worker on ghc45.ghc.andrew.cmu.edu is shutting down (master terminated connection)

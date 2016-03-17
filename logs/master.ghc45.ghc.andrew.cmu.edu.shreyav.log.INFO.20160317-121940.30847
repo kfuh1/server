@@ -1,0 +1,705 @@
+Log file created at: 2016/03/17 12:19:40
+Running on machine: ghc45.ghc.andrew.cmu.edu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0317 12:19:40.453500 30847 main_loop.cpp:73] Requesting worker name=my worker 0;tag=1804289383
+I0317 12:19:41.967448 30847 master.cpp:94] Received request: cmd=418wisdom;x=84443
+I0317 12:19:41.973613 30847 master.cpp:94] Received request: cmd=418wisdom;x=75796
+I0317 12:19:41.983610 30847 master.cpp:94] Received request: cmd=418wisdom;x=42057
+I0317 12:19:41.993592 30847 master.cpp:94] Received request: cmd=418wisdom;x=25891
+I0317 12:19:42.003571 30847 master.cpp:94] Received request: cmd=418wisdom;x=51127
+I0317 12:19:42.013558 30847 master.cpp:94] Received request: cmd=418wisdom;x=40493
+I0317 12:19:42.023627 30847 master.cpp:94] Received request: cmd=418wisdom;x=78380
+I0317 12:19:42.033632 30847 master.cpp:94] Received request: cmd=418wisdom;x=30331
+I0317 12:19:42.043539 30847 master.cpp:94] Received request: cmd=418wisdom;x=47660
+I0317 12:19:42.053495 30847 master.cpp:94] Received request: cmd=418wisdom;x=58338
+I0317 12:19:42.063658 30847 master.cpp:94] Received request: cmd=418wisdom;x=90812
+I0317 12:19:42.073554 30847 master.cpp:94] Received request: cmd=418wisdom;x=50469
+I0317 12:19:42.083593 30847 master.cpp:94] Received request: cmd=418wisdom;x=28184
+I0317 12:19:42.093621 30847 master.cpp:94] Received request: cmd=418wisdom;x=75581
+I0317 12:19:42.103586 30847 master.cpp:94] Received request: cmd=418wisdom;x=61837
+I0317 12:19:42.113643 30847 master.cpp:94] Received request: cmd=418wisdom;x=25050
+I0317 12:19:42.123618 30847 master.cpp:94] Received request: cmd=418wisdom;x=90975
+I0317 12:19:42.133499 30847 master.cpp:94] Received request: cmd=418wisdom;x=98279
+I0317 12:19:42.143682 30847 master.cpp:94] Received request: cmd=418wisdom;x=81022
+I0317 12:19:42.153587 30847 master.cpp:94] Received request: cmd=418wisdom;x=90217
+I0317 12:19:42.163611 30847 master.cpp:94] Received request: cmd=418wisdom;x=31015
+I0317 12:19:42.173540 30847 master.cpp:94] Received request: cmd=418wisdom;x=72983
+I0317 12:19:42.183634 30847 master.cpp:94] Received request: cmd=418wisdom;x=89884
+I0317 12:19:42.193634 30847 master.cpp:94] Received request: cmd=418wisdom;x=68399
+I0317 12:19:42.203634 30847 master.cpp:94] Received request: cmd=tellmenow;x=4249
+I0317 12:19:42.205344 30847 master.cpp:94] Received request: cmd=tellmenow;x=906
+I0317 12:19:42.207458 30847 master.cpp:94] Received request: cmd=tellmenow;x=3907
+I0317 12:19:42.209349 30847 master.cpp:94] Received request: cmd=tellmenow;x=5498
+I0317 12:19:42.211472 30847 master.cpp:94] Received request: cmd=tellmenow;x=8218
+I0317 12:19:42.213429 30847 master.cpp:94] Received request: cmd=tellmenow;x=8700
+I0317 12:19:42.215456 30847 master.cpp:94] Received request: cmd=tellmenow;x=4293
+I0317 12:19:42.217361 30847 master.cpp:94] Received request: cmd=tellmenow;x=7788
+I0317 12:19:42.219377 30847 master.cpp:94] Received request: cmd=tellmenow;x=2344
+I0317 12:19:42.221351 30847 master.cpp:94] Received request: cmd=tellmenow;x=7246
+I0317 12:19:42.223263 30847 master.cpp:94] Received request: cmd=tellmenow;x=4938
+I0317 12:19:42.225358 30847 master.cpp:94] Received request: cmd=tellmenow;x=126
+I0317 12:19:43.165199 30847 master.cpp:82] Master received a response from a worker: [0:Come to lecture, there might be donuts!]
+I0317 12:19:44.360605 30847 master.cpp:82] Master received a response from a worker: [1:Flatter your TAs with compliments]
+I0317 12:19:44.728123 30847 master.cpp:94] Received request: cmd=418wisdom;x=71971
+I0317 12:19:44.737524 30847 master.cpp:94] Received request: cmd=418wisdom;x=39882
+I0317 12:19:44.747573 30847 master.cpp:94] Received request: cmd=418wisdom;x=82485
+I0317 12:19:44.757638 30847 master.cpp:94] Received request: cmd=418wisdom;x=66815
+I0317 12:19:44.767586 30847 master.cpp:94] Received request: cmd=418wisdom;x=114
+I0317 12:19:44.777734 30847 master.cpp:94] Received request: cmd=418wisdom;x=49358
+I0317 12:19:44.787559 30847 master.cpp:94] Received request: cmd=418wisdom;x=86761
+I0317 12:19:44.797580 30847 master.cpp:94] Received request: cmd=418wisdom;x=24391
+I0317 12:19:44.807629 30847 master.cpp:94] Received request: cmd=418wisdom;x=32520
+I0317 12:19:44.817517 30847 master.cpp:94] Received request: cmd=418wisdom;x=87047
+I0317 12:19:44.827524 30847 master.cpp:94] Received request: cmd=418wisdom;x=19106
+I0317 12:19:44.837604 30847 master.cpp:94] Received request: cmd=418wisdom;x=56751
+I0317 12:19:44.847594 30847 master.cpp:94] Received request: cmd=418wisdom;x=23861
+I0317 12:19:44.857568 30847 master.cpp:94] Received request: cmd=418wisdom;x=96754
+I0317 12:19:44.867591 30847 master.cpp:94] Received request: cmd=418wisdom;x=80318
+I0317 12:19:44.877508 30847 master.cpp:94] Received request: cmd=418wisdom;x=44797
+I0317 12:19:44.887593 30847 master.cpp:94] Received request: cmd=418wisdom;x=8044
+I0317 12:19:44.897584 30847 master.cpp:94] Received request: cmd=418wisdom;x=32005
+I0317 12:19:44.907440 30847 master.cpp:94] Received request: cmd=418wisdom;x=50794
+I0317 12:19:44.917538 30847 master.cpp:94] Received request: cmd=418wisdom;x=93284
+I0317 12:19:44.927603 30847 master.cpp:94] Received request: cmd=418wisdom;x=10905
+I0317 12:19:44.937454 30847 master.cpp:94] Received request: cmd=418wisdom;x=55127
+I0317 12:19:44.947494 30847 master.cpp:94] Received request: cmd=418wisdom;x=70656
+I0317 12:19:44.957533 30847 master.cpp:94] Received request: cmd=418wisdom;x=54744
+I0317 12:19:44.967567 30847 master.cpp:94] Received request: cmd=tellmenow;x=7331
+I0317 12:19:44.969318 30847 master.cpp:94] Received request: cmd=tellmenow;x=4863
+I0317 12:19:44.971287 30847 master.cpp:94] Received request: cmd=tellmenow;x=8675
+I0317 12:19:44.973289 30847 master.cpp:94] Received request: cmd=tellmenow;x=5429
+I0317 12:19:44.975428 30847 master.cpp:94] Received request: cmd=tellmenow;x=5289
+I0317 12:19:44.977285 30847 master.cpp:94] Received request: cmd=tellmenow;x=4005
+I0317 12:19:44.979310 30847 master.cpp:94] Received request: cmd=tellmenow;x=5367
+I0317 12:19:44.981302 30847 master.cpp:94] Received request: cmd=tellmenow;x=3464
+I0317 12:19:44.983341 30847 master.cpp:94] Received request: cmd=tellmenow;x=5181
+I0317 12:19:44.985308 30847 master.cpp:94] Received request: cmd=tellmenow;x=2613
+I0317 12:19:44.987294 30847 master.cpp:94] Received request: cmd=tellmenow;x=1704
+I0317 12:19:44.989265 30847 master.cpp:94] Received request: cmd=tellmenow;x=1680
+I0317 12:19:45.558238 30847 master.cpp:82] Master received a response from a worker: [2:Worse is better. Keep it simple...]
+I0317 12:19:46.753741 30847 master.cpp:82] Master received a response from a worker: [3:OMG, 418 is so gr8!]
+I0317 12:19:47.493944 30847 master.cpp:94] Received request: cmd=418wisdom;x=61277
+I0317 12:19:47.501400 30847 master.cpp:94] Received request: cmd=418wisdom;x=65666
+I0317 12:19:47.511607 30847 master.cpp:94] Received request: cmd=418wisdom;x=47653
+I0317 12:19:47.521545 30847 master.cpp:94] Received request: cmd=418wisdom;x=8982
+I0317 12:19:47.531601 30847 master.cpp:94] Received request: cmd=418wisdom;x=75761
+I0317 12:19:47.541630 30847 master.cpp:94] Received request: cmd=418wisdom;x=87677
+I0317 12:19:47.551563 30847 master.cpp:94] Received request: cmd=418wisdom;x=92339
+I0317 12:19:47.561661 30847 master.cpp:94] Received request: cmd=418wisdom;x=84246
+I0317 12:19:47.571607 30847 master.cpp:94] Received request: cmd=418wisdom;x=89818
+I0317 12:19:47.581645 30847 master.cpp:94] Received request: cmd=418wisdom;x=92309
+I0317 12:19:47.591634 30847 master.cpp:94] Received request: cmd=418wisdom;x=54060
+I0317 12:19:47.601629 30847 master.cpp:94] Received request: cmd=418wisdom;x=39129
+I0317 12:19:47.611641 30847 master.cpp:94] Received request: cmd=418wisdom;x=70529
+I0317 12:19:47.621628 30847 master.cpp:94] Received request: cmd=418wisdom;x=27563
+I0317 12:19:47.631641 30847 master.cpp:94] Received request: cmd=418wisdom;x=81163
+I0317 12:19:47.641708 30847 master.cpp:94] Received request: cmd=418wisdom;x=84949
+I0317 12:19:47.651623 30847 master.cpp:94] Received request: cmd=418wisdom;x=89504
+I0317 12:19:47.661651 30847 master.cpp:94] Received request: cmd=418wisdom;x=58980
+I0317 12:19:47.671639 30847 master.cpp:94] Received request: cmd=418wisdom;x=94977
+I0317 12:19:47.681604 30847 master.cpp:94] Received request: cmd=418wisdom;x=57970
+I0317 12:19:47.691587 30847 master.cpp:94] Received request: cmd=418wisdom;x=45056
+I0317 12:19:47.701576 30847 master.cpp:94] Received request: cmd=418wisdom;x=66025
+I0317 12:19:47.711591 30847 master.cpp:94] Received request: cmd=418wisdom;x=99626
+I0317 12:19:47.721597 30847 master.cpp:94] Received request: cmd=418wisdom;x=91695
+I0317 12:19:47.731586 30847 master.cpp:94] Received request: cmd=tellmenow;x=7140
+I0317 12:19:47.733309 30847 master.cpp:94] Received request: cmd=tellmenow;x=741
+I0317 12:19:47.735285 30847 master.cpp:94] Received request: cmd=tellmenow;x=5515
+I0317 12:19:47.737263 30847 master.cpp:94] Received request: cmd=tellmenow;x=4378
+I0317 12:19:47.739274 30847 master.cpp:94] Received request: cmd=tellmenow;x=5671
+I0317 12:19:47.741299 30847 master.cpp:94] Received request: cmd=tellmenow;x=7606
+I0317 12:19:47.743249 30847 master.cpp:94] Received request: cmd=tellmenow;x=2187
+I0317 12:19:47.745245 30847 master.cpp:94] Received request: cmd=tellmenow;x=6584
+I0317 12:19:47.747203 30847 master.cpp:94] Received request: cmd=tellmenow;x=1054
+I0317 12:19:47.749202 30847 master.cpp:94] Received request: cmd=tellmenow;x=1984
+I0317 12:19:47.751261 30847 master.cpp:94] Received request: cmd=tellmenow;x=7152
+I0317 12:19:47.753268 30847 master.cpp:94] Received request: cmd=tellmenow;x=2993
+I0317 12:19:47.950901 30847 master.cpp:82] Master received a response from a worker: [4:Flatter your TAs with compliments]
+I0317 12:19:49.148211 30847 master.cpp:82] Master received a response from a worker: [5:Come to lecture, there might be donuts!]
+I0317 12:19:50.258015 30847 master.cpp:94] Received request: cmd=418wisdom;x=81592
+I0317 12:19:50.265537 30847 master.cpp:94] Received request: cmd=418wisdom;x=10060
+I0317 12:19:50.275601 30847 master.cpp:94] Received request: cmd=418wisdom;x=14635
+I0317 12:19:50.285717 30847 master.cpp:94] Received request: cmd=418wisdom;x=69767
+I0317 12:19:50.295650 30847 master.cpp:94] Received request: cmd=418wisdom;x=4523
+I0317 12:19:50.305765 30847 master.cpp:94] Received request: cmd=418wisdom;x=57387
+I0317 12:19:50.315594 30847 master.cpp:94] Received request: cmd=418wisdom;x=91002
+I0317 12:19:50.325469 30847 master.cpp:94] Received request: cmd=418wisdom;x=53420
+I0317 12:19:50.335587 30847 master.cpp:94] Received request: cmd=418wisdom;x=68059
+I0317 12:19:50.382519 30847 master.cpp:82] Master received a response from a worker: [6:Write a great lecture comment on your favorite idea in the class]
+I0317 12:19:50.382603 30847 master.cpp:94] Received request: cmd=418wisdom;x=2669
+I0317 12:19:50.382645 30847 master.cpp:94] Received request: cmd=418wisdom;x=63500
+I0317 12:19:50.382664 30847 master.cpp:94] Received request: cmd=418wisdom;x=60634
+I0317 12:19:50.382678 30847 master.cpp:94] Received request: cmd=418wisdom;x=57595
+I0317 12:19:50.385337 30847 master.cpp:94] Received request: cmd=418wisdom;x=39121
+I0317 12:19:50.395542 30847 master.cpp:94] Received request: cmd=418wisdom;x=37014
+I0317 12:19:50.405481 30847 master.cpp:94] Received request: cmd=418wisdom;x=98052
+I0317 12:19:50.415428 30847 master.cpp:94] Received request: cmd=418wisdom;x=3639
+I0317 12:19:50.425537 30847 master.cpp:94] Received request: cmd=418wisdom;x=2163
+I0317 12:19:50.435636 30847 master.cpp:94] Received request: cmd=418wisdom;x=96104
+I0317 12:19:50.445559 30847 master.cpp:94] Received request: cmd=418wisdom;x=18497
+I0317 12:19:50.455492 30847 master.cpp:94] Received request: cmd=418wisdom;x=12389
+I0317 12:19:50.465631 30847 master.cpp:94] Received request: cmd=418wisdom;x=21057
+I0317 12:19:50.475626 30847 master.cpp:94] Received request: cmd=418wisdom;x=80075
+I0317 12:19:50.485618 30847 master.cpp:94] Received request: cmd=418wisdom;x=93697
+I0317 12:19:50.495637 30847 master.cpp:94] Received request: cmd=tellmenow;x=205
+I0317 12:19:50.497342 30847 master.cpp:94] Received request: cmd=tellmenow;x=3830
+I0317 12:19:50.499593 30847 master.cpp:94] Received request: cmd=tellmenow;x=913
+I0317 12:19:50.501299 30847 master.cpp:94] Received request: cmd=tellmenow;x=2339
+I0317 12:19:50.503315 30847 master.cpp:94] Received request: cmd=tellmenow;x=1987
+I0317 12:19:50.505270 30847 master.cpp:94] Received request: cmd=tellmenow;x=5822
+I0317 12:19:50.507438 30847 master.cpp:94] Received request: cmd=tellmenow;x=3152
+I0317 12:19:50.509420 30847 master.cpp:94] Received request: cmd=tellmenow;x=1623
+I0317 12:19:50.511392 30847 master.cpp:94] Received request: cmd=tellmenow;x=4533
+I0317 12:19:50.513347 30847 master.cpp:94] Received request: cmd=tellmenow;x=354
+I0317 12:19:50.515352 30847 master.cpp:94] Received request: cmd=tellmenow;x=908
+I0317 12:19:50.517325 30847 master.cpp:94] Received request: cmd=tellmenow;x=8895
+I0317 12:19:51.580584 30847 master.cpp:82] Master received a response from a worker: [7:Do a great project, and it all works out in the end]
+I0317 12:19:52.736156 30847 master.cpp:82] Master received a response from a worker: [8:You will perform amazingly on exam 2]
+I0317 12:19:53.022011 30847 master.cpp:94] Received request: cmd=418wisdom;x=19935
+I0317 12:19:53.029554 30847 master.cpp:94] Received request: cmd=418wisdom;x=35855
+I0317 12:19:53.039604 30847 master.cpp:94] Received request: cmd=418wisdom;x=73160
+I0317 12:19:53.049629 30847 master.cpp:94] Received request: cmd=418wisdom;x=83833
+I0317 12:19:53.059602 30847 master.cpp:94] Received request: cmd=418wisdom;x=91849
+I0317 12:19:53.069635 30847 master.cpp:94] Received request: cmd=418wisdom;x=16942
+I0317 12:19:53.079635 30847 master.cpp:94] Received request: cmd=418wisdom;x=67264
+I0317 12:19:53.089623 30847 master.cpp:94] Received request: cmd=418wisdom;x=96655
+I0317 12:19:53.099781 30847 master.cpp:94] Received request: cmd=418wisdom;x=5805
+I0317 12:19:53.109657 30847 master.cpp:94] Received request: cmd=418wisdom;x=67620
+I0317 12:19:53.119525 30847 master.cpp:94] Received request: cmd=418wisdom;x=84543
+I0317 12:19:53.129642 30847 master.cpp:94] Received request: cmd=418wisdom;x=34231
+I0317 12:19:53.139618 30847 master.cpp:94] Received request: cmd=418wisdom;x=25068
+I0317 12:19:53.149585 30847 master.cpp:94] Received request: cmd=418wisdom;x=59679
+I0317 12:19:53.159608 30847 master.cpp:94] Received request: cmd=418wisdom;x=44231
+I0317 12:19:53.169555 30847 master.cpp:94] Received request: cmd=418wisdom;x=17482
+I0317 12:19:53.179572 30847 master.cpp:94] Received request: cmd=418wisdom;x=47163
+I0317 12:19:53.189530 30847 master.cpp:94] Received request: cmd=418wisdom;x=40990
+I0317 12:19:53.199573 30847 master.cpp:94] Received request: cmd=418wisdom;x=56911
+I0317 12:19:53.209630 30847 master.cpp:94] Received request: cmd=418wisdom;x=50860
+I0317 12:19:53.219560 30847 master.cpp:94] Received request: cmd=418wisdom;x=31144
+I0317 12:19:53.229567 30847 master.cpp:94] Received request: cmd=418wisdom;x=35715
+I0317 12:19:53.239562 30847 master.cpp:94] Received request: cmd=418wisdom;x=83766
+I0317 12:19:53.249567 30847 master.cpp:94] Received request: cmd=418wisdom;x=25093
+I0317 12:19:53.259555 30847 master.cpp:94] Received request: cmd=tellmenow;x=5045
+I0317 12:19:53.261306 30847 master.cpp:94] Received request: cmd=tellmenow;x=111
+I0317 12:19:53.263303 30847 master.cpp:94] Received request: cmd=tellmenow;x=6674
+I0317 12:19:53.265319 30847 master.cpp:94] Received request: cmd=tellmenow;x=3023
+I0317 12:19:53.267421 30847 master.cpp:94] Received request: cmd=tellmenow;x=411
+I0317 12:19:53.269372 30847 master.cpp:94] Received request: cmd=tellmenow;x=2528
+I0317 12:19:53.271399 30847 master.cpp:94] Received request: cmd=tellmenow;x=2161
+I0317 12:19:53.273335 30847 master.cpp:94] Received request: cmd=tellmenow;x=8579
+I0317 12:19:53.275390 30847 master.cpp:94] Received request: cmd=tellmenow;x=3170
+I0317 12:19:53.277346 30847 master.cpp:94] Received request: cmd=tellmenow;x=2591
+I0317 12:19:53.279258 30847 master.cpp:94] Received request: cmd=tellmenow;x=3233
+I0317 12:19:53.281303 30847 master.cpp:94] Received request: cmd=tellmenow;x=8523
+I0317 12:19:53.931485 30847 master.cpp:82] Master received a response from a worker: [9:You will perform amazingly on exam 2]
+I0317 12:19:55.127368 30847 master.cpp:82] Master received a response from a worker: [10:Worse is better. Keep it simple...]
+I0317 12:19:55.785962 30847 master.cpp:94] Received request: cmd=418wisdom;x=63375
+I0317 12:19:55.794795 30847 master.cpp:94] Received request: cmd=418wisdom;x=62108
+I0317 12:19:55.803611 30847 master.cpp:94] Received request: cmd=418wisdom;x=71562
+I0317 12:19:55.813560 30847 master.cpp:94] Received request: cmd=418wisdom;x=38802
+I0317 12:19:55.823639 30847 master.cpp:94] Received request: cmd=418wisdom;x=41442
+I0317 12:19:55.833621 30847 master.cpp:94] Received request: cmd=418wisdom;x=65083
+I0317 12:19:55.843639 30847 master.cpp:94] Received request: cmd=418wisdom;x=152
+I0317 12:19:55.853550 30847 master.cpp:94] Received request: cmd=418wisdom;x=19231
+I0317 12:19:55.863512 30847 master.cpp:94] Received request: cmd=418wisdom;x=33440
+I0317 12:19:55.873626 30847 master.cpp:94] Received request: cmd=418wisdom;x=23941
+I0317 12:19:55.883580 30847 master.cpp:94] Received request: cmd=418wisdom;x=63740
+I0317 12:19:55.893506 30847 master.cpp:94] Received request: cmd=418wisdom;x=37865
+I0317 12:19:55.903581 30847 master.cpp:94] Received request: cmd=418wisdom;x=87543
+I0317 12:19:55.913605 30847 master.cpp:94] Received request: cmd=418wisdom;x=56815
+I0317 12:19:55.923563 30847 master.cpp:94] Received request: cmd=418wisdom;x=41441
+I0317 12:19:55.933374 30847 master.cpp:94] Received request: cmd=418wisdom;x=40227
+I0317 12:19:55.943280 30847 master.cpp:94] Received request: cmd=418wisdom;x=70183
+I0317 12:19:55.953253 30847 master.cpp:94] Received request: cmd=418wisdom;x=41823
+I0317 12:19:55.963321 30847 master.cpp:94] Received request: cmd=418wisdom;x=66220
+I0317 12:19:55.973331 30847 master.cpp:94] Received request: cmd=418wisdom;x=4678
+I0317 12:19:55.983297 30847 master.cpp:94] Received request: cmd=418wisdom;x=44535
+I0317 12:19:55.993469 30847 master.cpp:94] Received request: cmd=418wisdom;x=25922
+I0317 12:19:56.003475 30847 master.cpp:94] Received request: cmd=418wisdom;x=15768
+I0317 12:19:56.013591 30847 master.cpp:94] Received request: cmd=418wisdom;x=52757
+I0317 12:19:56.023761 30847 master.cpp:94] Received request: cmd=tellmenow;x=4385
+I0317 12:19:56.025279 30847 master.cpp:94] Received request: cmd=tellmenow;x=5053
+I0317 12:19:56.027318 30847 master.cpp:94] Received request: cmd=tellmenow;x=6800
+I0317 12:19:56.029273 30847 master.cpp:94] Received request: cmd=tellmenow;x=7955
+I0317 12:19:56.031267 30847 master.cpp:94] Received request: cmd=tellmenow;x=4451
+I0317 12:19:56.033210 30847 master.cpp:94] Received request: cmd=tellmenow;x=2808
+I0317 12:19:56.035282 30847 master.cpp:94] Received request: cmd=tellmenow;x=4202
+I0317 12:19:56.037276 30847 master.cpp:94] Received request: cmd=tellmenow;x=7282
+I0317 12:19:56.039253 30847 master.cpp:94] Received request: cmd=tellmenow;x=7876
+I0317 12:19:56.041213 30847 master.cpp:94] Received request: cmd=tellmenow;x=7312
+I0317 12:19:56.043231 30847 master.cpp:94] Received request: cmd=tellmenow;x=1692
+I0317 12:19:56.045354 30847 master.cpp:94] Received request: cmd=tellmenow;x=8995
+I0317 12:19:56.323523 30847 master.cpp:82] Master received a response from a worker: [11:Be careful not to optimize prematurely]
+I0317 12:19:57.519969 30847 master.cpp:82] Master received a response from a worker: [12:You are going to do a great project]
+I0317 12:19:58.550034 30847 master.cpp:94] Received request: cmd=418wisdom;x=63309
+I0317 12:19:58.557448 30847 master.cpp:94] Received request: cmd=418wisdom;x=8346
+I0317 12:19:58.567643 30847 master.cpp:94] Received request: cmd=418wisdom;x=72556
+I0317 12:19:58.577555 30847 master.cpp:94] Received request: cmd=418wisdom;x=98683
+I0317 12:19:58.587484 30847 master.cpp:94] Received request: cmd=418wisdom;x=40182
+I0317 12:19:58.597609 30847 master.cpp:94] Received request: cmd=418wisdom;x=67852
+I0317 12:19:58.607509 30847 master.cpp:94] Received request: cmd=418wisdom;x=31618
+I0317 12:19:58.617534 30847 master.cpp:94] Received request: cmd=418wisdom;x=21352
+I0317 12:19:58.627619 30847 master.cpp:94] Received request: cmd=418wisdom;x=71733
+I0317 12:19:58.637653 30847 master.cpp:94] Received request: cmd=418wisdom;x=235
+I0317 12:19:58.647689 30847 master.cpp:94] Received request: cmd=418wisdom;x=82273
+I0317 12:19:58.657774 30847 master.cpp:94] Received request: cmd=418wisdom;x=52835
+I0317 12:19:58.667623 30847 master.cpp:94] Received request: cmd=418wisdom;x=9778
+I0317 12:19:58.677657 30847 master.cpp:94] Received request: cmd=418wisdom;x=11890
+I0317 12:19:58.687693 30847 master.cpp:94] Received request: cmd=418wisdom;x=64927
+I0317 12:19:58.697659 30847 master.cpp:94] Received request: cmd=418wisdom;x=87366
+I0317 12:19:58.707644 30847 master.cpp:94] Received request: cmd=418wisdom;x=27998
+I0317 12:19:58.755548 30847 master.cpp:82] Master received a response from a worker: [13:Exams are all just fun and games]
+I0317 12:19:58.755635 30847 master.cpp:94] Received request: cmd=418wisdom;x=97852
+I0317 12:19:58.755686 30847 master.cpp:94] Received request: cmd=418wisdom;x=10018
+I0317 12:19:58.755717 30847 master.cpp:94] Received request: cmd=418wisdom;x=85394
+I0317 12:19:58.755738 30847 master.cpp:94] Received request: cmd=418wisdom;x=39670
+I0317 12:19:58.757467 30847 master.cpp:94] Received request: cmd=418wisdom;x=8134
+I0317 12:19:58.767508 30847 master.cpp:94] Received request: cmd=418wisdom;x=27471
+I0317 12:19:58.777526 30847 master.cpp:94] Received request: cmd=418wisdom;x=45298
+I0317 12:19:58.787478 30847 master.cpp:94] Received request: cmd=tellmenow;x=7131
+I0317 12:19:58.789322 30847 master.cpp:94] Received request: cmd=tellmenow;x=7753
+I0317 12:19:58.791234 30847 master.cpp:94] Received request: cmd=tellmenow;x=1200
+I0317 12:19:58.793249 30847 master.cpp:94] Received request: cmd=tellmenow;x=4688
+I0317 12:19:58.795351 30847 master.cpp:94] Received request: cmd=tellmenow;x=5857
+I0317 12:19:58.797302 30847 master.cpp:94] Received request: cmd=tellmenow;x=3123
+I0317 12:19:58.799188 30847 master.cpp:94] Received request: cmd=tellmenow;x=7847
+I0317 12:19:58.801169 30847 master.cpp:94] Received request: cmd=tellmenow;x=2505
+I0317 12:19:58.803215 30847 master.cpp:94] Received request: cmd=tellmenow;x=167
+I0317 12:19:58.805225 30847 master.cpp:94] Received request: cmd=tellmenow;x=366
+I0317 12:19:58.807297 30847 master.cpp:94] Received request: cmd=tellmenow;x=6129
+I0317 12:19:58.809331 30847 master.cpp:94] Received request: cmd=tellmenow;x=5025
+I0317 12:19:59.951566 30847 master.cpp:82] Master received a response from a worker: [14:Worse is better. Keep it simple...]
+I0317 12:20:01.107954 30847 master.cpp:82] Master received a response from a worker: [15:Bring out all the stops in assignment 4.]
+I0317 12:20:01.313948 30847 master.cpp:94] Received request: cmd=418wisdom;x=94651
+I0317 12:20:01.321496 30847 master.cpp:94] Received request: cmd=418wisdom;x=93844
+I0317 12:20:01.331585 30847 master.cpp:94] Received request: cmd=418wisdom;x=90986
+I0317 12:20:01.341657 30847 master.cpp:94] Received request: cmd=418wisdom;x=4200
+I0317 12:20:01.351552 30847 master.cpp:94] Received request: cmd=418wisdom;x=74914
+I0317 12:20:01.361568 30847 master.cpp:94] Received request: cmd=418wisdom;x=70133
+I0317 12:20:01.371675 30847 master.cpp:94] Received request: cmd=418wisdom;x=65536
+I0317 12:20:01.381572 30847 master.cpp:94] Received request: cmd=418wisdom;x=71236
+I0317 12:20:01.391686 30847 master.cpp:94] Received request: cmd=418wisdom;x=90271
+I0317 12:20:01.401603 30847 master.cpp:94] Received request: cmd=418wisdom;x=64014
+I0317 12:20:01.411517 30847 master.cpp:94] Received request: cmd=418wisdom;x=37245
+I0317 12:20:01.421620 30847 master.cpp:94] Received request: cmd=418wisdom;x=53793
+I0317 12:20:01.431542 30847 master.cpp:94] Received request: cmd=418wisdom;x=20784
+I0317 12:20:01.441524 30847 master.cpp:94] Received request: cmd=418wisdom;x=58713
+I0317 12:20:01.451541 30847 master.cpp:94] Received request: cmd=418wisdom;x=889
+I0317 12:20:01.461585 30847 master.cpp:94] Received request: cmd=418wisdom;x=15102
+I0317 12:20:01.471580 30847 master.cpp:94] Received request: cmd=418wisdom;x=33341
+I0317 12:20:01.481616 30847 master.cpp:94] Received request: cmd=418wisdom;x=78963
+I0317 12:20:01.491530 30847 master.cpp:94] Received request: cmd=418wisdom;x=71850
+I0317 12:20:01.501513 30847 master.cpp:94] Received request: cmd=418wisdom;x=33825
+I0317 12:20:01.511598 30847 master.cpp:94] Received request: cmd=418wisdom;x=62054
+I0317 12:20:01.521582 30847 master.cpp:94] Received request: cmd=418wisdom;x=4120
+I0317 12:20:01.531750 30847 master.cpp:94] Received request: cmd=418wisdom;x=16386
+I0317 12:20:01.541616 30847 master.cpp:94] Received request: cmd=418wisdom;x=98192
+I0317 12:20:01.551533 30847 master.cpp:94] Received request: cmd=tellmenow;x=2606
+I0317 12:20:01.553299 30847 master.cpp:94] Received request: cmd=tellmenow;x=3553
+I0317 12:20:01.555377 30847 master.cpp:94] Received request: cmd=tellmenow;x=4936
+I0317 12:20:01.557319 30847 master.cpp:94] Received request: cmd=tellmenow;x=2640
+I0317 12:20:01.559387 30847 master.cpp:94] Received request: cmd=tellmenow;x=4303
+I0317 12:20:01.561242 30847 master.cpp:94] Received request: cmd=tellmenow;x=2157
+I0317 12:20:01.563344 30847 master.cpp:94] Received request: cmd=tellmenow;x=434
+I0317 12:20:01.565305 30847 master.cpp:94] Received request: cmd=tellmenow;x=1616
+I0317 12:20:01.567348 30847 master.cpp:94] Received request: cmd=tellmenow;x=4707
+I0317 12:20:01.569314 30847 master.cpp:94] Received request: cmd=tellmenow;x=637
+I0317 12:20:01.571318 30847 master.cpp:94] Received request: cmd=tellmenow;x=3628
+I0317 12:20:01.573233 30847 master.cpp:94] Received request: cmd=tellmenow;x=2957
+I0317 12:20:02.306774 30847 master.cpp:82] Master received a response from a worker: [16:Write a great lecture comment on your favorite idea in the class]
+I0317 12:20:03.504076 30847 master.cpp:82] Master received a response from a worker: [17:You will perform amazingly on exam 2]
+I0317 12:20:04.077790 30847 master.cpp:94] Received request: cmd=418wisdom;x=41472
+I0317 12:20:04.085347 30847 master.cpp:94] Received request: cmd=418wisdom;x=9940
+I0317 12:20:04.095664 30847 master.cpp:94] Received request: cmd=418wisdom;x=90866
+I0317 12:20:04.105574 30847 master.cpp:94] Received request: cmd=418wisdom;x=47400
+I0317 12:20:04.115803 30847 master.cpp:94] Received request: cmd=418wisdom;x=84085
+I0317 12:20:04.125743 30847 master.cpp:94] Received request: cmd=418wisdom;x=97623
+I0317 12:20:04.135582 30847 master.cpp:94] Received request: cmd=418wisdom;x=34365
+I0317 12:20:04.145618 30847 master.cpp:94] Received request: cmd=418wisdom;x=47909
+I0317 12:20:04.155627 30847 master.cpp:94] Received request: cmd=418wisdom;x=69960
+I0317 12:20:04.165487 30847 master.cpp:94] Received request: cmd=418wisdom;x=42653
+I0317 12:20:04.175577 30847 master.cpp:94] Received request: cmd=418wisdom;x=30190
+I0317 12:20:04.185587 30847 master.cpp:94] Received request: cmd=418wisdom;x=73475
+I0317 12:20:04.195597 30847 master.cpp:94] Received request: cmd=418wisdom;x=89440
+I0317 12:20:04.205612 30847 master.cpp:94] Received request: cmd=418wisdom;x=91969
+I0317 12:20:04.215677 30847 master.cpp:94] Received request: cmd=418wisdom;x=62674
+I0317 12:20:04.225567 30847 master.cpp:94] Received request: cmd=418wisdom;x=37557
+I0317 12:20:04.235594 30847 master.cpp:94] Received request: cmd=418wisdom;x=97457
+I0317 12:20:04.245623 30847 master.cpp:94] Received request: cmd=418wisdom;x=63888
+I0317 12:20:04.255549 30847 master.cpp:94] Received request: cmd=418wisdom;x=6583
+I0317 12:20:04.265568 30847 master.cpp:94] Received request: cmd=418wisdom;x=8467
+I0317 12:20:04.275655 30847 master.cpp:94] Received request: cmd=418wisdom;x=74987
+I0317 12:20:04.285580 30847 master.cpp:94] Received request: cmd=418wisdom;x=6115
+I0317 12:20:04.295624 30847 master.cpp:94] Received request: cmd=418wisdom;x=785
+I0317 12:20:04.305627 30847 master.cpp:94] Received request: cmd=418wisdom;x=39381
+I0317 12:20:04.315604 30847 master.cpp:94] Received request: cmd=tellmenow;x=4671
+I0317 12:20:04.317473 30847 master.cpp:94] Received request: cmd=tellmenow;x=4037
+I0317 12:20:04.319202 30847 master.cpp:94] Received request: cmd=tellmenow;x=4398
+I0317 12:20:04.321274 30847 master.cpp:94] Received request: cmd=tellmenow;x=5264
+I0317 12:20:04.323243 30847 master.cpp:94] Received request: cmd=tellmenow;x=6114
+I0317 12:20:04.325213 30847 master.cpp:94] Received request: cmd=tellmenow;x=3807
+I0317 12:20:04.327270 30847 master.cpp:94] Received request: cmd=tellmenow;x=3315
+I0317 12:20:04.329344 30847 master.cpp:94] Received request: cmd=tellmenow;x=8897
+I0317 12:20:04.331562 30847 master.cpp:94] Received request: cmd=tellmenow;x=2348
+I0317 12:20:04.333386 30847 master.cpp:94] Received request: cmd=tellmenow;x=6994
+I0317 12:20:04.335418 30847 master.cpp:94] Received request: cmd=tellmenow;x=3881
+I0317 12:20:04.337316 30847 master.cpp:94] Received request: cmd=tellmenow;x=3227
+I0317 12:20:04.701359 30847 master.cpp:82] Master received a response from a worker: [18:Laugh at Kayvon's jokes]
+I0317 12:20:05.897984 30847 master.cpp:82] Master received a response from a worker: [19:If all else fails... buy Kayvon donuts]
+I0317 12:20:06.841923 30847 master.cpp:94] Received request: cmd=418wisdom;x=6385
+I0317 12:20:06.849400 30847 master.cpp:94] Received request: cmd=418wisdom;x=86358
+I0317 12:20:06.859652 30847 master.cpp:94] Received request: cmd=418wisdom;x=70201
+I0317 12:20:06.869599 30847 master.cpp:94] Received request: cmd=418wisdom;x=90301
+I0317 12:20:06.879606 30847 master.cpp:94] Received request: cmd=418wisdom;x=45161
+I0317 12:20:06.889587 30847 master.cpp:94] Received request: cmd=418wisdom;x=67692
+I0317 12:20:06.899708 30847 master.cpp:94] Received request: cmd=418wisdom;x=11891
+I0317 12:20:06.909683 30847 master.cpp:94] Received request: cmd=418wisdom;x=39795
+I0317 12:20:06.919682 30847 master.cpp:94] Received request: cmd=418wisdom;x=20723
+I0317 12:20:06.929644 30847 master.cpp:94] Received request: cmd=418wisdom;x=4210
+I0317 12:20:06.939656 30847 master.cpp:94] Received request: cmd=418wisdom;x=94797
+I0317 12:20:06.949650 30847 master.cpp:94] Received request: cmd=418wisdom;x=21589
+I0317 12:20:06.959674 30847 master.cpp:94] Received request: cmd=418wisdom;x=14635
+I0317 12:20:06.969571 30847 master.cpp:94] Received request: cmd=418wisdom;x=19797
+I0317 12:20:06.979583 30847 master.cpp:94] Received request: cmd=418wisdom;x=37803
+I0317 12:20:06.989490 30847 master.cpp:94] Received request: cmd=418wisdom;x=54639
+I0317 12:20:06.999621 30847 master.cpp:94] Received request: cmd=418wisdom;x=15133
+I0317 12:20:07.009554 30847 master.cpp:94] Received request: cmd=418wisdom;x=98869
+I0317 12:20:07.019501 30847 master.cpp:94] Received request: cmd=418wisdom;x=98299
+I0317 12:20:07.029588 30847 master.cpp:94] Received request: cmd=418wisdom;x=14840
+I0317 12:20:07.039784 30847 master.cpp:94] Received request: cmd=418wisdom;x=40591
+I0317 12:20:07.049669 30847 master.cpp:94] Received request: cmd=418wisdom;x=67993
+I0317 12:20:07.059592 30847 master.cpp:94] Received request: cmd=418wisdom;x=87766
+I0317 12:20:07.069552 30847 master.cpp:94] Received request: cmd=418wisdom;x=49541
+I0317 12:20:07.079653 30847 master.cpp:94] Received request: cmd=tellmenow;x=8254
+I0317 12:20:07.081269 30847 master.cpp:94] Received request: cmd=tellmenow;x=2902
+I0317 12:20:07.083319 30847 master.cpp:94] Received request: cmd=tellmenow;x=4486
+I0317 12:20:07.085355 30847 master.cpp:94] Received request: cmd=tellmenow;x=4488
+I0317 12:20:07.087329 30847 master.cpp:94] Received request: cmd=tellmenow;x=6031
+I0317 12:20:07.089310 30847 master.cpp:94] Received request: cmd=tellmenow;x=1818
+I0317 12:20:07.091383 30847 master.cpp:94] Received request: cmd=tellmenow;x=5488
+I0317 12:20:07.093296 30847 master.cpp:94] Received request: cmd=tellmenow;x=1969
+I0317 12:20:07.133534 30847 master.cpp:82] Master received a response from a worker: [20:Flatter your TAs with compliments]
+I0317 12:20:07.133635 30847 master.cpp:94] Received request: cmd=tellmenow;x=3062
+I0317 12:20:07.133673 30847 master.cpp:94] Received request: cmd=tellmenow;x=8664
+I0317 12:20:07.133692 30847 master.cpp:94] Received request: cmd=tellmenow;x=8091
+I0317 12:20:07.133704 30847 master.cpp:94] Received request: cmd=tellmenow;x=7363
+I0317 12:20:07.602031 30847 master.cpp:94] Received request: cmd=lastrequest
+I0317 12:20:08.329581 30847 master.cpp:82] Master received a response from a worker: [21:Bring out all the stops in assignment 4.]
+I0317 12:20:09.485716 30847 master.cpp:82] Master received a response from a worker: [22:OMG, 418 is so gr8!]
+I0317 12:20:10.682014 30847 master.cpp:82] Master received a response from a worker: [23:You will perform amazingly on exam 2]
+I0317 12:20:10.682150 30847 master.cpp:82] Master received a response from a worker: [24:Re-watch the lecture on scaling a website]
+I0317 12:20:10.682183 30847 master.cpp:82] Master received a response from a worker: [25:There may be opportunities for caching in this assignment]
+I0317 12:20:10.682236 30847 master.cpp:82] Master received a response from a worker: [26:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:20:10.682286 30847 master.cpp:82] Master received a response from a worker: [27:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:20:10.682345 30847 master.cpp:82] Master received a response from a worker: [28:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:20:10.682381 30847 master.cpp:82] Master received a response from a worker: [29:We recommend getting full credit on grading_wisdom.txt first]
+I0317 12:20:10.682430 30847 master.cpp:82] Master received a response from a worker: [30:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:20:10.682473 30847 master.cpp:82] Master received a response from a worker: [31:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:20:10.682515 30847 master.cpp:82] Master received a response from a worker: [32:There may be opportunities for caching in this assignment]
+I0317 12:20:10.682554 30847 master.cpp:82] Master received a response from a worker: [33:There may be opportunities for caching in this assignment]
+I0317 12:20:10.682595 30847 master.cpp:82] Master received a response from a worker: [34:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:20:10.682636 30847 master.cpp:82] Master received a response from a worker: [35:There may be opportunities for caching in this assignment]
+I0317 12:20:11.877910 30847 master.cpp:82] Master received a response from a worker: [36:Come to lecture, there might be donuts!]
+I0317 12:20:13.072973 30847 master.cpp:82] Master received a response from a worker: [37:Flatter your TAs with compliments]
+I0317 12:20:14.268699 30847 master.cpp:82] Master received a response from a worker: [38:Come to lecture, there might be donuts!]
+I0317 12:20:15.464443 30847 master.cpp:82] Master received a response from a worker: [39:Laugh at Kayvon's jokes]
+I0317 12:20:16.660109 30847 master.cpp:82] Master received a response from a worker: [40:Bring out all the stops in assignment 4.]
+I0317 12:20:17.855232 30847 master.cpp:82] Master received a response from a worker: [41:Ask questions. Ask questions. Ask questions]
+I0317 12:20:19.051136 30847 master.cpp:82] Master received a response from a worker: [42:Do a great project, and it all works out in the end]
+I0317 12:20:20.246934 30847 master.cpp:82] Master received a response from a worker: [43:Do a great project, and it all works out in the end]
+I0317 12:20:21.442562 30847 master.cpp:82] Master received a response from a worker: [44:If all else fails... buy Kayvon donuts]
+I0317 12:20:22.638696 30847 master.cpp:82] Master received a response from a worker: [45:You will perform amazingly on exam 2]
+I0317 12:20:23.834066 30847 master.cpp:82] Master received a response from a worker: [46:Ask questions. Ask questions. Ask questions]
+I0317 12:20:25.029510 30847 master.cpp:82] Master received a response from a worker: [47:Do a great project, and it all works out in the end]
+I0317 12:20:26.225005 30847 master.cpp:82] Master received a response from a worker: [48:Do a great project, and it all works out in the end]
+I0317 12:20:27.420860 30847 master.cpp:82] Master received a response from a worker: [49:Ask questions. Ask questions. Ask questions]
+I0317 12:20:28.616008 30847 master.cpp:82] Master received a response from a worker: [50:Worse is better. Keep it simple...]
+I0317 12:20:29.812492 30847 master.cpp:82] Master received a response from a worker: [51:Do a great project, and it all works out in the end]
+I0317 12:20:31.008718 30847 master.cpp:82] Master received a response from a worker: [52:Exams are all just fun and games]
+I0317 12:20:32.204937 30847 master.cpp:82] Master received a response from a worker: [53:Flatter your TAs with compliments]
+I0317 12:20:33.401161 30847 master.cpp:82] Master received a response from a worker: [54:OMG, 418 is so gr8!]
+I0317 12:20:34.597232 30847 master.cpp:82] Master received a response from a worker: [55:If all else fails... buy Kayvon donuts]
+I0317 12:20:35.793294 30847 master.cpp:82] Master received a response from a worker: [56:You will perform amazingly on exam 2]
+I0317 12:20:36.989508 30847 master.cpp:82] Master received a response from a worker: [57:Be careful not to optimize prematurely]
+I0317 12:20:38.185997 30847 master.cpp:82] Master received a response from a worker: [58:Write a great lecture comment on your favorite idea in the class]
+I0317 12:20:39.381813 30847 master.cpp:82] Master received a response from a worker: [59:Laugh at Kayvon's jokes]
+I0317 12:20:39.381860 30847 master.cpp:82] Master received a response from a worker: [60:Re-watch the lecture on scaling a website]
+I0317 12:20:39.381888 30847 master.cpp:82] Master received a response from a worker: [61:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:20:39.381922 30847 master.cpp:82] Master received a response from a worker: [62:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:20:39.381960 30847 master.cpp:82] Master received a response from a worker: [63:Re-watch the lecture on scaling a website]
+I0317 12:20:39.382031 30847 master.cpp:82] Master received a response from a worker: [64:Re-watch the lecture on scaling a website]
+I0317 12:20:39.382078 30847 master.cpp:82] Master received a response from a worker: [65:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:20:39.382125 30847 master.cpp:82] Master received a response from a worker: [66:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:20:39.382164 30847 master.cpp:82] Master received a response from a worker: [67:There may be opportunities for caching in this assignment]
+I0317 12:20:39.382217 30847 master.cpp:82] Master received a response from a worker: [68:Re-watch the lecture on scaling a website]
+I0317 12:20:39.382258 30847 master.cpp:82] Master received a response from a worker: [69:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:20:39.382304 30847 master.cpp:82] Master received a response from a worker: [70:There may be opportunities for caching in this assignment]
+I0317 12:20:39.382347 30847 master.cpp:82] Master received a response from a worker: [71:We recommend getting full credit on grading_wisdom.txt first]
+I0317 12:20:40.577839 30847 master.cpp:82] Master received a response from a worker: [72:Do a great project, and it all works out in the end]
+I0317 12:20:41.773861 30847 master.cpp:82] Master received a response from a worker: [73:OMG, 418 is so gr8!]
+I0317 12:20:42.969400 30847 master.cpp:82] Master received a response from a worker: [74:You will PWN your classmates in the parallelism competition]
+I0317 12:20:44.165503 30847 master.cpp:82] Master received a response from a worker: [75:You will perform amazingly on exam 2]
+I0317 12:20:45.361201 30847 master.cpp:82] Master received a response from a worker: [76:You are going to do a great project]
+I0317 12:20:46.556390 30847 master.cpp:82] Master received a response from a worker: [77:Do as best as you can and just have fun!]
+I0317 12:20:47.752385 30847 master.cpp:82] Master received a response from a worker: [78:Ask questions. Ask questions. Ask questions]
+I0317 12:20:48.947939 30847 master.cpp:82] Master received a response from a worker: [79:Ask questions. Ask questions. Ask questions]
+I0317 12:20:50.144203 30847 master.cpp:82] Master received a response from a worker: [80:Laugh at Kayvon's jokes]
+I0317 12:20:51.339568 30847 master.cpp:82] Master received a response from a worker: [81:You will PWN your classmates in the parallelism competition]
+I0317 12:20:52.535924 30847 master.cpp:82] Master received a response from a worker: [82:Be careful not to optimize prematurely]
+I0317 12:20:53.731890 30847 master.cpp:82] Master received a response from a worker: [83:Worse is better. Keep it simple...]
+I0317 12:20:54.927142 30847 master.cpp:82] Master received a response from a worker: [84:Come to lecture, there might be donuts!]
+I0317 12:20:56.123198 30847 master.cpp:82] Master received a response from a worker: [85:If all else fails... buy Kayvon donuts]
+I0317 12:20:57.319362 30847 master.cpp:82] Master received a response from a worker: [86:You will perform amazingly on exam 2]
+I0317 12:20:58.515588 30847 master.cpp:82] Master received a response from a worker: [87:Come to lecture, there might be donuts!]
+I0317 12:20:59.711376 30847 master.cpp:82] Master received a response from a worker: [88:You will perform amazingly on exam 2]
+I0317 12:21:00.907279 30847 master.cpp:82] Master received a response from a worker: [89:If all else fails... buy Kayvon donuts]
+I0317 12:21:02.103057 30847 master.cpp:82] Master received a response from a worker: [90:Flatter your TAs with compliments]
+I0317 12:21:03.298336 30847 master.cpp:82] Master received a response from a worker: [91:Ask questions. Ask questions. Ask questions]
+I0317 12:21:04.494582 30847 master.cpp:82] Master received a response from a worker: [92:Bring out all the stops in assignment 4.]
+I0317 12:21:05.690017 30847 master.cpp:82] Master received a response from a worker: [93:Worse is better. Keep it simple...]
+I0317 12:21:06.886281 30847 master.cpp:82] Master received a response from a worker: [94:You are going to do a great project]
+I0317 12:21:08.081661 30847 master.cpp:82] Master received a response from a worker: [95:You will perform amazingly on exam 2]
+I0317 12:21:08.081713 30847 master.cpp:82] Master received a response from a worker: [96:We recommend getting full credit on grading_wisdom.txt first]
+I0317 12:21:08.081795 30847 master.cpp:82] Master received a response from a worker: [97:Re-watch the lecture on scaling a website]
+I0317 12:21:08.081831 30847 master.cpp:82] Master received a response from a worker: [98:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:21:08.081903 30847 master.cpp:82] Master received a response from a worker: [99:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:21:08.081975 30847 master.cpp:82] Master received a response from a worker: [100:Re-watch the lecture on scaling a website]
+I0317 12:21:08.082029 30847 master.cpp:82] Master received a response from a worker: [101:There may be opportunities for caching in this assignment]
+I0317 12:21:08.082085 30847 master.cpp:82] Master received a response from a worker: [102:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:21:08.082119 30847 master.cpp:82] Master received a response from a worker: [103:There may be opportunities for caching in this assignment]
+I0317 12:21:08.082207 30847 master.cpp:82] Master received a response from a worker: [104:There may be opportunities for caching in this assignment]
+I0317 12:21:08.082257 30847 master.cpp:82] Master received a response from a worker: [105:There may be opportunities for caching in this assignment]
+I0317 12:21:08.082283 30847 master.cpp:82] Master received a response from a worker: [106:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:21:08.082311 30847 master.cpp:82] Master received a response from a worker: [107:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:21:09.278578 30847 master.cpp:82] Master received a response from a worker: [108:You will PWN your classmates in the parallelism competition]
+I0317 12:21:10.474714 30847 master.cpp:82] Master received a response from a worker: [109:OMG, 418 is so gr8!]
+I0317 12:21:11.670958 30847 master.cpp:82] Master received a response from a worker: [110:You will perform amazingly on exam 2]
+I0317 12:21:12.866719 30847 master.cpp:82] Master received a response from a worker: [111:You will perform amazingly on exam 2]
+I0317 12:21:14.062621 30847 master.cpp:82] Master received a response from a worker: [112:Exams are all just fun and games]
+I0317 12:21:15.258585 30847 master.cpp:82] Master received a response from a worker: [113:You will PWN your classmates in the parallelism competition]
+I0317 12:21:16.454057 30847 master.cpp:82] Master received a response from a worker: [114:Do a great project, and it all works out in the end]
+I0317 12:21:17.650012 30847 master.cpp:82] Master received a response from a worker: [115:You will PWN your classmates in the parallelism competition]
+I0317 12:21:18.845266 30847 master.cpp:82] Master received a response from a worker: [116:OMG, 418 is so gr8!]
+I0317 12:21:20.041266 30847 master.cpp:82] Master received a response from a worker: [117:If all else fails... buy Kayvon donuts]
+I0317 12:21:21.236666 30847 master.cpp:82] Master received a response from a worker: [118:Laugh at Kayvon's jokes]
+I0317 12:21:22.432379 30847 master.cpp:82] Master received a response from a worker: [119:You are going to do a great project]
+I0317 12:21:23.628756 30847 master.cpp:82] Master received a response from a worker: [120:You will perform amazingly on exam 2]
+I0317 12:21:24.825090 30847 master.cpp:82] Master received a response from a worker: [121:If all else fails... buy Kayvon donuts]
+I0317 12:21:26.020628 30847 master.cpp:82] Master received a response from a worker: [122:Laugh at Kayvon's jokes]
+I0317 12:21:27.216681 30847 master.cpp:82] Master received a response from a worker: [123:Come to lecture, there might be donuts!]
+I0317 12:21:28.412024 30847 master.cpp:82] Master received a response from a worker: [124:Do a great project, and it all works out in the end]
+I0317 12:21:29.608496 30847 master.cpp:82] Master received a response from a worker: [125:Come to lecture, there might be donuts!]
+I0317 12:21:30.804538 30847 master.cpp:82] Master received a response from a worker: [126:Flatter your TAs with compliments]
+I0317 12:21:32.000036 30847 master.cpp:82] Master received a response from a worker: [127:Ask questions. Ask questions. Ask questions]
+I0317 12:21:33.196105 30847 master.cpp:82] Master received a response from a worker: [128:Laugh at Kayvon's jokes]
+I0317 12:21:34.391888 30847 master.cpp:82] Master received a response from a worker: [129:Come to lecture, there might be donuts!]
+I0317 12:21:35.588213 30847 master.cpp:82] Master received a response from a worker: [130:Write a great lecture comment on your favorite idea in the class]
+I0317 12:21:36.783828 30847 master.cpp:82] Master received a response from a worker: [131:Laugh at Kayvon's jokes]
+I0317 12:21:36.783893 30847 master.cpp:82] Master received a response from a worker: [132:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:21:36.783967 30847 master.cpp:82] Master received a response from a worker: [133:We recommend getting full credit on grading_wisdom.txt first]
+I0317 12:21:36.784029 30847 master.cpp:82] Master received a response from a worker: [134:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:21:36.784287 30847 master.cpp:82] Master received a response from a worker: [135:Re-watch the lecture on scaling a website]
+I0317 12:21:36.784348 30847 master.cpp:82] Master received a response from a worker: [136:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:21:36.784440 30847 master.cpp:82] Master received a response from a worker: [137:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:21:36.784504 30847 master.cpp:82] Master received a response from a worker: [138:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:21:36.784539 30847 master.cpp:82] Master received a response from a worker: [139:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:21:36.784577 30847 master.cpp:82] Master received a response from a worker: [140:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:21:36.784682 30847 master.cpp:82] Master received a response from a worker: [141:There may be opportunities for caching in this assignment]
+I0317 12:21:36.784713 30847 master.cpp:82] Master received a response from a worker: [142:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:21:36.784741 30847 master.cpp:82] Master received a response from a worker: [143:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:21:37.980514 30847 master.cpp:82] Master received a response from a worker: [144:Write a great lecture comment on your favorite idea in the class]
+I0317 12:21:39.176820 30847 master.cpp:82] Master received a response from a worker: [145:Do as best as you can and just have fun!]
+I0317 12:21:40.372476 30847 master.cpp:82] Master received a response from a worker: [146:Ask questions. Ask questions. Ask questions]
+I0317 12:21:41.568662 30847 master.cpp:82] Master received a response from a worker: [147:You will perform amazingly on exam 2]
+I0317 12:21:42.763927 30847 master.cpp:82] Master received a response from a worker: [148:Do a great project, and it all works out in the end]
+I0317 12:21:43.959476 30847 master.cpp:82] Master received a response from a worker: [149:Bring out all the stops in assignment 4.]
+I0317 12:21:45.154700 30847 master.cpp:82] Master received a response from a worker: [150:Flatter your TAs with compliments]
+I0317 12:21:46.350373 30847 master.cpp:82] Master received a response from a worker: [151:Write a great lecture comment on your favorite idea in the class]
+I0317 12:21:47.546301 30847 master.cpp:82] Master received a response from a worker: [152:You will perform amazingly on exam 2]
+I0317 12:21:48.741942 30847 master.cpp:82] Master received a response from a worker: [153:You are going to do a great project]
+I0317 12:21:49.937899 30847 master.cpp:82] Master received a response from a worker: [154:Ask questions. Ask questions. Ask questions]
+I0317 12:21:51.134541 30847 master.cpp:82] Master received a response from a worker: [155:Be careful not to optimize prematurely]
+I0317 12:21:52.330857 30847 master.cpp:82] Master received a response from a worker: [156:Flatter your TAs with compliments]
+I0317 12:21:53.526562 30847 master.cpp:82] Master received a response from a worker: [157:Flatter your TAs with compliments]
+I0317 12:21:54.722692 30847 master.cpp:82] Master received a response from a worker: [158:You will PWN your classmates in the parallelism competition]
+I0317 12:21:55.918934 30847 master.cpp:82] Master received a response from a worker: [159:You are going to do a great project]
+I0317 12:21:57.113934 30847 master.cpp:82] Master received a response from a worker: [160:Bring out all the stops in assignment 4.]
+I0317 12:21:58.309800 30847 master.cpp:82] Master received a response from a worker: [161:Come to lecture, there might be donuts!]
+I0317 12:21:59.506341 30847 master.cpp:82] Master received a response from a worker: [162:OMG, 418 is so gr8!]
+I0317 12:22:00.702013 30847 master.cpp:82] Master received a response from a worker: [163:Come to lecture, there might be donuts!]
+I0317 12:22:01.897282 30847 master.cpp:82] Master received a response from a worker: [164:Do as best as you can and just have fun!]
+I0317 12:22:03.092381 30847 master.cpp:82] Master received a response from a worker: [165:Ask questions. Ask questions. Ask questions]
+I0317 12:22:04.288174 30847 master.cpp:82] Master received a response from a worker: [166:You will perform amazingly on exam 2]
+I0317 12:22:05.484223 30847 master.cpp:82] Master received a response from a worker: [167:You will perform amazingly on exam 2]
+I0317 12:22:05.484289 30847 master.cpp:82] Master received a response from a worker: [168:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:22:05.484360 30847 master.cpp:82] Master received a response from a worker: [169:Re-watch the lecture on scaling a website]
+I0317 12:22:05.484438 30847 master.cpp:82] Master received a response from a worker: [170:There may be opportunities for caching in this assignment]
+I0317 12:22:05.484606 30847 master.cpp:82] Master received a response from a worker: [171:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:22:05.484709 30847 master.cpp:82] Master received a response from a worker: [172:Re-watch the lecture on scaling a website]
+I0317 12:22:05.484789 30847 master.cpp:82] Master received a response from a worker: [173:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:22:05.484822 30847 master.cpp:82] Master received a response from a worker: [174:Re-watch the lecture on scaling a website]
+I0317 12:22:05.484884 30847 master.cpp:82] Master received a response from a worker: [175:Re-watch the lecture on scaling a website]
+I0317 12:22:05.484926 30847 master.cpp:82] Master received a response from a worker: [176:We recommend getting full credit on grading_wisdom.txt first]
+I0317 12:22:05.484974 30847 master.cpp:82] Master received a response from a worker: [177:Re-watch the lecture on scaling a website]
+I0317 12:22:05.485013 30847 master.cpp:82] Master received a response from a worker: [178:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:22:05.485049 30847 master.cpp:82] Master received a response from a worker: [179:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:22:06.680770 30847 master.cpp:82] Master received a response from a worker: [180:If all else fails... buy Kayvon donuts]
+I0317 12:22:07.876458 30847 master.cpp:82] Master received a response from a worker: [181:Worse is better. Keep it simple...]
+I0317 12:22:09.072227 30847 master.cpp:82] Master received a response from a worker: [182:Write a great lecture comment on your favorite idea in the class]
+I0317 12:22:10.267977 30847 master.cpp:82] Master received a response from a worker: [183:Exams are all just fun and games]
+I0317 12:22:11.464431 30847 master.cpp:82] Master received a response from a worker: [184:Flatter your TAs with compliments]
+I0317 12:22:12.661015 30847 master.cpp:82] Master received a response from a worker: [185:OMG, 418 is so gr8!]
+I0317 12:22:13.857661 30847 master.cpp:82] Master received a response from a worker: [186:You will perform amazingly on exam 2]
+I0317 12:22:15.053771 30847 master.cpp:82] Master received a response from a worker: [187:You are going to do a great project]
+I0317 12:22:16.248540 30847 master.cpp:82] Master received a response from a worker: [188:Flatter your TAs with compliments]
+I0317 12:22:17.444725 30847 master.cpp:82] Master received a response from a worker: [189:You will perform amazingly on exam 2]
+I0317 12:22:18.639740 30847 master.cpp:82] Master received a response from a worker: [190:Do a great project, and it all works out in the end]
+I0317 12:22:19.835990 30847 master.cpp:82] Master received a response from a worker: [191:Do a great project, and it all works out in the end]
+I0317 12:22:21.031345 30847 master.cpp:82] Master received a response from a worker: [192:Write a great lecture comment on your favorite idea in the class]
+I0317 12:22:22.226732 30847 master.cpp:82] Master received a response from a worker: [193:Worse is better. Keep it simple...]
+I0317 12:22:23.422526 30847 master.cpp:82] Master received a response from a worker: [194:Laugh at Kayvon's jokes]
+I0317 12:22:24.619004 30847 master.cpp:82] Master received a response from a worker: [195:You will PWN your classmates in the parallelism competition]
+I0317 12:22:25.815289 30847 master.cpp:82] Master received a response from a worker: [196:Bring out all the stops in assignment 4.]
+I0317 12:22:27.011152 30847 master.cpp:82] Master received a response from a worker: [197:You will perform amazingly on exam 2]
+I0317 12:22:28.207206 30847 master.cpp:82] Master received a response from a worker: [198:Laugh at Kayvon's jokes]
+I0317 12:22:29.402760 30847 master.cpp:82] Master received a response from a worker: [199:Write a great lecture comment on your favorite idea in the class]
+I0317 12:22:30.598345 30847 master.cpp:82] Master received a response from a worker: [200:You are going to do a great project]
+I0317 12:22:31.794275 30847 master.cpp:82] Master received a response from a worker: [201:Laugh at Kayvon's jokes]
+I0317 12:22:32.990866 30847 master.cpp:82] Master received a response from a worker: [202:Come to lecture, there might be donuts!]
+I0317 12:22:34.187121 30847 master.cpp:82] Master received a response from a worker: [203:You will perform amazingly on exam 2]
+I0317 12:22:34.187176 30847 master.cpp:82] Master received a response from a worker: [204:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:22:34.187211 30847 master.cpp:82] Master received a response from a worker: [205:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:22:34.187247 30847 master.cpp:82] Master received a response from a worker: [206:We recommend getting full credit on grading_wisdom.txt first]
+I0317 12:22:34.187283 30847 master.cpp:82] Master received a response from a worker: [207:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:22:34.187346 30847 master.cpp:82] Master received a response from a worker: [208:Re-watch the lecture on scaling a website]
+I0317 12:22:34.187384 30847 master.cpp:82] Master received a response from a worker: [209:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:22:34.187432 30847 master.cpp:82] Master received a response from a worker: [210:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:22:34.187499 30847 master.cpp:82] Master received a response from a worker: [211:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:22:34.187536 30847 master.cpp:82] Master received a response from a worker: [212:There may be opportunities for caching in this assignment]
+I0317 12:22:34.187569 30847 master.cpp:82] Master received a response from a worker: [213:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:22:34.187629 30847 master.cpp:82] Master received a response from a worker: [214:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:22:34.187680 30847 master.cpp:82] Master received a response from a worker: [215:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:22:35.383556 30847 master.cpp:82] Master received a response from a worker: [216:Do as best as you can and just have fun!]
+I0317 12:22:36.579798 30847 master.cpp:82] Master received a response from a worker: [217:Flatter your TAs with compliments]
+I0317 12:22:37.775522 30847 master.cpp:82] Master received a response from a worker: [218:You will PWN your classmates in the parallelism competition]
+I0317 12:22:38.971571 30847 master.cpp:82] Master received a response from a worker: [219:Bring out all the stops in assignment 4.]
+I0317 12:22:40.168076 30847 master.cpp:82] Master received a response from a worker: [220:Do as best as you can and just have fun!]
+I0317 12:22:41.364325 30847 master.cpp:82] Master received a response from a worker: [221:You will PWN your classmates in the parallelism competition]
+I0317 12:22:42.560653 30847 master.cpp:82] Master received a response from a worker: [222:Laugh at Kayvon's jokes]
+I0317 12:22:43.756135 30847 master.cpp:82] Master received a response from a worker: [223:Do as best as you can and just have fun!]
+I0317 12:22:44.952852 30847 master.cpp:82] Master received a response from a worker: [224:OMG, 418 is so gr8!]
+I0317 12:22:46.148927 30847 master.cpp:82] Master received a response from a worker: [225:Flatter your TAs with compliments]
+I0317 12:22:47.345001 30847 master.cpp:82] Master received a response from a worker: [226:Ask questions. Ask questions. Ask questions]
+I0317 12:22:48.541332 30847 master.cpp:82] Master received a response from a worker: [227:Flatter your TAs with compliments]
+I0317 12:22:49.737267 30847 master.cpp:82] Master received a response from a worker: [228:Ask questions. Ask questions. Ask questions]
+I0317 12:22:50.932706 30847 master.cpp:82] Master received a response from a worker: [229:You are going to do a great project]
+I0317 12:22:52.129209 30847 master.cpp:82] Master received a response from a worker: [230:You will perform amazingly on exam 2]
+I0317 12:22:53.325084 30847 master.cpp:82] Master received a response from a worker: [231:Ask questions. Ask questions. Ask questions]
+I0317 12:22:54.521358 30847 master.cpp:82] Master received a response from a worker: [232:Exams are all just fun and games]
+I0317 12:22:55.717692 30847 master.cpp:82] Master received a response from a worker: [233:If all else fails... buy Kayvon donuts]
+I0317 12:22:56.913429 30847 master.cpp:82] Master received a response from a worker: [234:Ask questions. Ask questions. Ask questions]
+I0317 12:22:58.109225 30847 master.cpp:82] Master received a response from a worker: [235:Do as best as you can and just have fun!]
+I0317 12:22:59.305497 30847 master.cpp:82] Master received a response from a worker: [236:Ask questions. Ask questions. Ask questions]
+I0317 12:23:00.501864 30847 master.cpp:82] Master received a response from a worker: [237:Do as best as you can and just have fun!]
+I0317 12:23:01.697872 30847 master.cpp:82] Master received a response from a worker: [238:Ask questions. Ask questions. Ask questions]
+I0317 12:23:02.893362 30847 master.cpp:82] Master received a response from a worker: [239:Exams are all just fun and games]
+I0317 12:23:02.893424 30847 master.cpp:82] Master received a response from a worker: [240:Re-watch the lecture on scaling a website]
+I0317 12:23:02.893455 30847 master.cpp:82] Master received a response from a worker: [241:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:02.893491 30847 master.cpp:82] Master received a response from a worker: [242:We recommend getting full credit on grading_wisdom.txt first]
+I0317 12:23:02.893524 30847 master.cpp:82] Master received a response from a worker: [243:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:23:02.893581 30847 master.cpp:82] Master received a response from a worker: [244:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:02.893616 30847 master.cpp:82] Master received a response from a worker: [245:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:02.893677 30847 master.cpp:82] Master received a response from a worker: [246:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:02.893718 30847 master.cpp:82] Master received a response from a worker: [247:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:23:02.893748 30847 master.cpp:82] Master received a response from a worker: [248:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:02.893797 30847 master.cpp:82] Master received a response from a worker: [249:There may be opportunities for caching in this assignment]
+I0317 12:23:02.893826 30847 master.cpp:82] Master received a response from a worker: [250:Re-watch the lecture on scaling a website]
+I0317 12:23:02.893859 30847 master.cpp:82] Master received a response from a worker: [251:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:23:04.088865 30847 master.cpp:82] Master received a response from a worker: [252:Write a great lecture comment on your favorite idea in the class]
+I0317 12:23:05.284458 30847 master.cpp:82] Master received a response from a worker: [253:OMG, 418 is so gr8!]
+I0317 12:23:06.480648 30847 master.cpp:82] Master received a response from a worker: [254:Exams are all just fun and games]
+I0317 12:23:07.676638 30847 master.cpp:82] Master received a response from a worker: [255:You will perform amazingly on exam 2]
+I0317 12:23:08.872630 30847 master.cpp:82] Master received a response from a worker: [256:Laugh at Kayvon's jokes]
+I0317 12:23:10.068717 30847 master.cpp:82] Master received a response from a worker: [257:You are going to do a great project]
+I0317 12:23:11.264122 30847 master.cpp:82] Master received a response from a worker: [258:Worse is better. Keep it simple...]
+I0317 12:23:12.460139 30847 master.cpp:82] Master received a response from a worker: [259:You will PWN your classmates in the parallelism competition]
+I0317 12:23:13.656910 30847 master.cpp:82] Master received a response from a worker: [260:Be careful not to optimize prematurely]
+I0317 12:23:14.853140 30847 master.cpp:82] Master received a response from a worker: [261:Flatter your TAs with compliments]
+I0317 12:23:16.049384 30847 master.cpp:82] Master received a response from a worker: [262:Be careful not to optimize prematurely]
+I0317 12:23:17.245434 30847 master.cpp:82] Master received a response from a worker: [263:If all else fails... buy Kayvon donuts]
+I0317 12:23:18.440503 30847 master.cpp:82] Master received a response from a worker: [264:You are going to do a great project]
+I0317 12:23:19.636384 30847 master.cpp:82] Master received a response from a worker: [265:Ask questions. Ask questions. Ask questions]
+I0317 12:23:20.832270 30847 master.cpp:82] Master received a response from a worker: [266:Do a great project, and it all works out in the end]
+I0317 12:23:22.028084 30847 master.cpp:82] Master received a response from a worker: [267:Laugh at Kayvon's jokes]
+I0317 12:23:23.223626 30847 master.cpp:82] Master received a response from a worker: [268:Do a great project, and it all works out in the end]
+I0317 12:23:24.419832 30847 master.cpp:82] Master received a response from a worker: [269:OMG, 418 is so gr8!]
+I0317 12:23:25.614573 30847 master.cpp:82] Master received a response from a worker: [270:Worse is better. Keep it simple...]
+I0317 12:23:26.811697 30847 master.cpp:82] Master received a response from a worker: [271:Flatter your TAs with compliments]
+I0317 12:23:28.007506 30847 master.cpp:82] Master received a response from a worker: [272:Laugh at Kayvon's jokes]
+I0317 12:23:29.204000 30847 master.cpp:82] Master received a response from a worker: [273:Laugh at Kayvon's jokes]
+I0317 12:23:30.400151 30847 master.cpp:82] Master received a response from a worker: [274:OMG, 418 is so gr8!]
+I0317 12:23:31.596081 30847 master.cpp:82] Master received a response from a worker: [275:Do as best as you can and just have fun!]
+I0317 12:23:31.596132 30847 master.cpp:82] Master received a response from a worker: [276:There may be opportunities for caching in this assignment]
+I0317 12:23:31.596155 30847 master.cpp:82] Master received a response from a worker: [277:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:31.596177 30847 master.cpp:82] Master received a response from a worker: [278:There may be opportunities for caching in this assignment]
+I0317 12:23:31.596223 30847 master.cpp:82] Master received a response from a worker: [279:We recommend getting full credit on grading_wisdom.txt first]
+I0317 12:23:31.596292 30847 master.cpp:82] Master received a response from a worker: [280:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:31.596318 30847 master.cpp:82] Master received a response from a worker: [281:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:31.596364 30847 master.cpp:82] Master received a response from a worker: [282:There may be opportunities for caching in this assignment]
+I0317 12:23:31.596401 30847 master.cpp:82] Master received a response from a worker: [283:There may be opportunities for caching in this assignment]
+I0317 12:23:31.596464 30847 master.cpp:82] Master received a response from a worker: [284:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:31.596504 30847 master.cpp:82] Master received a response from a worker: [285:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:31.596542 30847 master.cpp:82] Master received a response from a worker: [286:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:23:31.596602 30847 master.cpp:82] Master received a response from a worker: [287:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:23:32.792776 30847 master.cpp:82] Master received a response from a worker: [288:Be careful not to optimize prematurely]
+I0317 12:23:33.987711 30847 master.cpp:82] Master received a response from a worker: [289:Ask questions. Ask questions. Ask questions]
+I0317 12:23:35.182941 30847 master.cpp:82] Master received a response from a worker: [290:You are going to do a great project]
+I0317 12:23:36.379384 30847 master.cpp:82] Master received a response from a worker: [291:Do a great project, and it all works out in the end]
+I0317 12:23:37.575259 30847 master.cpp:82] Master received a response from a worker: [292:Flatter your TAs with compliments]
+I0317 12:23:38.771185 30847 master.cpp:82] Master received a response from a worker: [293:Worse is better. Keep it simple...]
+I0317 12:23:39.966876 30847 master.cpp:82] Master received a response from a worker: [294:Do a great project, and it all works out in the end]
+I0317 12:23:41.163137 30847 master.cpp:82] Master received a response from a worker: [295:Do a great project, and it all works out in the end]
+I0317 12:23:42.358589 30847 master.cpp:82] Master received a response from a worker: [296:Flatter your TAs with compliments]
+I0317 12:23:43.554874 30847 master.cpp:82] Master received a response from a worker: [297:Write a great lecture comment on your favorite idea in the class]
+I0317 12:23:44.750963 30847 master.cpp:82] Master received a response from a worker: [298:You will PWN your classmates in the parallelism competition]
+I0317 12:23:45.947424 30847 master.cpp:82] Master received a response from a worker: [299:OMG, 418 is so gr8!]
+I0317 12:23:47.143941 30847 master.cpp:82] Master received a response from a worker: [300:You will PWN your classmates in the parallelism competition]
+I0317 12:23:48.339810 30847 master.cpp:82] Master received a response from a worker: [301:Laugh at Kayvon's jokes]
+I0317 12:23:49.536723 30847 master.cpp:82] Master received a response from a worker: [302:Laugh at Kayvon's jokes]
+I0317 12:23:50.733037 30847 master.cpp:82] Master received a response from a worker: [303:Ask questions. Ask questions. Ask questions]
+I0317 12:23:51.928668 30847 master.cpp:82] Master received a response from a worker: [304:You are going to do a great project]
+I0317 12:23:53.124150 30847 master.cpp:82] Master received a response from a worker: [305:If all else fails... buy Kayvon donuts]
+I0317 12:23:54.320323 30847 master.cpp:82] Master received a response from a worker: [306:Laugh at Kayvon's jokes]
+I0317 12:23:55.516197 30847 master.cpp:82] Master received a response from a worker: [307:Exams are all just fun and games]
+I0317 12:23:56.712010 30847 master.cpp:82] Master received a response from a worker: [308:Be careful not to optimize prematurely]
+I0317 12:23:57.908324 30847 master.cpp:82] Master received a response from a worker: [309:Laugh at Kayvon's jokes]
+I0317 12:23:59.103108 30847 master.cpp:82] Master received a response from a worker: [310:Do a great project, and it all works out in the end]
+I0317 12:24:00.299460 30847 master.cpp:82] Master received a response from a worker: [311:You are going to do a great project]
+I0317 12:24:00.299504 30847 master.cpp:82] Master received a response from a worker: [312:Re-watch the lecture on scaling a website]
+I0317 12:24:00.299535 30847 master.cpp:82] Master received a response from a worker: [313:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:24:00.299568 30847 master.cpp:82] Master received a response from a worker: [314:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:24:00.299603 30847 master.cpp:82] Master received a response from a worker: [315:There may be opportunities for caching in this assignment]
+I0317 12:24:00.299666 30847 master.cpp:82] Master received a response from a worker: [316:There may be opportunities for caching in this assignment]
+I0317 12:24:00.299702 30847 master.cpp:82] Master received a response from a worker: [317:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:24:00.299736 30847 master.cpp:82] Master received a response from a worker: [318:Figure out a way to understand the workload characteristics in each trace.]
+I0317 12:24:00.299767 30847 master.cpp:82] Master received a response from a worker: [319:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:24:00.299825 30847 master.cpp:82] Master received a response from a worker: [320:Yes, you can optimize for specific traces but you don't have to. A general schedule algorithm works.]
+I0317 12:24:00.299860 30847 master.cpp:82] Master received a response from a worker: [321:There may be opportunities for caching in this assignment]
+I0317 12:24:00.299891 30847 master.cpp:82] Master received a response from a worker: [322:Re-watch the lecture on scaling a website]
+I0317 12:24:00.299927 30847 master.cpp:82] Master received a response from a worker: [323:The best performance may come from a particular mixture of jobs on a worker node.]
+I0317 12:24:01.496141 30847 master.cpp:82] Master received a response from a worker: [324:OMG, 418 is so gr8!]
+I0317 12:24:02.691702 30847 master.cpp:82] Master received a response from a worker: [325:OMG, 418 is so gr8!]
+I0317 12:24:03.886972 30847 master.cpp:82] Master received a response from a worker: [326:Do a great project, and it all works out in the end]
+I0317 12:24:05.082912 30847 master.cpp:82] Master received a response from a worker: [327:Exams are all just fun and games]
+I0317 12:24:06.278158 30847 master.cpp:82] Master received a response from a worker: [328:Laugh at Kayvon's jokes]
+I0317 12:24:07.473456 30847 master.cpp:82] Master received a response from a worker: [329:Laugh at Kayvon's jokes]
+I0317 12:24:08.668648 30847 master.cpp:82] Master received a response from a worker: [330:Laugh at Kayvon's jokes]
+I0317 12:24:09.864073 30847 master.cpp:82] Master received a response from a worker: [331:Do a great project, and it all works out in the end]
+I0317 12:24:11.059448 30847 master.cpp:82] Master received a response from a worker: [332:Laugh at Kayvon's jokes]
+I0317 12:24:12.255015 30847 master.cpp:82] Master received a response from a worker: [333:Ask questions. Ask questions. Ask questions]
+I0317 12:24:13.449618 30847 master.cpp:82] Master received a response from a worker: [334:You will PWN your classmates in the parallelism competition]
+I0317 12:24:14.644361 30847 master.cpp:82] Master received a response from a worker: [335:You will perform amazingly on exam 2]
+I0317 12:24:15.839184 30847 master.cpp:82] Master received a response from a worker: [336:You will perform amazingly on exam 2]
+I0317 12:24:17.034564 30847 master.cpp:82] Master received a response from a worker: [337:Be careful not to optimize prematurely]
+I0317 12:24:18.229486 30847 master.cpp:82] Master received a response from a worker: [338:Exams are all just fun and games]
+I0317 12:24:19.424127 30847 master.cpp:82] Master received a response from a worker: [339:Write a great lecture comment on your favorite idea in the class]
