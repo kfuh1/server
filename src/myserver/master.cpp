@@ -21,6 +21,7 @@ static struct Master_state {
   int next_tag;
 
   int queue_size;
+  bool last_req_seen;
 
   Worker_handle my_worker;
   Client_handle waiting_client;
@@ -49,6 +50,7 @@ void master_node_init(int max_workers, int& tick_period) {
   // when 'master_node_init' returnes
   mstate.server_ready = false;
 
+  mstate.last_req_seen = false;
   // fire off a request for a new worker
 
   int tag = random();
@@ -87,6 +89,10 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   send_client_response(client_handle, resp);
   mstate.num_pending_client_requests--;
   mstate.tagMap.erase(tag);
+  //TODO: fix parameter to kill_worker_node when we get more workers
+  if(mstate.last_req_seen && mstate.num_pending_client_requests == 0){
+    kill_worker_node(worker_handle);
+  }
 
 }
 
@@ -101,6 +107,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     Response_msg resp(0);
     resp.set_response("ack");
     send_client_response(client_handle, resp);
+    mstate.last_req_seen = true;
     return;
   }
 
@@ -112,7 +119,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   mstate.num_pending_client_requests++;
   //printf("\n");
   while(mstate.queue_size > 0){
-    //printf("%d\n", mstate.num_pending_client_requests);
+    printf("%d\n", mstate.num_pending_client_requests);
     send_request_to_worker(mstate.my_worker, mstate.reqQueue.get_work());
     mstate.queue_size--;
  }
