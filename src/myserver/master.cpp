@@ -119,7 +119,6 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   mstate.num_pending_client_requests++;
   //printf("\n");
   while(mstate.queue_size > 0){
-    printf("%d\n", mstate.num_pending_client_requests);
     send_request_to_worker(mstate.my_worker, mstate.reqQueue.get_work());
     mstate.queue_size--;
  }

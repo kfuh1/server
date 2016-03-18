@@ -60,13 +60,18 @@ static void execute_compareprimes(const Request_msg& req, Response_msg& resp) {
 
 void* thread_start(void* args){
   while(1){
-    printf("hello\n");
+    //printf("hello\n")
+    bool hasJob = false;
+    Request_msg req;
     pthread_mutex_lock(&queue_mutex);
     if(wstate.num_requests > 0){
-      Request_msg req = wstate.reqQueue.get_work();
-      Response_msg resp(req.get_tag());
+      req = wstate.reqQueue.get_work();
       wstate.num_requests--;
-      pthread_mutex_unlock(&queue_mutex);
+      hasJob = true;
+    }
+    pthread_mutex_unlock(&queue_mutex);
+    if (hasJob) {
+      Response_msg resp(req.get_tag());
       if (req.get_arg("cmd").compare("compareprimes") == 0) {
         // The compareprimes command needs to be special cased since it is
         // built on four calls to execute_execute work.  All other
@@ -78,8 +83,8 @@ void* thread_start(void* args){
         // 'execute_work'
         execute_work(req, resp);
       }
+      worker_send_response(resp);
     }
-
   }
   return NULL;
 }
@@ -138,6 +143,5 @@ void worker_handle_request(const Request_msg& req) {
   DLOG(INFO) << "Worker completed work in " << (1000.f * dt) << " ms (" << req.get_tag()  << ")\n";
  
   // send a response string to the master
-  worker_send_response(resp);
   */
 }
