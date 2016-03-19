@@ -7,6 +7,14 @@
 #include "server/master.h"
 #include "tools/work_queue.h"
 
+#define MAX_WORKERS 4
+#define MAX_THREADS 24
+
+struct Worker_state {
+  bool is_alive;
+  int num_pending_requests;
+  Worker_handle worker_handle;
+};
 
 static struct Master_state {
 
@@ -19,18 +27,17 @@ static struct Master_state {
   int max_num_workers;
   int num_pending_client_requests;
   int next_tag;
+  int num_alive_workers;
 
   int queue_size;
   bool last_req_seen;
 
-  Worker_handle my_worker;
-  Client_handle waiting_client;
-
   WorkQueue<Request_msg> reqQueue;
   std::unordered_map<int,Client_handle> tagMap;
 
-} mstate;
+  Worker_state worker_states[MAX_WORKERS];
 
+} mstate;
 
 
 void master_node_init(int max_workers, int& tick_period) {
@@ -43,6 +50,8 @@ void master_node_init(int max_workers, int& tick_period) {
   mstate.max_num_workers = max_workers;
   mstate.num_pending_client_requests = 0;
 
+  mstate.num_alive_workers = 0;
+
   mstate.queue_size = 0;
   mstate.reqQueue = WorkQueue<Request_msg>();
   // don't mark the server as ready until the server is ready to go.
@@ -53,6 +62,15 @@ void master_node_init(int max_workers, int& tick_period) {
   mstate.last_req_seen = false;
   // fire off a request for a new worker
 
+  // initialize array of workers - bc it dont work elsewhere
+  for(int i = 0; i < MAX_WORKERS; i++){
+    Worker_state ws;
+  
+    ws.num_pending_requests = 0;
+    ws.is_alive = false;
+    mstate.worker_states[i] = ws;
+  }
+
   int tag = random();
   Request_msg req(tag);
   req.set_arg("name", "my worker 0");
@@ -61,12 +79,11 @@ void master_node_init(int max_workers, int& tick_period) {
 }
 
 void handle_new_worker_online(Worker_handle worker_handle, int tag) {
+  int idx = mstate.num_alive_workers;
+  mstate.worker_states[idx].is_alive = true;
 
-  // 'tag' allows you to identify which worker request this response
-  // corresponds to.  Since the starter code only sends off one new
-  // worker request, we don't use it here.
-
-  mstate.my_worker = worker_handle;
+  mstate.worker_states[idx].worker_handle = worker_handle;
+  mstate.num_alive_workers++;
 
   // Now that a worker is booted, let the system know the server is
   // ready to begin handling client requests.  The test harness will
@@ -89,11 +106,48 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   send_client_response(client_handle, resp);
   mstate.num_pending_client_requests--;
   mstate.tagMap.erase(tag);
-  //TODO: fix parameter to kill_worker_node when we get more workers
-  if(mstate.last_req_seen && mstate.num_pending_client_requests == 0){
-    kill_worker_node(worker_handle);
+
+  //search for the worker
+  for(int i = 0; i < MAX_WORKERS; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(ws.worker_handle == worker_handle){
+      ws.num_pending_requests--;
+      break;
+    }
   }
 
+  //TODO: fix parameter to kill_worker_node when we get more workers
+  if(mstate.last_req_seen && mstate.num_pending_client_requests == 0){
+    for(int i = 0; i < MAX_WORKERS; i++){
+      //we're not setting is_alive to false because we should be done at this point
+      if(mstate.worker_states[i].is_alive){
+        kill_worker_node(mstate.worker_states[i].worker_handle);
+      }
+    }
+  }
+
+}
+
+int choose_worker_idx(){
+  int curr_min;
+  bool has_begun = false;
+  int selected_idx;
+
+  for(int i = 0; i < MAX_WORKERS; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(ws.is_alive && !has_begun){
+      curr_min = ws.num_pending_requests;
+      selected_idx = i;
+      has_begun = true;
+    }
+    else if(ws.is_alive){
+      if(ws.num_pending_requests < curr_min){
+        curr_min = ws.num_pending_requests;
+        selected_idx = i;
+      }
+    }
+  }
+  return selected_idx;
 }
 
 void handle_client_request(Client_handle client_handle, const Request_msg& client_req) {
@@ -119,38 +173,13 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   mstate.num_pending_client_requests++;
   //printf("\n");
   while(mstate.queue_size > 0){
-    send_request_to_worker(mstate.my_worker, mstate.reqQueue.get_work());
+    int idx = choose_worker_idx();
+    Worker_state ws = mstate.worker_states[idx];
+    ws.num_pending_requests++;
+    send_request_to_worker(ws.worker_handle, mstate.reqQueue.get_work());
     mstate.queue_size--;
- }
-
-  // The provided starter code cannot handle multiple pending client
-  // requests.  The server returns an error message, and the checker
-  // will mark the response as "incorrect"
-  
-  /*if (mstate.num_pending_client_requests > 0) { 
-    Response_msg resp(0);
-    resp.set_response("Oh no! This server cannot handle multiple outstanding requests!");
-    send_client_response(client_handle, resp);
-    return;
-    
   }
 
-  // Save off the handle to the client that is expecting a response.
-  // The master needs to do this it can response to this client later
-  // when 'handle_worker_response' is called.
-  mstate.waiting_client = client_handle;
-  mstate.num_pending_client_requests++;
-
-  // Fire off the request to the worker.  Eventually the worker will
-  // respond, and your 'handle_worker_response' event handler will be
-  // called to forward the worker's response back to the server.
-  int tag = mstate.next_tag++;
-  Request_msg worker_req(tag, client_req);
-  send_request_to_worker(mstate.my_worker, worker_req);
-*/
-  // We're done!  This event handler now returns, and the master
-  // process calls another one of your handlers when action is
-  // required.
 
 }
 
@@ -160,6 +189,21 @@ void handle_tick() {
   // TODO: you may wish to take action here.  This method is called at
   // fixed time intervals, according to how you set 'tick_period' in
   // 'master_node_init'.
+  if(mstate.num_alive_workers < MAX_WORKERS){
+  bool all_workers_too_loaded = true;
+  for(int i = 0; i < MAX_WORKERS; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(ws.is_alive){
+      all_workers_too_loaded &= (ws.num_pending_requests > MAX_THREADS);
+    }
+  }
+  if(all_workers_too_loaded){
+    int tag = random();
+    Request_msg req(tag);
+    req.set_arg("name", "my worker 0");
+    request_new_worker_node(req);
+  }
+  }
 
 }
 
