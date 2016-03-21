@@ -10,6 +10,7 @@
 #define MAX_WORKERS 4
 #define MAX_THREADS 24
 
+int prgm_max_workers;
 
 struct Worker_state {
   bool is_alive;
@@ -30,10 +31,8 @@ static struct Master_state {
   int next_tag;
   int num_alive_workers;
 
-  int queue_size;
   bool last_req_seen;
 
-  WorkQueue<Request_msg> reqQueue;
   std::unordered_map<int,Client_handle> tagMap;
 
   Worker_state worker_states[MAX_WORKERS];
@@ -49,6 +48,7 @@ static struct Request_cache {
 
 void master_node_init(int max_workers, int& tick_period) {
 
+  prgm_max_workers = max_workers;
   // set up tick handler to fire every 5 seconds. (feel free to
   // configure as you please)
   tick_period = 5;
@@ -59,8 +59,6 @@ void master_node_init(int max_workers, int& tick_period) {
 
   mstate.num_alive_workers = 0;
 
-  mstate.queue_size = 0;
-  mstate.reqQueue = WorkQueue<Request_msg>();
   // don't mark the server as ready until the server is ready to go.
   // This is actually when the first worker is up and running, not
   // when 'master_node_init' returnes
@@ -120,7 +118,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   req_cache.size++;
 
   //search for the worker
-  for(int i = 0; i < MAX_WORKERS; i++){
+  for(int i = 0; i < prgm_max_workers; i++){
     Worker_state ws = mstate.worker_states[i];
     if(ws.worker_handle == worker_handle){
       ws.num_pending_requests--;
@@ -130,7 +128,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
 
   //TODO: fix parameter to kill_worker_node when we get more workers
   if(mstate.last_req_seen && mstate.num_pending_client_requests == 0){
-    for(int i = 0; i < MAX_WORKERS; i++){
+    for(int i = 0; i < prgm_max_workers; i++){
       //we're not setting is_alive to false because we should be done at this point
       if(mstate.worker_states[i].is_alive){
         kill_worker_node(mstate.worker_states[i].worker_handle);
@@ -145,7 +143,7 @@ int choose_worker_idx(){
   bool has_begun = false;
   int selected_idx;
 
-  for(int i = 0; i < MAX_WORKERS; i++){
+  for(int i = 0; i < prgm_max_workers; i++){
     Worker_state ws = mstate.worker_states[i];
     if(ws.is_alive && !has_begun){
       curr_min = ws.num_pending_requests;
@@ -188,19 +186,12 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   int tag = mstate.next_tag++;
   tagToReqMap.insert(std::pair<int, std::string>(tag, req_string)); 
   Request_msg worker_req(tag, client_req);
-  mstate.reqQueue.put_work(worker_req);
-  mstate.queue_size++;
   mstate.num_pending_client_requests++;
-  //printf("\n");
-  while(mstate.queue_size > 0){
-    int idx = choose_worker_idx();
-    Worker_state ws = mstate.worker_states[idx];
-    ws.num_pending_requests++;
-    send_request_to_worker(ws.worker_handle, mstate.reqQueue.get_work());
-    mstate.queue_size--;
-  }
-
-
+  
+  int idx = choose_worker_idx();
+  Worker_state ws = mstate.worker_states[idx];
+  ws.num_pending_requests++;
+  send_request_to_worker(ws.worker_handle, worker_req);
 }
 
 
@@ -209,9 +200,9 @@ void handle_tick() {
   // TODO: you may wish to take action here.  This method is called at
   // fixed time intervals, according to how you set 'tick_period' in
   // 'master_node_init'.
-  if(mstate.num_alive_workers < MAX_WORKERS){
+  if(mstate.num_alive_workers < prgm_max_workers){
   bool all_workers_too_loaded = true;
-  for(int i = 0; i < MAX_WORKERS; i++){
+  for(int i = 0; i < prgm_max_workers; i++){
     Worker_state ws = mstate.worker_states[i];
     if(ws.is_alive){
       all_workers_too_loaded &= (ws.num_pending_requests > MAX_THREADS);
