@@ -10,6 +10,7 @@
 #define MAX_WORKERS 4
 #define MAX_THREADS 24
 
+
 struct Worker_state {
   bool is_alive;
   int num_pending_requests;
@@ -39,6 +40,12 @@ static struct Master_state {
 
 } mstate;
 
+std::unordered_map<int, std::string> tagToReqMap;
+
+static struct Request_cache {
+  int size;
+  std::unordered_map<std::string, Response_msg> respMap;
+} req_cache;
 
 void master_node_init(int max_workers, int& tick_period) {
 
@@ -107,6 +114,11 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   mstate.num_pending_client_requests--;
   mstate.tagMap.erase(tag);
 
+  //at shouldn't throw exception here because we already added tag to map
+  std::string req_string = tagToReqMap.at(tag);
+  req_cache.respMap.insert(std::pair<std::string, Response_msg>(req_string, resp));
+  req_cache.size++;
+
   //search for the worker
   for(int i = 0; i < MAX_WORKERS; i++){
     Worker_state ws = mstate.worker_states[i];
@@ -165,8 +177,16 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     return;
   }
 
+  //Search for response in cache
+  std::string req_string = client_req.get_request_string();
+  if(req_cache.respMap.find(req_string) != req_cache.respMap.end()){
+    send_client_response(client_handle, req_cache.respMap.at(req_string));
+    return;
+  }
+
   mstate.tagMap.insert(std::pair<int,Client_handle>(mstate.next_tag, client_handle));
   int tag = mstate.next_tag++;
+  tagToReqMap.insert(std::pair<int, std::string>(tag, req_string)); 
   Request_msg worker_req(tag, client_req);
   mstate.reqQueue.put_work(worker_req);
   mstate.queue_size++;
