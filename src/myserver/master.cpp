@@ -13,6 +13,8 @@
 
 struct Worker_state {
   bool is_alive;
+  bool has_cache_intensive;
+  int cache_intensive_tag;
   int num_pending_requests;
   Worker_handle worker_handle;
 };
@@ -75,6 +77,7 @@ void master_node_init(int max_workers, int& tick_period) {
   
     ws.num_pending_requests = 0;
     ws.is_alive = false;
+    ws.has_cache_intensive = false;
     mstate.worker_states[i] = ws;
   }
 
@@ -124,10 +127,15 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
     Worker_state ws = mstate.worker_states[i];
     if(ws.worker_handle == worker_handle){
       ws.num_pending_requests--;
+      //unmark cache intensive if the response was for cache intensive request
+      if(ws.has_cache_intensive && ws.cache_intensive_tag == tag){
+        ws.has_cache_intensive = false;
+      }
       break;
     }
   }
 
+  
   //TODO: fix parameter to kill_worker_node when we get more workers
   if(mstate.last_req_seen && mstate.num_pending_client_requests == 0){
     for(int i = 0; i < MAX_WORKERS; i++){
@@ -195,8 +203,20 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   while(mstate.queue_size > 0){
     int idx = choose_worker_idx();
     Worker_state ws = mstate.worker_states[idx];
+    Request_msg req = mstate.reqQueue.get_work();
+    if(req.get_arg("cmd").compare("projectidea") == 0){
+      //if worker already has cache intensive job, put request back on
+      if(ws.has_cache_intensive){
+        mstate.reqQueue.put_work(req);
+        continue;
+      }
+      else{
+        ws.has_cache_intensive = true;
+        ws.cache_intensive_tag = req.get_tag();
+      }
+    }
     ws.num_pending_requests++;
-    send_request_to_worker(ws.worker_handle, mstate.reqQueue.get_work());
+    send_request_to_worker(ws.worker_handle, req);
     mstate.queue_size--;
   }
 
