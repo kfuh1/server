@@ -12,8 +12,13 @@
 
 struct Worker_state {
   bool is_alive;
-  int num_pending_requests;
+
+  bool to_be_killed; //need to initialize to false
+  int num_cpu_intense_requests;
+  int num_bw_intense_requests;
+
   int num_cache_intense_requests;
+  int num_pending_requests; //this is the total number of pending reqs
   Worker_handle worker_handle;
 };
 
@@ -39,11 +44,14 @@ static struct Master_state {
 } mstate;
 
 std::unordered_map<int, std::string> tagToReqMap;
+std::unordered_map<int, std::string> tagToTypeMap; //the string is type we define
 
 static struct Request_cache {
   int size;
   std::unordered_map<std::string, Response_msg> respMap;
 } req_cache;
+
+
 
 void master_node_init(int max_workers, int& tick_period) {
 
@@ -70,7 +78,10 @@ void master_node_init(int max_workers, int& tick_period) {
   for(int i = 0; i < MAX_WORKERS; i++){
     Worker_state ws;
     ws.num_cache_intense_requests = 0;
+    ws.num_cpu_intense_requests = 0;
+    ws.num_bw_intense_requests = 0;
     ws.num_pending_requests = 0;
+    ws.to_be_killed = false;
     ws.is_alive = false;
     mstate.worker_states[i] = ws;
   }
@@ -111,6 +122,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   mstate.num_pending_client_requests--;
   mstate.tagMap.erase(tag);
 
+
   //only cache tellmenow and countprimes
   if(tagToReqMap.find(tag) != tagToReqMap.end()){
     std::string req_string = tagToReqMap.at(tag);
@@ -123,6 +135,23 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
     Worker_state ws = mstate.worker_states[i];
     if(ws.is_alive && ws.worker_handle == worker_handle){
       ws.num_pending_requests--;
+      //find and decrement appropriate counter
+      std::string type = tagToTypeMap.at(tag);
+      if(type == "cache"){
+        ws.num_cache_intense_requests--;
+      }  
+      else if(type == "bw"){
+        ws.num_bw_intense_requests--;
+      }
+      else if(type == "cpu"){
+        ws.num_bw_intense_requests--;
+      }
+      tagToTypeMap.erase(tag);
+
+      //kill the worker if it's been flagged and it's done with work
+      if(ws.to_be_killed && ws.num_pending_requests == 0){
+        kill_worker_node(ws.worker_handle);
+      }
       break;
     }
   }
@@ -139,25 +168,97 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
 
 }
 
-int choose_worker_idx(){
+int find_min_cache_idx(){
   int curr_min;
-  bool has_begun = false;
   int selected_idx;
-
+  bool has_begun = false;
   for(int i = 0; i < mstate.max_num_workers; i++){
     Worker_state ws = mstate.worker_states[i];
+    if(!ws.is_alive || ws.to_be_killed){
+      continue;
+    }
     if(ws.is_alive && !has_begun){
-      curr_min = ws.num_pending_requests;
+      curr_min = ws.num_cache_intense_requests;
       selected_idx = i;
       has_begun = true;
     }
     else if(ws.is_alive){
       if(ws.num_pending_requests < curr_min){
-        curr_min = ws.num_pending_requests;
+        curr_min = ws.num_cache_intense_requests;
         selected_idx = i;
       }
     }
   }
+  return selected_idx;
+}
+int find_min_bw_idx(){
+  int curr_min;
+  int selected_idx;
+  bool has_begun = false;
+  for(int i = 0; i < mstate.max_num_workers; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(!ws.is_alive || ws.to_be_killed){
+      continue;
+    }
+    if(ws.is_alive && !has_begun){
+      curr_min = ws.num_bw_intense_requests;
+      selected_idx = i;
+      has_begun = true;
+    }
+    else if(ws.is_alive){
+      if(ws.num_pending_requests < curr_min){
+        curr_min = ws.num_bw_intense_requests;
+        selected_idx = i;
+      }
+    }
+  }
+  return selected_idx;
+}
+int find_min_cpu_idx(){
+  int curr_min;
+  bool has_begun = false;
+  int selected_idx;
+  for(int i = 0; i < mstate.max_num_workers; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(!ws.is_alive || ws.to_be_killed){
+      continue;
+    }
+    if(ws.is_alive && !has_begun){
+      curr_min = ws.num_cpu_intense_requests;
+      selected_idx = i;
+      has_begun = true;
+    }
+    else if(ws.is_alive){
+      if(ws.num_pending_requests < curr_min){
+        curr_min = ws.num_cpu_intense_requests;
+        selected_idx = i;
+      }
+    }
+  }
+  return selected_idx;
+}
+
+int choose_worker_idx(int tag){
+  int curr_min;
+  bool has_begun = false;
+  int selected_idx;
+
+  std::string type = tagToTypeMap.at(tag);
+
+  if(type == "cache"){
+    return find_min_cache_idx();
+  }
+  else if(type == "bw"){
+    return find_min_bw_idx();
+  }
+  else if(type == "cpu"){
+    return find_min_cpu_idx();
+  }
+  //shouldn't get here
+  else{
+    return -1;
+  }
+
   return selected_idx;
 }
 
@@ -191,8 +292,21 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   Request_msg worker_req(tag, client_req);
   mstate.num_pending_client_requests++;
   
-  
-  int idx = choose_worker_idx();
+  std::string req_name = client_req.get_arg("cmd");
+  if(req_name == "projectidea"){
+    tagToTypeMap.insert(std::pair<int,std::string>(tag, "cache"));
+  } 
+  //we're going to fix this, but right now our map assumes everything maps
+  //to one of the three types of requests
+  else if(req_name == "tellmenow"){
+    tagToTypeMap.insert(std::pair<int,std::string>(tag, "bw"));
+  }
+  //countprimes, compareprimes, 418wisdom - debating whether or not we want catch-all case 
+  else{
+    tagToTypeMap.insert(std::pair<int,std::string>(tag, "cpu"));
+  }
+    
+  int idx = choose_worker_idx(tag);
   Worker_state ws = mstate.worker_states[idx];
   ws.num_pending_requests++;
   send_request_to_worker(ws.worker_handle, worker_req);
@@ -204,21 +318,40 @@ void handle_tick() {
   // TODO: you may wish to take action here.  This method is called at
   // fixed time intervals, according to how you set 'tick_period' in
   // 'master_node_init'.
+  
+
+  //policy to add more worker nodes
   if(mstate.num_alive_workers < mstate.max_num_workers){
-  bool all_workers_too_loaded = true;
-  for(int i = 0; i < mstate.max_num_workers; i++){
-    Worker_state ws = mstate.worker_states[i];
-    if(ws.is_alive){
-      all_workers_too_loaded &= (ws.num_pending_requests > MAX_THREADS);
+    int avg_work_per_node = mstate.num_pending_client_requests / mstate.num_alive_workers;
+    if(avg_work_per_node > 12){
+      int tag = random();
+      Request_msg req(tag);
+      req.set_arg("name", "my worker 0");
+      request_new_worker_node(req);
     }
   }
-  if(all_workers_too_loaded){
-    int tag = random();
-    Request_msg req(tag);
-    req.set_arg("name", "my worker 0");
-    request_new_worker_node(req);
+
+  //policy to remove worker nodes only if there are more than one nodes
+  if(mstate.num_alive_workers > 1){
+    int avg_work_per_node = mstate.num_pending_client_requests / mstate.num_alive_workers;
+    if(avg_work_per_node < 6){
+      Worker_state candidate_state;
+      for(int i = 0; i < mstate.max_num_workers; i++){
+        Worker_state ws = mstate.worker_states[i];
+        if(ws.is_alive){
+          if(ws.to_be_killed){
+            return;
+          }
+          else{
+            candidate_state = ws;
+          }
+        }
+      }
+      candidate_state.to_be_killed = true;
+    }
   }
-  }
+
+
 
 }
 
