@@ -3,3 +3,5 @@ objs
 cpplint.py
 worker$
 logs/*
+logs_*
+latedays.*

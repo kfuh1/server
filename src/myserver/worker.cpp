@@ -18,7 +18,10 @@ pthread_mutex_t queue_mutex;
 
 static struct Worker_state {
   WorkQueue<Request_msg> reqQueue;
+  WorkQueue<Request_msg> cacheIntenseQueue;
+  int num_cache_intense_requests;
   int num_requests;
+  int running_cache_intensive;
 } wstate;
 
 
@@ -98,11 +101,14 @@ void worker_node_init(const Request_msg& params) {
 
   DLOG(INFO) << "**** Initializing worker: " << params.get_arg("name") << " ****\n";
   wstate.reqQueue = WorkQueue<Request_msg>();  
+  wstate.cacheIntenseQueue = WorkQueue<Request_msg>();
   wstate.num_requests = 0;
+  wstate.num_cache_intense_requests = 0;
+  wstate.running_cache_intensive = false;
+
 
   pthread_mutex_init(&queue_mutex, NULL);
   pthread_t workers[MAX_THREADS];
-
   // spawn 24 threads that will be pinned down to specific execution contexts
   for(int i = 0; i < MAX_THREADS; i++){
     pthread_create(&workers[i], NULL, thread_start, NULL);
