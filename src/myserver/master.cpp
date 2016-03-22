@@ -13,6 +13,7 @@
 struct Worker_state {
   bool is_alive;
   int num_pending_requests;
+  int num_cache_intense_requests;
   Worker_handle worker_handle;
 };
 
@@ -30,9 +31,6 @@ static struct Master_state {
   int num_alive_workers;
 
   bool last_req_seen;
-
-  //int queue_size;
-  //WorkQueue<Request_msg> reqQueue;
 
   std::unordered_map<int,Client_handle> tagMap;
 
@@ -59,8 +57,6 @@ void master_node_init(int max_workers, int& tick_period) {
 
   mstate.num_alive_workers = 0;
 
-  //mstate.queue_size = 0;
-  //mstate.reqQueue = WorkQueue<Request_msg>();
 
   // don't mark the server as ready until the server is ready to go.
   // This is actually when the first worker is up and running, not
@@ -73,7 +69,7 @@ void master_node_init(int max_workers, int& tick_period) {
   // initialize array of workers - bc it dont work elsewhere
   for(int i = 0; i < MAX_WORKERS; i++){
     Worker_state ws;
-  
+    ws.num_cache_intense_requests = 0;
     ws.num_pending_requests = 0;
     ws.is_alive = false;
     mstate.worker_states[i] = ws;
@@ -115,10 +111,12 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   mstate.num_pending_client_requests--;
   mstate.tagMap.erase(tag);
 
-  //map.at shouldn't throw exception here because we already added tag to map
-  std::string req_string = tagToReqMap.at(tag);
-  req_cache.respMap.insert(std::pair<std::string, Response_msg>(req_string, resp));
-  req_cache.size++;
+  //only cache tellmenow and countprimes
+  if(tagToReqMap.find(tag) != tagToReqMap.end()){
+    std::string req_string = tagToReqMap.at(tag);
+    req_cache.respMap.insert(std::pair<std::string, Response_msg>(req_string, resp));
+    req_cache.size++;
+  }
 
   //search for the worker
   for(int i = 0; i < mstate.max_num_workers; i++){
@@ -179,29 +177,25 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   }
 
   //Search for response in cache
-  std::string req_string = client_req.get_request_string();
-  if(req_cache.respMap.find(req_string) != req_cache.respMap.end()){
-    send_client_response(client_handle, req_cache.respMap.at(req_string));
-    return;
+  if(client_req.get_arg("cmd") == "countprimes" || client_req.get_arg("cmd") == "tellmenow"){
+    std::string req_string = client_req.get_request_string();
+    if(req_cache.respMap.find(req_string) != req_cache.respMap.end()){
+      send_client_response(client_handle, req_cache.respMap.at(req_string));
+      return;
+    }
+    tagToReqMap.insert(std::pair<int, std::string>(mstate.next_tag, req_string)); 
   }
 
   mstate.tagMap.insert(std::pair<int,Client_handle>(mstate.next_tag, client_handle));
   int tag = mstate.next_tag++;
-  tagToReqMap.insert(std::pair<int, std::string>(tag, req_string)); 
   Request_msg worker_req(tag, client_req);
   mstate.num_pending_client_requests++;
-  //mstate.reqQueue.put_work(worker_req);
-  //mstate.queue_size++;
   
   
-  //while(mstate.queue_size > 0){
-    int idx = choose_worker_idx();
-    Worker_state ws = mstate.worker_states[idx];
-    ws.num_pending_requests++;
-    send_request_to_worker(ws.worker_handle, worker_req);
-    //send_request_to_worker(ws.worker_handle, mstate.reqQueue.get_work());
-    //mstate.queue_size--;
-  //} 
+  int idx = choose_worker_idx();
+  Worker_state ws = mstate.worker_states[idx];
+  ws.num_pending_requests++;
+  send_request_to_worker(ws.worker_handle, worker_req);
 }
 
 
