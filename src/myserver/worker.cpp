@@ -11,17 +11,15 @@
 #include "tools/cycle_timer.h"
 #include "tools/work_queue.h"
 
-#define MAX_THREADS 24
-
-
-pthread_mutex_t queue_mutex;
+#define MAX_THREADS 48
 
 static struct Worker_state {
   WorkQueue<Request_msg> reqQueue;
-  WorkQueue<Request_msg> cacheIntenseQueue;
-  int num_cache_intense_requests;
-  int num_requests;
-  int running_cache_intensive;
+  WorkQueue<Request_msg> projectideaQueue;
+  WorkQueue<Request_msg> tellmenowQueue;
+  //int num_cache_intense_requests;
+  //int num_requests;
+  //int running_cache_intensive;
 } wstate;
 
 
@@ -61,45 +59,51 @@ static void execute_compareprimes(const Request_msg& req, Response_msg& resp) {
       resp.set_response("There are more primes in second range.");
 }
 
-void* thread_start(void* args){
+void* projectidea_thread_start(void* args){
+  bool hasJob = false;
+
+  //since only one thread has this code we know if it's able to 
+  //pull of the queue then the system isn't running another projectidea
   while(1){
-    bool hasJob = false;
-    bool hasCacheIntenseJob = false;;
+    //make use of the blocking queue
+    Request_msg req = wstate.projectideaQueue.get_work();
+    Response_msg resp(req.get_tag());
+    execute_work(req, resp);
+    worker_send_response(resp);
+  }
+}
+
+//function for thread dedicated to tellmenow requests
+void* tellmenow_thread_start(void* args){
+  while(1){
+    Request_msg req = wstate.tellmenowQueue.get_work();
+    Response_msg resp(req.get_tag());
+    execute_work(req, resp);
+    worker_send_response(resp);
+  }
+  return NULL;
+}
+
+void* general_thread_start(void* args){
+  while(1){
     Request_msg req;
-    pthread_mutex_lock(&queue_mutex);
 
-    if(wstate.num_cache_intense_requests > 0 && !wstate.running_cache_intensive){
-      wstate.running_cache_intensive = true;
-      wstate.num_cache_intense_requests--;
-      req = wstate.cacheIntenseQueue.get_work();
-      hasJob = true;
-      hasCacheIntenseJob = true;
-      //need to fix this so you can reset runnning_cache_intenseive to false
+    //queue is blocking so once we get past this point we know we must
+    //have a job to run
+    req = wstate.reqQueue.get_work();
+    
+    Response_msg resp(req.get_tag());
+    if (req.get_arg("cmd").compare("compareprimes") == 0) {
+      // The compareprimes command needs to be special cased since it is
+      // built on four calls to execute_execute work.  All other
+      // requests from the client are one-to-one with calls to  execute_work.
+      execute_compareprimes(req, resp);
+    } 
+    else {
+      //The response string is filled in by 'execute_work'
+      execute_work(req, resp);
     }
-    else if(wstate.num_requests > 0){
-      req = wstate.reqQueue.get_work();
-      wstate.num_requests--;
-      hasJob = true;
-    }
-    pthread_mutex_unlock(&queue_mutex);
-
-    if (hasJob) {
-      Response_msg resp(req.get_tag());
-      if (req.get_arg("cmd").compare("compareprimes") == 0) {
-        // The compareprimes command needs to be special cased since it is
-        // built on four calls to execute_execute work.  All other
-        // requests from the client are one-to-one with calls to  execute_work.
-        execute_compareprimes(req, resp);
-      } else {
-        // actually perform the work.  The response string is filled in by
-        // 'execute_work'
-        execute_work(req, resp);
-      }
-      worker_send_response(resp);
-      if(hasCacheIntenseJob){
-        wstate.running_cache_intensive = false;
-      }
-    }
+    worker_send_response(resp);
   }
   return NULL;
 }
@@ -113,18 +117,24 @@ void worker_node_init(const Request_msg& params) {
 
   DLOG(INFO) << "**** Initializing worker: " << params.get_arg("name") << " ****\n";
   wstate.reqQueue = WorkQueue<Request_msg>();  
-  wstate.cacheIntenseQueue = WorkQueue<Request_msg>();
-  wstate.num_requests = 0;
-  wstate.num_cache_intense_requests = 0;
-  wstate.running_cache_intensive = false;
+  wstate.projectideaQueue = WorkQueue<Request_msg>();
+  wstate.tellmenowQueue = WorkQueue<Request_msg>();
 
-
-  pthread_mutex_init(&queue_mutex, NULL);
   pthread_t workers[MAX_THREADS];
   // spawn 23 threads that will be pinned down to specific execution contexts
   // use 23 because 24 execution contexts total and we have a main thread
   for(int i = 0; i < MAX_THREADS - 1; i++){
-    pthread_create(&workers[i], NULL, thread_start, NULL);
+    //make 0th thread handle projectidea requests
+    if(i == 0){
+      pthread_create(&workers[i], NULL, projectidea_thread_start, NULL);
+    }
+    //make 1st thread handle tellmenow requests
+    else if(i == 1){
+      pthread_create(&workers[i], NULL, tellmenow_thread_start, NULL);
+    }
+    else{
+      pthread_create(&workers[i], NULL, general_thread_start, NULL);
+    }
   }
 }
 
@@ -135,12 +145,13 @@ void worker_handle_request(const Request_msg& req) {
 
   // Enqueue into correct queue based on type of job
   if (req.get_arg("cmd").compare("projectidea") == 0) {
-    wstate.cacheIntenseQueue.put_work(req);
-    wstate.num_cache_intense_requests++;
+    wstate.projectideaQueue.put_work(req);
+  }
+  else if(req.get_arg("cmd").compare("tellmenow") == 0){
+    wstate.tellmenowQueue.put_work(req);
   }
   else{
     wstate.reqQueue.put_work(req);
-    wstate.num_requests++;
   }
   // Output debugging help to the logs (in a single worker node
   // configuration, this would be in the log logs/worker.INFO)

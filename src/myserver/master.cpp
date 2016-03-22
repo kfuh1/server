@@ -8,7 +8,7 @@
 #include "tools/work_queue.h"
 
 #define MAX_WORKERS 4
-#define MAX_THREADS 24
+#define MAX_THREADS 48
 
 struct Worker_state {
   bool is_alive;
@@ -16,6 +16,7 @@ struct Worker_state {
   bool to_be_killed; //need to initialize to false
   int num_cpu_intense_requests;
   int num_bw_intense_requests;
+  int num_non_intense_requests; //this would be like tellmenow
 
   int num_cache_intense_requests;
   int num_pending_requests; //this is the total number of pending reqs
@@ -80,6 +81,7 @@ void master_node_init(int max_workers, int& tick_period) {
     ws.num_cache_intense_requests = 0;
     ws.num_cpu_intense_requests = 0;
     ws.num_bw_intense_requests = 0;
+    ws.num_non_intense_requests = 0;
     ws.num_pending_requests = 0;
     ws.to_be_killed = false;
     ws.is_alive = false;
@@ -144,7 +146,10 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
         ws.num_bw_intense_requests--;
       }
       else if(type == "cpu"){
-        ws.num_bw_intense_requests--;
+        ws.num_cpu_intense_requests--;
+      }
+      else if(type == "non"){
+        ws.num_non_intense_requests--;
       }
       tagToTypeMap.erase(tag);
 
@@ -214,6 +219,29 @@ int find_min_bw_idx(){
   }
   return selected_idx;
 }
+int find_min_non_idx(){
+  int curr_min;
+  int selected_idx;
+  bool has_begun = false;
+  for(int i = 0; i < mstate.max_num_workers; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(!ws.is_alive || ws.to_be_killed){
+      continue;
+    }
+    if(ws.is_alive && !has_begun){
+      curr_min = ws.num_non_intense_requests;
+      selected_idx = i;
+      has_begun = true;
+    }
+    else if(ws.is_alive){
+      if(ws.num_pending_requests < curr_min){
+        curr_min = ws.num_non_intense_requests;
+        selected_idx = i;
+      }
+    }
+  }
+  return selected_idx;
+}
 int find_min_cpu_idx(){
   int curr_min;
   bool has_begun = false;
@@ -253,6 +281,9 @@ int choose_worker_idx(int tag){
   }
   else if(type == "cpu"){
     return find_min_cpu_idx();
+  }
+  else if(type == "non"){
+    return find_min_non_idx();
   }
   //shouldn't get here
   else{
@@ -299,7 +330,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   //we're going to fix this, but right now our map assumes everything maps
   //to one of the three types of requests
   else if(req_name == "tellmenow"){
-    tagToTypeMap.insert(std::pair<int,std::string>(tag, "bw"));
+    tagToTypeMap.insert(std::pair<int,std::string>(tag, "non"));
   }
   //countprimes, compareprimes, 418wisdom - debating whether or not we want catch-all case 
   else{
@@ -318,12 +349,27 @@ void handle_tick() {
   // TODO: you may wish to take action here.  This method is called at
   // fixed time intervals, according to how you set 'tick_period' in
   // 'master_node_init'.
-  
 
+  int num_bw = 0;
+  int num_cpu = 0;
+  int num_cache = 0;
+
+  for(int i = 0; i < mstate.max_num_workers; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(ws.is_alive){
+      num_bw += ws.num_bw_intense_requests;
+      num_cpu += ws.num_cpu_intense_requests;
+      num_cache += ws.num_cache_intense_requests;
+    }
+  }  
+  // fast requests like tellmenow are weighted
+  int weighted_total = num_bw + num_cpu + num_cache;
+
+ 
   //policy to add more worker nodes
   if(mstate.num_alive_workers < mstate.max_num_workers){
-    int avg_work_per_node = mstate.num_pending_client_requests / mstate.num_alive_workers;
-    if(avg_work_per_node > 12){
+    int avg_work_per_node = weighted_total / mstate.num_alive_workers;
+    if(avg_work_per_node > MAX_THREADS/2){
       int tag = random();
       Request_msg req(tag);
       req.set_arg("name", "my worker 0");
@@ -333,8 +379,8 @@ void handle_tick() {
 
   //policy to remove worker nodes only if there are more than one nodes
   if(mstate.num_alive_workers > 1){
-    int avg_work_per_node = mstate.num_pending_client_requests / mstate.num_alive_workers;
-    if(avg_work_per_node < 6){
+    int avg_work_per_node = weighted_total / mstate.num_alive_workers;
+    if(avg_work_per_node < MAX_THREADS/2){
       Worker_state candidate_state;
       for(int i = 0; i < mstate.max_num_workers; i++){
         Worker_state ws = mstate.worker_states[i];
