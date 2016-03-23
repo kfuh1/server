@@ -35,7 +35,7 @@ static struct Master_state {
   int num_pending_client_requests;
   int next_tag;
   int num_alive_workers;
-
+  int num_to_be_killed;
   bool last_req_seen;
 
   std::unordered_map<int,Client_handle> tagMap;
@@ -65,7 +65,7 @@ void master_node_init(int max_workers, int& tick_period) {
   mstate.num_pending_client_requests = 0;
 
   mstate.num_alive_workers = 0;
-
+  mstate.num_to_be_killed = 0;
 
   // don't mark the server as ready until the server is ready to go.
   // This is actually when the first worker is up and running, not
@@ -156,9 +156,11 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       //kill the worker if it's been flagged and it's done with work
       if(ws.to_be_killed && ws.num_pending_requests == 0){
         kill_worker_node(ws.worker_handle);
+        mstate.num_to_be_killed--;
       }
       break;
     }
+    mstate.worker_states[i] = ws;
   }
 
   //TODO: fix parameter to kill_worker_node when we get more workers
@@ -167,6 +169,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       //we're not setting is_alive to false because we should be done at this point
       if(mstate.worker_states[i].is_alive){
         kill_worker_node(mstate.worker_states[i].worker_handle);
+        mstate.num_to_be_killed--;
       }
     }
   }
@@ -339,13 +342,12 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     
   int idx = choose_worker_idx(tag);
   Worker_state ws = mstate.worker_states[idx];
-  ws.num_pending_requests++;
+  mstate.worker_states[idx].num_pending_requests++;
   send_request_to_worker(ws.worker_handle, worker_req);
 }
 
 
 void handle_tick() {
-
   // TODO: you may wish to take action here.  This method is called at
   // fixed time intervals, according to how you set 'tick_period' in
   // 'master_node_init'.
@@ -363,37 +365,43 @@ void handle_tick() {
     }
   }  
   // fast requests like tellmenow are weighted
-  int weighted_total = num_bw + num_cpu + num_cache;
+  int weighted_total = num_bw + num_cpu + 3 * num_cache;
 
- 
+  int num_actually_alive = mstate.num_alive_workers - mstate.num_to_be_killed;
   //policy to add more worker nodes
-  if(mstate.num_alive_workers < mstate.max_num_workers){
-    int avg_work_per_node = weighted_total / mstate.num_alive_workers;
+  if(num_actually_alive < mstate.max_num_workers){
+    int avg_work_per_node = weighted_total / num_actually_alive;
     if(avg_work_per_node > MAX_THREADS/2){
-      int tag = random();
-      Request_msg req(tag);
-      req.set_arg("name", "my worker 0");
-      request_new_worker_node(req);
+      if(mstate.num_to_be_killed == 0 && mstate.num_alive_workers < mstate.max_num_workers){
+        int tag = random();
+        Request_msg req(tag);
+        req.set_arg("name", "my worker 0");
+        request_new_worker_node(req);
+      }
+      else{
+        for(int i = 0; i < mstate.max_num_workers; i++){
+          Worker_state ws = mstate.worker_states[i];
+          if(ws.is_alive && ws.to_be_killed){
+            mstate.worker_states[i].to_be_killed = false;
+            mstate.num_to_be_killed--;
+            break;
+          }
+        }
+      }
     }
   }
 
   //policy to remove worker nodes only if there are more than one nodes
-  if(mstate.num_alive_workers > 1){
-    int avg_work_per_node = weighted_total / mstate.num_alive_workers;
+  if(num_actually_alive > 1){
+    int avg_work_per_node = weighted_total / num_actually_alive;
     if(avg_work_per_node < MAX_THREADS/2){
-      Worker_state candidate_state;
       for(int i = 0; i < mstate.max_num_workers; i++){
         Worker_state ws = mstate.worker_states[i];
-        if(ws.is_alive){
-          if(ws.to_be_killed){
-            return;
-          }
-          else{
-            candidate_state = ws;
-          }
+        if(ws.is_alive && !ws.to_be_killed){
+          mstate.worker_states[i].to_be_killed = true;
+          mstate.num_to_be_killed++;
         }
       }
-      candidate_state.to_be_killed = true;
     }
   }
 
