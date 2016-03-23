@@ -127,7 +127,10 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   bool send_response = true;
   bool sent_cmpprimes_resp = false;
   int tag = resp.get_tag();
-  Client_handle client_handle = mstate.tagMap.at(tag);
+  Client_handle client_handle;
+  if(mstate.tagMap.find(tag) != mstate.tagMap.end()){
+    client_handle = mstate.tagMap.at(tag);
+  }
 
   if(cmpPrimeTagToTagMap.find(tag) != cmpPrimeTagToTagMap.end()){
     send_response = false;
@@ -140,15 +143,17 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       cmp_primes_data data = tagToCmpPrimesDataMap.at(parentTag);
       Response_msg cmpprimes_resp(parentTag);
       if(data.counts[1] - data.counts[0] > data.counts[3] - data.counts[2]){
-        cmpprimes_resp.set_response("There are more primes in the first range.");
+        cmpprimes_resp.set_response("There are more primes in first range.");
       }
       else{
-        cmpprimes_resp.set_response("There are more primes in the second range.");
+        cmpprimes_resp.set_response("There are more primes in second range.");
       }
+      client_handle = mstate.tagMap.at(parentTag);
       send_client_response(client_handle, cmpprimes_resp);
       tagToCmpPrimesDataMap.erase(parentTag);
       send_response = true;
       sent_cmpprimes_resp = true;
+      mstate.tagMap.erase(parentTag);
     }
     cmpPrimeTagToTagMap.erase(tag);
   }
@@ -159,9 +164,9 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   }
   if(!sent_cmpprimes_resp){
     send_client_response(client_handle, resp);
+    mstate.tagMap.erase(tag);
   }
   mstate.num_pending_client_requests--;
-  mstate.tagMap.erase(tag);
 
 
   //only cache tellmenow and countprimes
