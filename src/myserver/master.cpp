@@ -129,17 +129,23 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   int tag = resp.get_tag();
   Client_handle client_handle;
   if(mstate.tagMap.find(tag) != mstate.tagMap.end()){
+    //printf("1\n");
     client_handle = mstate.tagMap.at(tag);
   }
 
   if(cmpPrimeTagToTagMap.find(tag) != cmpPrimeTagToTagMap.end()){
     send_response = false;
+    //printf("2\n");
     int parentTag = cmpPrimeTagToTagMap.at(tag);
     int idx = tag - parentTag;
-
+    
+    //printf("3\n");
     tagToCmpPrimesDataMap.at(parentTag).counts[idx] = atoi(resp.get_response().c_str());
+    //printf("4\n");
     tagToCmpPrimesDataMap.at(parentTag).num_received++;
+    //printf("5\n");
     if(tagToCmpPrimesDataMap.at(parentTag).num_received == 4){
+      //printf("6\n");
       cmp_primes_data data = tagToCmpPrimesDataMap.at(parentTag);
       Response_msg cmpprimes_resp(parentTag);
       if(data.counts[1] - data.counts[0] > data.counts[3] - data.counts[2]){
@@ -148,12 +154,14 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       else{
         cmpprimes_resp.set_response("There are more primes in second range.");
       }
+      //printf("7\n");
       client_handle = mstate.tagMap.at(parentTag);
       send_client_response(client_handle, cmpprimes_resp);
       tagToCmpPrimesDataMap.erase(parentTag);
       send_response = true;
       sent_cmpprimes_resp = true;
       mstate.tagMap.erase(parentTag);
+      tag = parentTag;
     }
     cmpPrimeTagToTagMap.erase(tag);
   }
@@ -171,6 +179,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
 
   //only cache tellmenow and countprimes
   if(tagToReqMap.find(tag) != tagToReqMap.end()){
+    //printf("8\n");
     std::string req_string = tagToReqMap.at(tag);
     req_cache.respMap.insert(std::pair<std::string, Response_msg>(req_string, resp));
     req_cache.size++;
@@ -182,6 +191,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
     if(ws.is_alive && ws.worker_handle == worker_handle){
       ws.num_pending_requests--;
       //find and decrement appropriate counter
+      //printf("9\n");
       std::string type = tagToTypeMap.at(tag);
       if(type == "cache"){
         ws.num_cache_intense_requests--;
@@ -397,6 +407,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
       Request_msg dummy_req(0);
       create_computeprimes_req(dummy_req, params[i]);
       Request_msg worker_cmpprimes_req(tag++, dummy_req);
+      mstate.next_tag++;
       
       Worker_state ws = mstate.worker_states[idx];
       mstate.worker_states[idx].num_pending_requests++;

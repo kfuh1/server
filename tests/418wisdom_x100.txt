@@ -1,0 +1,2 @@
+{"time": 0, "work": "cmd=418wisdom;x=123", "resp": "Bring out all the stops in assignment 4."}
+{"time": 500, "work": "cmd=lastrequest", "resp": "ack" }

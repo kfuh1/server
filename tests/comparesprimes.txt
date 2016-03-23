@@ -1,0 +1,2 @@
+{"time": 0, "work": "cmd=compareprimes;n1=893333;n2=989898;n3=423080;n4=1000000", "resp": "There are more primes in second range."}
+{"time": 500, "work": "cmd=lastrequest", "resp": "ack" }

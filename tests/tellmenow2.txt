@@ -1,0 +1,2 @@
+{"time": 0, "work": "cmd=tellmenow;x=906", "resp": "There may be opportunities for caching in this assignment"}
+{"time": 500, "work": "cmd=lastrequest", "resp": "ack" }

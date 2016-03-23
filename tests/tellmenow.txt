@@ -1,0 +1,2 @@
+{"time": 0, "work": "cmd=tellmenow;x=7363", "resp": "The best performance may come from a particular mixture of jobs on a worker node."}
+{"time": 500, "work": "cmd=lastrequest", "resp": "ack" }

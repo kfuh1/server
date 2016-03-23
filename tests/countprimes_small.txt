@@ -1,0 +1,2 @@
+{"time": 0, "work": "cmd=countprimes;n=757320", "resp": "60774"}
+{"time": 500, "work": "cmd=lastrequest", "resp": "ack" }

@@ -1,0 +1,2 @@
+{"time": 0, "work": "cmd=projectidea;x=616014", "resp": "Try and beat one of the solutions in Guy Blelloch's Problem-Based Benchmark Suite."}
+{"time": 500, "work": "cmd=lastrequest", "resp": "ack" }

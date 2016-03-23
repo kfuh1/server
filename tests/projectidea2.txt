@@ -1,0 +1,2 @@
+{"time": 0, "work": "cmd=projectidea;x=90217", "resp": "Check out last year's parallelism computation page for more ideas"}
+{"time": 500, "work": "cmd=lastrequest", "resp": "ack" }
