@@ -44,14 +44,21 @@ static struct Master_state {
 
 } mstate;
 
+struct cmp_primes_data {
+  int counts[4];
+  int num_received;
+};
+
 std::unordered_map<int, std::string> tagToReqMap;
 std::unordered_map<int, std::string> tagToTypeMap; //the string is type we define
+std::unordered_map<int, int> cmpPrimeTagToTagMap;
+std::unordered_map<int, cmp_primes_data> tagToCmpPrimesDataMap;
+
 
 static struct Request_cache {
   int size;
   std::unordered_map<std::string, Response_msg> respMap;
 } req_cache;
-
 
 
 void master_node_init(int max_workers, int& tick_period) {
@@ -117,10 +124,42 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   // Here we directly return this response to the client.
 
   DLOG(INFO) << "Master received a response from a worker: [" << resp.get_tag() << ":" << resp.get_response() << "]" << std::endl;
-
+  bool send_response = true;
+  bool sent_cmpprimes_resp = false;
   int tag = resp.get_tag();
   Client_handle client_handle = mstate.tagMap.at(tag);
-  send_client_response(client_handle, resp);
+
+  if(cmpPrimeTagToTagMap.find(tag) != cmpPrimeTagToTagMap.end()){
+    send_response = false;
+    int parentTag = cmpPrimeTagToTagMap.at(tag);
+    int idx = tag - parentTag;
+
+    tagToCmpPrimesDataMap.at(parentTag).counts[idx] = atoi(resp.get_response().c_str());
+    tagToCmpPrimesDataMap.at(parentTag).num_received++;
+    if(tagToCmpPrimesDataMap.at(parentTag).num_received == 4){
+      cmp_primes_data data = tagToCmpPrimesDataMap.at(parentTag);
+      Response_msg cmpprimes_resp(parentTag);
+      if(data.counts[1] - data.counts[0] > data.counts[3] - data.counts[2]){
+        cmpprimes_resp.set_response("There are more primes in the first range.");
+      }
+      else{
+        cmpprimes_resp.set_response("There are more primes in the second range.");
+      }
+      send_client_response(client_handle, cmpprimes_resp);
+      tagToCmpPrimesDataMap.erase(parentTag);
+      send_response = true;
+      sent_cmpprimes_resp = true;
+    }
+    cmpPrimeTagToTagMap.erase(tag);
+  }
+
+  //this should only happen when compareprimes is not ready send response yet
+  if(!send_response){
+    return;
+  }
+  if(!sent_cmpprimes_resp){
+    send_client_response(client_handle, resp);
+  }
   mstate.num_pending_client_requests--;
   mstate.tagMap.erase(tag);
 
@@ -296,6 +335,14 @@ int choose_worker_idx(int tag){
   return selected_idx;
 }
 
+// Generate a valid 'countprimes' request dictionary from integer 'n'
+static void create_computeprimes_req(Request_msg& req, int n) {
+  std::ostringstream oss;
+  oss << n;
+  req.set_arg("cmd", "countprimes");
+  req.set_arg("n", oss.str());
+}
+
 void handle_client_request(Client_handle client_handle, const Request_msg& client_req) {
 
   DLOG(INFO) << "Received request: " << client_req.get_request_string() << std::endl;
@@ -322,12 +369,38 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   }
 
   mstate.tagMap.insert(std::pair<int,Client_handle>(mstate.next_tag, client_handle));
-  int tag = mstate.next_tag++;
-  Request_msg worker_req(tag, client_req);
-  mstate.num_pending_client_requests++;
+  int tag = mstate.next_tag;
   
   std::string req_name = client_req.get_arg("cmd");
-  if(req_name == "projectidea"){
+  if(req_name == "compareprimes"){
+    tagToTypeMap.insert(std::pair<int,std::string>(tag, "cpu"));
+    int idx = choose_worker_idx(tag);
+
+    int parentTag = tag;
+    cmp_primes_data data;
+    data.num_received = 0;
+
+    tagToCmpPrimesDataMap.insert(std::pair<int,cmp_primes_data>(parentTag, data));
+    int params[4];
+    params[0] = atoi(client_req.get_arg("n1").c_str());
+    params[1] = atoi(client_req.get_arg("n2").c_str());
+    params[2] = atoi(client_req.get_arg("n3").c_str());
+    params[3] = atoi(client_req.get_arg("n4").c_str());
+    
+    for(int i = 0; i < 4; i++){
+      cmpPrimeTagToTagMap.insert(std::pair<int, int>(tag, parentTag));
+      Request_msg dummy_req(0);
+      create_computeprimes_req(dummy_req, params[i]);
+      Request_msg worker_cmpprimes_req(tag++, dummy_req);
+      
+      Worker_state ws = mstate.worker_states[idx];
+      mstate.worker_states[idx].num_pending_requests++;
+      send_request_to_worker(ws.worker_handle, worker_cmpprimes_req);
+    }
+
+    return;
+  }
+  else if(req_name == "projectidea"){
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "cache"));
   } 
   //we're going to fix this, but right now our map assumes everything maps
@@ -335,14 +408,17 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   else if(req_name == "tellmenow"){
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "non"));
   }
-  //countprimes, compareprimes, 418wisdom - debating whether or not we want catch-all case 
+  //countprimes 418wisdom - debating whether or not we want catch-all case 
   else{
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "cpu"));
   }
-    
+  
+  Request_msg worker_req(tag, client_req);
+  mstate.num_pending_client_requests++;
   int idx = choose_worker_idx(tag);
   Worker_state ws = mstate.worker_states[idx];
   mstate.worker_states[idx].num_pending_requests++;
+  mstate.next_tag++;
   send_request_to_worker(ws.worker_handle, worker_req);
 }
 
