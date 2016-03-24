@@ -108,9 +108,22 @@ void master_node_init(int max_workers, int& tick_period) {
 }
 
 void handle_new_worker_online(Worker_handle worker_handle, int tag) {
-  int idx = mstate.num_alive_workers;
+  int idx;
+  for(int i = 0; i < mstate.max_num_workers; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(!ws.is_alive){
+      idx = i;
+      break;
+    } 
+  }
   mstate.worker_states[idx].is_alive = true;
 
+  mstate.worker_states[idx].num_cache_intense_requests = 0;
+  mstate.worker_states[idx].num_cpu_intense_requests = 0;
+  mstate.worker_states[idx].num_non_intense_requests = 0;
+  mstate.worker_states[idx].num_pending_requests = 0;
+  mstate.worker_states[idx].to_be_killed = false;
+  
   mstate.worker_states[idx].worker_handle = worker_handle;
   mstate.num_alive_workers++;
 
