@@ -360,6 +360,9 @@ static void create_computeprimes_req(Request_msg& req, int n) {
 
 void handle_client_request(Client_handle client_handle, const Request_msg& client_req) {
 
+  bool is_cache_intense = false; 
+  bool is_cpu_intense = false;
+  bool not_intense = false;
   DLOG(INFO) << "Received request: " << client_req.get_request_string() << std::endl;
 
   // You can assume that traces end with this special message.  It
@@ -418,21 +421,34 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   }
   else if(req_name == "projectidea"){
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "cache"));
+    is_cache_intense = true;
   } 
   //we're going to fix this, but right now our map assumes everything maps
   //to one of the three types of requests
   else if(req_name == "tellmenow"){
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "non"));
+    not_intense = true;
   }
   //countprimes 418wisdom - debating whether or not we want catch-all case 
   else{
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "cpu"));
+    is_cpu_intense = true;
   }
   
   Request_msg worker_req(tag, client_req);
   mstate.num_pending_client_requests++;
   int idx = choose_worker_idx(tag);
   Worker_state ws = mstate.worker_states[idx];
+
+  if(is_cache_intense){
+    mstate.worker_states[idx].num_cache_intense_requests++;
+  }
+  else if(is_cpu_intense){
+    mstate.worker_states[idx].num_cpu_intense_requests++;
+  }
+  else if(not_intense){
+    mstate.worker_states[idx].num_non_intense_requests++;
+  }
   mstate.worker_states[idx].num_pending_requests++;
   mstate.next_tag++;
   send_request_to_worker(ws.worker_handle, worker_req);
@@ -450,20 +466,20 @@ void handle_tick() {
 
   for(int i = 0; i < mstate.max_num_workers; i++){
     Worker_state ws = mstate.worker_states[i];
-    if(ws.is_alive){
+    if(ws.is_alive && !ws.to_be_killed){
       num_bw += ws.num_bw_intense_requests;
       num_cpu += ws.num_cpu_intense_requests;
       num_cache += ws.num_cache_intense_requests;
     }
   }  
   // fast requests like tellmenow are weighted
-  int weighted_total = num_bw + num_cpu + 3 * num_cache;
+  int weighted_total = num_bw +  num_cpu + num_cache;
 
   int num_actually_alive = mstate.num_alive_workers - mstate.num_to_be_killed;
   //policy to add more worker nodes
   if(num_actually_alive < mstate.max_num_workers){
     int avg_work_per_node = weighted_total / num_actually_alive;
-    if(avg_work_per_node > MAX_THREADS/2){
+    if(avg_work_per_node > 3*MAX_THREADS/4){
       if(mstate.num_to_be_killed == 0 && mstate.num_alive_workers < mstate.max_num_workers){
         int tag = random();
         Request_msg req(tag);
@@ -476,6 +492,7 @@ void handle_tick() {
           if(ws.is_alive && ws.to_be_killed){
             mstate.worker_states[i].to_be_killed = false;
             mstate.num_to_be_killed--;
+            num_actually_alive++;
             break;
           }
         }
@@ -486,12 +503,13 @@ void handle_tick() {
   //policy to remove worker nodes only if there are more than one nodes
   if(num_actually_alive > 1){
     int avg_work_per_node = weighted_total / num_actually_alive;
-    if(avg_work_per_node < MAX_THREADS/2){
+    if(avg_work_per_node < 3*MAX_THREADS/4){
       for(int i = 0; i < mstate.max_num_workers; i++){
         Worker_state ws = mstate.worker_states[i];
         if(ws.is_alive && !ws.to_be_killed){
           mstate.worker_states[i].to_be_killed = true;
           mstate.num_to_be_killed++;
+          break;
         }
       }
     }
