@@ -225,6 +225,8 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       //kill the worker if it's been flagged and it's done with work
       if(ws.to_be_killed && ws.num_pending_requests == 0){
 
+        std::cout << "\n---------------KILLING A WORKER-----------------------\n";
+        std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
 /*
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------KILLING ALL THE WORKERS-----------------------\n";
@@ -473,9 +475,21 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
 
 
 void handle_tick() {
-  // TODO: you may wish to take action here.  This method is called at
-  // fixed time intervals, according to how you set 'tick_period' in
-  // 'master_node_init'.
+        t = CycleTimer::currentSeconds(); 
+        std::cout << "\n--------------HANDLE TICK-----------------------\n";
+        std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
+        std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
+        std::cout << "Time: " << t << "\n";
+        std::cout << "Alive workers: " << mstate.num_alive_workers << "\nActually alive: " << mstate.num_alive_workers - mstate.num_to_be_killed << "\nTo be killed: " << mstate.num_to_be_killed << "\n";
+        for(int i = 0; i < mstate.max_num_workers; i++){
+          if(mstate.worker_states[i].is_alive){
+            Worker_state ws = mstate.worker_states[i];
+            std::cout << "Worker number: "<< i << "\nCache count: " << ws.num_cache_intense_requests << "\nCPU count: " << ws.num_cpu_intense_requests << "\nOther Count: " << ws.num_non_intense_requests << "\n TOTAL count: " << ws.num_pending_requests << "\n";
+            std::cout << "is_alive " << ws.is_alive << "\nto_be_killed " << ws.to_be_killed << "\n";
+            }
+        }
+
+        std::cout << "\n------------------------------------------------------\n\n";
 
   int num_cpu = 0;
   int num_cache = 0;
@@ -499,6 +513,9 @@ void handle_tick() {
     int avg_work_per_node = weighted_total / num_actually_alive;
     
     if(avg_cpu_intense_work > MAX_THREADS - 2 || avg_cache_intense_work > 2){
+ 
+        std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
+        std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
     /* 
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
@@ -549,6 +566,8 @@ void handle_tick() {
   if(num_actually_alive > 1){
     int avg_work_per_node = weighted_total / num_actually_alive;
     if(avg_work_per_node < MAX_THREADS/2){
+      std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
+      std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
      /*
       t = CycleTimer::currentSeconds(); 
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
