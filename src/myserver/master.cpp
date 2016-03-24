@@ -203,7 +203,17 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
 
       //kill the worker if it's been flagged and it's done with work
       if(ws.to_be_killed && ws.num_pending_requests == 0){
+        printf("\n------------KILLING A WORKER NODE------------\n");
+        printf("Alive workers: %d\n, To be killed: %d\n, Actually alive: %d\n", mstate.num_alive_workers, mstate.num_to_be_killed, mstate.num_alive_workers - mstate.num_to_be_killed);
+        for(int i = 0; i < mstate.max_num_workers; i++){
+          if(mstate.worker_states[i].is_alive){
+            Worker_state ws = mstate.worker_states[i];
+            printf("Cache: %d\n, CPU: %d\n, Other: %d\n, TOTAL: %d\n", ws.num_cache_intense_requests, ws.num_cpu_intense_requests, ws.num_non_intense_requests, ws.num_pending_requests);
+          }
+        }
+        printf("KILLING NOW.....\n");
         kill_worker_node(ws.worker_handle);
+        printf("\n-----------------------------------------------\n");
         mstate.num_to_be_killed--;
       }
       break;
@@ -445,6 +455,19 @@ void handle_tick() {
     int avg_work_per_node = weighted_total / num_actually_alive;
     if(avg_work_per_node > MAX_THREADS){
       if(mstate.num_to_be_killed == 0 && mstate.num_alive_workers < mstate.max_num_workers){
+
+        printf("\n------------ADDING A WORKER NODE------------\n");
+        printf("Alive workers: %d\n, To be killed: %d\n, Actually alive: %d\n", mstate.num_alive_workers, mstate.num_to_be_killed, mstate.num_alive_workers - mstate.num_to_be_killed);
+        for(int i = 0; i < mstate.max_num_workers; i++){
+          if(mstate.worker_states[i].is_alive){
+            Worker_state ws = mstate.worker_states[i];
+            printf("Cache: %d\n, CPU: %d\n, Other: %d\n, TOTAL: %d\n", ws.num_cache_intense_requests, ws.num_cpu_intense_requests, ws.num_non_intense_requests, ws.num_pending_requests);
+          }
+        }
+        printf("ADDING NOW.....\n");
+        printf("\n-----------------------------------------------\n");
+
+
         int tag = random();
         Request_msg req(tag);
         req.set_arg("name", "my worker 0");
@@ -454,6 +477,18 @@ void handle_tick() {
         for(int i = 0; i < mstate.max_num_workers; i++){
           Worker_state ws = mstate.worker_states[i];
           if(ws.is_alive && ws.to_be_killed){
+
+            printf("\n------------SETTING TO BE KILLED FLAG------------\n");
+            printf("Alive workers: %d\n, To be killed: %d\n, Actually alive: %d\n", mstate.num_alive_workers, mstate.num_to_be_killed, mstate.num_alive_workers - mstate.num_to_be_killed);
+            for(int i = 0; i < mstate.max_num_workers; i++){
+              if(mstate.worker_states[i].is_alive){
+                Worker_state ws = mstate.worker_states[i];
+                printf("Cache: %d\n, CPU: %d\n, Other: %d\n, TOTAL: %d\n", ws.num_cache_intense_requests, ws.num_cpu_intense_requests, ws.num_non_intense_requests, ws.num_pending_requests);
+              }
+            }
+            printf("SETTING IT NOW .....\n");
+            printf("\n------------------------------------------------------\n");
+
             mstate.worker_states[i].to_be_killed = false;
             mstate.num_to_be_killed--;
             num_actually_alive++;
