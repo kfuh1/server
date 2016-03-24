@@ -257,6 +257,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
         // update node to indicate done
         ws.to_be_killed = false;
         ws.is_alive = false;
+	std::cout << "\n\nKILLING WORKER HANDLE: " << ws.worker_handle << "\n\n";
         kill_worker_node(ws.worker_handle);
         mstate.num_alive_workers--;
         mstate.num_to_be_killed--;
@@ -271,7 +272,10 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   if(mstate.last_req_seen && mstate.num_pending_client_requests == 0){
     for(int i = 0; i < mstate.max_num_workers; i++){
       //we're not setting is_alive to false because we should be done at this point
-      if(mstate.worker_states[i].is_alive){
+      
+	std::cout << "KILLING THEM ALLLLLLLLLLL";
+if(mstate.worker_states[i].is_alive){
+	std::cout << "\n\nKILLING WORKER HANDLE " << mstate.worker_states[i].worker_handle << "\n\n";
         kill_worker_node(mstate.worker_states[i].worker_handle);
         mstate.num_to_be_killed--;
       }
@@ -505,7 +509,9 @@ void handle_tick() {
       
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
-        std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
+        
+	std::cout << "Weighted Total: " << weighted_total << "\nAverage Work: " << avg_work_per_node << "\n";
+	std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
         std::cout << "Time: " << t << "\n";
         std::cout << "Alive workers: " << mstate.num_alive_workers << "\nActually alive: " << mstate.num_alive_workers - mstate.num_to_be_killed << "\nTo be killed: " << mstate.num_to_be_killed << "\n";
