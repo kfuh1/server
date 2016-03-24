@@ -71,7 +71,7 @@ void master_node_init(int max_workers, int& tick_period) {
   // configure as you please)
   tick_period = 5;
   
-  std::cout << "\n\n\nHELLLLOjroiewhiohbttiobj43t4\n\n\n";
+  //std::cout << "\n\n\nHELLLLOjroiewhiohbttiobj43t4\n\n\n";
 
   mstate.next_tag = 0;
   mstate.max_num_workers = max_workers;
@@ -225,7 +225,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       //kill the worker if it's been flagged and it's done with work
       if(ws.to_be_killed && ws.num_pending_requests == 0){
 
-
+/*
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------KILLING ALL THE WORKERS-----------------------\n";
         std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
@@ -242,22 +242,11 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
 
         std::cout << "\nKILLING THEM ALL NOW\n";
         std::cout << "\n------------------------------------------------------\n\n";
-/*
-        printf("\n------------KILLING A WORKER NODE------------\n");
-        printf("Alive workers: %d\n, To be killed: %d\n, Actually alive: %d\n", mstate.num_alive_workers, mstate.num_to_be_killed, mstate.num_alive_workers - mstate.num_to_be_killed);
-        for(int i = 0; i < mstate.max_num_workers; i++){
-          if(mstate.worker_states[i].is_alive){
-            Worker_state ws = mstate.worker_states[i];
-            printf("Cache: %d\n, CPU: %d\n, Other: %d\n, TOTAL: %d\n", ws.num_cache_intense_requests, ws.num_cpu_intense_requests, ws.num_non_intense_requests, ws.num_pending_requests);
-          }
-        }
-        printf("KILLING NOW.....\n");
-        printf("\n-----------------------------------------------\n");
 */
         // update node to indicate done
         ws.to_be_killed = false;
         ws.is_alive = false;
-	std::cout << "\n\nKILLING WORKER HANDLE: " << ws.worker_handle << "\n\n";
+//	std::cout << "\n\nKILLING WORKER HANDLE: " << ws.worker_handle << "\n\n";
         kill_worker_node(ws.worker_handle);
         mstate.num_alive_workers--;
         mstate.num_to_be_killed--;
@@ -273,9 +262,9 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
     for(int i = 0; i < mstate.max_num_workers; i++){
       //we're not setting is_alive to false because we should be done at this point
       
-	std::cout << "KILLING THEM ALLLLLLLLLLL";
+	//std::cout << "KILLING THEM ALLLLLLLLLLL";
 if(mstate.worker_states[i].is_alive){
-	std::cout << "\n\nKILLING WORKER HANDLE " << mstate.worker_states[i].worker_handle << "\n\n";
+	//std::cout << "\n\nKILLING WORKER HANDLE " << mstate.worker_states[i].worker_handle << "\n\n";
         kill_worker_node(mstate.worker_states[i].worker_handle);
         mstate.num_to_be_killed--;
       }
@@ -426,6 +415,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     cmp_primes_data data;
     data.num_received = 0;
 
+    mstate.worker_states[idx].num_cpu_intense_requests++;
     tagToCmpPrimesDataMap.insert(std::pair<int,cmp_primes_data>(parentTag, data));
     int params[4];
     params[0] = atoi(client_req.get_arg("n1").c_str());
@@ -503,10 +493,13 @@ void handle_tick() {
   int num_actually_alive = mstate.num_alive_workers - mstate.num_to_be_killed;
   //policy to add more worker nodes
   if(num_actually_alive < mstate.max_num_workers){
+    int avg_cpu_intense_work = num_cpu / num_actually_alive;
+    int avg_cache_intense_work = num_cache / num_actually_alive;
+
     int avg_work_per_node = weighted_total / num_actually_alive;
     
-    if(avg_work_per_node > MAX_THREADS){
-      
+    if(avg_cpu_intense_work > MAX_THREADS - 2 || avg_cache_intense_work > 2){
+    /* 
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
         
@@ -525,22 +518,10 @@ void handle_tick() {
 
         std::cout << "\nADDING IT NOW\n";
         std::cout <<"\n------------------------------------------------------\n\n";
-      
+      */
       if(mstate.num_to_be_killed == 0 && mstate.num_alive_workers < mstate.max_num_workers){
-        std::cout << "ACTUALLY REQUESTING NEW WORKER\n\n";
+        //std::cout << "ACTUALLY REQUESTING NEW WORKER\n\n";
 
-/*
-        printf("\n------------ADDING A WORKER NODE------------\n");
-        printf("Alive workers: %d\n, To be killed: %d\n, Actually alive: %d\n", mstate.num_alive_workers, mstate.num_to_be_killed, mstate.num_alive_workers - mstate.num_to_be_killed);
-        for(int i = 0; i < mstate.max_num_workers; i++){
-          if(mstate.worker_states[i].is_alive){
-            Worker_state ws = mstate.worker_states[i];
-            printf("Cache: %d\n, CPU: %d\n, Other: %d\n, TOTAL: %d\n", ws.num_cache_intense_requests, ws.num_cpu_intense_requests, ws.num_non_intense_requests, ws.num_pending_requests);
-          }
-        }
-        printf("ADDING NOW.....\n");
-        printf("\n-----------------------------------------------\n");
-*/
 
         int tag = random();
         Request_msg req(tag);
@@ -552,7 +533,7 @@ void handle_tick() {
           Worker_state ws = mstate.worker_states[i];
           if(ws.is_alive && ws.to_be_killed){
             
-           std::cout << "RESETTING THE FLAGG NOWWW\n\n"; 
+           //std::cout << "RESETTING THE FLAGG NOWWW\n\n"; 
             
             mstate.worker_states[i].to_be_killed = false;
             mstate.num_to_be_killed--;
@@ -568,7 +549,7 @@ void handle_tick() {
   if(num_actually_alive > 1){
     int avg_work_per_node = weighted_total / num_actually_alive;
     if(avg_work_per_node < MAX_THREADS/2){
-      
+     /*
       t = CycleTimer::currentSeconds(); 
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
       std::cout << "num+pending_client+requests" << mstate.num_pending_client_requests << "\n";
@@ -585,12 +566,12 @@ void handle_tick() {
 
       std::cout << "\nSETTING IT NOW\n";
       std::cout << "\n------------------------------------------------------\n\n";
-      
+      */
       for(int i = 0; i < mstate.max_num_workers; i++){
         Worker_state ws = mstate.worker_states[i];
         if(ws.is_alive && !ws.to_be_killed){
           
-          std::cout << "\nACTUALLY FOUND WORKER TO SET AS TO BE KILLED\n\n";
+         // std::cout << "\nACTUALLY FOUND WORKER TO SET AS TO BE KILLED\n\n";
           
           mstate.worker_states[i].to_be_killed = true;
           mstate.num_to_be_killed++;
