@@ -1,0 +1,1527 @@
+
+spawning master process on compute-0-25.local (0 of 5)
+compute-0-11 compute-0-21 compute-0-23 compute-0-25 compute-0-7
+Username is  shreyav
+command was: '/home/shreyav/15418-assignment4/harness.sh 4 tests/grading_nonuniform1.txt'
+Waiting for server to initialize...
+Server ready, beginning trace...
+Request 1: req: "cmd=418wisdom;x=75796", resp: "Flatter your TAs with compliments", latency: 1894 ms
+Request 0: req: "cmd=418wisdom;x=84443", resp: "Come to lecture, there might be donuts!", latency: 2193 ms
+Request 2: req: "cmd=418wisdom;x=42057", resp: "Worse is better. Keep it simple...", latency: 1985 ms
+Request 3: req: "cmd=418wisdom;x=25891", resp: "OMG, 418 is so gr8!", latency: 1970 ms
+Request 5: req: "cmd=418wisdom;x=40493", resp: "Come to lecture, there might be donuts!", latency: 1995 ms
+Request 7: req: "cmd=418wisdom;x=30331", resp: "Do a great project, and it all works out in the end", latency: 1713 ms
+Request 4: req: "cmd=418wisdom;x=51127", resp: "Flatter your TAs with compliments", latency: 2308 ms
+Request 8: req: "cmd=418wisdom;x=47660", resp: "You will perform amazingly on exam 2", latency: 1733 ms
+Request 6: req: "cmd=418wisdom;x=78380", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2191 ms
+Request 10: req: "cmd=418wisdom;x=90812", resp: "Worse is better. Keep it simple...", latency: 1524 ms
+Request 9: req: "cmd=418wisdom;x=58338", resp: "You will perform amazingly on exam 2", latency: 1834 ms
+Request 11: req: "cmd=418wisdom;x=50469", resp: "Be careful not to optimize prematurely", latency: 1486 ms
+Request 12: req: "cmd=418wisdom;x=28184", resp: "You are going to do a great project", latency: 1615 ms
+Request 13: req: "cmd=418wisdom;x=75581", resp: "Exams are all just fun and games", latency: 1482 ms
+Request 14: req: "cmd=418wisdom;x=61837", resp: "Worse is better. Keep it simple...", latency: 1655 ms
+Request 15: req: "cmd=418wisdom;x=25050", resp: "Bring out all the stops in assignment 4.", latency: 1572 ms
+Request 16: req: "cmd=418wisdom;x=90975", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1503 ms
+Request 18: req: "cmd=418wisdom;x=81022", resp: "Laugh at Kayvon's jokes", latency: 1461 ms
+Request 17: req: "cmd=418wisdom;x=98279", resp: "You will perform amazingly on exam 2", latency: 1677 ms
+Request 19: req: "cmd=418wisdom;x=90217", resp: "If all else fails... buy Kayvon donuts", latency: 1559 ms
+Request 20: req: "cmd=418wisdom;x=31015", resp: "Flatter your TAs with compliments", latency: 1521 ms
+Request 21: req: "cmd=418wisdom;x=72983", resp: "Bring out all the stops in assignment 4.", latency: 1558 ms
+Request 22: req: "cmd=418wisdom;x=89884", resp: "OMG, 418 is so gr8!", latency: 1618 ms
+Request 23: req: "cmd=418wisdom;x=68399", resp: "You will perform amazingly on exam 2", latency: 1487 ms
+Request 25: req: "cmd=418wisdom;x=10070", resp: "Bring out all the stops in assignment 4.", latency: 1548 ms
+Request 26: req: "cmd=418wisdom;x=43417", resp: "Come to lecture, there might be donuts!", latency: 1498 ms
+Request 27: req: "cmd=418wisdom;x=61089", resp: "Worse is better. Keep it simple...", latency: 1460 ms
+Request 24: req: "cmd=418wisdom;x=47214", resp: "If all else fails... buy Kayvon donuts", latency: 2214 ms
+Request 30: req: "cmd=418wisdom;x=47701", resp: "You will PWN your classmates in the parallelism competition", latency: 1535 ms
+Request 29: req: "cmd=418wisdom;x=96661", resp: "You are going to do a great project", latency: 1691 ms
+Request 31: req: "cmd=418wisdom;x=86531", resp: "Do a great project, and it all works out in the end", latency: 1562 ms
+Request 28: req: "cmd=418wisdom;x=91302", resp: "Flatter your TAs with compliments", latency: 2008 ms
+Request 32: req: "cmd=418wisdom;x=26049", resp: "Do a great project, and it all works out in the end", latency: 1594 ms
+Request 35: req: "cmd=418wisdom;x=1404", resp: "You will perform amazingly on exam 2", latency: 1519 ms
+Request 34: req: "cmd=418wisdom;x=54870", resp: "Worse is better. Keep it simple...", latency: 1662 ms
+Request 36: req: "cmd=418wisdom;x=71971", resp: "Come to lecture, there might be donuts!", latency: 1478 ms
+Request 33: req: "cmd=418wisdom;x=80503", resp: "OMG, 418 is so gr8!", latency: 1939 ms
+Request 37: req: "cmd=418wisdom;x=39882", resp: "Flatter your TAs with compliments", latency: 1499 ms
+Request 39: req: "cmd=418wisdom;x=66815", resp: "Laugh at Kayvon's jokes", latency: 1612 ms
+Request 38: req: "cmd=418wisdom;x=82485", resp: "Come to lecture, there might be donuts!", latency: 1819 ms
+Request 41: req: "cmd=418wisdom;x=49358", resp: "Ask questions. Ask questions. Ask questions", latency: 1519 ms
+Request 42: req: "cmd=418wisdom;x=86761", resp: "Do a great project, and it all works out in the end", latency: 1572 ms
+Request 40: req: "cmd=418wisdom;x=114", resp: "Bring out all the stops in assignment 4.", latency: 1944 ms
+Request 43: req: "cmd=418wisdom;x=24391", resp: "Do a great project, and it all works out in the end", latency: 1637 ms
+Request 44: req: "cmd=418wisdom;x=32520", resp: "If all else fails... buy Kayvon donuts", latency: 1540 ms
+Request 45: req: "cmd=418wisdom;x=87047", resp: "You will perform amazingly on exam 2", latency: 1588 ms
+Request 47: req: "cmd=418wisdom;x=56751", resp: "Do a great project, and it all works out in the end", latency: 1514 ms
+Request 46: req: "cmd=418wisdom;x=19106", resp: "Ask questions. Ask questions. Ask questions", latency: 1652 ms
+Request 48: req: "cmd=418wisdom;x=23861", resp: "Do a great project, and it all works out in the end", latency: 1518 ms
+Request 50: req: "cmd=418wisdom;x=80318", resp: "Worse is better. Keep it simple...", latency: 1537 ms
+Request 51: req: "cmd=418wisdom;x=44797", resp: "Do a great project, and it all works out in the end", latency: 1601 ms
+Request 52: req: "cmd=418wisdom;x=8044", resp: "Exams are all just fun and games", latency: 1504 ms
+Request 53: req: "cmd=418wisdom;x=32005", resp: "Flatter your TAs with compliments", latency: 1529 ms
+Request 54: req: "cmd=418wisdom;x=50794", resp: "OMG, 418 is so gr8!", latency: 1559 ms
+Request 49: req: "cmd=418wisdom;x=96754", resp: "Ask questions. Ask questions. Ask questions", latency: 2086 ms
+Request 56: req: "cmd=418wisdom;x=10905", resp: "You will perform amazingly on exam 2", latency: 1644 ms
+Request 57: req: "cmd=418wisdom;x=55127", resp: "Be careful not to optimize prematurely", latency: 1570 ms
+Request 59: req: "cmd=418wisdom;x=54744", resp: "Laugh at Kayvon's jokes", latency: 1584 ms
+Request 58: req: "cmd=418wisdom;x=70656", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1714 ms
+Request 61: req: "cmd=418wisdom;x=54028", resp: "If all else fails... buy Kayvon donuts", latency: 1520 ms
+Request 55: req: "cmd=418wisdom;x=93284", resp: "If all else fails... buy Kayvon donuts", latency: 2063 ms
+Request 60: req: "cmd=418wisdom;x=81447", resp: "Do as best as you can and just have fun!", latency: 1648 ms
+Request 62: req: "cmd=418wisdom;x=96384", resp: "Bring out all the stops in assignment 4.", latency: 1475 ms
+Request 66: req: "cmd=418wisdom;x=59629", resp: "Do a great project, and it all works out in the end", latency: 1549 ms
+Request 63: req: "cmd=418wisdom;x=60319", resp: "Worse is better. Keep it simple...", latency: 1879 ms
+Request 65: req: "cmd=418wisdom;x=44499", resp: "Worse is better. Keep it simple...", latency: 1710 ms
+Request 67: req: "cmd=418wisdom;x=38490", resp: "Worse is better. Keep it simple...", latency: 1748 ms
+Request 68: req: "cmd=418wisdom;x=57565", resp: "Be careful not to optimize prematurely", latency: 1685 ms
+Request 64: req: "cmd=418wisdom;x=58762", resp: "Flatter your TAs with compliments", latency: 2038 ms
+Request 69: req: "cmd=418wisdom;x=29033", resp: "Flatter your TAs with compliments", latency: 1654 ms
+Request 70: req: "cmd=418wisdom;x=18939", resp: "You are going to do a great project", latency: 1845 ms
+Request 72: req: "cmd=418wisdom;x=61277", resp: "Do a great project, and it all works out in the end", latency: 1725 ms
+Request 75: req: "cmd=418wisdom;x=8982", resp: "You will perform amazingly on exam 2", latency: 1863 ms
+Request 71: req: "cmd=418wisdom;x=18673", resp: "You will PWN your classmates in the parallelism competition", latency: 2212 ms
+Request 73: req: "cmd=418wisdom;x=65666", resp: "OMG, 418 is so gr8!", latency: 2109 ms
+Request 78: req: "cmd=418wisdom;x=92339", resp: "Ask questions. Ask questions. Ask questions", latency: 1853 ms
+Request 81: req: "cmd=418wisdom;x=92309", resp: "You will PWN your classmates in the parallelism competition", latency: 1675 ms
+Request 84: req: "cmd=418wisdom;x=70529", resp: "Come to lecture, there might be donuts!", latency: 1565 ms
+Request 74: req: "cmd=418wisdom;x=47653", resp: "You will PWN your classmates in the parallelism competition", latency: 2299 ms
+Request 77: req: "cmd=418wisdom;x=87677", resp: "Do as best as you can and just have fun!", latency: 2072 ms
+Request 83: req: "cmd=418wisdom;x=39129", resp: "Worse is better. Keep it simple...", latency: 1906 ms
+Request 76: req: "cmd=418wisdom;x=75761", resp: "You are going to do a great project", latency: 2632 ms
+Request 80: req: "cmd=418wisdom;x=89818", resp: "Laugh at Kayvon's jokes", latency: 2473 ms
+Request 79: req: "cmd=418wisdom;x=84246", resp: "Ask questions. Ask questions. Ask questions", latency: 2586 ms
+Request 90: req: "cmd=418wisdom;x=94977", resp: "Flatter your TAs with compliments", latency: 1991 ms
+Request 91: req: "cmd=418wisdom;x=57970", resp: "Ask questions. Ask questions. Ask questions", latency: 1964 ms
+Request 87: req: "cmd=418wisdom;x=84949", resp: "Come to lecture, there might be donuts!", latency: 2259 ms
+Request 82: req: "cmd=418wisdom;x=54060", resp: "Be careful not to optimize prematurely", latency: 2803 ms
+Request 85: req: "cmd=418wisdom;x=27563", resp: "If all else fails... buy Kayvon donuts", latency: 2599 ms
+Request 88: req: "cmd=418wisdom;x=89504", resp: "You will perform amazingly on exam 2", latency: 2425 ms
+Request 86: req: "cmd=418wisdom;x=81163", resp: "You will perform amazingly on exam 2", latency: 2631 ms
+Request 100: req: "cmd=418wisdom;x=63015", resp: "You are going to do a great project", latency: 1908 ms
+Request 102: req: "cmd=418wisdom;x=24303", resp: "Bring out all the stops in assignment 4.", latency: 1841 ms
+Request 105: req: "cmd=418wisdom;x=22046", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1658 ms
+Request 94: req: "cmd=418wisdom;x=99626", resp: "You are going to do a great project", latency: 2359 ms
+Request 96: req: "cmd=418wisdom;x=79333", resp: "Flatter your TAs with compliments", latency: 2372 ms
+Request 103: req: "cmd=418wisdom;x=73149", resp: "Bring out all the stops in assignment 4.", latency: 1946 ms
+Request 89: req: "cmd=418wisdom;x=58980", resp: "If all else fails... buy Kayvon donuts", latency: 2886 ms
+Request 97: req: "cmd=418wisdom;x=8237", resp: "Be careful not to optimize prematurely", latency: 2364 ms
+Request 95: req: "cmd=418wisdom;x=91695", resp: "You will perform amazingly on exam 2", latency: 2560 ms
+Request 101: req: "cmd=418wisdom;x=84508", resp: "Ask questions. Ask questions. Ask questions", latency: 2300 ms
+Request 98: req: "cmd=418wisdom;x=61278", resp: "Be careful not to optimize prematurely", latency: 2515 ms
+Request 93: req: "cmd=418wisdom;x=66025", resp: "Worse is better. Keep it simple...", latency: 2868 ms
+Request 99: req: "cmd=418wisdom;x=48644", resp: "Bring out all the stops in assignment 4.", latency: 2529 ms
+ Request 110: req: "cmd=418wisdom;x=14635", resp: "You will perform amazingly on exam 2", latency: 1862 ms
+Request 92: req: "cmd=418wisdom;x=45056", resp: "Bring out all the stops in assignment 4.", latency: 3048 ms
+Request 108: req: "cmd=418wisdom;x=81592", resp: "You will PWN your classmates in the parallelism competition", latency: 2296 ms
+Request 112: req: "cmd=418wisdom;x=4523", resp: "Exams are all just fun and games", latency: 2158 ms
+Request 107: req: "cmd=418wisdom;x=33253", resp: "Exams are all just fun and games", latency: 2491 ms
+Request 109: req: "cmd=418wisdom;x=10060", resp: "OMG, 418 is so gr8!", latency: 2584 ms
+Request 104: req: "cmd=418wisdom;x=11713", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2887 ms
+Request 106: req: "cmd=418wisdom;x=79459", resp: "Worse is better. Keep it simple...", latency: 2926 ms
+Request 116: req: "cmd=418wisdom;x=68059", resp: "OMG, 418 is so gr8!", latency: 2352 ms
+Request 118: req: "cmd=418wisdom;x=63500", resp: "Laugh at Kayvon's jokes", latency: 2443 ms
+Request 121: req: "cmd=418wisdom;x=39121", resp: "If all else fails... buy Kayvon donuts", latency: 2282 ms
+Request 114: req: "cmd=418wisdom;x=91002", resp: "Do a great project, and it all works out in the end", latency: 2798 ms
+Request 111: req: "cmd=418wisdom;x=69767", resp: "You will perform amazingly on exam 2", latency: 3171 ms
+Request 136: req: "cmd=418wisdom;x=22083", resp: "Worse is better. Keep it simple...", latency: 1824 ms
+Request 124: req: "cmd=418wisdom;x=3639", resp: "Do a great project, and it all works out in the end", latency: 2482 ms
+Request 113: req: "cmd=418wisdom;x=57387", resp: "You will PWN your classmates in the parallelism competition", latency: 3235 ms
+Request 129: req: "cmd=418wisdom;x=21057", resp: "Come to lecture, there might be donuts!", latency: 2395 ms
+Request 133: req: "cmd=418wisdom;x=42562", resp: "Do a great project, and it all works out in the end", latency: 2271 ms
+Request 115: req: "cmd=418wisdom;x=53420", resp: "You will PWN your classmates in the parallelism competition", latency: 3269 ms
+Request 138: req: "cmd=418wisdom;x=35029", resp: "You are going to do a great project", latency: 2052 ms
+Request 119: req: "cmd=418wisdom;x=60634", resp: "You are going to do a great project", latency: 3115 ms
+Request 148: req: "cmd=418wisdom;x=91849", resp: "Do a great project, and it all works out in the end", latency: 1617 ms
+Request 120: req: "cmd=418wisdom;x=57595", resp: "You will perform amazingly on exam 2", latency: 3065 ms
+Request 152: req: "cmd=418wisdom;x=5805", resp: "You will perform amazingly on exam 2", latency: 1693 ms
+Request 125: req: "cmd=418wisdom;x=2163", resp: "Come to lecture, there might be donuts!", latency: 3056 ms
+Request 142: req: "cmd=418wisdom;x=10092", resp: "Come to lecture, there might be donuts!", latency: 2350 ms
+Request 137: req: "cmd=418wisdom;x=64693", resp: "OMG, 418 is so gr8!", latency: 2612 ms
+Request 145: req: "cmd=418wisdom;x=35855", resp: "Do as best as you can and just have fun!", latency: 2243 ms
+Request 122: req: "cmd=418wisdom;x=37014", resp: "Laugh at Kayvon's jokes", latency: 3532 ms
+Request 123: req: "cmd=418wisdom;x=98052", resp: "Come to lecture, there might be donuts!", latency: 3515 ms
+Request 128: req: "cmd=418wisdom;x=12389", resp: "Laugh at Kayvon's jokes", latency: 3249 ms
+Request 127: req: "cmd=418wisdom;x=18497", resp: "Ask questions. Ask questions. Ask questions", latency: 3336 ms
+Request 130: req: "cmd=418wisdom;x=80075", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3217 ms
+Request 135: req: "cmd=418wisdom;x=25992", resp: "If all else fails... buy Kayvon donuts", latency: 2998 ms
+Request 131: req: "cmd=418wisdom;x=93697", resp: "Laugh at Kayvon's jokes", latency: 3264 ms
+Request 117: req: "cmd=418wisdom;x=2669", resp: "If all else fails... buy Kayvon donuts", latency: 4062 ms
+Request 153: req: "cmd=418wisdom;x=67620", resp: "You are going to do a great project", latency: 2265 ms
+Request 146: req: "cmd=418wisdom;x=73160", resp: "Ask questions. Ask questions. Ask questions", latency: 2681 ms
+Request 134: req: "cmd=418wisdom;x=10150", resp: "You will PWN your classmates in the parallelism competition", latency: 3321 ms
+Request 151: req: "cmd=418wisdom;x=96655", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2653 ms
+Request 149: req: "cmd=418wisdom;x=16942", resp: "Bring out all the stops in assignment 4.", latency: 2749 ms
+Request 126: req: "cmd=418wisdom;x=96104", resp: "Flatter your TAs with compliments", latency: 3913 ms
+Request 140: req: "cmd=418wisdom;x=50364", resp: "OMG, 418 is so gr8!", latency: 3226 ms
+Request 157: req: "cmd=418wisdom;x=59679", resp: "Flatter your TAs with compliments", latency: 2530 ms
+Request 139: req: "cmd=418wisdom;x=18031", resp: "Come to lecture, there might be donuts!", latency: 3398 ms
+Request 144: req: "cmd=418wisdom;x=19935", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3190 ms
+Request 132: req: "cmd=418wisdom;x=2278", resp: "Do a great project, and it all works out in the end", latency: 3901 ms
+Request 147: req: "cmd=418wisdom;x=83833", resp: "You will perform amazingly on exam 2", latency: 3189 ms
+Request 154: req: "cmd=418wisdom;x=84543", resp: "Ask questions. Ask questions. Ask questions", latency: 2856 ms
+Request 158: req: "cmd=418wisdom;x=44231", resp: "You will PWN your classmates in the parallelism competition", latency: 2750 ms
+Request 172: req: "cmd=418wisdom;x=4569", resp: "Laugh at Kayvon's jokes", latency: 2261 ms
+Request 143: req: "cmd=418wisdom;x=98824", resp: "Ask questions. Ask questions. Ask questions", latency: 3661 ms
+Request 176: req: "cmd=418wisdom;x=35222", resp: "Be careful not to optimize prematurely", latency: 2353 ms
+Request 155: req: "cmd=418wisdom;x=34231", resp: "Be careful not to optimize prematurely", latency: 3297 ms
+Request 162: req: "cmd=418wisdom;x=56911", resp: "OMG, 418 is so gr8!", latency: 3063 ms
+Request 167: req: "cmd=418wisdom;x=25093", resp: "You will perform amazingly on exam 2", latency: 2870 ms
+Request 141: req: "cmd=418wisdom;x=3937", resp: "Ask questions. Ask questions. Ask questions", latency: 4118 ms
+Request 171: req: "cmd=418wisdom;x=33591", resp: "Ask questions. Ask questions. Ask questions", latency: 2871 ms
+Request 150: req: "cmd=418wisdom;x=67264", resp: "Flatter your TAs with compliments", latency: 3914 ms
+Request 159: req: "cmd=418wisdom;x=17482", resp: "You are going to do a great project", latency: 3502 ms
+ Request 163: req: "cmd=418wisdom;x=50860", resp: "Come to lecture, there might be donuts!", latency: 3318 ms
+Request 160: req: "cmd=418wisdom;x=47163", resp: "Bring out all the stops in assignment 4.", latency: 3577 ms
+Request 165: req: "cmd=418wisdom;x=35715", resp: "Ask questions. Ask questions. Ask questions", latency: 3463 ms
+Request 174: req: "cmd=418wisdom;x=24013", resp: "Be careful not to optimize prematurely", latency: 3065 ms
+Request 175: req: "cmd=418wisdom;x=95313", resp: "You will PWN your classmates in the parallelism competition", latency: 3061 ms
+Request 166: req: "cmd=418wisdom;x=83766", resp: "You will perform amazingly on exam 2", latency: 3640 ms
+Request 187: req: "cmd=418wisdom;x=19231", resp: "You are going to do a great project", latency: 2849 ms
+Request 169: req: "cmd=418wisdom;x=1243", resp: "Be careful not to optimize prematurely", latency: 3722 ms
+Request 164: req: "cmd=418wisdom;x=31144", resp: "Do as best as you can and just have fun!", latency: 3946 ms
+Request 156: req: "cmd=418wisdom;x=25068", resp: "Flatter your TAs with compliments", latency: 4313 ms
+Request 170: req: "cmd=418wisdom;x=74158", resp: "Flatter your TAs with compliments", latency: 3760 ms
+Request 161: req: "cmd=418wisdom;x=40990", resp: "Come to lecture, there might be donuts!", latency: 4164 ms
+Request 193: req: "cmd=418wisdom;x=56815", resp: "Worse is better. Keep it simple...", latency: 2981 ms
+Request 189: req: "cmd=418wisdom;x=23941", resp: "You will perform amazingly on exam 2", latency: 3161 ms
+Request 185: req: "cmd=418wisdom;x=65083", resp: "OMG, 418 is so gr8!", latency: 3381 ms
+Request 202: req: "cmd=418wisdom;x=15768", resp: "Come to lecture, there might be donuts!", latency: 2794 ms
+Request 195: req: "cmd=418wisdom;x=40227", resp: "You will PWN your classmates in the parallelism competition", latency: 3115 ms
+Request 173: req: "cmd=418wisdom;x=28088", resp: "Ask questions. Ask questions. Ask questions", latency: 4100 ms
+Request 188: req: "cmd=418wisdom;x=33440", resp: "Flatter your TAs with compliments", latency: 3467 ms
+Request 168: req: "cmd=418wisdom;x=56060", resp: "If all else fails... buy Kayvon donuts", latency: 4391 ms
+Request 178: req: "cmd=418wisdom;x=35920", resp: "OMG, 418 is so gr8!", latency: 4110 ms
+Request 182: req: "cmd=418wisdom;x=71562", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3980 ms
+Request 198: req: "cmd=418wisdom;x=66220", resp: "Laugh at Kayvon's jokes", latency: 3346 ms
+Request 181: req: "cmd=418wisdom;x=62108", resp: "Worse is better. Keep it simple...", latency: 4125 ms
+Request 184: req: "cmd=418wisdom;x=41442", resp: "Flatter your TAs with compliments", latency: 4008 ms
+Request 177: req: "cmd=418wisdom;x=28788", resp: "Ask questions. Ask questions. Ask questions", latency: 4349 ms
+Request 203: req: "cmd=418wisdom;x=52757", resp: "You will perform amazingly on exam 2", latency: 3307 ms
+Request 199: req: "cmd=418wisdom;x=4678", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3494 ms
+Request 180: req: "cmd=418wisdom;x=63375", resp: "If all else fails... buy Kayvon donuts", latency: 4348 ms
+Request 183: req: "cmd=418wisdom;x=38802", resp: "Exams are all just fun and games", latency: 4271 ms
+Request 179: req: "cmd=418wisdom;x=94691", resp: "Bring out all the stops in assignment 4.", latency: 4675 ms
+Request 211: req: "cmd=418wisdom;x=80905", resp: "Come to lecture, there might be donuts!", latency: 3383 ms
+Request 194: req: "cmd=418wisdom;x=41441", resp: "Laugh at Kayvon's jokes", latency: 4150 ms
+Request 205: req: "cmd=418wisdom;x=56141", resp: "Flatter your TAs with compliments", latency: 3801 ms
+Request 190: req: "cmd=418wisdom;x=63740", resp: "Do a great project, and it all works out in the end", latency: 4407 ms
+Request 207: req: "cmd=418wisdom;x=88388", resp: "Do as best as you can and just have fun!", latency: 3784 ms
+Request 213: req: "cmd=418wisdom;x=81242", resp: "Laugh at Kayvon's jokes", latency: 3552 ms
+Request 192: req: "cmd=418wisdom;x=87543", resp: "Write a great lecture comment on your favorite idea in the class", latency: 4445 ms
+Request 196: req: "cmd=418wisdom;x=70183", resp: "Bring out all the stops in assignment 4.", latency: 4334 ms
+Request 191: req: "cmd=418wisdom;x=37865", resp: "Do a great project, and it all works out in the end", latency: 4605 ms
+Request 206: req: "cmd=418wisdom;x=75549", resp: "You will perform amazingly on exam 2", latency: 4007 ms
+Request 212: req: "cmd=418wisdom;x=87502", resp: "Worse is better. Keep it simple...", latency: 3797 ms
+Request 186: req: "cmd=418wisdom;x=152", resp: "You will perform amazingly on exam 2", latency: 4848 ms
+Request 197: req: "cmd=418wisdom;x=41823", resp: "You will perform amazingly on exam 2", latency: 4607 ms
+Request 288: req: "cmd=418wisdom;x=41472", resp: "Be careful not to optimize prematurely", latency: 1411 ms
+Request 214: req: "cmd=418wisdom;x=18800", resp: "OMG, 418 is so gr8!", latency: 4057 ms
+Request 208: req: "cmd=418wisdom;x=49458", resp: "Ask questions. Ask questions. Ask questions", latency: 4316 ms
+Request 215: req: "cmd=418wisdom;x=99943", resp: "Be careful not to optimize prematurely", latency: 4054 ms
+Request 336: req: "cmd=418wisdom;x=14635", resp: "You will perform amazingly on exam 2", latency: 40 ms
+Request 200: req: "cmd=418wisdom;x=44535", resp: "You are going to do a great project", latency: 4715 ms
+Request 201: req: "cmd=418wisdom;x=25922", resp: "Laugh at Kayvon's jokes", latency: 4675 ms
+Request 221: req: "cmd=418wisdom;x=67852", resp: "You will PWN your classmates in the parallelism competition", latency: 3912 ms
+Request 204: req: "cmd=418wisdom;x=48727", resp: "You are going to do a great project", latency: 4728 ms
+Request 287: req: "cmd=418wisdom;x=32852", resp: "Exams are all just fun and games", latency: 1778 ms
+Request 224: req: "cmd=418wisdom;x=71733", resp: "OMG, 418 is so gr8!", latency: 3973 ms
+Request 225: req: "cmd=418wisdom;x=235", resp: "Flatter your TAs with compliments", latency: 4027 ms
+Request 292: req: "cmd=418wisdom;x=84085", resp: "Flatter your TAs with compliments", latency: 1763 ms
+Request 295: req: "cmd=418wisdom;x=47909", resp: "Do a great project, and it all works out in the end", latency: 1677 ms
+Request 222: req: "cmd=418wisdom;x=31618", resp: "Laugh at Kayvon's jokes", latency: 4286 ms
+Request 227: req: "cmd=418wisdom;x=52835", resp: "Flatter your TAs with compliments", latency: 4127 ms
+Request 223: req: "cmd=418wisdom;x=21352", resp: "Do as best as you can and just have fun!", latency: 4321 ms
+Request 235: req: "cmd=418wisdom;x=85394", resp: "Do as best as you can and just have fun!", latency: 4064 ms
+Request 210: req: "cmd=418wisdom;x=46689", resp: "Exams are all just fun and games", latency: 5008 ms
+Request 290: req: "cmd=418wisdom;x=90866", resp: "You are going to do a great project", latency: 2217 ms
+Request 303: req: "cmd=418wisdom;x=37557", resp: "Ask questions. Ask questions. Ask questions", latency: 1861 ms
+Request 217: req: "cmd=418wisdom;x=8346", resp: "Flatter your TAs with compliments", latency: 4860 ms
+Request 309: req: "cmd=418wisdom;x=6115", resp: "Laugh at Kayvon's jokes", latency: 1710 ms
+Request 209: req: "cmd=418wisdom;x=31206", resp: "Exams are all just fun and games", latency: 5201 ms
+ Request 291: req: "cmd=418wisdom;x=47400", resp: "Do a great project, and it all works out in the end", latency: 2303 ms
+Request 312: req: "cmd=418wisdom;x=51900", resp: "Do a great project, and it all works out in the end", latency: 1654 ms
+Request 220: req: "cmd=418wisdom;x=40182", resp: "Do as best as you can and just have fun!", latency: 4799 ms
+Request 308: req: "cmd=418wisdom;x=74987", resp: "Be careful not to optimize prematurely", latency: 1809 ms
+Request 231: req: "cmd=418wisdom;x=87366", resp: "Ask questions. Ask questions. Ask questions", latency: 4449 ms
+Request 317: req: "cmd=418wisdom;x=42304", resp: "Come to lecture, there might be donuts!", latency: 1596 ms
+Request 310: req: "cmd=418wisdom;x=785", resp: "Do a great project, and it all works out in the end", latency: 1823 ms
+Request 218: req: "cmd=418wisdom;x=72556", resp: "You will PWN your classmates in the parallelism competition", latency: 5021 ms
+Request 236: req: "cmd=418wisdom;x=39670", resp: "Ask questions. Ask questions. Ask questions", latency: 4385 ms
+Request 313: req: "cmd=418wisdom;x=44854", resp: "Be careful not to optimize prematurely", latency: 1859 ms
+Request 320: req: "cmd=418wisdom;x=26091", resp: "Laugh at Kayvon's jokes", latency: 1642 ms
+Request 300: req: "cmd=418wisdom;x=89440", resp: "You will PWN your classmates in the parallelism competition", latency: 2310 ms
+Request 314: req: "cmd=418wisdom;x=48862", resp: "Be careful not to optimize prematurely", latency: 1868 ms
+Request 216: req: "cmd=418wisdom;x=63309", resp: "Do as best as you can and just have fun!", latency: 5366 ms
+Request 219: req: "cmd=418wisdom;x=98683", resp: "Bring out all the stops in assignment 4.", latency: 5292 ms
+Request 384: req: "cmd=418wisdom;x=57387", resp: "You will PWN your classmates in the parallelism competition", latency: 0 ms
+Request 331: req: "cmd=418wisdom;x=39795", resp: "Do a great project, and it all works out in the end", latency: 1656 ms
+Request 299: req: "cmd=418wisdom;x=73475", resp: "OMG, 418 is so gr8!", latency: 2670 ms
+ Request 332: req: "cmd=418wisdom;x=20723", resp: "Laugh at Kayvon's jokes", latency: 1641 ms
+Request 304: req: "cmd=418wisdom;x=97457", resp: "You are going to do a great project", latency: 2535 ms
+Request 302: req: "cmd=418wisdom;x=62674", resp: "Laugh at Kayvon's jokes", latency: 2614 ms
+Request 226: req: "cmd=418wisdom;x=82273", resp: "Ask questions. Ask questions. Ask questions", latency: 5374 ms
+Request 289: req: "cmd=418wisdom;x=9940", resp: "Ask questions. Ask questions. Ask questions", latency: 3190 ms
+Request 229: req: "cmd=418wisdom;x=11890", resp: "You are going to do a great project", latency: 5332 ms
+Request 240: req: "cmd=418wisdom;x=79234", resp: "Come to lecture, there might be donuts!", latency: 4956 ms
+Request 245: req: "cmd=418wisdom;x=34705", resp: "Bring out all the stops in assignment 4.", latency: 4782 ms
+ Request 301: req: "cmd=418wisdom;x=91969", resp: "Laugh at Kayvon's jokes", latency: 2902 ms
+Request 294: req: "cmd=418wisdom;x=34365", resp: "Do a great project, and it all works out in the end", latency: 3167 ms
+Request 232: req: "cmd=418wisdom;x=27998", resp: "Exams are all just fun and games", latency: 5342 ms
+Request 237: req: "cmd=418wisdom;x=8134", resp: "Do as best as you can and just have fun!", latency: 5193 ms
+Request 250: req: "cmd=418wisdom;x=68100", resp: "Bring out all the stops in assignment 4.", latency: 4736 ms
+Request 238: req: "cmd=418wisdom;x=27471", resp: "Ask questions. Ask questions. Ask questions", latency: 5167 ms
+Request 297: req: "cmd=418wisdom;x=42653", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3194 ms
+Request 293: req: "cmd=418wisdom;x=97623", resp: "Worse is better. Keep it simple...", latency: 3343 ms
+Request 249: req: "cmd=418wisdom;x=4066", resp: "Write a great lecture comment on your favorite idea in the class", latency: 4825 ms
+ Request 253: req: "cmd=418wisdom;x=93844", resp: "OMG, 418 is so gr8!", latency: 4685 ms
+Request 233: req: "cmd=418wisdom;x=97852", resp: "If all else fails... buy Kayvon donuts", latency: 5543 ms
+Request 234: req: "cmd=418wisdom;x=10018", resp: "Ask questions. Ask questions. Ask questions", latency: 5506 ms
+Request 228: req: "cmd=418wisdom;x=9778", resp: "Ask questions. Ask questions. Ask questions", latency: 5757 ms
+Request 230: req: "cmd=418wisdom;x=64927", resp: "You will perform amazingly on exam 2", latency: 5694 ms
+Request 244: req: "cmd=418wisdom;x=65078", resp: "Laugh at Kayvon's jokes", latency: 5186 ms
+Request 335: req: "cmd=418wisdom;x=21589", resp: "You will perform amazingly on exam 2", latency: 2216 ms
+Request 239: req: "cmd=418wisdom;x=45298", resp: "Exams are all just fun and games", latency: 5410 ms
+Request 242: req: "cmd=418wisdom;x=13342", resp: "Do as best as you can and just have fun!", latency: 5309 ms
+Request 315: req: "cmd=418wisdom;x=58489", resp: "You will PWN your classmates in the parallelism competition", latency: 2921 ms
+Request 255: req: "cmd=418wisdom;x=4200", resp: "You will perform amazingly on exam 2", latency: 4890 ms
+Request 334: req: "cmd=418wisdom;x=94797", resp: "You will PWN your classmates in the parallelism competition", latency: 2342 ms
+Request 258: req: "cmd=418wisdom;x=65536", resp: "Worse is better. Keep it simple...", latency: 4862 ms
+Request 306: req: "cmd=418wisdom;x=6583", resp: "Laugh at Kayvon's jokes", latency: 3329 ms
+Request 296: req: "cmd=418wisdom;x=69960", resp: "Flatter your TAs with compliments", latency: 3689 ms
+Request 298: req: "cmd=418wisdom;x=30190", resp: "You will PWN your classmates in the parallelism competition", latency: 3626 ms
+Request 261: req: "cmd=418wisdom;x=64014", resp: "Flatter your TAs with compliments", latency: 4878 ms
+Request 263: req: "cmd=418wisdom;x=53793", resp: "If all else fails... buy Kayvon donuts", latency: 4850 ms
+Request 341: req: "cmd=418wisdom;x=98869", resp: "You will perform amazingly on exam 2", latency: 2411 ms
+Request 344: req: "cmd=418wisdom;x=40591", resp: "Ask questions. Ask questions. Ask questions", latency: 2361 ms
+Request 254: req: "cmd=418wisdom;x=90986", resp: "Exams are all just fun and games", latency: 5274 ms
+Request 260: req: "cmd=418wisdom;x=90271", resp: "Be careful not to optimize prematurely", latency: 5097 ms
+Request 265: req: "cmd=418wisdom;x=58713", resp: "Ask questions. Ask questions. Ask questions", latency: 5019 ms
+Request 262: req: "cmd=418wisdom;x=37245", resp: "Be careful not to optimize prematurely", latency: 5121 ms
+Request 338: req: "cmd=418wisdom;x=37803", resp: "Exams are all just fun and games", latency: 2695 ms
+Request 326: req: "cmd=418wisdom;x=70201", resp: "Do a great project, and it all works out in the end", latency: 3091 ms
+Request 318: req: "cmd=418wisdom;x=36833", resp: "Worse is better. Keep it simple...", latency: 3339 ms
+Request 264: req: "cmd=418wisdom;x=20784", resp: "You are going to do a great project", latency: 5091 ms
+Request 247: req: "cmd=418wisdom;x=27841", resp: "You are going to do a great project", latency: 5721 ms
+Request 241: req: "cmd=418wisdom;x=86136", resp: "Ask questions. Ask questions. Ask questions", latency: 5938 ms
+Request 322: req: "cmd=418wisdom;x=43122", resp: "You will PWN your classmates in the parallelism competition", latency: 3257 ms
+Request 307: req: "cmd=418wisdom;x=8467", resp: "Exams are all just fun and games", latency: 3726 ms
+Request 342: req: "cmd=418wisdom;x=98299", resp: "You are going to do a great project", latency: 2651 ms
+Request 305: req: "cmd=418wisdom;x=63888", resp: "If all else fails... buy Kayvon donuts", latency: 3806 ms
+Request 248: req: "cmd=418wisdom;x=1857", resp: "OMG, 418 is so gr8!", latency: 5718 ms
+Request 348: req: "cmd=418wisdom;x=91705", resp: "Bring out all the stops in assignment 4.", latency: 2513 ms
+Request 343: req: "cmd=418wisdom;x=14840", resp: "You will PWN your classmates in the parallelism competition", latency: 2770 ms
+Request 252: req: "cmd=418wisdom;x=94651", resp: "Write a great lecture comment on your favorite idea in the class", latency: 5698 ms
+Request 323: req: "cmd=418wisdom;x=35852", resp: "You will perform amazingly on exam 2", latency: 3416 ms
+Request 311: req: "cmd=418wisdom;x=39381", resp: "You are going to do a great project", latency: 3799 ms
+Request 339: req: "cmd=418wisdom;x=54639", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2954 ms
+Request 246: req: "cmd=418wisdom;x=87187", resp: "If all else fails... buy Kayvon donuts", latency: 5993 ms
+Request 345: req: "cmd=418wisdom;x=67993", resp: "Flatter your TAs with compliments", latency: 2801 ms
+Request 243: req: "cmd=418wisdom;x=52087", resp: "Ask questions. Ask questions. Ask questions", latency: 6171 ms
+Request 346: req: "cmd=418wisdom;x=87766", resp: "OMG, 418 is so gr8!", latency: 2853 ms
+Request 350: req: "cmd=418wisdom;x=49844", resp: "You are going to do a great project", latency: 2741 ms
+Request 259: req: "cmd=418wisdom;x=71236", resp: "You will PWN your classmates in the parallelism competition", latency: 5728 ms
+Request 272: req: "cmd=418wisdom;x=62054", resp: "Laugh at Kayvon's jokes", latency: 5294 ms
+Request 325: req: "cmd=418wisdom;x=86358", resp: "OMG, 418 is so gr8!", latency: 3655 ms
+Request 270: req: "cmd=418wisdom;x=71850", resp: "Worse is better. Keep it simple...", latency: 5488 ms
+ Request 251: req: "cmd=418wisdom;x=55836", resp: "Worse is better. Keep it simple...", latency: 6142 ms
+Request 349: req: "cmd=418wisdom;x=32246", resp: "You will perform amazingly on exam 2", latency: 3142 ms
+Request 319: req: "cmd=418wisdom;x=98846", resp: "Flatter your TAs with compliments", latency: 4191 ms
+Request 328: req: "cmd=418wisdom;x=45161", resp: "Laugh at Kayvon's jokes", latency: 4000 ms
+Request 316: req: "cmd=418wisdom;x=67930", resp: "Come to lecture, there might be donuts!", latency: 4449 ms
+Request 327: req: "cmd=418wisdom;x=90301", resp: "Exams are all just fun and games", latency: 4117 ms
+Request 324: req: "cmd=418wisdom;x=6385", resp: "OMG, 418 is so gr8!", latency: 4241 ms
+Request 365: req: "cmd=418wisdom;x=58295", resp: "Laugh at Kayvon's jokes", latency: 3018 ms
+Request 321: req: "cmd=418wisdom;x=77710", resp: "You are going to do a great project", latency: 4342 ms
+Request 363: req: "cmd=418wisdom;x=78417", resp: "Exams are all just fun and games", latency: 3095 ms
+Request 268: req: "cmd=418wisdom;x=33341", resp: "Do a great project, and it all works out in the end", latency: 6113 ms
+Request 360: req: "cmd=418wisdom;x=3546", resp: "Ask questions. Ask questions. Ask questions", latency: 3239 ms
+Request 257: req: "cmd=418wisdom;x=70133", resp: "You are going to do a great project", latency: 6520 ms
+Request 256: req: "cmd=418wisdom;x=74914", resp: "Laugh at Kayvon's jokes", latency: 6592 ms
+Request 269: req: "cmd=418wisdom;x=78963", resp: "OMG, 418 is so gr8!", latency: 6161 ms
+Request 277: req: "cmd=418wisdom;x=39479", resp: "You will PWN your classmates in the parallelism competition", latency: 5894 ms
+Request 333: req: "cmd=418wisdom;x=4210", resp: "Ask questions. Ask questions. Ask questions", latency: 4168 ms
+Request 278: req: "cmd=418wisdom;x=54848", resp: "Do a great project, and it all works out in the end", latency: 5980 ms
+Request 330: req: "cmd=418wisdom;x=11891", resp: "Laugh at Kayvon's jokes", latency: 4425 ms
+Request 382: req: "cmd=418wisdom;x=90109", resp: "If all else fails... buy Kayvon donuts", latency: 2897 ms
+Request 329: req: "cmd=418wisdom;x=67692", resp: "Laugh at Kayvon's jokes", latency: 4485 ms
+Request 283: req: "cmd=418wisdom;x=17958", resp: "Ask questions. Ask questions. Ask questions", latency: 5970 ms
+Request 375: req: "cmd=418wisdom;x=84396", resp: "Exams are all just fun and games", latency: 3165 ms
+Request 279: req: "cmd=418wisdom;x=29340", resp: "Write a great lecture comment on your favorite idea in the class", latency: 6126 ms
+Request 284: req: "cmd=418wisdom;x=52305", resp: "Do a great project, and it all works out in the end", latency: 6000 ms
+Request 372: req: "cmd=418wisdom;x=22509", resp: "You will perform amazingly on exam 2", latency: 3344 ms
+Request 370: req: "cmd=418wisdom;x=86890", resp: "Worse is better. Keep it simple...", latency: 3418 ms
+Request 371: req: "cmd=418wisdom;x=3941", resp: "Worse is better. Keep it simple...", latency: 3392 ms
+Request 347: req: "cmd=418wisdom;x=49541", resp: "Come to lecture, there might be donuts!", latency: 4094 ms
+Request 361: req: "cmd=418wisdom;x=14836", resp: "You will PWN your classmates in the parallelism competition", latency: 3683 ms
+Request 271: req: "cmd=418wisdom;x=33825", resp: "Flatter your TAs with compliments", latency: 6526 ms
+Request 385: req: "cmd=418wisdom;x=67857", resp: "Do as best as you can and just have fun!", latency: 3073 ms
+Request 379: req: "cmd=418wisdom;x=65609", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3294 ms
+Request 340: req: "cmd=418wisdom;x=15133", resp: "Exams are all just fun and games", latency: 4466 ms
+Request 353: req: "cmd=418wisdom;x=20199", resp: "Ask questions. Ask questions. Ask questions", latency: 4094 ms
+Request 396: req: "cmd=418wisdom;x=79104", resp: "Worse is better. Keep it simple...", latency: 2921 ms
+Request 266: req: "cmd=418wisdom;x=889", resp: "Do a great project, and it all works out in the end", latency: 6942 ms
+Request 373: req: "cmd=418wisdom;x=4063", resp: "OMG, 418 is so gr8!", latency: 3642 ms
+Request 275: req: "cmd=418wisdom;x=98192", resp: "Do as best as you can and just have fun!", latency: 6687 ms
+Request 387: req: "cmd=418wisdom;x=75785", resp: "OMG, 418 is so gr8!", latency: 3288 ms
+Request 276: req: "cmd=418wisdom;x=28953", resp: "You will PWN your classmates in the parallelism competition", latency: 6720 ms
+Request 267: req: "cmd=418wisdom;x=15102", resp: "Laugh at Kayvon's jokes", latency: 7045 ms
+Request 394: req: "cmd=418wisdom;x=82570", resp: "You will perform amazingly on exam 2", latency: 3270 ms
+Request 368: req: "cmd=418wisdom;x=6635", resp: "Worse is better. Keep it simple...", latency: 4013 ms
+Request 280: req: "cmd=418wisdom;x=47806", resp: "You will perform amazingly on exam 2", latency: 6739 ms
+Request 386: req: "cmd=418wisdom;x=80511", resp: "You will PWN your classmates in the parallelism competition", latency: 3534 ms
+Request 281: req: "cmd=418wisdom;x=23970", resp: "Be careful not to optimize prematurely", latency: 6739 ms
+Request 390: req: "cmd=418wisdom;x=90578", resp: "Worse is better. Keep it simple...", latency: 3447 ms
+Request 282: req: "cmd=418wisdom;x=4825", resp: "Flatter your TAs with compliments", latency: 6724 ms
+Request 337: req: "cmd=418wisdom;x=19797", resp: "Be careful not to optimize prematurely", latency: 4998 ms
+Request 395: req: "cmd=418wisdom;x=48221", resp: "Be careful not to optimize prematurely", latency: 3320 ms
+Request 355: req: "cmd=418wisdom;x=21877", resp: "You will PWN your classmates in the parallelism competition", latency: 4473 ms
+Request 391: req: "cmd=418wisdom;x=20610", resp: "Exams are all just fun and games", latency: 3442 ms
+Request 352: req: "cmd=418wisdom;x=67007", resp: "Worse is better. Keep it simple...", latency: 4568 ms
+Request 273: req: "cmd=418wisdom;x=4120", resp: "Laugh at Kayvon's jokes", latency: 7157 ms
+Request 359: req: "cmd=418wisdom;x=81812", resp: "Flatter your TAs with compliments", latency: 4493 ms
+Request 405: req: "cmd=418wisdom;x=25446", resp: "You will perform amazingly on exam 2", latency: 3200 ms
+Request 407: req: "cmd=418wisdom;x=85989", resp: "Flatter your TAs with compliments", latency: 3216 ms
+Request 366: req: "cmd=418wisdom;x=71813", resp: "Write a great lecture comment on your favorite idea in the class", latency: 4419 ms
+Request 383: req: "cmd=418wisdom;x=50243", resp: "If all else fails... buy Kayvon donuts", latency: 3959 ms
+Request 427: req: "cmd=418wisdom;x=61177", resp: "Laugh at Kayvon's jokes", latency: 2817 ms
+Request 274: req: "cmd=418wisdom;x=16386", resp: "OMG, 418 is so gr8!", latency: 7409 ms
+Request 381: req: "cmd=418wisdom;x=50500", resp: "Flatter your TAs with compliments", latency: 4123 ms
+Request 420: req: "cmd=418wisdom;x=49183", resp: "Ask questions. Ask questions. Ask questions", latency: 3046 ms
+Request 398: req: "cmd=418wisdom;x=58639", resp: "Come to lecture, there might be donuts!", latency: 3687 ms
+ Request 374: req: "cmd=418wisdom;x=1528", resp: "You will perform amazingly on exam 2", latency: 4366 ms
+Request 286: req: "cmd=418wisdom;x=40317", resp: "Be careful not to optimize prematurely", latency: 7058 ms
+Request 356: req: "cmd=418wisdom;x=34022", resp: "Come to lecture, there might be donuts!", latency: 5049 ms
+Request 351: req: "cmd=418wisdom;x=49865", resp: "Flatter your TAs with compliments", latency: 5196 ms
+Request 364: req: "cmd=418wisdom;x=84234", resp: "Worse is better. Keep it simple...", latency: 4959 ms
+Request 354: req: "cmd=418wisdom;x=60977", resp: "You will perform amazingly on exam 2", latency: 5249 ms
+Request 393: req: "cmd=418wisdom;x=59862", resp: "You will perform amazingly on exam 2", latency: 4199 ms
+Request 406: req: "cmd=418wisdom;x=6562", resp: "Do a great project, and it all works out in the end", latency: 3875 ms
+Request 437: req: "cmd=418wisdom;x=34667", resp: "Do a great project, and it all works out in the end", latency: 3052 ms
+Request 357: req: "cmd=418wisdom;x=96257", resp: "Come to lecture, there might be donuts!", latency: 5302 ms
+Request 399: req: "cmd=418wisdom;x=85132", resp: "You are going to do a great project", latency: 4166 ms
+Request 400: req: "cmd=418wisdom;x=79806", resp: "Do a great project, and it all works out in the end", latency: 4156 ms
+Request 358: req: "cmd=418wisdom;x=89901", resp: "Do a great project, and it all works out in the end", latency: 5421 ms
+Request 377: req: "cmd=418wisdom;x=16069", resp: "Do a great project, and it all works out in the end", latency: 4910 ms
+ Request 438: req: "cmd=418wisdom;x=38341", resp: "If all else fails... buy Kayvon donuts", latency: 3220 ms
+Request 430: req: "cmd=418wisdom;x=47089", resp: "OMG, 418 is so gr8!", latency: 3436 ms
+Request 285: req: "cmd=418wisdom;x=7086", resp: "Do as best as you can and just have fun!", latency: 7769 ms
+ Request 413: req: "cmd=418wisdom;x=64099", resp: "Exams are all just fun and games", latency: 3950 ms
+Request 471: req: "cmd=418wisdom;x=66651", resp: "Do a great project, and it all works out in the end", latency: 2433 ms
+ Request 564: req: "cmd=418wisdom;x=47089", resp: "OMG, 418 is so gr8!", latency: 57 ms
+Request 367: req: "cmd=418wisdom;x=80706", resp: "Do as best as you can and just have fun!", latency: 5318 ms
+Request 445: req: "cmd=418wisdom;x=33786", resp: "Come to lecture, there might be donuts!", latency: 3149 ms
+Request 476: req: "cmd=418wisdom;x=88878", resp: "Do as best as you can and just have fun!", latency: 2328 ms
+Request 404: req: "cmd=418wisdom;x=50686", resp: "You will perform amazingly on exam 2", latency: 4345 ms
+ Request 362: req: "cmd=418wisdom;x=25688", resp: "Exams are all just fun and games", latency: 5540 ms
+Request 392: req: "cmd=418wisdom;x=53542", resp: "Be careful not to optimize prematurely", latency: 4694 ms
+Request 486: req: "cmd=418wisdom;x=41564", resp: "You are going to do a great project", latency: 2198 ms
+Request 423: req: "cmd=418wisdom;x=67355", resp: "Worse is better. Keep it simple...", latency: 3876 ms
+Request 492: req: "cmd=418wisdom;x=68642", resp: "Flatter your TAs with compliments", latency: 2134 ms
+Request 488: req: "cmd=418wisdom;x=77382", resp: "Bring out all the stops in assignment 4.", latency: 2274 ms
+Request 376: req: "cmd=418wisdom;x=33059", resp: "OMG, 418 is so gr8!", latency: 5337 ms
+Request 494: req: "cmd=418wisdom;x=91929", resp: "Do as best as you can and just have fun!", latency: 2140 ms
+Request 489: req: "cmd=418wisdom;x=73428", resp: "If all else fails... buy Kayvon donuts", latency: 2295 ms
+Request 415: req: "cmd=418wisdom;x=28709", resp: "You are going to do a great project", latency: 4265 ms
+Request 487: req: "cmd=418wisdom;x=9921", resp: "Worse is better. Keep it simple...", latency: 2348 ms
+Request 418: req: "cmd=418wisdom;x=3593", resp: "Write a great lecture comment on your favorite idea in the class", latency: 4223 ms
+Request 380: req: "cmd=418wisdom;x=96860", resp: "Worse is better. Keep it simple...", latency: 5313 ms
+Request 388: req: "cmd=418wisdom;x=99054", resp: "OMG, 418 is so gr8!", latency: 5128 ms
+Request 428: req: "cmd=418wisdom;x=38668", resp: "Do as best as you can and just have fun!", latency: 4020 ms
+Request 417: req: "cmd=418wisdom;x=5552", resp: "Worse is better. Keep it simple...", latency: 4337 ms
+Request 429: req: "cmd=418wisdom;x=4703", resp: "If all else fails... buy Kayvon donuts", latency: 4079 ms
+ Request 491: req: "cmd=418wisdom;x=44672", resp: "If all else fails... buy Kayvon donuts", latency: 2436 ms
+Request 433: req: "cmd=418wisdom;x=61740", resp: "Laugh at Kayvon's jokes", latency: 3981 ms
+Request 378: req: "cmd=418wisdom;x=14882", resp: "OMG, 418 is so gr8!", latency: 5530 ms
+Request 512: req: "cmd=418wisdom;x=718", resp: "OMG, 418 is so gr8!", latency: 1949 ms
+Request 475: req: "cmd=418wisdom;x=81940", resp: "Be careful not to optimize prematurely", latency: 2911 ms
+Request 446: req: "cmd=418wisdom;x=12432", resp: "If all else fails... buy Kayvon donuts", latency: 3690 ms
+Request 426: req: "cmd=418wisdom;x=41114", resp: "You will PWN your classmates in the parallelism competition", latency: 4253 ms
+Request 498: req: "cmd=418wisdom;x=7033", resp: "Do a great project, and it all works out in the end", latency: 2347 ms
+Request 408: req: "cmd=418wisdom;x=94295", resp: "Be careful not to optimize prematurely", latency: 4770 ms
+Request 507: req: "cmd=418wisdom;x=20798", resp: "Flatter your TAs with compliments", latency: 2176 ms
+Request 403: req: "cmd=418wisdom;x=18197", resp: "Flatter your TAs with compliments", latency: 4951 ms
+Request 416: req: "cmd=418wisdom;x=82994", resp: "Worse is better. Keep it simple...", latency: 4627 ms
+Request 497: req: "cmd=418wisdom;x=7853", resp: "Ask questions. Ask questions. Ask questions", latency: 2477 ms
+Request 453: req: "cmd=418wisdom;x=91689", resp: "Laugh at Kayvon's jokes", latency: 3633 ms
+Request 410: req: "cmd=418wisdom;x=40807", resp: "You will perform amazingly on exam 2", latency: 4802 ms
+Request 397: req: "cmd=418wisdom;x=38857", resp: "Do a great project, and it all works out in the end", latency: 5168 ms
+Request 448: req: "cmd=418wisdom;x=62204", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3805 ms
+Request 462: req: "cmd=418wisdom;x=75662", resp: "Laugh at Kayvon's jokes", latency: 3429 ms
+Request 389: req: "cmd=418wisdom;x=74697", resp: "Do a great project, and it all works out in the end", latency: 5425 ms
+Request 439: req: "cmd=418wisdom;x=77642", resp: "You are going to do a great project", latency: 4064 ms
+Request 402: req: "cmd=418wisdom;x=24", resp: "Do a great project, and it all works out in the end", latency: 5086 ms
+Request 441: req: "cmd=418wisdom;x=88128", resp: "Worse is better. Keep it simple...", latency: 4062 ms
+Request 369: req: "cmd=418wisdom;x=8464", resp: "If all else fails... buy Kayvon donuts", latency: 6076 ms
+Request 469: req: "cmd=418wisdom;x=90108", resp: "Be careful not to optimize prematurely", latency: 3370 ms
+Request 464: req: "cmd=418wisdom;x=78956", resp: "Be careful not to optimize prematurely", latency: 3517 ms
+Request 421: req: "cmd=418wisdom;x=86333", resp: "You will PWN your classmates in the parallelism competition", latency: 4688 ms
+Request 412: req: "cmd=418wisdom;x=6225", resp: "Bring out all the stops in assignment 4.", latency: 4941 ms
+Request 451: req: "cmd=418wisdom;x=91179", resp: "OMG, 418 is so gr8!", latency: 3914 ms
+Request 479: req: "cmd=418wisdom;x=42011", resp: "Be careful not to optimize prematurely", latency: 3219 ms
+Request 456: req: "cmd=418wisdom;x=81025", resp: "Be careful not to optimize prematurely", latency: 3890 ms
+Request 465: req: "cmd=418wisdom;x=7534", resp: "Flatter your TAs with compliments", latency: 3707 ms
+Request 470: req: "cmd=418wisdom;x=94479", resp: "Do a great project, and it all works out in the end", latency: 3577 ms
+Request 443: req: "cmd=418wisdom;x=46719", resp: "Laugh at Kayvon's jokes", latency: 4336 ms
+Request 458: req: "cmd=418wisdom;x=78549", resp: "You will perform amazingly on exam 2", latency: 3961 ms
+Request 401: req: "cmd=418wisdom;x=65699", resp: "OMG, 418 is so gr8!", latency: 5555 ms
+Request 450: req: "cmd=418wisdom;x=12711", resp: "Be careful not to optimize prematurely", latency: 4233 ms
+Request 460: req: "cmd=418wisdom;x=78212", resp: "You are going to do a great project", latency: 3963 ms
+Request 520: req: "cmd=418wisdom;x=95918", resp: "Do a great project, and it all works out in the end", latency: 2459 ms
+Request 534: req: "cmd=418wisdom;x=89768", resp: "You will perform amazingly on exam 2", latency: 2154 ms
+Request 473: req: "cmd=418wisdom;x=21598", resp: "Come to lecture, there might be donuts!", latency: 3813 ms
+Request 543: req: "cmd=418wisdom;x=13223", resp: "Bring out all the stops in assignment 4.", latency: 2050 ms
+Request 436: req: "cmd=418wisdom;x=54914", resp: "Come to lecture, there might be donuts!", latency: 4839 ms
+Request 467: req: "cmd=418wisdom;x=93429", resp: "You are going to do a great project", latency: 4025 ms
+Request 477: req: "cmd=418wisdom;x=77940", resp: "Exams are all just fun and games", latency: 3799 ms
+Request 432: req: "cmd=418wisdom;x=3246", resp: "Ask questions. Ask questions. Ask questions", latency: 5036 ms
+Request 527: req: "cmd=418wisdom;x=95815", resp: "Exams are all just fun and games", latency: 2543 ms
+Request 484: req: "cmd=418wisdom;x=92288", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3679 ms
+Request 480: req: "cmd=418wisdom;x=30531", resp: "OMG, 418 is so gr8!", latency: 3787 ms
+Request 523: req: "cmd=418wisdom;x=36224", resp: "Ask questions. Ask questions. Ask questions", latency: 2690 ms
+Request 442: req: "cmd=418wisdom;x=61012", resp: "Ask questions. Ask questions. Ask questions", latency: 4833 ms
+Request 424: req: "cmd=418wisdom;x=15137", resp: "Be careful not to optimize prematurely", latency: 5319 ms
+Request 544: req: "cmd=418wisdom;x=2054", resp: "Flatter your TAs with compliments", latency: 2185 ms
+Request 419: req: "cmd=418wisdom;x=41787", resp: "You will perform amazingly on exam 2", latency: 5455 ms
+Request 431: req: "cmd=418wisdom;x=15136", resp: "You are going to do a great project", latency: 5139 ms
+Request 422: req: "cmd=418wisdom;x=71719", resp: "You will PWN your classmates in the parallelism competition", latency: 5417 ms
+Request 515: req: "cmd=418wisdom;x=60485", resp: "Worse is better. Keep it simple...", latency: 2982 ms
+Request 449: req: "cmd=418wisdom;x=78857", resp: "If all else fails... buy Kayvon donuts", latency: 4721 ms
+Request 472: req: "cmd=418wisdom;x=57180", resp: "Ask questions. Ask questions. Ask questions", latency: 4129 ms
+Request 517: req: "cmd=418wisdom;x=18699", resp: "You will perform amazingly on exam 2", latency: 2970 ms
+Request 409: req: "cmd=418wisdom;x=30280", resp: "Exams are all just fun and games", latency: 5883 ms
+Request 516: req: "cmd=418wisdom;x=85918", resp: "Do a great project, and it all works out in the end", latency: 3043 ms
+Request 546: req: "cmd=418wisdom;x=7321", resp: "Ask questions. Ask questions. Ask questions", latency: 2313 ms
+Request 508: req: "cmd=418wisdom;x=20479", resp: "Do a great project, and it all works out in the end", latency: 3291 ms
+ Request 474: req: "cmd=418wisdom;x=9347", resp: "Laugh at Kayvon's jokes", latency: 4175 ms
+Request 518: req: "cmd=418wisdom;x=11239", resp: "If all else fails... buy Kayvon donuts", latency: 3031 ms
+Request 452: req: "cmd=418wisdom;x=79934", resp: "Worse is better. Keep it simple...", latency: 4770 ms
+Request 454: req: "cmd=418wisdom;x=87254", resp: "Exams are all just fun and games", latency: 4717 ms
+Request 425: req: "cmd=418wisdom;x=98671", resp: "You will perform amazingly on exam 2", latency: 5516 ms
+Request 490: req: "cmd=418wisdom;x=3070", resp: "You will perform amazingly on exam 2", latency: 3799 ms
+Request 455: req: "cmd=418wisdom;x=68101", resp: "If all else fails... buy Kayvon donuts", latency: 4726 ms
+Request 414: req: "cmd=418wisdom;x=12732", resp: "Exams are all just fun and games", latency: 5884 ms
+Request 434: req: "cmd=418wisdom;x=62997", resp: "You are going to do a great project", latency: 5351 ms
+Request 524: req: "cmd=418wisdom;x=47337", resp: "You will perform amazingly on exam 2", latency: 3019 ms
+Request 495: req: "cmd=418wisdom;x=96225", resp: "You will perform amazingly on exam 2", latency: 3771 ms
+Request 466: req: "cmd=418wisdom;x=4464", resp: "OMG, 418 is so gr8!", latency: 4605 ms
+Request 459: req: "cmd=418wisdom;x=18912", resp: "If all else fails... buy Kayvon donuts", latency: 4788 ms
+Request 468: req: "cmd=418wisdom;x=48616", resp: "Do a great project, and it all works out in the end", latency: 4607 ms
+Request 542: req: "cmd=418wisdom;x=4625", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2703 ms
+Request 483: req: "cmd=418wisdom;x=56601", resp: "Write a great lecture comment on your favorite idea in the class", latency: 4238 ms
+Request 457: req: "cmd=418wisdom;x=51901", resp: "Come to lecture, there might be donuts!", latency: 4917 ms
+Request 532: req: "cmd=418wisdom;x=58085", resp: "Do as best as you can and just have fun!", latency: 2974 ms
+Request 536: req: "cmd=418wisdom;x=80439", resp: "Bring out all the stops in assignment 4.", latency: 2893 ms
+ Request 493: req: "cmd=418wisdom;x=3013", resp: "You are going to do a great project", latency: 3997 ms
+Request 440: req: "cmd=418wisdom;x=49032", resp: "If all else fails... buy Kayvon donuts", latency: 5435 ms
+Request 547: req: "cmd=418wisdom;x=42023", resp: "Do as best as you can and just have fun!", latency: 2668 ms
+Request 478: req: "cmd=418wisdom;x=69850", resp: "Do a great project, and it all works out in the end", latency: 4504 ms
+Request 485: req: "cmd=418wisdom;x=93576", resp: "You are going to do a great project", latency: 4375 ms
+Request 574: req: "cmd=418wisdom;x=43172", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2153 ms
+Request 519: req: "cmd=418wisdom;x=34445", resp: "Ask questions. Ask questions. Ask questions", latency: 3531 ms
+Request 481: req: "cmd=418wisdom;x=11344", resp: "You will PWN your classmates in the parallelism competition", latency: 4531 ms
+Request 545: req: "cmd=418wisdom;x=7792", resp: "You will perform amazingly on exam 2", latency: 2941 ms
+Request 567: req: "cmd=418wisdom;x=27697", resp: "Laugh at Kayvon's jokes", latency: 2391 ms
+Request 411: req: "cmd=418wisdom;x=81004", resp: "Come to lecture, there might be donuts!", latency: 6456 ms
+Request 573: req: "cmd=418wisdom;x=76764", resp: "Do as best as you can and just have fun!", latency: 2263 ms
+Request 447: req: "cmd=418wisdom;x=68253", resp: "OMG, 418 is so gr8!", latency: 5501 ms
+Request 435: req: "cmd=418wisdom;x=10529", resp: "You are going to do a great project", latency: 5825 ms
+Request 502: req: "cmd=418wisdom;x=996", resp: "Do a great project, and it all works out in the end", latency: 4078 ms
+Request 482: req: "cmd=418wisdom;x=42597", resp: "If all else fails... buy Kayvon donuts", latency: 4619 ms
+Request 558: req: "cmd=418wisdom;x=40863", resp: "Worse is better. Keep it simple...", latency: 2697 ms
+Request 575: req: "cmd=418wisdom;x=24796", resp: "Ask questions. Ask questions. Ask questions", latency: 2275 ms
+Request 571: req: "cmd=418wisdom;x=44616", resp: "Ask questions. Ask questions. Ask questions", latency: 2385 ms
+Request 501: req: "cmd=418wisdom;x=34788", resp: "You will perform amazingly on exam 2", latency: 4187 ms
+Request 504: req: "cmd=418wisdom;x=81901", resp: "Write a great lecture comment on your favorite idea in the class", latency: 4109 ms
+Request 525: req: "cmd=418wisdom;x=29263", resp: "Worse is better. Keep it simple...", latency: 3589 ms
+Request 551: req: "cmd=418wisdom;x=42219", resp: "If all else fails... buy Kayvon donuts", latency: 2940 ms
+Request 559: req: "cmd=418wisdom;x=41722", resp: "You will PWN your classmates in the parallelism competition", latency: 2756 ms
+Request 592: req: "cmd=418wisdom;x=70630", resp: "Do a great project, and it all works out in the end", latency: 1959 ms
+Request 444: req: "cmd=418wisdom;x=63231", resp: "Exams are all just fun and games", latency: 5757 ms
+Request 555: req: "cmd=418wisdom;x=36925", resp: "If all else fails... buy Kayvon donuts", latency: 2904 ms
+Request 499: req: "cmd=418wisdom;x=35925", resp: "Do as best as you can and just have fun!", latency: 4331 ms
+Request 599: req: "cmd=418wisdom;x=98402", resp: "Flatter your TAs with compliments", latency: 1823 ms
+Request 496: req: "cmd=418wisdom;x=72254", resp: "Exams are all just fun and games", latency: 4428 ms
+Request 595: req: "cmd=418wisdom;x=76009", resp: "You will PWN your classmates in the parallelism competition", latency: 1963 ms
+Request 503: req: "cmd=418wisdom;x=97433", resp: "Exams are all just fun and games", latency: 4290 ms
+Request 526: req: "cmd=418wisdom;x=93713", resp: "Be careful not to optimize prematurely", latency: 3714 ms
+Request 557: req: "cmd=418wisdom;x=5785", resp: "Flatter your TAs with compliments", latency: 2945 ms
+Request 505: req: "cmd=418wisdom;x=7051", resp: "If all else fails... buy Kayvon donuts", latency: 4264 ms
+Request 550: req: "cmd=418wisdom;x=14228", resp: "Bring out all the stops in assignment 4.", latency: 3126 ms
+Request 562: req: "cmd=418wisdom;x=20399", resp: "You are going to do a great project", latency: 2852 ms
+Request 509: req: "cmd=418wisdom;x=67376", resp: "Do as best as you can and just have fun!", latency: 4193 ms
+Request 561: req: "cmd=418wisdom;x=32067", resp: "Ask questions. Ask questions. Ask questions", latency: 2881 ms
+Request 529: req: "cmd=418wisdom;x=18404", resp: "Flatter your TAs with compliments", latency: 3692 ms
+Request 593: req: "cmd=418wisdom;x=47143", resp: "Flatter your TAs with compliments", latency: 2116 ms
+Request 530: req: "cmd=418wisdom;x=99296", resp: "Flatter your TAs with compliments", latency: 3700 ms
+Request 566: req: "cmd=418wisdom;x=79652", resp: "Come to lecture, there might be donuts!", latency: 2814 ms
+Request 500: req: "cmd=418wisdom;x=2937", resp: "OMG, 418 is so gr8!", latency: 4526 ms
+Request 590: req: "cmd=418wisdom;x=54521", resp: "Exams are all just fun and games", latency: 2254 ms
+Request 521: req: "cmd=418wisdom;x=13015", resp: "Do a great project, and it all works out in the end", latency: 4029 ms
+Request 461: req: "cmd=418wisdom;x=44458", resp: "You will perform amazingly on exam 2", latency: 5593 ms
+Request 552: req: "cmd=418wisdom;x=63697", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3284 ms
+Request 582: req: "cmd=418wisdom;x=20364", resp: "You will PWN your classmates in the parallelism competition", latency: 2546 ms
+Request 511: req: "cmd=418wisdom;x=12318", resp: "Ask questions. Ask questions. Ask questions", latency: 4411 ms
+Request 513: req: "cmd=418wisdom;x=36913", resp: "Come to lecture, there might be donuts!", latency: 4367 ms
+Request 506: req: "cmd=418wisdom;x=89344", resp: "You will perform amazingly on exam 2", latency: 4556 ms
+Request 510: req: "cmd=418wisdom;x=93827", resp: "Laugh at Kayvon's jokes", latency: 4453 ms
+Request 605: req: "cmd=418wisdom;x=58162", resp: "You are going to do a great project", latency: 2070 ms
+Request 528: req: "cmd=418wisdom;x=63592", resp: "Exams are all just fun and games", latency: 4015 ms
+Request 540: req: "cmd=418wisdom;x=29106", resp: "Bring out all the stops in assignment 4.", latency: 3724 ms
+Request 586: req: "cmd=418wisdom;x=777", resp: "Flatter your TAs with compliments", latency: 2601 ms
+Request 584: req: "cmd=418wisdom;x=69899", resp: "Flatter your TAs with compliments", latency: 2692 ms
+Request 514: req: "cmd=418wisdom;x=2465", resp: "Bring out all the stops in assignment 4.", latency: 4477 ms
+Request 576: req: "cmd=418wisdom;x=45345", resp: "Worse is better. Keep it simple...", latency: 2920 ms
+Request 594: req: "cmd=418wisdom;x=67818", resp: "If all else fails... buy Kayvon donuts", latency: 2510 ms
+Request 608: req: "cmd=418wisdom;x=25261", resp: "You are going to do a great project", latency: 2189 ms
+Request 601: req: "cmd=418wisdom;x=88372", resp: "Ask questions. Ask questions. Ask questions", latency: 2404 ms
+Request 603: req: "cmd=418wisdom;x=25657", resp: "Exams are all just fun and games", latency: 2354 ms
+ Request 623: req: "cmd=418wisdom;x=51983", resp: "You are going to do a great project", latency: 1854 msRequest 589: req: "cmd=418wisdom;x=62892", resp: "If all else fails... buy Kayvon donuts", latency: 2704 ms
+ Request 463: req: "cmd=418wisdom;x=45547", resp: "Exams are all just fun and games", latency: 5913 ms
+
+Request 533: req: "cmd=418wisdom;x=15640", resp: "OMG, 418 is so gr8!", latency: 4156 ms
+Request 600: req: "cmd=418wisdom;x=12083", resp: "Be careful not to optimize prematurely", latency: 2483 ms
+Request 598: req: "cmd=418wisdom;x=28009", resp: "Exams are all just fun and games", latency: 2553 ms
+Request 531: req: "cmd=418wisdom;x=10258", resp: "You are going to do a great project", latency: 4257 ms
+Request 535: req: "cmd=418wisdom;x=94568", resp: "Do as best as you can and just have fun!", latency: 4175 ms
+Request 522: req: "cmd=418wisdom;x=96652", resp: "Bring out all the stops in assignment 4.", latency: 4502 ms
+Request 607: req: "cmd=418wisdom;x=10203", resp: "If all else fails... buy Kayvon donuts", latency: 2417 ms
+Request 610: req: "cmd=418wisdom;x=75523", resp: "OMG, 418 is so gr8!", latency: 2353 ms
+Request 541: req: "cmd=418wisdom;x=41978", resp: "You will PWN your classmates in the parallelism competition", latency: 4078 ms
+Request 549: req: "cmd=418wisdom;x=74088", resp: "Flatter your TAs with compliments", latency: 3886 ms
+Request 539: req: "cmd=418wisdom;x=75486", resp: "Worse is better. Keep it simple...", latency: 4179 ms
+Request 629: req: "cmd=418wisdom;x=40341", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1969 ms
+Request 597: req: "cmd=418wisdom;x=76200", resp: "OMG, 418 is so gr8!", latency: 2769 ms
+Request 613: req: "cmd=418wisdom;x=3545", resp: "Bring out all the stops in assignment 4.", latency: 2369 ms
+Request 636: req: "cmd=418wisdom;x=69703", resp: "Worse is better. Keep it simple...", latency: 1830 ms
+Request 591: req: "cmd=418wisdom;x=15622", resp: "If all else fails... buy Kayvon donuts", latency: 3019 ms
+ Request 638: req: "cmd=418wisdom;x=59106", resp: "Exams are all just fun and games", latency: 1844 ms
+Request 624: req: "cmd=418wisdom;x=57398", resp: "If all else fails... buy Kayvon donuts", latency: 2215 ms
+Request 646: req: "cmd=418wisdom;x=31824", resp: "Be careful not to optimize prematurely", latency: 1671 ms
+Request 537: req: "cmd=418wisdom;x=31589", resp: "Bring out all the stops in assignment 4.", latency: 4396 ms
+ Request 568: req: "cmd=418wisdom;x=55818", resp: "You are going to do a great project", latency: 3621 ms
+Request 640: req: "cmd=418wisdom;x=66826", resp: "Ask questions. Ask questions. Ask questions", latency: 1838 ms
+Request 583: req: "cmd=418wisdom;x=184", resp: "Be careful not to optimize prematurely", latency: 3268 ms
+Request 569: req: "cmd=418wisdom;x=68820", resp: "OMG, 418 is so gr8!", latency: 3685 ms
+Request 554: req: "cmd=418wisdom;x=44481", resp: "OMG, 418 is so gr8!", latency: 4078 ms
+Request 538: req: "cmd=418wisdom;x=24284", resp: "You are going to do a great project", latency: 4500 ms
+Request 548: req: "cmd=418wisdom;x=55078", resp: "You will PWN your classmates in the parallelism competition", latency: 4265 ms
+Request 658: req: "cmd=418wisdom;x=6645", resp: "You will perform amazingly on exam 2", latency: 1524 ms
+Request 656: req: "cmd=418wisdom;x=1011", resp: "Be careful not to optimize prematurely", latency: 1584 ms
+Request 572: req: "cmd=418wisdom;x=39878", resp: "Be careful not to optimize prematurely", latency: 3684 ms
+Request 577: req: "cmd=418wisdom;x=93711", resp: "Worse is better. Keep it simple...", latency: 3569 ms
+Request 641: req: "cmd=418wisdom;x=35406", resp: "Worse is better. Keep it simple...", latency: 1999 ms
+ Request 631: req: "cmd=418wisdom;x=78818", resp: "OMG, 418 is so gr8!", latency: 2249 ms
+ Request 553: req: "cmd=418wisdom;x=8455", resp: "Come to lecture, there might be donuts!", latency: 4199 ms
+Request 556: req: "cmd=418wisdom;x=94894", resp: "If all else fails... buy Kayvon donuts", latency: 4158 ms
+Request 665: req: "cmd=418wisdom;x=62088", resp: "You will PWN your classmates in the parallelism competition", latency: 1436 ms
+Request 570: req: "cmd=418wisdom;x=79566", resp: "You will PWN your classmates in the parallelism competition", latency: 3910 ms
+Request 560: req: "cmd=418wisdom;x=72818", resp: "If all else fails... buy Kayvon donuts", latency: 4160 ms
+Request 651: req: "cmd=418wisdom;x=5240", resp: "You will PWN your classmates in the parallelism competition", latency: 1900 ms
+Request 666: req: "cmd=418wisdom;x=99969", resp: "Do as best as you can and just have fun!", latency: 1550 ms
+Request 579: req: "cmd=418wisdom;x=46243", resp: "You will perform amazingly on exam 2", latency: 3740 ms
+ Request 654: req: "cmd=418wisdom;x=47153", resp: "If all else fails... buy Kayvon donuts", latency: 1865 ms
+Request 652: req: "cmd=418wisdom;x=62114", resp: "You will perform amazingly on exam 2", latency: 1965 ms
+Request 565: req: "cmd=418wisdom;x=95027", resp: "If all else fails... buy Kayvon donuts", latency: 4140 ms
+Request 563: req: "cmd=418wisdom;x=29331", resp: "Do as best as you can and just have fun!", latency: 4190 ms
+Request 670: req: "cmd=418wisdom;x=22668", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1524 ms
+Request 618: req: "cmd=418wisdom;x=24904", resp: "Worse is better. Keep it simple...", latency: 2859 ms
+Request 643: req: "cmd=418wisdom;x=41511", resp: "You will PWN your classmates in the parallelism competition", latency: 2234 ms
+Request 669: req: "cmd=418wisdom;x=72710", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1611 ms
+Request 657: req: "cmd=418wisdom;x=52683", resp: "Worse is better. Keep it simple...", latency: 1911 ms
+Request 674: req: "cmd=418wisdom;x=46089", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1499 ms
+Request 596: req: "cmd=418wisdom;x=23236", resp: "Bring out all the stops in assignment 4.", latency: 3449 ms
+Request 673: req: "cmd=418wisdom;x=10546", resp: "You will PWN your classmates in the parallelism competition", latency: 1530 ms
+Request 645: req: "cmd=418wisdom;x=69470", resp: "Be careful not to optimize prematurely", latency: 2242 ms
+Request 620: req: "cmd=418wisdom;x=16355", resp: "Worse is better. Keep it simple...", latency: 2929 ms
+Request 676: req: "cmd=418wisdom;x=16825", resp: "Do a great project, and it all works out in the end", latency: 1561 ms
+Request 581: req: "cmd=418wisdom;x=48329", resp: "You are going to do a great project", latency: 3961 ms
+Request 663: req: "cmd=418wisdom;x=642", resp: "Worse is better. Keep it simple...", latency: 1911 ms
+Request 678: req: "cmd=418wisdom;x=89720", resp: "OMG, 418 is so gr8!", latency: 1579 ms
+Request 617: req: "cmd=418wisdom;x=53019", resp: "Be careful not to optimize prematurely", latency: 3104 ms
+Request 681: req: "cmd=418wisdom;x=70883", resp: "Do a great project, and it all works out in the end", latency: 1544 ms
+ Request 578: req: "cmd=418wisdom;x=14256", resp: "Exams are all just fun and games", latency: 4119 ms
+Request 682: req: "cmd=418wisdom;x=52416", resp: "Laugh at Kayvon's jokes", latency: 1526 ms
+Request 625: req: "cmd=418wisdom;x=62714", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2957 ms
+Request 616: req: "cmd=418wisdom;x=33989", resp: "Bring out all the stops in assignment 4.", latency: 3213 ms
+ Request 628: req: "cmd=418wisdom;x=63460", resp: "Do as best as you can and just have fun!", latency: 2913 ms
+Request 621: req: "cmd=418wisdom;x=41483", resp: "OMG, 418 is so gr8!", latency: 3097 ms
+ Request 683: req: "cmd=418wisdom;x=12922", resp: "You are going to do a great project", latency: 1547 ms
+Request 604: req: "cmd=418wisdom;x=52610", resp: "Exams are all just fun and games", latency: 3522 ms
+ Request 609: req: "cmd=418wisdom;x=28339", resp: "OMG, 418 is so gr8!", latency: 3397 ms
+Request 612: req: "cmd=418wisdom;x=59541", resp: "Flatter your TAs with compliments", latency: 3324 ms
+Request 588: req: "cmd=418wisdom;x=76864", resp: "You will perform amazingly on exam 2", latency: 3925 ms
+Request 602: req: "cmd=418wisdom;x=4054", resp: "You will PWN your classmates in the parallelism competition", latency: 3579 ms
+Request 614: req: "cmd=418wisdom;x=79224", resp: "Come to lecture, there might be donuts!", latency: 3284 ms
+Request 615: req: "cmd=418wisdom;x=30560", resp: "You will perform amazingly on exam 2", latency: 3264 ms
+Request 686: req: "cmd=418wisdom;x=78934", resp: "Do a great project, and it all works out in the end", latency: 1518 ms
+Request 580: req: "cmd=418wisdom;x=63730", resp: "Be careful not to optimize prematurely", latency: 4180 ms
+Request 630: req: "cmd=418wisdom;x=77855", resp: "Worse is better. Keep it simple...", latency: 2940 ms
+Request 606: req: "cmd=418wisdom;x=39623", resp: "Flatter your TAs with compliments", latency: 3573 ms
+Request 611: req: "cmd=418wisdom;x=90878", resp: "Worse is better. Keep it simple...", latency: 3465 ms
+Request 662: req: "cmd=418wisdom;x=66901", resp: "Ask questions. Ask questions. Ask questions", latency: 2193 ms
+Request 587: req: "cmd=418wisdom;x=29856", resp: "Be careful not to optimize prematurely", latency: 4086 ms
+Request 689: req: "cmd=418wisdom;x=38954", resp: "Laugh at Kayvon's jokes", latency: 1538 ms
+Request 585: req: "cmd=418wisdom;x=61874", resp: "You are going to do a great project", latency: 4138 ms
+Request 649: req: "cmd=418wisdom;x=30018", resp: "You will perform amazingly on exam 2", latency: 2538 ms
+Request 644: req: "cmd=418wisdom;x=47672", resp: "Come to lecture, there might be donuts!", latency: 2680 ms
+Request 647: req: "cmd=418wisdom;x=65206", resp: "Be careful not to optimize prematurely", latency: 2628 ms
+Request 619: req: "cmd=418wisdom;x=91998", resp: "Exams are all just fun and games", latency: 3368 ms
+ Request 693: req: "cmd=418wisdom;x=58653", resp: "OMG, 418 is so gr8!", latency: 1518 ms
+Request 642: req: "cmd=418wisdom;x=47267", resp: "Laugh at Kayvon's jokes", latency: 2810 ms
+Request 622: req: "cmd=418wisdom;x=28969", resp: "Bring out all the stops in assignment 4.", latency: 3316 ms
+Request 655: req: "cmd=418wisdom;x=88855", resp: "Do a great project, and it all works out in the end", latency: 2491 ms
+Request 633: req: "cmd=418wisdom;x=37180", resp: "You will PWN your classmates in the parallelism competition", latency: 3075 ms
+Request 634: req: "cmd=418wisdom;x=62881", resp: "If all else fails... buy Kayvon donuts", latency: 3056 ms
+Request 698: req: "cmd=418wisdom;x=18675", resp: "Exams are all just fun and games", latency: 1456 ms
+Request 690: req: "cmd=418wisdom;x=22016", resp: "Do a great project, and it all works out in the end", latency: 1658 ms
+Request 635: req: "cmd=418wisdom;x=15707", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3034 ms
+Request 667: req: "cmd=418wisdom;x=87315", resp: "Ask questions. Ask questions. Ask questions", latency: 2236 ms
+Request 639: req: "cmd=418wisdom;x=13953", resp: "Exams are all just fun and games", latency: 2955 ms
+Request 627: req: "cmd=418wisdom;x=41080", resp: "Come to lecture, there might be donuts!", latency: 3268 ms
+Request 626: req: "cmd=418wisdom;x=53138", resp: "Ask questions. Ask questions. Ask questions", latency: 3333 ms
+ Request 659: req: "cmd=418wisdom;x=86711", resp: "You will PWN your classmates in the parallelism competition", latency: 2508 msRequest 692: req: "cmd=418wisdom;x=94004", resp: "Bring out all the stops in assignment 4.", latency: 1683 ms
+
+ Request 695: req: "cmd=418wisdom;x=38835", resp: "You will perform amazingly on exam 2", latency: 1608 ms
+Request 632: req: "cmd=418wisdom;x=29225", resp: "Be careful not to optimize prematurely", latency: 3207 ms
+Request 661: req: "cmd=418wisdom;x=74196", resp: "You are going to do a great project", latency: 2490 ms
+Request 637: req: "cmd=418wisdom;x=38143", resp: "Be careful not to optimize prematurely", latency: 3134 ms
+Request 650: req: "cmd=418wisdom;x=74521", resp: "Come to lecture, there might be donuts!", latency: 2809 ms
+Request 660: req: "cmd=418wisdom;x=68630", resp: "If all else fails... buy Kayvon donuts", latency: 2561 ms
+Request 702: req: "cmd=418wisdom;x=61078", resp: "Flatter your TAs with compliments", latency: 1546 ms
+Request 653: req: "cmd=418wisdom;x=2554", resp: "You will PWN your classmates in the parallelism competition", latency: 2776 ms
+Request 671: req: "cmd=418wisdom;x=75162", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2334 ms
+Request 664: req: "cmd=418wisdom;x=4117", resp: "You are going to do a great project", latency: 2533 ms
+Request 699: req: "cmd=418wisdom;x=5699", resp: "Flatter your TAs with compliments", latency: 1705 ms
+Request 680: req: "cmd=418wisdom;x=44729", resp: "Come to lecture, there might be donuts!", latency: 2185 ms
+Request 704: req: "cmd=418wisdom;x=70493", resp: "Exams are all just fun and games", latency: 1609 ms
+ Request 648: req: "cmd=418wisdom;x=6022", resp: "If all else fails... buy Kayvon donuts", latency: 3009 ms
+Request 696: req: "cmd=418wisdom;x=23403", resp: "Ask questions. Ask questions. Ask questions", latency: 1825 ms
+ Request 703: req: "cmd=418wisdom;x=61251", resp: "You will perform amazingly on exam 2", latency: 1650 ms
+Request 691: req: "cmd=418wisdom;x=19619", resp: "Do as best as you can and just have fun!", latency: 1950 ms
+Request 694: req: "cmd=418wisdom;x=4979", resp: "Bring out all the stops in assignment 4.", latency: 1875 ms
+Request 700: req: "cmd=418wisdom;x=63808", resp: "If all else fails... buy Kayvon donuts", latency: 1730 ms
+Request 705: req: "cmd=418wisdom;x=51212", resp: "Come to lecture, there might be donuts!", latency: 1615 ms
+Request 697: req: "cmd=418wisdom;x=8465", resp: "You are going to do a great project", latency: 1858 ms
+Request 710: req: "cmd=418wisdom;x=63188", resp: "If all else fails... buy Kayvon donuts", latency: 1573 ms
+Request 685: req: "cmd=418wisdom;x=44412", resp: "Ask questions. Ask questions. Ask questions", latency: 2202 ms
+Request 687: req: "cmd=418wisdom;x=38887", resp: "Exams are all just fun and games", latency: 2152 ms
+Request 706: req: "cmd=418wisdom;x=28442", resp: "Come to lecture, there might be donuts!", latency: 1677 ms
+Request 675: req: "cmd=418wisdom;x=33019", resp: "Come to lecture, there might be donuts!", latency: 2528 ms
+Request 677: req: "cmd=418wisdom;x=42171", resp: "Ask questions. Ask questions. Ask questions", latency: 2479 ms
+Request 707: req: "cmd=418wisdom;x=87746", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1821 ms
+Request 668: req: "cmd=418wisdom;x=69969", resp: "You are going to do a great project", latency: 2801 ms
+Request 716: req: "cmd=418wisdom;x=58096", resp: "Laugh at Kayvon's jokes", latency: 1623 ms
+Request 718: req: "cmd=418wisdom;x=70412", resp: "Flatter your TAs with compliments", latency: 1612 ms
+Request 672: req: "cmd=418wisdom;x=28792", resp: "Do a great project, and it all works out in the end", latency: 2763 ms
+ Request 715: req: "cmd=418wisdom;x=93408", resp: "Bring out all the stops in assignment 4.", latency: 1688 ms
+Request 709: req: "cmd=418wisdom;x=45829", resp: "You are going to do a great project", latency: 1838 ms
+Request 679: req: "cmd=418wisdom;x=43527", resp: "Flatter your TAs with compliments", latency: 2601 ms
+Request 721: req: "cmd=418wisdom;x=4380", resp: "Bring out all the stops in assignment 4.", latency: 1557 ms
+Request 688: req: "cmd=418wisdom;x=80685", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2415 ms
+Request 684: req: "cmd=418wisdom;x=91040", resp: "Ask questions. Ask questions. Ask questions", latency: 2516 ms
+Request 717: req: "cmd=418wisdom;x=49020", resp: "You are going to do a great project", latency: 1691 ms
+Request 708: req: "cmd=418wisdom;x=35307", resp: "Laugh at Kayvon's jokes", latency: 1928 ms
+Request 722: req: "cmd=418wisdom;x=16285", resp: "You will perform amazingly on exam 2", latency: 1618 ms
+Request 726: req: "cmd=418wisdom;x=78668", resp: "You will perform amazingly on exam 2", latency: 1547 ms
+Request 714: req: "cmd=418wisdom;x=92976", resp: "Bring out all the stops in assignment 4.", latency: 1862 msRequest 719: req: "cmd=418wisdom;x=21542", resp: "You will perform amazingly on exam 2", latency: 1737 ms
+ Request 732: req: "cmd=418wisdom;x=33950", resp: "You will PWN your classmates in the parallelism competition", latency: 1412 ms
+Request 701: req: "cmd=418wisdom;x=17337", resp: "If all else fails... buy Kayvon donuts", latency: 2187 ms
+
+Request 720: req: "cmd=418wisdom;x=26587", resp: "If all else fails... buy Kayvon donuts", latency: 1740 ms
+Request 725: req: "cmd=418wisdom;x=14040", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1630 ms
+Request 711: req: "cmd=418wisdom;x=51612", resp: "You are going to do a great project", latency: 2088 ms
+Request 723: req: "cmd=418wisdom;x=387", resp: "Do as best as you can and just have fun!", latency: 1795 ms
+Request 728: req: "cmd=418wisdom;x=97068", resp: "Laugh at Kayvon's jokes", latency: 1703 ms
+Request 739: req: "cmd=418wisdom;x=2882", resp: "Worse is better. Keep it simple...", latency: 1456 ms
+Request 729: req: "cmd=418wisdom;x=39651", resp: "You will perform amazingly on exam 2", latency: 1706 ms
+Request 740: req: "cmd=418wisdom;x=4435", resp: "Bring out all the stops in assignment 4.", latency: 1431 ms
+Request 737: req: "cmd=418wisdom;x=45574", resp: "Do a great project, and it all works out in the end", latency: 1507 ms
+Request 735: req: "cmd=418wisdom;x=79479", resp: "You will PWN your classmates in the parallelism competition", latency: 1566 ms
+Request 730: req: "cmd=418wisdom;x=92140", resp: "You will perform amazingly on exam 2", latency: 1707 ms
+Request 734: req: "cmd=418wisdom;x=88284", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1644 ms
+Request 712: req: "cmd=418wisdom;x=95647", resp: "Exams are all just fun and games", latency: 2247 ms
+Request 745: req: "cmd=418wisdom;x=20162", resp: "Be careful not to optimize prematurely", latency: 1422 ms
+Request 713: req: "cmd=418wisdom;x=95472", resp: "Exams are all just fun and games", latency: 2222 ms
+Request 724: req: "cmd=418wisdom;x=65463", resp: "Do as best as you can and just have fun!", latency: 1975 ms
+Request 733: req: "cmd=418wisdom;x=10233", resp: "Do a great project, and it all works out in the end", latency: 1790 ms
+Request 736: req: "cmd=418wisdom;x=32293", resp: "Ask questions. Ask questions. Ask questions", latency: 1753 ms
+Request 738: req: "cmd=418wisdom;x=32514", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1830 ms
+Request 731: req: "cmd=418wisdom;x=45370", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2005 ms
+Request 743: req: "cmd=418wisdom;x=52451", resp: "You are going to do a great project", latency: 1728 ms
+Request 741: req: "cmd=418wisdom;x=36870", resp: "Do as best as you can and just have fun!", latency: 1778 ms
+Request 748: req: "cmd=418wisdom;x=31223", resp: "Exams are all just fun and games", latency: 1631 ms
+ Request 752: req: "cmd=418wisdom;x=71248", resp: "Flatter your TAs with compliments", latency: 1531 msRequest 727: req: "cmd=418wisdom;x=68051", resp: "Bring out all the stops in assignment 4.", latency: 2156 ms
+ Request 753: req: "cmd=418wisdom;x=4450", resp: "Be careful not to optimize prematurely", latency: 1506 ms
+
+Request 812: req: "cmd=418wisdom;x=24013", resp: "Be careful not to optimize prematurely", latency: 40 ms
+Request 744: req: "cmd=418wisdom;x=18778", resp: "You will PWN your classmates in the parallelism competition", latency: 1748 ms
+Request 750: req: "cmd=418wisdom;x=25464", resp: "Be careful not to optimize prematurely", latency: 1639 ms
+Request 742: req: "cmd=418wisdom;x=20959", resp: "Exams are all just fun and games", latency: 1840 ms
+Request 759: req: "cmd=418wisdom;x=80901", resp: "You will perform amazingly on exam 2", latency: 1440 ms
+Request 747: req: "cmd=418wisdom;x=73561", resp: "Be careful not to optimize prematurely", latency: 1780 ms
+ Request 756: req: "cmd=418wisdom;x=46093", resp: "OMG, 418 is so gr8!", latency: 1555 ms
+Request 746: req: "cmd=418wisdom;x=67267", resp: "Flatter your TAs with compliments", latency: 1805 ms
+Request 757: req: "cmd=418wisdom;x=72461", resp: "Flatter your TAs with compliments", latency: 1650 ms
+Request 749: req: "cmd=418wisdom;x=86000", resp: "Ask questions. Ask questions. Ask questions", latency: 1872 ms
+Request 762: req: "cmd=418wisdom;x=11812", resp: "You are going to do a great project", latency: 1553 ms
+Request 767: req: "cmd=418wisdom;x=91924", resp: "Do a great project, and it all works out in the end", latency: 1446 ms
+Request 760: req: "cmd=418wisdom;x=97890", resp: "Ask questions. Ask questions. Ask questions", latency: 1643 ms
+Request 768: req: "cmd=418wisdom;x=44064", resp: "Be careful not to optimize prematurely", latency: 1461 ms
+Request 763: req: "cmd=418wisdom;x=8147", resp: "If all else fails... buy Kayvon donuts", latency: 1616 ms
+Request 761: req: "cmd=418wisdom;x=46051", resp: "You are going to do a great project", latency: 1666 ms
+Request 764: req: "cmd=418wisdom;x=9873", resp: "If all else fails... buy Kayvon donuts", latency: 1591 ms
+Request 754: req: "cmd=418wisdom;x=93419", resp: "Do as best as you can and just have fun!", latency: 1889 ms
+ Request 773: req: "cmd=418wisdom;x=3935", resp: "Ask questions. Ask questions. Ask questions", latency: 1414 ms
+Request 751: req: "cmd=418wisdom;x=34394", resp: "Do as best as you can and just have fun!", latency: 1964 ms
+Request 769: req: "cmd=418wisdom;x=7714", resp: "You will perform amazingly on exam 2", latency: 1521 ms
+Request 755: req: "cmd=418wisdom;x=7233", resp: "If all else fails... buy Kayvon donuts", latency: 1975 ms
+Request 770: req: "cmd=418wisdom;x=42693", resp: "Exams are all just fun and games", latency: 1600 ms
+Request 775: req: "cmd=418wisdom;x=49001", resp: "OMG, 418 is so gr8!", latency: 1476 ms
+Request 778: req: "cmd=418wisdom;x=93447", resp: "OMG, 418 is so gr8!", latency: 1407 ms
+Request 774: req: "cmd=418wisdom;x=18039", resp: "OMG, 418 is so gr8!", latency: 1541 ms
+ Request 766: req: "cmd=418wisdom;x=41401", resp: "Do as best as you can and just have fun!", latency: 1741 ms
+Request 776: req: "cmd=418wisdom;x=12808", resp: "You are going to do a great project", latency: 1513 ms
+Request 771: req: "cmd=418wisdom;x=75483", resp: "Worse is better. Keep it simple...", latency: 1646 ms
+Request 777: req: "cmd=418wisdom;x=87110", resp: "Laugh at Kayvon's jokes", latency: 1528 ms
+Request 758: req: "cmd=418wisdom;x=4746", resp: "Laugh at Kayvon's jokes", latency: 2028 ms
+Request 781: req: "cmd=418wisdom;x=55705", resp: "If all else fails... buy Kayvon donuts", latency: 1453 ms
+Request 779: req: "cmd=418wisdom;x=31960", resp: "Come to lecture, there might be donuts!", latency: 1528 ms
+Request 783: req: "cmd=418wisdom;x=54108", resp: "Ask questions. Ask questions. Ask questions", latency: 1468 ms
+Request 784: req: "cmd=418wisdom;x=20118", resp: "If all else fails... buy Kayvon donuts", latency: 1480 ms
+Request 765: req: "cmd=418wisdom;x=76544", resp: "Be careful not to optimize prematurely", latency: 1955 ms
+Request 782: req: "cmd=418wisdom;x=28550", resp: "Laugh at Kayvon's jokes", latency: 1568 ms
+Request 780: req: "cmd=418wisdom;x=43484", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1658 ms
+Request 790: req: "cmd=418wisdom;x=23179", resp: "Come to lecture, there might be donuts!", latency: 1408 ms
+Request 786: req: "cmd=418wisdom;x=44178", resp: "Come to lecture, there might be donuts!", latency: 1572 ms
+Request 772: req: "cmd=418wisdom;x=82934", resp: "Be careful not to optimize prematurely", latency: 1949 ms
+Request 792: req: "cmd=418wisdom;x=78350", resp: "If all else fails... buy Kayvon donuts", latency: 1506 ms
+Request 798: req: "cmd=418wisdom;x=65962", resp: "Bring out all the stops in assignment 4.", latency: 1399 ms
+Request 789: req: "cmd=418wisdom;x=26099", resp: "Do a great project, and it all works out in the end", latency: 1624 ms
+Request 787: req: "cmd=418wisdom;x=60467", resp: "OMG, 418 is so gr8!", latency: 1674 ms
+Request 794: req: "cmd=418wisdom;x=73289", resp: "Worse is better. Keep it simple...", latency: 1511 ms
+Request 788: req: "cmd=418wisdom;x=53617", resp: "You will PWN your classmates in the parallelism competition", latency: 1701 ms
+Request 791: req: "cmd=418wisdom;x=11873", resp: "Worse is better. Keep it simple...", latency: 1626 ms
+Request 800: req: "cmd=418wisdom;x=51528", resp: "Worse is better. Keep it simple...", latency: 1401 ms
+Request 793: req: "cmd=418wisdom;x=9890", resp: "Ask questions. Ask questions. Ask questions", latency: 1641 ms
+Request 795: req: "cmd=418wisdom;x=24877", resp: "Come to lecture, there might be donuts!", latency: 1594 ms
+Request 797: req: "cmd=418wisdom;x=73609", resp: "Do a great project, and it all works out in the end", latency: 1544 ms
+Request 799: req: "cmd=418wisdom;x=74192", resp: "You will PWN your classmates in the parallelism competition", latency: 1513 ms
+Request 796: req: "cmd=418wisdom;x=28455", resp: "You will perform amazingly on exam 2", latency: 1630 ms
+Request 804: req: "cmd=418wisdom;x=11824", resp: "Worse is better. Keep it simple...", latency: 1485 ms
+Request 802: req: "cmd=418wisdom;x=12179", resp: "Worse is better. Keep it simple...", latency: 1559 ms
+Request 806: req: "cmd=418wisdom;x=35890", resp: "Do a great project, and it all works out in the end", latency: 1515 ms
+Request 805: req: "cmd=418wisdom;x=73729", resp: "Do a great project, and it all works out in the end", latency: 1604 ms
+Request 801: req: "cmd=418wisdom;x=85910", resp: "Be careful not to optimize prematurely", latency: 1738 ms
+Request 809: req: "cmd=418wisdom;x=66061", resp: "Ask questions. Ask questions. Ask questions", latency: 1538 ms
+Request 785: req: "cmd=418wisdom;x=29664", resp: "OMG, 418 is so gr8!", latency: 2178 ms
+Request 810: req: "cmd=418wisdom;x=22156", resp: "Come to lecture, there might be donuts!", latency: 1754 ms
+Request 811: req: "cmd=418wisdom;x=83180", resp: "OMG, 418 is so gr8!", latency: 1734 ms
+Request 819: req: "cmd=418wisdom;x=80975", resp: "Flatter your TAs with compliments", latency: 1569 ms
+Request 814: req: "cmd=418wisdom;x=67465", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1705 ms
+ Request 821: req: "cmd=418wisdom;x=32788", resp: "If all else fails... buy Kayvon donuts", latency: 1530 msRequest 824: req: "cmd=418wisdom;x=12982", resp: "OMG, 418 is so gr8!", latency: 1455 ms
+
+Request 807: req: "cmd=418wisdom;x=67488", resp: "OMG, 418 is so gr8!", latency: 1880 ms
+Request 817: req: "cmd=418wisdom;x=28683", resp: "Ask questions. Ask questions. Ask questions", latency: 1659 ms
+Request 808: req: "cmd=418wisdom;x=70349", resp: "If all else fails... buy Kayvon donuts", latency: 1904 ms
+Request 803: req: "cmd=418wisdom;x=64520", resp: "Laugh at Kayvon's jokes", latency: 2069 ms
+Request 816: req: "cmd=418wisdom;x=62851", resp: "If all else fails... buy Kayvon donuts", latency: 1744 ms
+Request 813: req: "cmd=418wisdom;x=51815", resp: "Be careful not to optimize prematurely", latency: 1823 ms
+Request 826: req: "cmd=418wisdom;x=97576", resp: "You are going to do a great project", latency: 1550 ms
+Request 825: req: "cmd=418wisdom;x=39558", resp: "Worse is better. Keep it simple...", latency: 1575 ms
+Request 827: req: "cmd=418wisdom;x=51047", resp: "Worse is better. Keep it simple...", latency: 1571 ms
+Request 815: req: "cmd=418wisdom;x=23360", resp: "You are going to do a great project", latency: 1876 ms
+Request 833: req: "cmd=418wisdom;x=69570", resp: "Worse is better. Keep it simple...", latency: 1482 ms
+Request 822: req: "cmd=418wisdom;x=58543", resp: "You will PWN your classmates in the parallelism competition", latency: 1757 ms
+Request 838: req: "cmd=418wisdom;x=35346", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1458 ms
+Request 820: req: "cmd=418wisdom;x=55312", resp: "Flatter your TAs with compliments", latency: 1916 ms
+Request 823: req: "cmd=418wisdom;x=2528", resp: "You will PWN your classmates in the parallelism competition", latency: 1911 ms
+Request 836: req: "cmd=418wisdom;x=81618", resp: "Do as best as you can and just have fun!", latency: 1596 ms
+Request 834: req: "cmd=418wisdom;x=21346", resp: "Bring out all the stops in assignment 4.", latency: 1650 ms
+Request 843: req: "cmd=418wisdom;x=83394", resp: "Bring out all the stops in assignment 4.", latency: 1465 ms
+Request 837: req: "cmd=418wisdom;x=75997", resp: "Ask questions. Ask questions. Ask questions", latency: 1655 ms
+ Request 830: req: "cmd=418wisdom;x=78145", resp: "You will PWN your classmates in the parallelism competition", latency: 1830 ms
+Request 818: req: "cmd=418wisdom;x=17138", resp: "Worse is better. Keep it simple...", latency: 2135 ms
+Request 842: req: "cmd=418wisdom;x=10801", resp: "Do as best as you can and just have fun!", latency: 1575 ms
+Request 845: req: "cmd=418wisdom;x=35861", resp: "Ask questions. Ask questions. Ask questions", latency: 1506 ms
+Request 835: req: "cmd=418wisdom;x=73256", resp: "Exams are all just fun and games", latency: 1773 ms
+Request 844: req: "cmd=418wisdom;x=52644", resp: "Do a great project, and it all works out in the end", latency: 1626 ms
+Request 847: req: "cmd=418wisdom;x=1263", resp: "Come to lecture, there might be donuts!", latency: 1555 ms
+Request 848: req: "cmd=418wisdom;x=22007", resp: "OMG, 418 is so gr8!", latency: 1540 ms
+Request 846: req: "cmd=418wisdom;x=45560", resp: "OMG, 418 is so gr8!", latency: 1614 ms
+Request 831: req: "cmd=418wisdom;x=77480", resp: "You are going to do a great project", latency: 2009 ms
+Request 839: req: "cmd=418wisdom;x=59103", resp: "You are going to do a great project", latency: 1831 ms
+Request 828: req: "cmd=418wisdom;x=7645", resp: "Worse is better. Keep it simple...", latency: 2106 ms
+Request 832: req: "cmd=418wisdom;x=56950", resp: "Do as best as you can and just have fun!", latency: 2057 ms
+Request 829: req: "cmd=418wisdom;x=76504", resp: "Do as best as you can and just have fun!", latency: 2172 ms
+ Request 852: req: "cmd=418wisdom;x=95333", resp: "Laugh at Kayvon's jokes", latency: 1589 ms
+Request 850: req: "cmd=418wisdom;x=66085", resp: "Be careful not to optimize prematurely", latency: 1641 ms
+Request 855: req: "cmd=418wisdom;x=84778", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1531 ms
+Request 853: req: "cmd=418wisdom;x=48091", resp: "Come to lecture, there might be donuts!", latency: 1587 ms
+Request 841: req: "cmd=418wisdom;x=90081", resp: "You will perform amazingly on exam 2", latency: 1936 ms
+Request 840: req: "cmd=418wisdom;x=62899", resp: "You will PWN your classmates in the parallelism competition", latency: 2039 ms
+Request 860: req: "cmd=418wisdom;x=78537", resp: "Do a great project, and it all works out in the end", latency: 1557 ms
+Request 859: req: "cmd=418wisdom;x=82170", resp: "If all else fails... buy Kayvon donuts", latency: 1589 ms
+ Request 857: req: "cmd=418wisdom;x=60431", resp: "Laugh at Kayvon's jokes", latency: 1641 ms
+Request 856: req: "cmd=418wisdom;x=25916", resp: "You will PWN your classmates in the parallelism competition", latency: 1675 ms
+Request 868: req: "cmd=418wisdom;x=72580", resp: "Laugh at Kayvon's jokes", latency: 1475 ms
+Request 862: req: "cmd=418wisdom;x=5918", resp: "Be careful not to optimize prematurely", latency: 1631 ms
+Request 849: req: "cmd=418wisdom;x=65276", resp: "Come to lecture, there might be donuts!", latency: 1984 ms
+Request 864: req: "cmd=418wisdom;x=72646", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1599 ms
+Request 851: req: "cmd=418wisdom;x=49470", resp: "You will PWN your classmates in the parallelism competition", latency: 1975 ms
+Request 876: req: "cmd=418wisdom;x=15121", resp: "Ask questions. Ask questions. Ask questions", latency: 1351 ms
+Request 867: req: "cmd=418wisdom;x=44119", resp: "You will PWN your classmates in the parallelism competition", latency: 1585 ms
+Request 870: req: "cmd=418wisdom;x=26010", resp: "You will PWN your classmates in the parallelism competition", latency: 1521 ms
+Request 872: req: "cmd=418wisdom;x=30490", resp: "If all else fails... buy Kayvon donuts", latency: 1495 ms
+Request 866: req: "cmd=418wisdom;x=34316", resp: "You will perform amazingly on exam 2", latency: 1651 ms
+Request 854: req: "cmd=418wisdom;x=31394", resp: "OMG, 418 is so gr8!", latency: 2032 ms
+Request 878: req: "cmd=418wisdom;x=62783", resp: "You will perform amazingly on exam 2", latency: 1416 ms
+Request 865: req: "cmd=418wisdom;x=96170", resp: "Worse is better. Keep it simple...", latency: 1754 ms
+Request 871: req: "cmd=418wisdom;x=67159", resp: "Laugh at Kayvon's jokes", latency: 1614 ms
+Request 863: req: "cmd=418wisdom;x=3828", resp: "Come to lecture, there might be donuts!", latency: 1846 ms
+Request 877: req: "cmd=418wisdom;x=2198", resp: "Do as best as you can and just have fun!", latency: 1514 ms
+Request 881: req: "cmd=418wisdom;x=22577", resp: "Come to lecture, there might be donuts!", latency: 1497 ms
+Request 861: req: "cmd=418wisdom;x=38409", resp: "Laugh at Kayvon's jokes", latency: 2020 ms
+Request 880: req: "cmd=418wisdom;x=4496", resp: "Bring out all the stops in assignment 4.", latency: 1526 ms
+Request 879: req: "cmd=418wisdom;x=2456", resp: "Come to lecture, there might be donuts!", latency: 1643 ms
+Request 869: req: "cmd=418wisdom;x=65783", resp: "If all else fails... buy Kayvon donuts", latency: 1944 ms
+Request 889: req: "cmd=418wisdom;x=43521", resp: "Do a great project, and it all works out in the end", latency: 1434 ms
+Request 888: req: "cmd=418wisdom;x=21652", resp: "OMG, 418 is so gr8!", latency: 1465 ms
+Request 858: req: "cmd=418wisdom;x=70342", resp: "If all else fails... buy Kayvon donuts", latency: 2245 ms
+Request 874: req: "cmd=418wisdom;x=53951", resp: "You are going to do a great project", latency: 1855 ms
+Request 875: req: "cmd=418wisdom;x=73232", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1860 ms
+Request 885: req: "cmd=418wisdom;x=97210", resp: "You will perform amazingly on exam 2", latency: 1640 ms
+Request 893: req: "cmd=418wisdom;x=98680", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1512 ms
+Request 873: req: "cmd=418wisdom;x=35636", resp: "If all else fails... buy Kayvon donuts", latency: 2032 ms
+Request 884: req: "cmd=418wisdom;x=6240", resp: "You will PWN your classmates in the parallelism competition", latency: 1746 ms
+Request 891: req: "cmd=418wisdom;x=17693", resp: "You will perform amazingly on exam 2", latency: 1604 ms
+Request 892: req: "cmd=418wisdom;x=32881", resp: "Exams are all just fun and games", latency: 1627 ms
+Request 886: req: "cmd=418wisdom;x=42265", resp: "Do as best as you can and just have fun!", latency: 1783 ms
+Request 890: req: "cmd=418wisdom;x=35803", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1686 ms
+Request 883: req: "cmd=418wisdom;x=6654", resp: "OMG, 418 is so gr8!", latency: 1908 ms
+Request 894: req: "cmd=418wisdom;x=74731", resp: "Exams are all just fun and games", latency: 1628 ms
+Request 887: req: "cmd=418wisdom;x=89243", resp: "Exams are all just fun and games", latency: 1888 ms
+ Request 882: req: "cmd=418wisdom;x=65388", resp: "Ask questions. Ask questions. Ask questions", latency: 2018 ms
+Request 899: req: "cmd=418wisdom;x=73564", resp: "You are going to do a great project", latency: 1599 ms
+Request 898: req: "cmd=418wisdom;x=53134", resp: "Ask questions. Ask questions. Ask questions", latency: 1625 ms
+Request 895: req: "cmd=418wisdom;x=38267", resp: "Worse is better. Keep it simple...", latency: 1703 ms
+Request 904: req: "cmd=418wisdom;x=40893", resp: "OMG, 418 is so gr8!", latency: 1478 ms
+Request 905: req: "cmd=418wisdom;x=39030", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1549 ms
+Request 896: req: "cmd=418wisdom;x=40928", resp: "You are going to do a great project", latency: 1787 ms
+Request 902: req: "cmd=418wisdom;x=4193", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1664 ms
+Request 900: req: "cmd=418wisdom;x=68665", resp: "You will PWN your classmates in the parallelism competition", latency: 1723 ms
+Request 901: req: "cmd=418wisdom;x=46265", resp: "If all else fails... buy Kayvon donuts", latency: 1704 ms
+Request 903: req: "cmd=418wisdom;x=92151", resp: "You are going to do a great project", latency: 1742 ms
+Request 909: req: "cmd=418wisdom;x=51393", resp: "Do a great project, and it all works out in the end", latency: 1597 ms
+Request 897: req: "cmd=418wisdom;x=26374", resp: "Do as best as you can and just have fun!", latency: 1915 ms
+Request 911: req: "cmd=418wisdom;x=14816", resp: "You will perform amazingly on exam 2", latency: 1575 ms
+Request 906: req: "cmd=418wisdom;x=311", resp: "Laugh at Kayvon's jokes", latency: 1742 ms
+Request 907: req: "cmd=418wisdom;x=13822", resp: "OMG, 418 is so gr8!", latency: 1723 ms
+Request 912: req: "cmd=418wisdom;x=33005", resp: "You are going to do a great project", latency: 1588 ms
+Request 910: req: "cmd=418wisdom;x=73244", resp: "Come to lecture, there might be donuts!", latency: 1642 ms
+Request 913: req: "cmd=418wisdom;x=84014", resp: "You will perform amazingly on exam 2", latency: 1562 ms
+Request 914: req: "cmd=418wisdom;x=82066", resp: "Worse is better. Keep it simple...", latency: 1556 ms
+Request 918: req: "cmd=418wisdom;x=16884", resp: "Bring out all the stops in assignment 4.", latency: 1500 ms
+Request 917: req: "cmd=418wisdom;x=80647", resp: "OMG, 418 is so gr8!", latency: 1540 ms
+Request 915: req: "cmd=418wisdom;x=24679", resp: "You will PWN your classmates in the parallelism competition", latency: 1634 ms
+Request 919: req: "cmd=418wisdom;x=78768", resp: "Do a great project, and it all works out in the end", latency: 1526 ms
+Request 908: req: "cmd=418wisdom;x=86886", resp: "If all else fails... buy Kayvon donuts", latency: 1852 ms
+Request 916: req: "cmd=418wisdom;x=2197", resp: "Be careful not to optimize prematurely", latency: 1637 ms
+Request 922: req: "cmd=418wisdom;x=7848", resp: "Do as best as you can and just have fun!", latency: 1529 ms
+Request 921: req: "cmd=418wisdom;x=16831", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1571 ms
+Request 923: req: "cmd=418wisdom;x=92765", resp: "Come to lecture, there might be donuts!", latency: 1578 ms
+Request 924: req: "cmd=418wisdom;x=59788", resp: "OMG, 418 is so gr8!", latency: 1555 ms
+Request 925: req: "cmd=418wisdom;x=62051", resp: "Come to lecture, there might be donuts!", latency: 1564 ms
+ Request 920: req: "cmd=418wisdom;x=68366", resp: "Laugh at Kayvon's jokes", latency: 1699 ms
+Request 926: req: "cmd=418wisdom;x=45751", resp: "Ask questions. Ask questions. Ask questions", latency: 1615 ms
+Request 927: req: "cmd=418wisdom;x=15007", resp: "Come to lecture, there might be donuts!", latency: 1589 ms
+Request 932: req: "cmd=418wisdom;x=2726", resp: "Come to lecture, there might be donuts!", latency: 1492 ms
+Request 931: req: "cmd=418wisdom;x=73272", resp: "Come to lecture, there might be donuts!", latency: 1576 ms
+Request 929: req: "cmd=418wisdom;x=25247", resp: "Ask questions. Ask questions. Ask questions", latency: 1635 ms
+Request 928: req: "cmd=418wisdom;x=60197", resp: "OMG, 418 is so gr8!", latency: 1697 ms
+Request 940: req: "cmd=418wisdom;x=73550", resp: "You will perform amazingly on exam 2", latency: 1382 ms
+Request 934: req: "cmd=418wisdom;x=3631", resp: "Do a great project, and it all works out in the end", latency: 1544 ms
+Request 937: req: "cmd=418wisdom;x=15081", resp: "Flatter your TAs with compliments", latency: 1489 ms
+Request 930: req: "cmd=418wisdom;x=80590", resp: "Do as best as you can and just have fun!", latency: 1717 ms
+ Request 933: req: "cmd=418wisdom;x=93243", resp: "You will PWN your classmates in the parallelism competition", latency: 1636 ms
+Request 936: req: "cmd=418wisdom;x=29273", resp: "Be careful not to optimize prematurely", latency: 1606 ms
+Request 941: req: "cmd=418wisdom;x=40471", resp: "Laugh at Kayvon's jokes", latency: 1511 ms
+Request 942: req: "cmd=418wisdom;x=26984", resp: "You will PWN your classmates in the parallelism competition", latency: 1540 ms
+Request 939: req: "cmd=418wisdom;x=35581", resp: "Do as best as you can and just have fun!", latency: 1632 ms
+Request 948: req: "cmd=418wisdom;x=97733", resp: "Laugh at Kayvon's jokes", latency: 1445 ms
+Request 943: req: "cmd=418wisdom;x=49231", resp: "Exams are all just fun and games", latency: 1586 ms
+Request 946: req: "cmd=418wisdom;x=90055", resp: "Flatter your TAs with compliments", latency: 1588 ms
+Request 944: req: "cmd=418wisdom;x=39259", resp: "Exams are all just fun and games", latency: 1642 ms
+ Request 935: req: "cmd=418wisdom;x=8962", resp: "Be careful not to optimize prematurely", latency: 1885 ms
+Request 938: req: "cmd=418wisdom;x=23614", resp: "Do a great project, and it all works out in the end", latency: 1805 ms
+Request 945: req: "cmd=418wisdom;x=31076", resp: "Ask questions. Ask questions. Ask questions", latency: 1667 ms
+Request 951: req: "cmd=418wisdom;x=26244", resp: "Come to lecture, there might be donuts!", latency: 1617 ms
+Request 955: req: "cmd=418wisdom;x=40378", resp: "You will perform amazingly on exam 2", latency: 1556 ms
+Request 954: req: "cmd=418wisdom;x=72139", resp: "Flatter your TAs with compliments", latency: 1584 ms
+Request 949: req: "cmd=418wisdom;x=77292", resp: "Flatter your TAs with compliments", latency: 1746 ms
+Request 947: req: "cmd=418wisdom;x=55045", resp: "If all else fails... buy Kayvon donuts", latency: 1822 ms
+Request 957: req: "cmd=418wisdom;x=2068", resp: "Bring out all the stops in assignment 4.", latency: 1569 ms
+Request 953: req: "cmd=418wisdom;x=45592", resp: "You are going to do a great project", latency: 1716 ms
+Request 964: req: "cmd=418wisdom;x=68611", resp: "Bring out all the stops in assignment 4.", latency: 1413 ms
+Request 950: req: "cmd=418wisdom;x=57050", resp: "Come to lecture, there might be donuts!", latency: 1805 ms
+Request 965: req: "cmd=418wisdom;x=20710", resp: "Flatter your TAs with compliments", latency: 1430 ms
+Request 956: req: "cmd=418wisdom;x=49600", resp: "Do as best as you can and just have fun!", latency: 1682 ms
+Request 961: req: "cmd=418wisdom;x=58200", resp: "Flatter your TAs with compliments", latency: 1569 ms
+Request 962: req: "cmd=418wisdom;x=77592", resp: "Worse is better. Keep it simple...", latency: 1545 ms
+Request 958: req: "cmd=418wisdom;x=73996", resp: "Do a great project, and it all works out in the end", latency: 1666 ms
+Request 959: req: "cmd=418wisdom;x=3427", resp: "Ask questions. Ask questions. Ask questions", latency: 1699 ms
+Request 952: req: "cmd=418wisdom;x=68685", resp: "Laugh at Kayvon's jokes", latency: 1913 ms
+Request 960: req: "cmd=418wisdom;x=68073", resp: "Flatter your TAs with compliments", latency: 1691 ms
+Request 966: req: "cmd=418wisdom;x=52927", resp: "Worse is better. Keep it simple...", latency: 1524 ms
+Request 970: req: "cmd=418wisdom;x=20897", resp: "OMG, 418 is so gr8!", latency: 1497 ms
+Request 969: req: "cmd=418wisdom;x=97187", resp: "Bring out all the stops in assignment 4.", latency: 1525 ms
+Request 963: req: "cmd=418wisdom;x=28978", resp: "Bring out all the stops in assignment 4.", latency: 1693 ms
+Request 974: req: "cmd=418wisdom;x=92453", resp: "Do as best as you can and just have fun!", latency: 1403 ms
+Request 972: req: "cmd=418wisdom;x=32944", resp: "You are going to do a great project", latency: 1499 ms
+Request 968: req: "cmd=418wisdom;x=97846", resp: "Come to lecture, there might be donuts!", latency: 1618 ms
+Request 967: req: "cmd=418wisdom;x=34028", resp: "Ask questions. Ask questions. Ask questions", latency: 1722 ms
+Request 980: req: "cmd=418wisdom;x=89946", resp: "You will PWN your classmates in the parallelism competition", latency: 1358 ms
+Request 975: req: "cmd=418wisdom;x=58615", resp: "Come to lecture, there might be donuts!", latency: 1538 ms
+Request 973: req: "cmd=418wisdom;x=96854", resp: "You are going to do a great project", latency: 1593 ms
+Request 979: req: "cmd=418wisdom;x=91637", resp: "Worse is better. Keep it simple...", latency: 1443 ms
+Request 977: req: "cmd=418wisdom;x=68133", resp: "Exams are all just fun and games", latency: 1521 ms
+Request 971: req: "cmd=418wisdom;x=56604", resp: "OMG, 418 is so gr8!", latency: 1747 ms
+Request 978: req: "cmd=418wisdom;x=35335", resp: "Come to lecture, there might be donuts!", latency: 1590 ms
+Request 976: req: "cmd=418wisdom;x=72009", resp: "Bring
+
+
+HELLLLOjroiewhiohbttiobj43t4
+
+
+
+---------------ADDING A NEW WORKER-----------------------
+num_pending_client_requests: 83
+Current tag and timestamp 248
+Time: 1.58676e+07
+Alive workers: 1
+Actually alive: 1
+To be killed: 0
+Worker number: 0
+Cache count: 0
+CPU count: 83
+Other Count: 0
+ TOTAL count: 83
+is_alive 1
+to_be_killed 0
+
+ADDING IT NOW
+
+------------------------------------------------------
+
+ACTUALLY REQUESTING NEW WORKER
+
+
+---------------ADDING A NEW WORKER-----------------------
+num_pending_client_requests: 140
+Current tag and timestamp 409
+Time: 1.58676e+07
+Alive workers: 2
+Actually alive: 2
+To be killed: 0
+Worker number: 0
+Cache count: 0
+CPU count: 70
+Other Count: 0
+ TOTAL count: 70
+is_alive 1
+to_be_killed 0
+Worker number: 1
+Cache count: 0
+CPU count: 70
+Other Count: 0
+ TOTAL count: 70
+is_alive 1
+to_be_killed 0
+
+ADDING IT NOW
+
+------------------------------------------------------
+
+ACTUALLY REQUESTING NEW WORKER
+
+
+---------------ADDING A NEW WORKER-----------------------
+num_pending_client_requests: 154
+Current tag and timestamp 600
+Time: 1.58676e+07
+Alive workers: 3
+Actually alive: 3
+To be killed: 0
+Worker number: 0
+Cache count: 0
+CPU count: 52
+Other Count: 0
+ TOTAL count: 52
+is_alive 1
+to_be_killed 0
+Worker number: 1
+Cache count: 0
+CPU count: 50
+Other Count: 0
+ TOTAL count: 50
+is_alive 1
+to_be_killed 0
+Worker number: 2
+Cache count: 0
+CPU count: 52
+Other Count: 0
+ TOTAL count: 52
+is_alive 1
+to_be_killed 0
+
+ADDING IT NOW
+
+------------------------------------------------------
+
+ACTUALLY REQUESTING NEW WORKER
+
+
+---------------SETTING TO BE KILLED FLAG-----------------------
+num+pending_client+requests66
+Current tag and timestamp 801
+Time: 1.58676e+07
+Alive workers: 4
+Actually alive: 4
+To be killed: 0
+Worker number: 0
+Cache count: 0
+CPU count: 17
+Other Count: 0
+ TOTAL count: 17
+is_alive 1
+to_be_killed 0
+Worker number: 1
+Cache count: 0
+CPU count: 17
+Other Count: 0
+ TOTAL count: 17
+is_alive 1
+to_be_killed 0
+Worker number: 2
+Cache count: 0
+CPU count: 16
+Other Count: 0
+ TOTAL count: 16
+is_alive 1
+to_be_killed 0
+Worker number: 3
+Cache count: 0
+CPU count: 16
+Other Count: 0
+ TOTAL count: 16
+is_alive 1
+to_be_killed 0
+
+SETTING IT NOW
+
+------------------------------------------------------
+
+
+ACTUALLY FOUND WORKER TO SET AS TO BE KILLED
+
+
+---------------KILLING ALL THE WORKERS-----------------------
+num_pending_client_requests: 62
+Current tag and timestamp 865
+Time: 1.58676e+07
+Alive workers: 4
+Actually alive: 3
+To be killed: 1
+Worker number: 0
+Cache count: 0
+CPU count: 1
+Other Count: 0
+ TOTAL count: 1
+is_alive 1
+to_be_killed 1
+Worker number: 1
+Cache count: 0
+CPU count: 21
+Other Count: 0
+ TOTAL count: 21
+is_alive 1
+to_be_killed 0
+Worker number: 2
+Cache count: 0
+CPU count: 21
+Other Count: 0
+ TOTAL count: 21
+is_alive 1
+to_be_killed 0
+Worker number: 3
+Cache count: 0
+CPU count: 20
+Other Count: 0
+ TOTAL count: 20
+is_alive 1
+to_be_killed 0
+
+KILLING THEM ALL NOW
+
+------------------------------------------------------
+
+
+---------------SETTING TO BE KILLED FLAG-----------------------
+num+pending_client+requests55
+Current tag and timestamp 988
+Time: 1.58676e+07
+Alive workers: 4
+Actually alive: 4
+To be killed: 0
+Worker number: 1
+Cache count: 0
+CPU count: 19
+Other Count: 0
+ TOTAL count: 19
+is_alive 1
+to_be_killed 0
+Worker number: 2
+Cache count: 0
+CPU count: 18
+Other Count: 0
+ TOTAL count: 18
+is_alive 1
+to_be_killed 0
+Worker number: 3
+Cache count: 0
+CPU count: 18
+Other Count: 0
+ TOTAL count: 18
+is_alive 1
+to_be_killed 0
+
+SETTING IT NOW
+
+------------------------------------------------------
+
+
+ACTUALLY FOUND WORKER TO SET AS TO BE KILLED
+
+
+---------------KILLING ALL THE WORKERS-----------------------
+num_pending_client_requests: 52
+Current tag and timestamp 1030
+Time: 1.58676e+07
+Alive workers: 4
+Actually alive: 3
+To be killed: 1
+Worker number: 1
+Cache count: 0
+CPU count: 1
+Other Count: 0
+ TOTAL count: 1
+is_alive 1
+to_be_killed 1
+Worker number: 2
+Cache count: 0
+CPU count: 26
+Other Count: 0
+ TOTAL count: 26
+is_alive 1
+to_be_killed 0
+Worker number: 3
+Cache count: 0
+CPU count: 26
+Other Count: 0
+ TOTAL count: 26
+is_alive 1
+to_be_killed 0
+
+KILLI out all the stops in assignment 4.", latency: 1681 ms
+Request 989: req: "cmd=418wisdom;x=32300", resp: "Laugh at Kayvon's jokes", latency: 1361 ms
+Request 984: req: "cmd=418wisdom;x=81636", resp: "Come to lecture, there might be donuts!", latency: 1650 ms
+Request 981: req: "cmd=418wisdom;x=33066", resp: "Be careful not to optimize prematurely", latency: 1815 ms
+Request 988: req: "cmd=418wisdom;x=62571", resp: "If all else fails... buy Kayvon donuts", latency: 1667 ms
+ Request 983: req: "cmd=418wisdom;x=909", resp: "Laugh at Kayvon's jokes", latency: 1810 ms
+Request 992: req: "cmd=418wisdom;x=98748", resp: "Do as best as you can and just have fun!", latency: 1565 ms
+Request 994: req: "cmd=418wisdom;x=14076", resp: "Flatter your TAs with compliments", latency: 1509 ms
+Request 985: req: "cmd=418wisdom;x=56487", resp: "Worse is better. Keep it simple...", latency: 1812 ms
+Request 997: req: "cmd=418wisdom;x=92939", resp: "You will perform amazingly on exam 2", latency: 1529 ms
+ Request 990: req: "cmd=418wisdom;x=78279", resp: "OMG, 418 is so gr8!", latency: 1732 ms
+Request 986: req: "cmd=418wisdom;x=95231", resp: "Laugh at Kayvon's jokes", latency: 1885 ms
+Request 1004: req: "cmd=418wisdom;x=18765", resp: "Be careful not to optimize prematurely", latency: 1491 ms
+Request 1001: req: "cmd=418wisdom;x=81839", resp: "Worse is better. Keep it simple...", latency: 1594 ms
+Request 982: req: "cmd=418wisdom;x=74740", resp: "Worse is better. Keep it simple...", latency: 2186 ms
+Request 1055: req: "cmd=418wisdom;x=7792", resp: "You will perform amazingly on exam 2", latency: 40 ms
+Request 998: req: "cmd=418wisdom;x=94861", resp: "Be careful not to optimize prematurely", latency: 1803 msRequest 1003: req: "cmd=418wisdom;x=74728", resp: "Bring out all the stops in assignment 4.", latency: 1658 ms
+
+Request 1009: req: "cmd=418wisdom;x=16986", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1524 ms
+Request 1010: req: "cmd=418wisdom;x=65886", resp: "You are going to do a great project", latency: 1535 ms
+Request 991: req: "cmd=418wisdom;x=60070", resp: "Flatter your TAs with compliments", latency: 2086 ms
+Request 987: req: "cmd=418wisdom;x=36319", resp: "Do as best as you can and just have fun!", latency: 2202 ms
+Request 996: req: "cmd=418wisdom;x=12584", resp: "OMG, 418 is so gr8!", latency: 2054 ms
+Request 995: req: "cmd=418wisdom;x=4360", resp: "Exams are all just fun and games", latency: 2085 ms
+Request 993: req: "cmd=418wisdom;x=101", resp: "You will PWN your classmates in the parallelism competition", latency: 2181 ms
+Request 1007: req: "cmd=418wisdom;x=94979", resp: "Laugh at Kayvon's jokes", latency: 1792 ms
+Request 999: req: "cmd=418wisdom;x=48041", resp: "If all else fails... buy Kayvon donuts", latency: 2056 ms
+Request 1000: req: "cmd=418wisdom;x=94669", resp: "If all else fails... buy Kayvon donuts", latency: 2035 ms
+Request 1002: req: "cmd=418wisdom;x=77862", resp: "Do as best as you can and just have fun!", latency: 2079 ms
+Request 1006: req: "cmd=418wisdom;x=42388", resp: "Laugh at Kayvon's jokes", latency: 2074 ms
+Request 1073: req: "cmd=418wisdom;x=3013", resp: "You are going to do a great project", latency: 22 ms
+Request 1005: req: "cmd=418wisdom;x=54888", resp: "You will PWN your classmates in the parallelism competition", latency: 2119 ms
+Request 1022: req: "cmd=418wisdom;x=94626", resp: "Worse is better. Keep it simple...", latency: 1646 ms
+Request 1018: req: "cmd=418wisdom;x=28496", resp: "Exams are all just fun and games", latency: 1771 ms
+Request 1021: req: "cmd=418wisdom;x=71792", resp: "Worse is better. Keep it simple...", latency: 1681 ms
+Request 1011: req: "cmd=418wisdom;x=15740", resp: "Flatter your TAs with compliments", latency: 2019 ms
+Request 1015: req: "cmd=418wisdom;x=60505", resp: "OMG, 418 is so gr8!", latency: 1912 ms
+Request 1023: req: "cmd=418wisdom;x=53787", resp: "Bring out all the stops in assignment 4.", latency: 1679 ms
+Request 1016: req: "cmd=418wisdom;x=75476", resp: "You will PWN your classmates in the parallelism competition", latency: 2060 ms
+ Request 1008: req: "cmd=418wisdom;x=17383", resp: "Ask questions. Ask questions. Ask questions", latency: 2295 ms
+Request 1019: req: "cmd=418wisdom;x=42870", resp: "Ask questions. Ask questions. Ask questions", latency: 2034 ms
+ Request 1020: req: "cmd=418wisdom;x=99085", resp: "You will PWN your classmates in the parallelism competition", latency: 2004 ms
+ Request 1028: req: "cmd=418wisdom;x=79152", resp: "Do a great project, and it all works out in the end", latency: 1764 ms
+Request 1012: req: "cmd=418wisdom;x=11005", resp: "Do a great project, and it all works out in the end", latency: 2247 ms
+Request 1013: req: "cmd=418wisdom;x=50392", resp: "Do as best as you can and just have fun!", latency: 2218 ms
+Request 1026: req: "cmd=418wisdom;x=18999", resp: "You will PWN your classmates in the parallelism competition", latency: 1909 ms
+Request 1014: req: "cmd=418wisdom;x=79666", resp: "Laugh at Kayvon's jokes", latency: 2306 ms
+Request 1034: req: "cmd=418wisdom;x=56329", resp: "Exams are all just fun and games", latency: 1706 ms
+Request 1027: req: "cmd=418wisdom;x=78259", resp: "Do as best as you can and just have fun!", latency: 1919 ms
+Request 1033: req: "cmd=418wisdom;x=92371", resp: "You will PWN your classmates in the parallelism competition", latency: 1842 ms
+Request 1017: req: "cmd=418wisdom;x=26576", resp: "You will PWN your classmates in the parallelism competition", latency: 2333 ms
+Request 1035: req: "cmd=418wisdom;x=36094", resp: "You will PWN your classmates in the parallelism competition", latency: 1832 ms
+Request 1037: req: "cmd=418wisdom;x=56160", resp: "Be careful not to optimize prematurely", latency: 1772 ms
+Request 1024: req: "cmd=418wisdom;x=55456", resp: "Do a great project, and it all works out in the end", latency: 2179 ms
+Request 1025: req: "cmd=418wisdom;x=99010", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2172 ms
+Request 1031: req: "cmd=418wisdom;x=15533", resp: "Be careful not to optimize prematurely", latency: 2017 ms
+Request 1036: req: "cmd=418wisdom;x=94952", resp: "Flatter your TAs with compliments", latency: 1907 ms
+Request 1045: req: "cmd=418wisdom;x=68026", resp: "Come to lecture, there might be donuts!", latency: 1657 ms
+Request 1030: req: "cmd=418wisdom;x=75006", resp: "You will perform amazingly on exam 2", latency: 2114 ms
+Request 1038: req: "cmd=418wisdom;x=41164", resp: "Do as best as you can and just have fun!", latency: 1970 ms
+Request 1029: req: "cmd=418wisdom;x=84475", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2297 ms
+Request 1048: req: "cmd=418wisdom;x=49699", resp: "Bring out all the stops in assignment 4.", latency: 1718 ms
+Request 1043: req: "cmd=418wisdom;x=52910", resp: "You are going to do a great project", latency: 1913 ms
+Request 1044: req: "cmd=418wisdom;x=94136", resp: "Be careful not to optimize prematurely", latency: 1891 ms
+Request 1039: req: "cmd=418wisdom;x=61413", resp: "Flatter your TAs with compliments", latency: 2051 ms
+Request 1047: req: "cmd=418wisdom;x=62782", resp: "Laugh at Kayvon's jokes", latency: 1910 ms
+Request 1040: req: "cmd=418wisdom;x=80413", resp: "If all else fails... buy Kayvon donuts", latency: 2127 ms
+Request 1032: req: "cmd=418wisdom;x=66113", resp: "Ask questions. Ask questions. Ask questions", latency: 2395 ms
+Request 1051: req: "cmd=418wisdom;x=89176", resp: "You are going to do a great project", latency: 1812 ms
+Request 1042: req: "cmd=418wisdom;x=1569", resp: "If all else fails... buy Kayvon donuts", latency: 2091 ms
+Request 1041: req: "cmd=418wisdom;x=22830", resp: "You will perform amazingly on exam 2", latency: 2172 ms
+Request 1052: req: "cmd=418wisdom;x=27447", resp: "You are going to do a great project", latency: 1831 ms
+Request 1049: req: "cmd=418wisdom;x=73092", resp: "Come to lecture, there might be donuts!", latency: 1989 ms
+Request 1046: req: "cmd=418wisdom;x=63091", resp: "Worse is better. Keep it simple...", latency: 2124 ms
+Request 1050: req: "cmd=418wisdom;x=24919", resp: "Do a great project, and it all works out in the end", latency: 2083 ms
+ Request 1054: req: "cmd=418wisdom;x=92650", resp: "If all else fails... buy Kayvon donuts", latency: 1959 ms
+Request 1053: req: "cmd=418wisdom;x=94495", resp: "Come to lecture, there might be donuts!", latency: 2010 ms
+Request 1056: req: "cmd=418wisdom;x=44818", resp: "Ask questions. Ask questions. Ask questions", latency: 1957 ms
+Request 1057: req: "cmd=418wisdom;x=74404", resp: "Laugh at Kayvon's jokes", latency: 1926 ms
+Request 1063: req: "cmd=418wisdom;x=16448", resp: "OMG, 418 is so gr8!", latency: 1801 ms
+Request 1066: req: "cmd=418wisdom;x=63475", resp: "Do a great project, and it all works out in the end", latency: 1739 ms
+ Request 1061: req: "cmd=418wisdom;x=70499", resp: "You will PWN your classmates in the parallelism competition", latency: 1899 ms
+Request 1064: req: "cmd=418wisdom;x=92356", resp: "You are going to do a great project", latency: 1828 ms
+Request 1060: req: "cmd=418wisdom;x=80683", resp: "Exams are all just fun and games", latency: 1996 ms
+Request 1059: req: "cmd=418wisdom;x=50890", resp: "You are going to do a great project", latency: 2074 ms
+Request 1069: req: "cmd=418wisdom;x=88179", resp: "You will PWN your classmates in the parallelism competition", latency: 1764 ms
+Request 1058: req: "cmd=418wisdom;x=44965", resp: "Do as best as you can and just have fun!", latency: 2197 ms
+Request 1070: req: "cmd=418wisdom;x=77348", resp: "You will PWN your classmates in the parallelism competition", latency: 1819 ms
+Request 1065: req: "cmd=418wisdom;x=92799", resp: "Come to lecture, there might be donuts!", latency: 2019 ms
+Request 1067: req: "cmd=418wisdom;x=94040", resp: "If all else fails... buy Kayvon donuts", latency: 1972 ms
+Request 1062: req: "cmd=418wisdom;x=95801", resp: "Come to lecture, there might be donuts!", latency: 2138 ms
+Request 1068: req: "cmd=418wisdom;x=25268", resp: "You will perform amazingly on exam 2", latency: 2089 ms
+Request 1078: req: "cmd=418wisdom;x=77545", resp: "You will PWN your classmates in the parallelism competition", latency: 1781 ms
+Request 1076: req: "cmd=418wisdom;x=76236", resp: "Laugh at Kayvon's jokes", latency: 1870 ms
+Request 1072: req: "cmd=418wisdom;x=9063", resp: "Worse is better. Keep it simple...", latency: 1998 ms
+Request 1075: req: "cmd=418wisdom;x=25056", resp: "Ask questions. Ask questions. Ask questions", latency: 1957 ms
+Request 1086: req: "cmd=418wisdom;x=71049", resp: "You will PWN your classmates in the parallelism competition", latency: 1618 ms
+ Request 1082: req: "cmd=418wisdom;x=3841", resp: "Laugh at Kayvon's jokes", latency: 1750 ms
+Request 1071: req: "cmd=418wisdom;x=60969", resp: "Do as best as you can and just have fun!", latency: 2147 ms
+Request 1079: req: "cmd=418wisdom;x=62564", resp: "If all else fails... buy Kayvon donuts", latency: 1928 ms
+Request 1077: req: "cmd=418wisdom;x=38662", resp: "You will perform amazingly on exam 2", latency: 2034 ms
+Request 1074: req: "cmd=418wisdom;x=1096", resp: "Laugh at Kayvon's jokes", latency: 2130 ms
+Request 1081: req: "cmd=418wisdom;x=88015", resp: "Come to lecture, there might be donuts!", latency: 1911 ms
+Request 1080: req: "cmd=418wisdom;x=38926", resp: "Be careful not to optimize prematurely", latency: 1944 ms
+Request 1083: req: "cmd=418wisdom;x=46531", resp: "If all else fails... buy Kayvon donuts", latency: 1877 ms
+Request 1085: req: "cmd=418wisdom;x=12681", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1819 ms
+Request 1090: req: "cmd=418wisdom;x=52169", resp: "Flatter your TAs with compliments", latency: 1675 ms
+Request 1084: req: "cmd=418wisdom;x=82986", resp: "Come to lecture, there might be donuts!", latency: 1970 ms
+Request 1087: req: "cmd=418wisdom;x=32811", resp: "Exams are all just fun and games", latency: 1911 ms
+Request 1091: req: "cmd=418wisdom;x=4158", resp: "If all else fails... buy Kayvon donuts", latency: 1795 ms
+Request 1095: req: "cmd=418wisdom;x=19077", resp: "Worse is better. Keep it simple...", latency: 1807 ms
+Request 1093: req: "cmd=418wisdom;x=34743", resp: "Bring out all the stops in assignment 4.", latency: 1875 ms
+ Request 1089: req: "cmd=418wisdom;x=47372", resp: "Do as best as you can and just have fun!", latency: 2007 ms
+Request 1088: req: "cmd=418wisdom;x=2430", resp: "You are going to do a great project", latency: 2043 ms
+Request 1101: req: "cmd=418wisdom;x=94530", resp: "OMG, 418 is so gr8!", latency: 1608 ms
+Request 1104: req: "cmd=418wisdom;x=98432", resp: "Do as best as you can and just have fun!", latency: 1571 ms
+Request 1094: req: "cmd=418wisdom;x=449", resp: "OMG, 418 is so gr8!", latency: 1976 ms
+Request 1097: req: "cmd=418wisdom;x=54062", resp: "Do as best as you can and just have fun!", latency: 1981 ms
+ Request 1092: req: "cmd=418wisdom;x=56592", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2150 msRequest 1096: req: "cmd=418wisdom;x=11081", resp: "Come to lecture, there might be donuts!", latency: 2015 ms
+
+Request 1102: req: "cmd=418wisdom;x=31480", resp: "Do as best as you can and just have fun!", latency: 1886 ms
+Request 1109: req: "cmd=418wisdom;x=40420", resp: "Exams are all just fun and games", latency: 1685 ms
+Request 1098: req: "cmd=418wisdom;x=4312", resp: "Ask questions. Ask questions. Ask questions", latency: 2093 ms
+Request 1106: req: "cmd=418wisdom;x=27508", resp: "Be careful not to optimize prematurely", latency: 1833 ms
+Request 1107: req: "cmd=418wisdom;x=67089", resp: "Do a great project, and it all works out in the end", latency: 1857 ms
+Request 1116: req: "cmd=418wisdom;x=76407", resp: "Write a great lecture comment on your favorite idea in the class", latency: 1630 ms
+Request 1100: req: "cmd=418wisdom;x=84507", resp: "You are going to do a great project", latency: 2192 ms
+Request 1111: req: "cmd=418wisdom;x=5984", resp: "You are going to do a great project", latency: 1836 ms
+Request 1110: req: "cmd=418wisdom;x=30610", resp: "You will PWN your classmates in the parallelism competition", latency: 1911 ms
+Request 1103: req: "cmd=418wisdom;x=90527", resp: "Be careful not to optimize prematurely", latency: 2151 ms
+Request 1108: req: "cmd=418wisdom;x=59566", resp: "Flatter your TAs with compliments", latency: 2005 ms
+Request 1099: req: "cmd=418wisdom;x=92814", resp: "Ask questions. Ask questions. Ask questions", latency: 2356 ms
+Request 1105: req: "cmd=418wisdom;x=76473", resp: "Laugh at Kayvon's jokes", latency: 2190 ms
+Request 1124: req: "cmd=418wisdom;x=34470", resp: "Come to lecture, there might be donuts!", latency: 1533 ms
+Request 1117: req: "cmd=418wisdom;x=4671", resp: "Laugh at Kayvon's jokes", latency: 1824 ms
+Request 1118: req: "cmd=418wisdom;x=82376", resp: "Ask questions. Ask questions. Ask questions", latency: 1829 ms
+Request 1115: req: "cmd=418wisdom;x=64189", resp: "Do as best as you can and just have fun!", latency: 1933 ms
+Request 1126: req: "cmd=418wisdom;x=8279", resp: "Come to lecture, there might be donuts!", latency: 1553 ms
+Request 1119: req: "cmd=418wisdom;x=4347", resp: "You will perform amazingly on exam 2", latency: 1813 ms
+Request 1114: req: "cmd=418wisdom;x=48089", resp: "Ask questions. Ask questions. Ask questions", latency: 2005 ms
+Request 1127: req: "cmd=418wisdom;x=55980", resp: "Exams are all just fun and games", latency: 1546 ms
+Request 1128: req: "cmd=418wisdom;x=81330", resp: "Be careful not to optimize prematurely", latency: 1511 ms
+Request 1112: req: "cmd=418wisdom;x=12538", resp: "Ask questions. Ask questions. Ask questions", latency: 2100 ms
+Request 1125: req: "cmd=418wisdom;x=58588", resp: "Laugh at Kayvon's jokes", latency: 1652 ms
+Request 1113: req: "cmd=418wisdom;x=13395", resp: "Be careful not to optimize prematurely", latency: 2086 ms
+Request 1131: req: "cmd=418wisdom;x=70041", resp: "Flatter your TAs with compliments", latency: 1521 ms
+Request 1123: req: "cmd=418wisdom;x=94968", resp: "Come to lecture, there might be donuts!", latency: 1827 ms
+Request 1132: req: "cmd=418wisdom;x=25388", resp: "Do as best as you can and just have fun!", latency: 1503 ms
+Request 1122: req: "cmd=418wisdom;x=63122", resp: "If all else fails... buy Kayvon donuts", latency: 1903 ms
+Request 1120: req: "cmd=418wisdom;x=55495", resp: "Flatter your TAs with compliments", latency: 1996 ms
+Request 1129: req: "cmd=418wisdom;x=20160", resp: "Flatter your TAs with compliments", latency: 1726 ms
+Request 1130: req: "cmd=418wisdom;x=26096", resp: "If all else fails... buy Kayvon donuts", latency: 1761 ms
+Request 1133: req: "cmd=418wisdom;x=25924", resp: "OMG, 418 is so gr8!", latency: 1691 ms
+Request 1121: req: "cmd=418wisdom;x=74415", resp: "Exams are all just fun and games", latency: 2161 ms
+Request 1139: req: "cmd=418wisdom;x=3860", resp: "If all else fails... buy Kayvon donuts", latency: 1507 ms
+Request 1135: req: "cmd=418wisdom;x=99855", resp: "Exams are all just fun and games", latency: 1695 ms
+Request 1142: req: "cmd=418wisdom;x=3379", resp: "Do a great project, and it all works out in the end", latency: 1463 ms
+Request 1136: req: "cmd=418wisdom;x=15519", resp: "Flatter your TAs with compliments", latency: 1849 ms
+Request 1134: req: "cmd=418wisdom;x=93552", resp: "You are going to do a great project", latency: 2113 ms
+Request 1143: req: "cmd=418wisdom;x=75769", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2021 ms
+Request 1137: req: "cmd=418wisdom;x=90017", resp: "Flatter your TAs with compliments", latency: 2307 ms
+Request 1151: req: "cmd=418wisdom;x=33366", resp: "You will PWN your classmates in the parallelism competition", latency: 1949 ms
+Request 1148: req: "cmd=418wisdom;x=23872", resp: "You will perform amazingly on exam 2", latency: 2192 ms
+Request 1138: req: "cmd=418wisdom;x=55273", resp: "Come to lecture, there might be donuts!", latency: 2566 ms
+Request 1149: req: "cmd=418wisdom;x=45867", resp: "Laugh at Kayvon's jokes", latency: 2231 ms
+Request 1140: req: "cmd=418wisdom;x=58550", resp: "You will perform amazingly on exam 2", latency: 2652 ms
+Request 1154: req: "cmd=418wisdom;x=55592", resp: "OMG, 418 is so gr8!", latency: 2123 ms
+Request 1159: req: "cmd=418wisdom;x=7998", resp: "Be careful not to optimize prematurely", latency: 1992 ms
+Request 1164: req: "cmd=418wisdom;x=51240", resp: "Laugh at Kayvon's jokes", latency: 1801 ms
+Request 1141: req: "cmd=418wisdom;x=64155", resp: "Come to lecture, there might be donuts!", latency: 2752 ms
+Request 1144: req: "cmd=418wisdom;x=81780", resp: "Bring out all the stops in assignment 4.", latency: 2774 ms
+Request 1145: req: "cmd=418wisdom;x=7164", resp: "Be careful not to optimize prematurely", latency: 2770 ms
+Request 1146: req: "cmd=418wisdom;x=64840", resp: "You are going to do a great project", latency: 2734 ms
+Request 1152: req: "cmd=418wisdom;x=65521", resp: "Come to lecture, there might be donuts!", latency: 2756 ms
+Request 1150: req: "cmd=418wisdom;x=15939", resp: "Bring out all the stops in assignment 4.", latency: 2920 ms
+Request 1147: req: "cmd=418wisdom;x=45655", resp: "OMG, 418 is so gr8!", latency: 3041 ms
+Request 1153: req: "cmd=418wisdom;x=47649", resp: "You are going to do a great project", latency: 2844 ms
+Request 1155: req: "cmd=418wisdom;x=54344", resp: "Be careful not to optimize prematurely", latency: 2873 ms
+Request 1161: req: "cmd=418wisdom;x=35232", resp: "Flatter your TAs with compliments", latency: 2683 ms
+Request 1156: req: "cmd=418wisdom;x=82060", resp: "You will perform amazingly on exam 2", latency: 2892 ms
+Request 1158: req: "cmd=418wisdom;x=81297", resp: "Worse is better. Keep it simple...", latency: 2891 ms
+Request 1165: req: "cmd=418wisdom;x=98725", resp: "Write a great lecture comment on your favorite idea in the class", latency: 2633 ms
+Request 1171: req: "cmd=418wisdom;x=1920", resp: "Be careful not to optimize prematurely", latency: 2425 ms
+Request 1163: req: "cmd=418wisdom;x=83351", resp: "Be careful not to optimize prematurely", latency: 2855 ms
+Request 1157: req: "cmd=418wisdom;x=34338", resp: "OMG, 418 is so gr8!", latency: 3089 ms
+Request 1179: req: "cmd=418wisdom;x=76755", resp: "You will perform amazingly on exam 2", latency: 2207 ms
+Request 1160: req: "cmd=418wisdom;x=42773", resp: "Ask questions. Ask questions. Ask questions", latency: 3035 ms
+Request 1167: req: "cmd=418wisdom;x=11884", resp: "Bring out all the stops in assignment 4.", latency: 2842 ms
+NG THEM ALL NOW
+
+------------------------------------------------------
+
+
+---------------SETTING TO BE KILLED FLAG-----------------------
+num+pending_client+requests52
+Current tag and timestamp 1140
+Time: 1.58676e+07
+Alive workers: 4
+Actually alive: 4
+To be killed: 0
+Worker number: 2
+Cache count: 0
+CPU count: 27
+Other Count: 0
+ TOTAL count: 27
+is_alive 1
+to_be_killed 0
+Worker number: 3
+Cache count: 0
+CPU count: 25
+Other Count: 0
+ TOTAL count: 25
+is_alive 1
+to_be_killed 0
+
+SETTING IT NOW
+
+------------------------------------------------------
+
+
+ACTUALLY FOUND WORKER TO SET AS TO BE KILLED
+
+
+---------------KILLING ALL THE WORKERS-----------------------
+num_pending_client_requests: 42
+Current tag and timestamp 1173
+Time: 1.58676e+07
+Alive workers: 4
+Actually alive: 3
+To be killed: 1
+Worker number: 2
+Cache count: 0
+CPU count: 1
+Other Count: 0
+ TOTAL count: 1
+is_alive 1
+to_be_killed 1
+Worker number: 3
+Cache count: 0
+CPU count: 42
+Other Count: 0
+ TOTAL count: 42
+is_alive 1
+to_be_killed 0
+
+KILLING THEM ALL NOW
+
+------------------------------------------------------
+
+
+---------------SETTING TO BE KILLED FLAG-----------------------
+num+pending_client+requests67
+Current tag and timestamp 1250
+Time: 1.58676e+07
+Alive workers: 4
+Actually alive: 4
+To be killed: 0
+Worker number: 3
+Cache count: 0
+CPU count: 67
+Other Count: 0
+ TOTAL count: 67
+is_alive 1
+to_be_killed 0
+
+SETTING IT NOW
+
+------------------------------------------------------
+
+
+ACTUALLY FOUND WORKER TO SET AS TO BE KILLED
+
+Request 1168: req: "cmd=418wisdom;x=31689", resp: "Worse is better. Keep it simple...", latency: 2817 ms
+Request 1174: req: "cmd=418wisdom;x=41384", resp: "Worse is better. Keep it simple...", latency: 2687 ms
+Request 1162: req: "cmd=418wisdom;x=45158", resp: "If all else fails... buy Kayvon donuts", latency: 3173 ms
+Request 1166: req: "cmd=418wisdom;x=86146", resp: "Do as best as you can and just have fun!", latency: 3032 ms
+Request 1169: req: "cmd=418wisdom;x=2272", resp: "Write a great lecture comment on your favorite idea in the class", latency: 3140 ms
+Request 1176: req: "cmd=418wisdom;x=31125", resp: "Come to lecture, there might be donuts!", latency: 2857 ms
+Request 1170: req: "cmd=418wisdom;x=73376", resp: "Laugh at Kayvon's jokes", latency: 3102 ms
+Request 1172: req: "cmd=418wisdom;x=88594", resp: "Laugh at Kayvon's jokes", latency: 3101 ms
+Request 1173: req: "cmd=418wisdom;x=19334", resp: "If all else fails... buy Kayvon donuts", latency: 3082 ms
+Request 1175: req: "cmd=418wisdom;x=6203", resp: "You will PWN your classmates in the parallelism competition", latency: 3108 ms
+Request 1186: req: "cmd=418wisdom;x=90185", resp: "Exams are all just fun and games", latency: 2650 ms
+Request 1178: req: "cmd=418wisdom;x=5223", resp: "Exams are all just fun and games", latency: 3150 ms
+Request 1180: req: "cmd=418wisdom;x=71135", resp: "You are going to do a great project", latency: 3069 ms
+Request 1182: req: "cmd=418wisdom;x=83520", resp: "Exams are all just fun and games", latency: 2985 ms
+Request 1181: req: "cmd=418wisdom;x=35788", resp: "Worse is better. Keep it simple...", latency: 3048 ms
+Request 1177: req: "cmd=418wisdom;x=38951", resp: "OMG, 418 is so gr8!", latency: 3233 ms
+Request 1184: req: "cmd=418wisdom;x=5400", resp: "OMG, 418 is so gr8!", latency: 3079 ms
+Request 1183: req: "cmd=418wisdom;x=7742", resp: "You are going to do a great project", latency: 3215 ms
+ Request 1193: req: "cmd=418wisdom;x=80241", resp: "You will perform amazingly on exam 2", latency: 2788 ms
+Request 1192: req: "cmd=418wisdom;x=3068", resp: "Be careful not to optimize prematurely", latency: 2875 ms
+Request 1206: req: "cmd=418wisdom;x=49603", resp: "If all else fails... buy Kayvon donuts", latency: 2432 ms
+Request 1185: req: "cmd=418wisdom;x=35498", resp: "Exams are all just fun and games", latency: 3475 ms
+Cleaning up after a completed test...
