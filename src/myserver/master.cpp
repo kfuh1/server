@@ -15,7 +15,6 @@ struct Worker_state {
 
   bool to_be_killed; //need to initialize to false
   int num_cpu_intense_requests;
-  int num_bw_intense_requests;
   int num_non_intense_requests; //this would be like tellmenow
 
   int num_cache_intense_requests;
@@ -87,7 +86,6 @@ void master_node_init(int max_workers, int& tick_period) {
     Worker_state ws;
     ws.num_cache_intense_requests = 0;
     ws.num_cpu_intense_requests = 0;
-    ws.num_bw_intense_requests = 0;
     ws.num_non_intense_requests = 0;
     ws.num_pending_requests = 0;
     ws.to_be_killed = false;
@@ -177,7 +175,6 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   mstate.num_pending_client_requests--;
 
 
-  //only cache tellmenow and countprimes
   if(tagToReqMap.find(tag) != tagToReqMap.end()){
     //printf("8\n");
     std::string req_string = tagToReqMap.at(tag);
@@ -196,9 +193,6 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       if(type == "cache"){
         ws.num_cache_intense_requests--;
       }  
-      else if(type == "bw"){
-        ws.num_bw_intense_requests--;
-      }
       else if(type == "cpu"){
         ws.num_cpu_intense_requests--;
       }
@@ -247,29 +241,6 @@ int find_min_cache_idx(){
     else if(ws.is_alive){
       if(ws.num_pending_requests < curr_min){
         curr_min = ws.num_cache_intense_requests;
-        selected_idx = i;
-      }
-    }
-  }
-  return selected_idx;
-}
-int find_min_bw_idx(){
-  int curr_min;
-  int selected_idx;
-  bool has_begun = false;
-  for(int i = 0; i < mstate.max_num_workers; i++){
-    Worker_state ws = mstate.worker_states[i];
-    if(!ws.is_alive || ws.to_be_killed){
-      continue;
-    }
-    if(ws.is_alive && !has_begun){
-      curr_min = ws.num_bw_intense_requests;
-      selected_idx = i;
-      has_begun = true;
-    }
-    else if(ws.is_alive){
-      if(ws.num_pending_requests < curr_min){
-        curr_min = ws.num_bw_intense_requests;
         selected_idx = i;
       }
     }
@@ -333,9 +304,6 @@ int choose_worker_idx(int tag){
   if(type == "cache"){
     return find_min_cache_idx();
   }
-  else if(type == "bw"){
-    return find_min_bw_idx();
-  }
   else if(type == "cpu"){
     return find_min_cpu_idx();
   }
@@ -377,14 +345,12 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   }
 
   //Search for response in cache
-  if(client_req.get_arg("cmd") == "countprimes" || client_req.get_arg("cmd") == "tellmenow"){
-    std::string req_string = client_req.get_request_string();
-    if(req_cache.respMap.find(req_string) != req_cache.respMap.end()){
-      send_client_response(client_handle, req_cache.respMap.at(req_string));
-      return;
-    }
-    tagToReqMap.insert(std::pair<int, std::string>(mstate.next_tag, req_string)); 
+  std::string req_string = client_req.get_request_string();
+  if(req_cache.respMap.find(req_string) != req_cache.respMap.end()){
+    send_client_response(client_handle, req_cache.respMap.at(req_string));
+    return;
   }
+  tagToReqMap.insert(std::pair<int, std::string>(mstate.next_tag, req_string)); 
 
   mstate.tagMap.insert(std::pair<int,Client_handle>(mstate.next_tag, client_handle));
   int tag = mstate.next_tag;
@@ -460,26 +426,24 @@ void handle_tick() {
   // fixed time intervals, according to how you set 'tick_period' in
   // 'master_node_init'.
 
-  int num_bw = 0;
   int num_cpu = 0;
   int num_cache = 0;
 
   for(int i = 0; i < mstate.max_num_workers; i++){
     Worker_state ws = mstate.worker_states[i];
     if(ws.is_alive && !ws.to_be_killed){
-      num_bw += ws.num_bw_intense_requests;
       num_cpu += ws.num_cpu_intense_requests;
       num_cache += ws.num_cache_intense_requests;
     }
   }  
   // fast requests like tellmenow are weighted
-  int weighted_total = num_bw +  num_cpu + num_cache;
+  int weighted_total = num_cpu + num_cache;
 
   int num_actually_alive = mstate.num_alive_workers - mstate.num_to_be_killed;
   //policy to add more worker nodes
   if(num_actually_alive < mstate.max_num_workers){
     int avg_work_per_node = weighted_total / num_actually_alive;
-    if(avg_work_per_node > 3*MAX_THREADS/4){
+    if(avg_work_per_node > MAX_THREADS){
       if(mstate.num_to_be_killed == 0 && mstate.num_alive_workers < mstate.max_num_workers){
         int tag = random();
         Request_msg req(tag);
@@ -503,7 +467,7 @@ void handle_tick() {
   //policy to remove worker nodes only if there are more than one nodes
   if(num_actually_alive > 1){
     int avg_work_per_node = weighted_total / num_actually_alive;
-    if(avg_work_per_node < 3*MAX_THREADS/4){
+    if(avg_work_per_node < MAX_THREADS/2){
       for(int i = 0; i < mstate.max_num_workers; i++){
         Worker_state ws = mstate.worker_states[i];
         if(ws.is_alive && !ws.to_be_killed){
@@ -514,8 +478,5 @@ void handle_tick() {
       }
     }
   }
-
-
-
 }
 

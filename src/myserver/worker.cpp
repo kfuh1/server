@@ -17,9 +17,6 @@ static struct Worker_state {
   WorkQueue<Request_msg> reqQueue;
   WorkQueue<Request_msg> projectideaQueue;
   WorkQueue<Request_msg> tellmenowQueue;
-  //int num_cache_intense_requests;
-  //int num_requests;
-  //int running_cache_intensive;
 } wstate;
 
 
@@ -158,19 +155,4 @@ void worker_handle_request(const Request_msg& req) {
   DLOG(INFO) << "Worker got request: [" << req.get_tag() << ":" << req.get_request_string() << "]\n";
 
   
-  /*
-  double startTime = CycleTimer::currentSeconds();
-
-    // The compareprimes command needs to be special cased since it is
-    // built on four calls to execute_execute work.  All other
-    // requests from the client are one-to-one with calls to
-    // execute_work.
-
-
-    // actually perform the work.  The response string is filled in by
-    // 'execute_work'
-
-
- 
-  */
 }
