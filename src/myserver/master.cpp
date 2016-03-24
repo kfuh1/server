@@ -245,6 +245,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
         ws.to_be_killed = false;
         ws.is_alive = false;
         kill_worker_node(ws.worker_handle);
+        mstate.num_alive_workers--;
         mstate.num_to_be_killed--;
       }
 
