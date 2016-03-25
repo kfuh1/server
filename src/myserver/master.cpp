@@ -128,7 +128,7 @@ void handle_new_worker_online(Worker_handle worker_handle, int tag) {
   mstate.worker_states[idx].num_cache_intense_requests = 0;
   mstate.worker_states[idx].num_cpu_intense_requests = 0;
   mstate.worker_states[idx].num_non_intense_requests = 0;
-  mstate.worker_states[idx].weighted_countprimes_requests;
+  mstate.worker_states[idx].weighted_countprimes_requests = 0;
   mstate.worker_states[idx].num_pending_requests = 0;
   mstate.worker_states[idx].to_be_killed = false;
   
@@ -227,7 +227,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       //decrement the weighted count for countprimes requests
       if(tagToPrimeCatMap.find(tag) != tagToPrimeCatMap.end()){
         int cat = tagToPrimeCatMap.at(tag);
-        ws.weighted_countprimes_requests -= tag;
+        ws.weighted_countprimes_requests -= cat;
         tagToPrimeCatMap.erase(tag);
       }
 
@@ -381,6 +381,7 @@ int find_min_cpu_idx(){
   return selected_idx;
 }
 
+//used when looking for worker to delete
 int find_min_load_idx(){
   int curr_min;
   bool has_begun = false;
@@ -416,10 +417,10 @@ int choose_worker_idx(int tag){
   }
   else if(type == "cpu"){
     if(tagToPrimeCatMap.find(tag) != tagToPrimeCatMap.end()){
-      return find_min_cpu_idx();
+      return find_min_primes_idx();
     }
     else{
-      return find_min_primes_idx();
+      return find_min_cpu_idx();
     }
   }
   else if(type == "non"){
