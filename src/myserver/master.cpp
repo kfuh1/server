@@ -345,6 +345,29 @@ int find_min_cpu_idx(){
   return selected_idx;
 }
 
+int find_min_load_idx(){
+  int curr_min;
+  bool has_begun = false;
+  int selected_idx;
+  for(int i = 0; i < mstate.max_num_workers; i++){
+    Worker_state ws = mstate.worker_states[i];
+    if(!ws.is_alive || ws.to_be_killed){
+      continue;
+    }
+    if(ws.is_alive && !has_begun){
+      curr_min = ws.num_cpu_intense_requests + ws.num_cache_intense_requests;
+      selected_idx = i;
+      has_begun = true;
+    }
+    else if(ws.is_alive){
+      if(ws.num_pending_requests + ws.num_cache_intense_requests < curr_min){
+        curr_min = ws.num_cpu_intense_requests + ws.num_cache_intense_requests;
+        selected_idx = i;
+      }
+    }
+  }
+  return selected_idx;
+}
 int choose_worker_idx(int tag){
   int curr_min;
   bool has_begun = false;
@@ -512,7 +535,7 @@ void handle_tick() {
 
     int avg_work_per_node = weighted_total / num_actually_alive;
     
-    if(avg_cpu_intense_work > MAX_THREADS - 2 || avg_cache_intense_work > 2){
+    if(avg_cpu_intense_work > MAX_THREADS - 2 || avg_cache_intense_work > 1){
  
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
@@ -564,8 +587,9 @@ void handle_tick() {
 
   //policy to remove worker nodes only if there are more than one nodes
   if(num_actually_alive > 1){
-    int avg_work_per_node = weighted_total / num_actually_alive;
-    if(avg_work_per_node < MAX_THREADS/2){
+    //what's the average work per node if you did take away a worker
+    int avg_work_per_node = weighted_total / (num_actually_alive - 1);
+    if(avg_work_per_node < MAX_THREADS - 2){
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
       std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
      /*
@@ -586,17 +610,9 @@ void handle_tick() {
       std::cout << "\nSETTING IT NOW\n";
       std::cout << "\n------------------------------------------------------\n\n";
       */
-      for(int i = 0; i < mstate.max_num_workers; i++){
-        Worker_state ws = mstate.worker_states[i];
-        if(ws.is_alive && !ws.to_be_killed){
-          
-         // std::cout << "\nACTUALLY FOUND WORKER TO SET AS TO BE KILLED\n\n";
-          
-          mstate.worker_states[i].to_be_killed = true;
-          mstate.num_to_be_killed++;
-          break;
-        }
-      }
+      int idx = find_min_load_idx();
+      mstate.worker_states[i].to_be_killed = true;
+      mstat.num_to_be_killed++;
     }
   }
 }
