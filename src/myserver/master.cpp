@@ -16,8 +16,6 @@
 #define MAX_WORKERS 4 
 #define MAX_THREADS 48
 
-double t = 0.0;
-
 struct Worker_state {
   bool is_alive;
 
@@ -25,7 +23,7 @@ struct Worker_state {
   int num_cpu_intense_requests;
   int num_non_intense_requests; //this would be like tellmenow
 
-//  int weighted_countprimes_requests;
+  int weighted_countprimes_requests;
 
   int num_cache_intense_requests;
   int num_pending_requests; //this is the total number of pending reqs
@@ -63,10 +61,9 @@ std::unordered_map<int, std::string> tagToReqMap;
 std::unordered_map<int, std::string> tagToTypeMap; //the string is type we define
 std::unordered_map<int, int> cmpPrimeTagToTagMap;
 std::unordered_map<int, cmp_primes_data> tagToCmpPrimesDataMap;
-//std::unordered_map<int, int> tagToPrimeMap;
+std::unordered_map<int, int> tagToPrimeMap;
 
 static struct Request_cache {
-  int size;
   std::unordered_map<std::string, Response_msg> respMap;
 } req_cache;
 
@@ -77,8 +74,6 @@ void master_node_init(int max_workers, int& tick_period) {
   // configure as you please)
   tick_period = 4;
   
-  //std::cout << "\n\n\nHELLLLOjroiewhiohbttiobj43t4\n\n\n";
-
   mstate.next_tag = 0;
   mstate.max_num_workers = max_workers;
   mstate.num_pending_client_requests = 0;
@@ -100,7 +95,7 @@ void master_node_init(int max_workers, int& tick_period) {
     ws.num_cache_intense_requests = 0;
     ws.num_cpu_intense_requests = 0;
     ws.num_non_intense_requests = 0;
-//    ws.weighted_countprimes_requests = 0;
+    ws.weighted_countprimes_requests = 0;
     ws.num_pending_requests = 0;
     ws.to_be_killed = false;
     ws.is_alive = false;
@@ -128,7 +123,7 @@ void handle_new_worker_online(Worker_handle worker_handle, int tag) {
   mstate.worker_states[idx].num_cache_intense_requests = 0;
   mstate.worker_states[idx].num_cpu_intense_requests = 0;
   mstate.worker_states[idx].num_non_intense_requests = 0;
-//  mstate.worker_states[idx].weighted_countprimes_requests = 0;
+  mstate.worker_states[idx].weighted_countprimes_requests = 0;
   mstate.worker_states[idx].num_pending_requests = 0;
   mstate.worker_states[idx].to_be_killed = false;
   
@@ -203,7 +198,6 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   if(tagToReqMap.find(tag) != tagToReqMap.end()){
     std::string req_string = tagToReqMap.at(tag);
     req_cache.respMap.insert(std::pair<std::string, Response_msg>(req_string, resp));
-    req_cache.size++;
   }
 
   //search for the worker
@@ -225,42 +219,19 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       tagToTypeMap.erase(tag);
 
       //decrement the weighted count for countprimes requests
-//      if(tagToPrimeMap.find(tag) != tagToPrimeMap.end()){
-//        int cat = tagToPrimeMap.at(tag);
-//        ws.weighted_countprimes_requests -= cat;
-//        tagToPrimeMap.erase(tag);
-//      }
+      if(tagToPrimeMap.find(tag) != tagToPrimeMap.end()){
+        int cat = tagToPrimeMap.at(tag);
+        ws.weighted_countprimes_requests -= cat;
+        tagToPrimeMap.erase(tag);
+      }
 
       //summing up manually because ws.num_pending_requests is wrong
       int totalRequests = ws.num_cache_intense_requests + ws.num_cpu_intense_requests + ws.num_non_intense_requests;
       //kill the worker if it's been flagged and it's done with work
       if(ws.to_be_killed && totalRequests == 0){
-/*
-        std::cout << "\n---------------KILLING A WORKER-----------------------\n";
-        std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-*/
-/*
-        t = CycleTimer::currentSeconds(); 
-        std::cout << "\n---------------KILLING ALL THE WORKERS-----------------------\n";
-        std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
-        std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-        std::cout << "Time: " << t << "\n";
-        std::cout << "Alive workers: " << mstate.num_alive_workers << "\nActually alive: " << mstate.num_alive_workers - mstate.num_to_be_killed << "\nTo be killed: " << mstate.num_to_be_killed << "\n";
-        for(int i = 0; i < mstate.max_num_workers; i++){
-          if(mstate.worker_states[i].is_alive){
-            Worker_state ws = mstate.worker_states[i];
-            std::cout << "Worker number: "<< i << "\nCache count: " << ws.num_cache_intense_requests << "\nCPU count: " << ws.num_cpu_intense_requests << "\nOther Count: " << ws.num_non_intense_requests << "\n TOTAL count: " << ws.num_pending_requests << "\n";
-            std::cout << "is_alive " << ws.is_alive << "\nto_be_killed " << ws.to_be_killed << "\n";
-            }
-        }
-
-        std::cout << "\nKILLING THEM ALL NOW\n";
-        std::cout << "\n------------------------------------------------------\n\n";
-*/
         // update node to indicate done
         ws.to_be_killed = false;
         ws.is_alive = false;
-//	std::cout << "\n\nKILLING WORKER HANDLE: " << ws.worker_handle << "\n\n";
         kill_worker_node(ws.worker_handle);
         mstate.num_alive_workers--;
         mstate.num_to_be_killed--;
@@ -274,11 +245,8 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   //this should be the end
   if(mstate.last_req_seen && mstate.num_pending_client_requests == 0){
     for(int i = 0; i < mstate.max_num_workers; i++){
-      //we're not setting is_alive to false because we should be done at this point
-      
-	//std::cout << "KILLING THEM ALLLLLLLLLLL";
-if(mstate.worker_states[i].is_alive){
-	//std::cout << "\n\nKILLING WORKER HANDLE " << mstate.worker_states[i].worker_handle << "\n\n";
+      //we're not setting is_alive to false because we should be done at this point      
+      if(mstate.worker_states[i].is_alive){
         kill_worker_node(mstate.worker_states[i].worker_handle);
         mstate.num_to_be_killed--;
       }
@@ -286,7 +254,7 @@ if(mstate.worker_states[i].is_alive){
   }
 
 }
-/*
+
 int find_min_primes_idx(){ 
   int curr_min;
   int selected_idx;
@@ -310,7 +278,7 @@ int find_min_primes_idx(){
   }
   return selected_idx;
 }
-*/
+
 int find_min_cache_idx(){
   int curr_min;
   int selected_idx;
@@ -416,12 +384,12 @@ int choose_worker_idx(int tag){
     return find_min_cache_idx();
   }
   else if(type == "cpu"){
-//    if(tagToPrimeMap.find(tag) != tagToPrimeMap.end()){
-//      return find_min_primes_idx();
-//    }
-//    else{
+    if(tagToPrimeMap.find(tag) != tagToPrimeMap.end()){
+      return find_min_primes_idx();
+    }
+    else{
       return find_min_cpu_idx();
-//    }
+    }
   }
   else if(type == "non"){
     return find_min_non_idx();
@@ -449,7 +417,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   bool not_intense = false;
 
 
-//  int weighted_countprimes = 0;
+  int weighted_countprimes = 0;
 
   DLOG(INFO) << "Received request: " << client_req.get_request_string() << std::endl;
 
@@ -478,6 +446,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   int tag = mstate.next_tag;
   
   std::string req_name = client_req.get_arg("cmd");
+  //handle compareprimes by splitting into four countprimes requests
   if(req_name == "compareprimes"){
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "cpu"));
     int idx = choose_worker_idx(tag);
@@ -496,7 +465,6 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     params[2] = atoi(client_req.get_arg("n3").c_str());
     params[3] = atoi(client_req.get_arg("n4").c_str());
     
-
     for(int i = 0; i < 4; i++){
       cmpPrimeTagToTagMap.insert(std::pair<int, int>(tag, parentTag));
       Request_msg dummy_req(0);
@@ -520,13 +488,13 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "non"));
     not_intense = true;
   }
-  //countprimes 418wisdom - debating whether or not we want catch-all case 
+  //countprimes 418wisdm 
   else{
-//    if(req_name == "countprimes"){
-//      int n = atoi(client_req.get_arg("n").c_str());
-//      tagToPrimeMap.insert(std::pair<int,int>(tag, n));
-//      weighted_countprimes = n;
-  //  }
+    if(req_name == "countprimes"){
+      int n = atoi(client_req.get_arg("n").c_str());
+      tagToPrimeMap.insert(std::pair<int,int>(tag, n));
+      weighted_countprimes = n;
+    }
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "cpu"));
     is_cpu_intense = true;
   }
@@ -544,31 +512,13 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   else if(not_intense){
     mstate.worker_states[idx].num_non_intense_requests++;
   }
-//  mstate.worker_states[idx].weighted_countprimes_requests += weighted_countprimes;
+  mstate.worker_states[idx].weighted_countprimes_requests += weighted_countprimes;
   mstate.worker_states[idx].num_pending_requests++;
   mstate.next_tag++;
   send_request_to_worker(ws.worker_handle, worker_req);
 }
 
-
 void handle_tick() {
-/*
-        t = CycleTimer::currentSeconds(); 
-        std::cout << "\n--------------HANDLE TICK-----------------------\n";
-        std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
-        std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-        std::cout << "Time: " << t << "\n";
-        std::cout << "Alive workers: " << mstate.num_alive_workers << "\nActually alive: " << mstate.num_alive_workers - mstate.num_to_be_killed << "\nTo be killed: " << mstate.num_to_be_killed << "\n";
-        for(int i = 0; i < mstate.max_num_workers; i++){
-          if(mstate.worker_states[i].is_alive){
-            Worker_state ws = mstate.worker_states[i];
-            std::cout << "Worker number: "<< i << "\nCache count: " << ws.num_cache_intense_requests << "\nCPU count: " << ws.num_cpu_intense_requests << "\nOther Count: " << ws.num_non_intense_requests << "\n TOTAL count: " << ws.num_pending_requests << "\n";
-            std::cout << "is_alive " << ws.is_alive << "\nto_be_killed " << ws.to_be_killed << "\n";
-            }
-        }
-
-        std::cout << "\n------------------------------------------------------\n\n";
-*/
   int num_cpu = 0;
   int num_cache = 0;
 
@@ -588,37 +538,8 @@ void handle_tick() {
     int avg_cpu_intense_work = num_cpu / num_actually_alive;
     int avg_cache_intense_work = num_cache / num_actually_alive;
 
-    int avg_work_per_node = weighted_total / num_actually_alive;
-    
     if(avg_cpu_intense_work > 3 * MAX_THREADS / 4  || avg_cache_intense_work > 1){
- /*
-        std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
-        std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-*/
-    /* 
-        t = CycleTimer::currentSeconds(); 
-        std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
-        
-	std::cout << "Weighted Total: " << weighted_total << "\nAverage Work: " << avg_work_per_node << "\n";
-	std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
-        std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-        std::cout << "Time: " << t << "\n";
-        std::cout << "Alive workers: " << mstate.num_alive_workers << "\nActually alive: " << mstate.num_alive_workers - mstate.num_to_be_killed << "\nTo be killed: " << mstate.num_to_be_killed << "\n";
-        for(int i = 0; i < mstate.max_num_workers; i++){
-          if(mstate.worker_states[i].is_alive){
-            Worker_state ws = mstate.worker_states[i];
-            std::cout << "Worker number: "<< i << "\nCache count: " << ws.num_cache_intense_requests << "\nCPU count: " << ws.num_cpu_intense_requests << "\nOther Count: " << ws.num_non_intense_requests << "\n TOTAL count: " << ws.num_pending_requests << "\n";
-            std::cout << "is_alive " << ws.is_alive << "\nto_be_killed " << ws.to_be_killed << "\n";
-            }
-        }
-
-        std::cout << "\nADDING IT NOW\n";
-        std::cout <<"\n------------------------------------------------------\n\n";
-      */
       if(mstate.num_to_be_killed == 0 && mstate.num_alive_workers < mstate.max_num_workers){
-        //std::cout << "ACTUALLY REQUESTING NEW WORKER\n\n";
-
-
         int tag = random();
         Request_msg req(tag);
         req.set_arg("name", "my worker 0");
@@ -628,9 +549,6 @@ void handle_tick() {
         for(int i = 0; i < mstate.max_num_workers; i++){
           Worker_state ws = mstate.worker_states[i];
           if(ws.is_alive && ws.to_be_killed){
-            
-           //std::cout << "RESETTING THE FLAGG NOWWW\n\n"; 
-            
             mstate.worker_states[i].to_be_killed = false;
             mstate.num_to_be_killed--;
             num_actually_alive++;
@@ -645,36 +563,14 @@ void handle_tick() {
   //policy to remove worker nodes only if there are more than one nodes
   if(num_actually_alive > 1){
     //what's the average work per node if you did take away a worker
-    int avg_work_per_node = weighted_total / (num_actually_alive - 1);
     int avg_cpu_intense_work = num_cpu / (num_actually_alive - 1);
     int avg_cache_intense_work = num_cache / (num_actually_alive - 1);
+    //we have 1 thread dedicated to tellmenow and one to projectidea which leaves
+    //MAX_THREADS - 2 threads for the other requests
     if(avg_cpu_intense_work < MAX_THREADS - 2 && avg_cache_intense_work < 1){
-  /*    
-      std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
-      std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-*/
-     /*
-      t = CycleTimer::currentSeconds(); 
-      std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
-      std::cout << "num+pending_client+requests" << mstate.num_pending_client_requests << "\n";
-      std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-      std::cout << "Time: " << t << "\n";
-      std::cout << "Alive workers: " << mstate.num_alive_workers << "\nActually alive: " << mstate.num_alive_workers - mstate.num_to_be_killed << "\nTo be killed: " << mstate.num_to_be_killed << "\n";
-      for(int i = 0; i < mstate.max_num_workers; i++){
-        if(mstate.worker_states[i].is_alive){
-          Worker_state ws = mstate.worker_states[i];
-          std::cout << "Worker number: "<< i << "\nCache count: " << ws.num_cache_intense_requests << "\nCPU count: " << ws.num_cpu_intense_requests << "\nOther Count: " << ws.num_non_intense_requests << "\n TOTAL count: " << ws.num_pending_requests << "\n";
-          std::cout << "is_alive " << ws.is_alive << "\nto_be_killed " << ws.to_be_killed << "\n";
-          }
-      }
-
-      std::cout << "\nSETTING IT NOW\n";
-      std::cout << "\n------------------------------------------------------\n\n";
-      */
       int idx = find_min_load_idx();
       mstate.worker_states[idx].to_be_killed = true;
       mstate.num_to_be_killed++;
     }
   }
 }
-
