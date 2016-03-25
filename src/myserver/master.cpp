@@ -73,7 +73,7 @@ void master_node_init(int max_workers, int& tick_period) {
 
   // set up tick handler to fire every 5 seconds. (feel free to
   // configure as you please)
-  tick_period = 4;
+  tick_period = 3;
   
   //std::cout << "\n\n\nHELLLLOjroiewhiohbttiobj43t4\n\n\n";
 
