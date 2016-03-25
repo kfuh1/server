@@ -539,7 +539,7 @@ void handle_tick() {
 
     int avg_work_per_node = weighted_total / num_actually_alive;
     
-    if(avg_cpu_intense_work > 3 * MAX_THREADS / 4 || avg_cache_intense_work > 1){
+    if(avg_cpu_intense_work > MAX_THREADS / 2 || avg_cache_intense_work > 1){
  
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
@@ -594,7 +594,7 @@ void handle_tick() {
   if(num_actually_alive > 1){
     //what's the average work per node if you did take away a worker
     int avg_work_per_node = weighted_total / (num_actually_alive - 1);
-    if(avg_work_per_node < MAX_THREADS - 2){
+    if(avg_work_per_node < MAX_THREADS){
       
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
       std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
