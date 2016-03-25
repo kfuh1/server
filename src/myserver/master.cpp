@@ -611,8 +611,8 @@ void handle_tick() {
       std::cout << "\n------------------------------------------------------\n\n";
       */
       int idx = find_min_load_idx();
-      mstate.worker_states[i].to_be_killed = true;
-      mstat.num_to_be_killed++;
+      mstate.worker_states[idx].to_be_killed = true;
+      mstate.num_to_be_killed++;
     }
   }
 }
