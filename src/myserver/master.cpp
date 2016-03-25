@@ -73,7 +73,7 @@ void master_node_init(int max_workers, int& tick_period) {
 
   // set up tick handler to fire every 5 seconds. (feel free to
   // configure as you please)
-  tick_period = 5;
+  tick_period = 4;
   
   //std::cout << "\n\n\nHELLLLOjroiewhiohbttiobj43t4\n\n\n";
 
@@ -594,7 +594,7 @@ void handle_tick() {
   if(num_actually_alive > 1){
     //what's the average work per node if you did take away a worker
     int avg_work_per_node = weighted_total / (num_actually_alive - 1);
-    if(avg_work_per_node < MAX_THREADS){
+    if(avg_work_per_node < MAX_THREADS - 2){
       
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
       std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
