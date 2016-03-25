@@ -10,7 +10,10 @@
 #include "tools/cycle_timer.h"
 #include <iostream>
 
-#define MAX_WORKERS 4
+//MAX_WORKERS is just used so we have a static value for creating
+//a fixed size array of worker states, but we do use the max_num_workers
+//parameter in our code when deciding to launch workers
+#define MAX_WORKERS 4 
 #define MAX_THREADS 48
 
 double t = 0.0;
@@ -48,6 +51,7 @@ static struct Master_state {
 
 } mstate;
 
+//stores the countprimes partial results of compareprimes
 struct cmp_primes_data {
   int counts[4];
   int num_received;
@@ -524,7 +528,7 @@ void handle_tick() {
       num_cache += ws.num_cache_intense_requests;
     }
   }  
-  // fast requests like tellmenow are weighted
+  // fast requests like tellmenow are unweighted
   int weighted_total = num_cpu + num_cache;
 
   int num_actually_alive = mstate.num_alive_workers - mstate.num_to_be_killed;
@@ -535,7 +539,7 @@ void handle_tick() {
 
     int avg_work_per_node = weighted_total / num_actually_alive;
     
-    if(avg_cpu_intense_work > MAX_THREADS - 2 || avg_cache_intense_work > 1){
+    if(avg_cpu_intense_work > MAX_THREADS / 2 || avg_cache_intense_work > 1){
  
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
