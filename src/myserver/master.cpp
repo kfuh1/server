@@ -142,29 +142,26 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
   // Here we directly return this response to the client.
 
   DLOG(INFO) << "Master received a response from a worker: [" << resp.get_tag() << ":" << resp.get_response() << "]" << std::endl;
+  
+  //flags to make our logic work because we send compareprimes result separately
   bool send_response = true;
   bool sent_cmpprimes_resp = false;
   int tag = resp.get_tag();
   Client_handle client_handle;
 
   if(mstate.tagMap.find(tag) != mstate.tagMap.end()){
-    //printf("1\n");
     client_handle = mstate.tagMap.at(tag);
   }
 
+  //check if this response was one of the countprimes subjob for compareprimes
   if(cmpPrimeTagToTagMap.find(tag) != cmpPrimeTagToTagMap.end()){
     send_response = false;
-    //printf("2\n");
     int parentTag = cmpPrimeTagToTagMap.at(tag);
     int idx = tag - parentTag;
     
-    //printf("3\n");
     tagToCmpPrimesDataMap.at(parentTag).counts[idx] = atoi(resp.get_response().c_str());
-    //printf("4\n");
     tagToCmpPrimesDataMap.at(parentTag).num_received++;
-    //printf("5\n");
     if(tagToCmpPrimesDataMap.at(parentTag).num_received == 4){
-      //printf("6\n");
       cmp_primes_data data = tagToCmpPrimesDataMap.at(parentTag);
       Response_msg cmpprimes_resp(parentTag);
       if(data.counts[1] - data.counts[0] > data.counts[3] - data.counts[2]){
@@ -173,7 +170,6 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       else{
         cmpprimes_resp.set_response("There are more primes in second range.");
       }
-      //printf("7\n");
       client_handle = mstate.tagMap.at(parentTag);
       send_client_response(client_handle, cmpprimes_resp);
       tagToCmpPrimesDataMap.erase(parentTag);
@@ -197,7 +193,6 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
 
 
   if(tagToReqMap.find(tag) != tagToReqMap.end()){
-    //printf("8\n");
     std::string req_string = tagToReqMap.at(tag);
     req_cache.respMap.insert(std::pair<std::string, Response_msg>(req_string, resp));
     req_cache.size++;
@@ -208,8 +203,7 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
     Worker_state ws = mstate.worker_states[i];
     if(ws.is_alive && ws.worker_handle == worker_handle){
       ws.num_pending_requests--;
-      //find and decrement appropriate counter
-      //printf("9\n");
+      //by the way we set this up, every request should have one of these 3 types
       std::string type = tagToTypeMap.at(tag);
       if(type == "cache"){
         ws.num_cache_intense_requests--;
@@ -222,11 +216,15 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       }
       tagToTypeMap.erase(tag);
 
-      //kill the worker if it's been flagged and it's done with work
-      if(ws.to_be_killed && ws.num_pending_requests == 0){
 
+      //summing up manually because ws.num_pending_requests is wrong
+      int totalRequests = ws.num_cache_intense_requests + ws.num_cpu_intense_requests + ws.num_non_intense_requests;
+      //kill the worker if it's been flagged and it's done with work
+      if(ws.to_be_killed && totalRequests == 0){
+/*
         std::cout << "\n---------------KILLING A WORKER-----------------------\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
+*/
 /*
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------KILLING ALL THE WORKERS-----------------------\n";
@@ -290,7 +288,7 @@ int find_min_cache_idx(){
       has_begun = true;
     }
     else if(ws.is_alive){
-      if(ws.num_pending_requests < curr_min){
+      if(ws.num_cache_intense_requests < curr_min){
         curr_min = ws.num_cache_intense_requests;
         selected_idx = i;
       }
@@ -313,7 +311,7 @@ int find_min_non_idx(){
       has_begun = true;
     }
     else if(ws.is_alive){
-      if(ws.num_pending_requests < curr_min){
+      if(ws.num_non_intense_requests < curr_min){
         curr_min = ws.num_non_intense_requests;
         selected_idx = i;
       }
@@ -336,7 +334,7 @@ int find_min_cpu_idx(){
       has_begun = true;
     }
     else if(ws.is_alive){
-      if(ws.num_pending_requests < curr_min){
+      if(ws.num_cpu_intense_requests < curr_min){
         curr_min = ws.num_cpu_intense_requests;
         selected_idx = i;
       }
@@ -360,7 +358,7 @@ int find_min_load_idx(){
       has_begun = true;
     }
     else if(ws.is_alive){
-      if(ws.num_pending_requests + ws.num_cache_intense_requests < curr_min){
+      if(ws.num_cpu_intense_requests + ws.num_cache_intense_requests < curr_min){
         curr_min = ws.num_cpu_intense_requests + ws.num_cache_intense_requests;
         selected_idx = i;
       }
@@ -441,6 +439,8 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
     data.num_received = 0;
 
     mstate.worker_states[idx].num_cpu_intense_requests++;
+    mstate.worker_states[idx].num_pending_requests++;
+
     tagToCmpPrimesDataMap.insert(std::pair<int,cmp_primes_data>(parentTag, data));
     int params[4];
     params[0] = atoi(client_req.get_arg("n1").c_str());
@@ -456,7 +456,6 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
       mstate.next_tag++;
       
       Worker_state ws = mstate.worker_states[idx];
-      mstate.worker_states[idx].num_pending_requests++;
       send_request_to_worker(ws.worker_handle, worker_cmpprimes_req);
     }
 
@@ -498,6 +497,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
 
 
 void handle_tick() {
+/*
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n--------------HANDLE TICK-----------------------\n";
         std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
@@ -513,7 +513,7 @@ void handle_tick() {
         }
 
         std::cout << "\n------------------------------------------------------\n\n";
-
+*/
   int num_cpu = 0;
   int num_cache = 0;
 
@@ -536,9 +536,10 @@ void handle_tick() {
     int avg_work_per_node = weighted_total / num_actually_alive;
     
     if(avg_cpu_intense_work > MAX_THREADS - 2 || avg_cache_intense_work > 1){
- 
+/* 
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
+*/
     /* 
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
@@ -590,8 +591,10 @@ void handle_tick() {
     //what's the average work per node if you did take away a worker
     int avg_work_per_node = weighted_total / (num_actually_alive - 1);
     if(avg_work_per_node < MAX_THREADS - 2){
+      /*
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
       std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
+*/
      /*
       t = CycleTimer::currentSeconds(); 
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
