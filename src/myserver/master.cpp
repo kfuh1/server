@@ -529,7 +529,7 @@ void handle_tick() {
     }
   }  
   // fast requests like tellmenow are unweighted
-  int weighted_total = num_cpu + num_cache;
+  int weighted_total = num_cpu + 3 * num_cache;
 
   int num_actually_alive = mstate.num_alive_workers - mstate.num_to_be_killed;
   //policy to add more worker nodes
@@ -539,7 +539,7 @@ void handle_tick() {
 
     int avg_work_per_node = weighted_total / num_actually_alive;
     
-    if(avg_cpu_intense_work > MAX_THREADS / 2 || avg_cache_intense_work > 1){
+    if(avg_cpu_intense_work > MAX_THREADS - 2 || avg_cache_intense_work > 1){
  
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
