@@ -63,7 +63,7 @@ std::unordered_map<int, std::string> tagToReqMap;
 std::unordered_map<int, std::string> tagToTypeMap; //the string is type we define
 std::unordered_map<int, int> cmpPrimeTagToTagMap;
 std::unordered_map<int, cmp_primes_data> tagToCmpPrimesDataMap;
-std::unordered_map<int, int> tagToPrimeCatMap;
+std::unordered_map<int, int> tagToPrimeMap;
 
 static struct Request_cache {
   int size;
@@ -225,10 +225,10 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       tagToTypeMap.erase(tag);
 
       //decrement the weighted count for countprimes requests
-      if(tagToPrimeCatMap.find(tag) != tagToPrimeCatMap.end()){
-        int cat = tagToPrimeCatMap.at(tag);
+      if(tagToPrimeMap.find(tag) != tagToPrimeMap.end()){
+        int cat = tagToPrimeMap.at(tag);
         ws.weighted_countprimes_requests -= cat;
-        tagToPrimeCatMap.erase(tag);
+        tagToPrimeMap.erase(tag);
       }
 
       //summing up manually because ws.num_pending_requests is wrong
@@ -416,7 +416,7 @@ int choose_worker_idx(int tag){
     return find_min_cache_idx();
   }
   else if(type == "cpu"){
-    if(tagToPrimeCatMap.find(tag) != tagToPrimeCatMap.end()){
+    if(tagToPrimeMap.find(tag) != tagToPrimeMap.end()){
       return find_min_primes_idx();
     }
     else{
@@ -524,18 +524,8 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
   else{
     if(req_name == "countprimes"){
       int n = atoi(client_req.get_arg("n").c_str());
-      if(n < 800000){
-        tagToPrimeCatMap.insert(std::pair<int,int>(tag, 1));
-        weighted_countprimes = 1;
-      }
-      else if(n >= 800000 && n < 900000){
-        tagToPrimeCatMap.insert(std::pair<int,int>(tag, 2));
-        weighted_countprimes = 2;
-      }
-      else{
-        tagToPrimeCatMap.insert(std::pair<int,int>(tag, 3));
-        weighted_countprimes = 3;
-      }
+      tagToPrimeMap.insert(std::pair<int,int>(tag, n));
+      weighted_countprimes = n;
     }
     tagToTypeMap.insert(std::pair<int,std::string>(tag, "cpu"));
     is_cpu_intense = true;
