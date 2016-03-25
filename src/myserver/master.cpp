@@ -221,10 +221,10 @@ void handle_worker_response(Worker_handle worker_handle, const Response_msg& res
       int totalRequests = ws.num_cache_intense_requests + ws.num_cpu_intense_requests + ws.num_non_intense_requests;
       //kill the worker if it's been flagged and it's done with work
       if(ws.to_be_killed && totalRequests == 0){
-/*
+
         std::cout << "\n---------------KILLING A WORKER-----------------------\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-*/
+
 /*
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------KILLING ALL THE WORKERS-----------------------\n";
@@ -497,7 +497,7 @@ void handle_client_request(Client_handle client_handle, const Request_msg& clien
 
 
 void handle_tick() {
-/*
+
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n--------------HANDLE TICK-----------------------\n";
         std::cout << "num_pending_client_requests: " << mstate.num_pending_client_requests << "\n";
@@ -513,7 +513,7 @@ void handle_tick() {
         }
 
         std::cout << "\n------------------------------------------------------\n\n";
-*/
+
   int num_cpu = 0;
   int num_cache = 0;
 
@@ -536,10 +536,10 @@ void handle_tick() {
     int avg_work_per_node = weighted_total / num_actually_alive;
     
     if(avg_cpu_intense_work > MAX_THREADS - 2 || avg_cache_intense_work > 1){
-/* 
+ 
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
         std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-*/
+
     /* 
         t = CycleTimer::currentSeconds(); 
         std::cout << "\n---------------ADDING A NEW WORKER-----------------------\n";
@@ -591,10 +591,10 @@ void handle_tick() {
     //what's the average work per node if you did take away a worker
     int avg_work_per_node = weighted_total / (num_actually_alive - 1);
     if(avg_work_per_node < MAX_THREADS - 2){
-      /*
+      
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
       std::cout << "Current tag and timestamp " << mstate.next_tag << "\n";
-*/
+
      /*
       t = CycleTimer::currentSeconds(); 
       std::cout << "\n---------------SETTING TO BE KILLED FLAG-----------------------\n";
